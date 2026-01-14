@@ -8,8 +8,8 @@ CONTENT_DIR = "./content/gallery"
 ASSETS_DIR = "./assets/gallery"
 
 # --- PARAMÈTRES D'OPTIMISATION ---
-QUALITY = 80          # Qualité WebP (80 est le ratio idéal poids/qualité)
-MAX_WIDTH = 2000      # Largeur max pour éviter les fichiers de 50Mo
+QUALITY = 80          # Qualité WebP
+MAX_WIDTH = 2000      # Largeur max
 
 def clean_name(name):
     name = name.lower().replace(" ", "_")
@@ -39,24 +39,28 @@ def sync_portfolio():
             img_clean = f"{folder_clean}_{i+1:03d}.webp"
             target_path = os.path.join(hugo_assets_path, img_clean)
             
-            img_list_markdown += f'  <img src="gallery/{folder_clean}/{img_clean}" loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 4px;" />\n'
-
             try:
                 img = Image.open(os.path.join(source_folder_path, img_name))
                 img = ImageOps.exif_transpose(img)
                 
-                # --- REDIMENSIONNEMENT INTELLIGENT ---
+                # Récupération des dimensions d'origine
+                width, height = img.size
+                
+                # --- REDIMENSIONNEMENT ---
                 if img.width > MAX_WIDTH:
                     ratio = MAX_WIDTH / float(img.width)
                     new_height = int(float(img.height) * float(ratio))
                     img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
-                
-                # --- SAUVEGARDE COMPRESSÉE ---
-                img.save(target_path, "WEBP", quality=QUALITY, method=6) # method 6 = meilleure compression
+                    width, height = MAX_WIDTH, new_height 
+
+                # ON ÉCRIT LA BALISE ICI (UNE SEULE FOIS)
+                # On ajoute les dimensions pour que le navigateur réserve l'espace
+                img_list_markdown += f'  <img src="gallery/{folder_clean}/{img_clean}" width="{width}" height="{height}" />\n'
+
+                img.save(target_path, "WEBP", quality=QUALITY, method=6)
             except Exception as e:
                 print(f"❌ Erreur {img_name}: {e}")
 
-        # Création auto de la miniature de la carte (feature.webp)
         if images:
             first_img = os.path.join(hugo_assets_path, f"{folder_clean}_001.webp")
             shutil.copy(first_img, os.path.join(hugo_content_path, "feature.webp"))
