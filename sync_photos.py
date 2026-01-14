@@ -39,8 +39,8 @@ def sync_portfolio():
             img_clean = f"{folder_clean}_{i+1:03d}.webp"
             target_path = os.path.join(hugo_assets_path, img_clean)
             
-            img_list_markdown += f'  <img src="gallery/{folder_clean}/{img_clean}" loading="lazy" />\n'
-            
+            img_list_markdown += f'  <img src="gallery/{folder_clean}/{img_clean}" loading="lazy" style="display: block; width: 100%; height: auto; border-radius: 4px;" />\n'
+
             try:
                 img = Image.open(os.path.join(source_folder_path, img_name))
                 img = ImageOps.exif_transpose(img)
