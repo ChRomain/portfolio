@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div style="width: 100%; max-width: 1200px; margin: 20px auto; padding: 0 20px;">
+  
+  <div style="display: flex !important; flex-wrap: wrap !important; gap: 15px !important; justify-content: center !important;">
+    
+    {{ range (where .Site.RegularPages "Section" "gallery") }}
+    <a href="{{ .Permalink }}" 
+       style="display: flex !important; align-items: center; justify-content: center; 
+              width: 250px !important; height: 55px !important; /* <--- MODIFIE CETTE VALEUR */
+              border-radius: 8px; border: 1px solid #3f3f46; 
+              background-color: #1e1f20; color: white; 
+              text-decoration: none; font-weight: bold; font-size: 0.95rem;
+              transition: transform 0.2s ease;">
+      {{ .Title }}
+    </a>
+    {{ end }}
+
+  </div>
+</div>
+
+<style>
+  a:hover { transform: scale(1.05); border-color: #6366f1 !important; }
+</style>
+{{ end }}

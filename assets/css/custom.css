@@ -1,0 +1,79 @@
+/* Fond du site */
+body {
+    background-color: #f1f5f9 !important; 
+}
+
+/* Fond de la page et des articles */
+.dark body {
+    background-color: #1e1f20 !important;
+}
+
+/* On enlève les bordures ou fonds gris des galeries */
+.gallery {
+    background-color: transparent !important;
+}
+
+/* --- COULEURS --- */
+body { background-color: #f1f5f9 !important; }
+.dark body { background-color: #1e1f20 !important; }
+
+/* --- FORCE LA LARGEUR MAXIMALE DU SITE --- */
+/* Blowfish limite souvent le contenu à 800px ou 1000px, ce qui bloque à 2 photos */
+.prose, 
+.max-w-prose,
+article,
+main {
+    max-width: 100% !important; 
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* --- GRILLE TYPE GOOGLE PHOTOS --- */
+.gallery {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.gallery img {
+    /* ÉTAPE CLÉ : On baisse la hauteur à 320px. 
+       Plus c'est bas, plus tu auras d'images par ligne. */
+    height: 320px !important; 
+    width: auto !important;
+    
+    flex-grow: 1 !important;
+    object-fit: cover !important; 
+    
+    /* On donne une base très petite pour forcer le regroupement */
+    flex-basis: 150px !important; 
+    
+    margin: 0 !important;
+    border-radius: 4px !important;
+}
+
+/* Astuce pour que la dernière ligne ne s'étire pas trop */
+.gallery::after {
+    content: "";
+    flex-grow: 100;
+}
+
+.navbar-search, 
+#search-button, 
+button[aria-label="Search"],
+.search-button {
+    display: none !important;
+}
+
+footer {
+    display: none !important;
+}
+
+/* Si tu veux juste masquer les textes mais garder un peu d'espace en bas */
+.footer-text, 
+.footer-powered-by,
+footer hr {
+    display: none !important;
+}

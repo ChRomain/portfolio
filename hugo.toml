@@ -1,4 +1,169 @@
+disableKinds = ["RSS", "sitemap"]
 baseURL = 'https://ChRomain.github.io/portfolio/'
-languageCode = 'en-us'
-title = 'Portfolio'
-theme = "hugo-easy-gallery"
+theme = "blowfish"
+languageCode = "fr"
+title = "Travel"
+
+[params]
+  showRecent = false
+  mainSections = ["gallery"]
+  showDate = false
+  showReadingTime = false
+  showEdit = false
+  showSearch = false
+  [params.homepage]
+    layout = "card"
+    showRecent = true
+    showRecentItems = 50 # Mets un gros chiffre pour voir TOUS tes dossiers de voyage
+    showTitle = false
+    cardView = true
+    title = ""
+    description = ""
+  [params.gallery]
+    enable = true
+  [params.article]
+    showDate = false
+    showReadingTime = false
+    showAuthor = false
+    showTaxonomies = false
+    [params.footer]
+      showCopyright = false       # Enlève le © 2026
+      showPoweredBy = false       # Enlève "Propulsé par Hugo & Blowfish"
+
+# --- PARENTS PRINCIPAUX ---
+
+[[menu.main]]
+  name = "Canada"
+  identifier = "menu_canada"
+  url = "#"
+  weight = 10
+
+[[menu.main]]
+  name = "USA"
+  identifier = "menu_usa"
+  url = "#"
+  weight = 20
+
+[[menu.main]]
+  name = "France"
+  identifier = "menu_france"
+  url = "#"
+  weight = 30
+
+[[menu.main]]
+  name = "Guatemala"
+  url = "/gallery/guatemala/"
+  weight = 40
+
+[[menu.main]]
+  name = "Indonésie"
+  url = "/gallery/indonesie/"
+  weight = 50
+
+# --- SOUS-MENU CANADA ---
+
+[[menu.main]]
+  name = "Montréal"
+  parent = "menu_canada"
+  url = "/gallery/montreal/"
+  weight = 1
+
+[[menu.main]]
+  name = "Toronto"
+  parent = "menu_canada"
+  url = "/gallery/toronto/"
+  weight = 2
+
+[[menu.main]]
+  name = "Ottawa"
+  parent = "menu_canada"
+  url = "/gallery/ottawa/"
+  weight = 3
+
+[[menu.main]]
+  name = "Québec"
+  parent = "menu_canada"
+  url = "/gallery/quebec/"
+  weight = 4
+
+[[menu.main]]
+  name = "Autres"
+  parent = "menu_canada"
+  url = "/gallery/canada/"
+  weight = 5
+
+# --- SOUS-MENU USA ---
+
+[[menu.main]]
+  name = "New York"
+  parent = "menu_usa"
+  url = "/gallery/new_york/"
+  weight = 1
+
+[[menu.main]]
+  name = "Washington"
+  parent = "menu_usa"
+  url = "/gallery/washington/"
+  weight = 2
+
+[[menu.main]]
+  name = "Philadelphia"
+  parent = "menu_usa"
+  url = "/gallery/philadelphie/"
+  weight = 3
+
+[[menu.main]]
+  name = "Boston"
+  parent = "menu_usa"
+  url = "/gallery/boston/"
+  weight = 4
+
+[[menu.main]]
+  name = "Niagara Falls"
+  parent = "menu_usa"
+  url = "/gallery/niagara_falls/"
+  weight = 5
+
+[[menu.main]]
+  name = "Maine"
+  parent = "menu_usa"
+  url = "/gallery/maine/"
+  weight = 6
+
+[[menu.main]]
+  name = "Vermont"
+  parent = "menu_usa"
+  url = "/gallery/vermont/"
+  weight = 7
+
+[[menu.main]]
+  name = "New Hampshire"
+  parent = "menu_usa"
+  url = "/gallery/new_hampshire/"
+  weight = 8
+
+[[menu.main]]
+  name = "Cape Cod"
+  parent = "menu_usa"
+  url = "/gallery/cape_cod/"
+  weight = 9
+
+# --- SOUS-MENU FRANCE ---
+
+[[menu.main]]
+  name = "Lyon"
+  parent = "menu_france"
+  url = "/gallery/lyon/"
+  weight = 1
+
+[[menu.main]]
+  name = "Bordeaux"
+  parent = "menu_france"
+  url = "/gallery/bordeaux/"
+  weight = 2
+
+[[menu.main]]
+  name = "Finistère"
+  parent = "menu_france"
+  url = "/gallery/finistere/"
+  weight = 3

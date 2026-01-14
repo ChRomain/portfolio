@@ -1,32 +1,57 @@
 import os
-from PIL import Image
+import re
+import shutil
+from PIL import Image, ImageOps
 
-# Config des chemins
 SOURCE_DIR = "/Users/romaincharretteur/pCloud Drive/Portfolio_Images"
-DEST_DIR = "./static/gallery" # Hugo cherchera ici
+CONTENT_DIR = "./content/gallery"
+ASSETS_DIR = "./assets/gallery"
 
-def sync_and_resize():
-    if not os.path.exists(DEST_DIR):
-        os.makedirs(DEST_DIR)
+def clean_name(name):
+    name = name.lower().replace(" ", "_")
+    name = re.sub(r'[^a-z0-9_]+', '-', name)
+    return name.strip('-')
 
-    for root, dirs, files in os.walk(SOURCE_DIR):
-        for file in files:
-            if file.lower().endswith(('jpg', 'jpeg', 'png')):
-                # Garder la structure des dossiers (Sport, Street...)
-                rel_path = os.path.relpath(root, SOURCE_DIR)
-                target_folder = os.path.join(DEST_DIR, rel_path)
-                os.makedirs(target_folder, exist_ok=True)
+def sync_portfolio():
+    # Nettoyage des dossiers de destination pour éviter les conflits
+    for p in [CONTENT_DIR, ASSETS_DIR]:
+        if os.path.exists(p): shutil.rmtree(p)
+        os.makedirs(p, exist_ok=True)
 
-                # Chemin final
-                filename_webp = os.path.splitext(file)[0] + ".webp"
-                target_path = os.path.join(target_folder, filename_webp)
+    for folder in os.listdir(SOURCE_DIR):
+        source_folder_path = os.path.join(SOURCE_DIR, folder)
+        if not os.path.isdir(source_folder_path): continue
+        
+        folder_clean = clean_name(folder)
+        hugo_content_path = os.path.join(CONTENT_DIR, folder_clean)
+        hugo_assets_path = os.path.join(ASSETS_DIR, folder_clean)
+        os.makedirs(hugo_content_path, exist_ok=True)
+        os.makedirs(hugo_assets_path, exist_ok=True)
 
-                # N'optimiser que si le fichier n'existe pas déjà
-                if not os.path.exists(target_path):
-                    img = Image.open(os.path.join(root, file))
-                    img.thumbnail((1920, 1920)) # Redimensionne pour le web
-                    img.save(target_path, "WEBP", quality=82)
-                    print(f"✅ Ajouté : {filename_webp}")
+        img_list_markdown = ""
+        images = [f for f in os.listdir(source_folder_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'webp'))]
+        
+        for i, img_name in enumerate(sorted(images)):
+            img_clean = f"{folder_clean}_{i+1:03d}.webp"
+            target_path = os.path.join(hugo_assets_path, img_clean)
+            
+            # CRUCIAL : Le chemin pour le shortcode doit être relatif à 'assets/'
+            # Ton thème utilise resources.GetMatch, donc 'gallery/dossier/image.webp'
+            img_list_markdown += f'  <img src="gallery/{folder_clean}/{img_clean}" />\n'
+            
+            try:
+                img = Image.open(os.path.join(source_folder_path, img_name))
+                img = ImageOps.exif_transpose(img)
+                img.save(target_path, "WEBP", quality=100)
+            except Exception as e:
+                print(f"❌ Erreur {img_name}: {e}")
+
+        # Ecriture du fichier index.md avec le format attendu par ton layout
+        display_title = folder.replace('_', ' ').title()
+        with open(os.path.join(hugo_content_path, "index.md"), "w") as f:
+            f.write(f'---\ntitle: "{display_title}"\nlayout: "gallery"\n---\n\n')
+            f.write(f'{{{{< gallery >}}}}\n{img_list_markdown}{{{{< /gallery >}}}}')
+        print(f"✅ Galerie générée : {folder_clean}")
 
 if __name__ == "__main__":
-    sync_and_resize()
+    sync_portfolio()

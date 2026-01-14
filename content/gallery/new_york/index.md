@@ -1,0 +1,49 @@
+---
+title: "New York"
+layout: "gallery"
+---
+
+{{< gallery >}}
+  <img src="gallery/new_york/new_york_001.webp" />
+  <img src="gallery/new_york/new_york_002.webp" />
+  <img src="gallery/new_york/new_york_003.webp" />
+  <img src="gallery/new_york/new_york_004.webp" />
+  <img src="gallery/new_york/new_york_005.webp" />
+  <img src="gallery/new_york/new_york_006.webp" />
+  <img src="gallery/new_york/new_york_007.webp" />
+  <img src="gallery/new_york/new_york_008.webp" />
+  <img src="gallery/new_york/new_york_009.webp" />
+  <img src="gallery/new_york/new_york_010.webp" />
+  <img src="gallery/new_york/new_york_011.webp" />
+  <img src="gallery/new_york/new_york_012.webp" />
+  <img src="gallery/new_york/new_york_013.webp" />
+  <img src="gallery/new_york/new_york_014.webp" />
+  <img src="gallery/new_york/new_york_015.webp" />
+  <img src="gallery/new_york/new_york_016.webp" />
+  <img src="gallery/new_york/new_york_017.webp" />
+  <img src="gallery/new_york/new_york_018.webp" />
+  <img src="gallery/new_york/new_york_019.webp" />
+  <img src="gallery/new_york/new_york_020.webp" />
+  <img src="gallery/new_york/new_york_021.webp" />
+  <img src="gallery/new_york/new_york_022.webp" />
+  <img src="gallery/new_york/new_york_023.webp" />
+  <img src="gallery/new_york/new_york_024.webp" />
+  <img src="gallery/new_york/new_york_025.webp" />
+  <img src="gallery/new_york/new_york_026.webp" />
+  <img src="gallery/new_york/new_york_027.webp" />
+  <img src="gallery/new_york/new_york_028.webp" />
+  <img src="gallery/new_york/new_york_029.webp" />
+  <img src="gallery/new_york/new_york_030.webp" />
+  <img src="gallery/new_york/new_york_031.webp" />
+  <img src="gallery/new_york/new_york_032.webp" />
+  <img src="gallery/new_york/new_york_033.webp" />
+  <img src="gallery/new_york/new_york_034.webp" />
+  <img src="gallery/new_york/new_york_035.webp" />
+  <img src="gallery/new_york/new_york_036.webp" />
+  <img src="gallery/new_york/new_york_037.webp" />
+  <img src="gallery/new_york/new_york_038.webp" />
+  <img src="gallery/new_york/new_york_039.webp" />
+  <img src="gallery/new_york/new_york_040.webp" />
+  <img src="gallery/new_york/new_york_041.webp" />
+  <img src="gallery/new_york/new_york_042.webp" />
+{{< /gallery >}}
