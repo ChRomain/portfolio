@@ -1,5 +1,5 @@
 disableKinds = ["RSS", "sitemap"]
-baseURL = 'https://ChRomain.github.io/portfolio/'
+baseURL = 'https://rctravel.netlify.app/'
 theme = "blowfish"
 languageCode = "fr"
 title = "Travel"
