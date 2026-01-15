@@ -5,22 +5,23 @@ from PIL import Image, ImageOps
 
 SOURCE_DIR = "/Users/romaincharretteur/pCloud Drive/Portfolio_Images"
 CONTENT_DIR = "./content/gallery"
-ASSETS_DIR = "./assets/gallery"
+# CHANGEMENT ICI : On passe de assets à static
+ASSETS_DIR = "./static/gallery" 
 
 # --- PARAMÈTRES D'OPTIMISATION ---
 QUALITY = 80          # Qualité WebP
 MAX_WIDTH = 2000      # Largeur max
 
 def clean_name(name):
-    # Convertit en minuscule, remplace espaces par underscores
     name = name.lower().replace(" ", "_")
-    # Supprime les caractères spéciaux (garde lettres, chiffres et underscores)
     name = re.sub(r'[^a-z0-9_]+', '', name)
     return name.strip('_')
 
 def sync_portfolio():
+    # Nettoyage des anciens dossiers pour repartir propre
     if os.path.exists(CONTENT_DIR): shutil.rmtree(CONTENT_DIR)
     if os.path.exists(ASSETS_DIR): shutil.rmtree(ASSETS_DIR)
+    
     os.makedirs(CONTENT_DIR, exist_ok=True)
     os.makedirs(ASSETS_DIR, exist_ok=True)
 
@@ -28,7 +29,6 @@ def sync_portfolio():
         source_folder_path = os.path.join(SOURCE_DIR, folder)
         if not os.path.isdir(source_folder_path): continue
         
-        # On nettoie le nom du dossier (ex: "Montréal 2024" -> "montreal_2024")
         folder_clean = clean_name(folder)
         
         hugo_content_path = os.path.join(CONTENT_DIR, folder_clean)
@@ -37,13 +37,9 @@ def sync_portfolio():
         os.makedirs(hugo_assets_path, exist_ok=True)
 
         img_list_markdown = ""
-        # Liste les images originales
         images = [f for f in os.listdir(source_folder_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'webp'))]
         
-        # Tri alphabétique pour que l'ordre 001, 002 soit logique
         for i, img_name in enumerate(sorted(images)):
-            # CRÉATION DU NOUVEAU NOM : dossier_001.webp
-            # :03d signifie 3 chiffres (001), tu peux mettre :05d pour 00001
             img_clean = f"{folder_clean}_{i+1:03d}.webp"
             target_path = os.path.join(hugo_assets_path, img_clean)
             
@@ -59,17 +55,15 @@ def sync_portfolio():
                     img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
                     width, height = MAX_WIDTH, new_height 
 
-                # On ajoute au Markdown le nouveau nom de l'image
-                img_list_markdown += f'  <img src="gallery/{folder_clean}/{img_clean}" width="{width}" height="{height}" />\n'
+                # CHANGEMENT ICI : On ajoute un / devant gallery pour être sûr du chemin
+                img_list_markdown += f'  <img src="/gallery/{folder_clean}/{img_clean}" width="{width}" height="{height}" />\n'
 
-                # On sauvegarde l'image originale vers le nouveau nom optimisé
                 img.save(target_path, "WEBP", quality=QUALITY, method=6)
                 
             except Exception as e:
                 print(f"❌ Erreur sur {img_name} dans {folder}: {e}")
 
         if images:
-            # On utilise la première image renommée comme miniature
             first_img_renamed = f"{folder_clean}_001.webp"
             shutil.copy(os.path.join(hugo_assets_path, first_img_renamed), 
                         os.path.join(hugo_content_path, "feature.webp"))
