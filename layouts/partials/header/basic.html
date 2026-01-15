@@ -1,0 +1,68 @@
+<div class="container flex items-center justify-between mx-auto px-6 h-16">
+  <div class="flex items-center">
+    <a href="{{ .Site.BaseURL }}" class="text-2xl font-bold text-neutral-800 dark:text-neutral">
+      {{ .Site.Title }}
+    </a>
+  </div>
+
+  <nav class="hidden md:flex items-center">
+    <ul class="main-nav-list flex items-center list-none m-0 p-0">
+      {{ range .Site.Menus.main }}
+      <li class="relative group flex items-center">
+        <a href="{{ .URL }}" class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-medium text-neutral-800 dark:text-neutral hover:text-primary-500 py-4 px-3 flex items-center transition-colors">
+          {{ .Name }}
+          {{ if .HasChildren }}<span class="ml-1 text-[10px] opacity-50">▼</span>{{ end }}
+        </a>
+        
+        {{ if .HasChildren }}
+        <ul class="sub-menu-level-2 absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white dark:bg-[#1a1b1c] border border-neutral-200 dark:border-neutral-700 shadow-xl z-50 rounded-md py-2 transition-all duration-200 list-none m-0">
+          {{ range .Children }}
+          <li class="relative group/sub list-none">
+            <a href="{{ .URL }}" class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 flex items-center justify-between whitespace-nowrap">
+              <span>{{ .Name }}</span>
+              {{ if .HasChildren }}<span class="ml-4 text-[10px]">▶</span>{{ end }}
+            </a>
+            
+            {{ if .HasChildren }}
+            <ul class="sub-menu-level-3 absolute invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 left-full top-0 ml-px bg-white dark:bg-[#1a1b1c] border border-neutral-200 dark:border-neutral-700 shadow-xl rounded-md py-2 transition-all duration-200 list-none m-0">
+              {{ range .Children }}
+              <li class="list-none">
+                <a href="{{ .URL }}" class="block px-6 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 whitespace-nowrap">
+                  {{ .Name }}
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+
+    <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4">
+      <button id="theme-button" class="theme-toggle-btn text-neutral-400 hover:text-primary-500 transition-colors focus:outline-none flex items-center justify-center">
+        <svg id="sun-icon" class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg id="moon-icon" class="block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+
+      <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-icon-link text-neutral-400 hover:text-pink-500 transition-colors ml-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<script>
+  (function() {
+    const btn = document.getElementById('theme-button');
+    if(btn) {
+      btn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('appearance', isDark ? 'dark' : 'light');
+      });
+    }
+  })();
+</script>

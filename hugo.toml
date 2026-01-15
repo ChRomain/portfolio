@@ -11,57 +11,90 @@ title = "Travel"
   showReadingTime = false
   showEdit = false
   showSearch = false
+  showSocial = true
+  showSocialInHeader = true
   [params.homepage]
     layout = "card"
     showRecent = true
-    showRecentItems = 50 # Mets un gros chiffre pour voir TOUS tes dossiers de voyage
+    showRecentItems = 1000
     showTitle = false
     cardView = true
-    title = ""
-    description = ""
   [params.gallery]
     enable = true
   [params.article]
     showDate = false
     showReadingTime = false
     showAuthor = false
-    showTaxonomies = false
     [params.footer]
-      showCopyright = false       # Enlève le © 2026
-      showPoweredBy = false       # Enlève "Propulsé par Hugo & Blowfish"
+      showCopyright = false
+      showPoweredBy = false
 
-# --- PARENTS PRINCIPAUX ---
+[[params.social]]
+  name = "instagram"
+  url = "https://www.instagram.com/romain.charretteur"
+
+# --- NIVEAU 1 : ACCUEIL & CONTINENTS ---
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
 
 [[menu.main]]
-  name = "Canada"
-  identifier = "menu_canada"
+  name = "Amérique du Nord"
+  identifier = "menu_am_nord"
   url = "#"
   weight = 10
 
 [[menu.main]]
-  name = "USA"
-  identifier = "menu_usa"
+  name = "Amérique Centrale"
+  identifier = "menu_am_central"
   url = "#"
   weight = 20
 
 [[menu.main]]
-  name = "France"
-  identifier = "menu_france"
+  name = "Asie"
+  identifier = "menu_asie"
   url = "#"
   weight = 30
 
 [[menu.main]]
-  name = "Guatemala"
-  url = "/gallery/guatemala/"
+  name = "Europe"
+  identifier = "menu_europe"
+  url = "#"
   weight = 40
 
+# --- NIVEAU 2 : PAYS ---
 [[menu.main]]
-  name = "Indonésie"
-  url = "/gallery/indonesie/"
-  weight = 50
+  name = "Canada"
+  identifier = "menu_canada"
+  parent = "menu_am_nord"
+  url = "#"
+  weight = 1
 
-# --- SOUS-MENU CANADA ---
+[[menu.main]]
+  name = "USA"
+  identifier = "menu_usa"
+  parent = "menu_am_nord"
+  url = "#"
+  weight = 2
 
+[[menu.main]]
+  name = "France"
+  identifier = "menu_france"
+  parent = "menu_europe"
+  url = "#"
+  weight = 1
+
+[[menu.main]]
+  name = "Italie"
+  identifier = "menu_italie"
+  parent = "menu_europe"
+  url = "#"
+  weight = 2
+
+# --- NIVEAU 3 : VILLES ---
+
+# CANADA
 [[menu.main]]
   name = "Montréal"
   parent = "menu_canada"
@@ -69,21 +102,21 @@ title = "Travel"
   weight = 1
 
 [[menu.main]]
-  name = "Toronto"
-  parent = "menu_canada"
-  url = "/gallery/toronto/"
-  weight = 2
-
-[[menu.main]]
   name = "Ottawa"
   parent = "menu_canada"
   url = "/gallery/ottawa/"
-  weight = 3
+  weight = 2
 
 [[menu.main]]
   name = "Québec"
   parent = "menu_canada"
   url = "/gallery/quebec/"
+  weight = 3
+
+[[menu.main]]
+  name = "Toronto"
+  parent = "menu_canada"
+  url = "/gallery/toronto/"
   weight = 4
 
 [[menu.main]]
@@ -92,78 +125,114 @@ title = "Travel"
   url = "/gallery/canada/"
   weight = 5
 
-# --- SOUS-MENU USA ---
-
-[[menu.main]]
-  name = "New York"
-  parent = "menu_usa"
-  url = "/gallery/new_york/"
-  weight = 1
-
-[[menu.main]]
-  name = "Washington"
-  parent = "menu_usa"
-  url = "/gallery/washington/"
-  weight = 2
-
-[[menu.main]]
-  name = "Philadelphia"
-  parent = "menu_usa"
-  url = "/gallery/philadelphie/"
-  weight = 3
-
+# USA
 [[menu.main]]
   name = "Boston"
   parent = "menu_usa"
   url = "/gallery/boston/"
-  weight = 4
-
-[[menu.main]]
-  name = "Niagara Falls"
-  parent = "menu_usa"
-  url = "/gallery/niagara_falls/"
-  weight = 5
-
-[[menu.main]]
-  name = "Maine"
-  parent = "menu_usa"
-  url = "/gallery/maine/"
-  weight = 6
-
-[[menu.main]]
-  name = "Vermont"
-  parent = "menu_usa"
-  url = "/gallery/vermont/"
-  weight = 7
-
-[[menu.main]]
-  name = "New Hampshire"
-  parent = "menu_usa"
-  url = "/gallery/new_hampshire/"
-  weight = 8
+  weight = 1
 
 [[menu.main]]
   name = "Cape Cod"
   parent = "menu_usa"
   url = "/gallery/cape_cod/"
-  weight = 9
-
-# --- SOUS-MENU FRANCE ---
+  weight = 2
 
 [[menu.main]]
-  name = "Lyon"
-  parent = "menu_france"
-  url = "/gallery/lyon/"
-  weight = 1
+  name = "Maine"
+  parent = "menu_usa"
+  url = "/gallery/maine/"
+  weight = 3
 
+[[menu.main]]
+  name = "New Hampshire"
+  parent = "menu_usa"
+  url = "/gallery/new_hampshire/"
+  weight = 4
+
+[[menu.main]]
+  name = "New York"
+  parent = "menu_usa"
+  url = "/gallery/new_york/"
+  weight = 5
+
+[[menu.main]]
+  name = "Niagara Falls"
+  parent = "menu_usa"
+  url = "/gallery/niagara_falls/"
+  weight = 6
+
+[[menu.main]]
+  name = "Philadelphia"
+  parent = "menu_usa"
+  url = "/gallery/philadelphie/"
+  weight = 7
+
+[[menu.main]]
+  name = "Vermont"
+  parent = "menu_usa"
+  url = "/gallery/vermont/"
+  weight = 8
+
+[[menu.main]]
+  name = "Washington"
+  parent = "menu_usa"
+  url = "/gallery/washington/"
+  weight = 9
+
+# FRANCE
 [[menu.main]]
   name = "Bordeaux"
   parent = "menu_france"
   url = "/gallery/bordeaux/"
+  weight = 1
+
+[[menu.main]]
+  name = "Corse"
+  parent = "menu_france"
+  url = "/gallery/corse/"
   weight = 2
 
 [[menu.main]]
   name = "Finistère"
   parent = "menu_france"
   url = "/gallery/finistere/"
+  weight = 3
+
+[[menu.main]]
+  name = "Lyon"
+  parent = "menu_france"
+  url = "/gallery/lyon/"
+  weight = 4
+
+[[menu.main]]
+  name = "Paris"
+  parent = "menu_france"
+  url = "/gallery/paris/"
+  weight = 5
+
+# ITALIE
+[[menu.main]]
+  name = "Naples"
+  parent = "menu_italie"
+  url = "/gallery/naples/"
+  weight = 1
+
+# DIRECTS (NIVEAU 2)
+[[menu.main]]
+  name = "Guatemala"
+  parent = "menu_am_central"
+  url = "/gallery/guatemala/"
+  weight = 1
+
+[[menu.main]]
+  name = "Indonésie"
+  parent = "menu_asie"
+  url = "/gallery/indonesie/"
+  weight = 1
+
+[[menu.main]]
+  name = "Monténégro"
+  parent = "menu_europe"
+  url = "/gallery/montenegro/"
   weight = 3

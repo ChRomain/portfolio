@@ -1,61 +1,150 @@
-/* --- 1. FOND DU SITE --- */
-body { background-color: #f1f5f9 !important; }
-.dark body { background-color: #1e1f20 !important; }
-
-/* --- 2. LARGEUR DU CONTENU --- */
-.prose, .max-w-prose, article, main {
-    max-width: 100% !important; 
-    width: 100% !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+/* --- 1. BASE --- */
+body {
+    background-color: #f1f5f9;
 }
 
-/* --- 3. GRILLE TYPE GOOGLE PHOTOS --- */
-.gallery {
+.dark body {
+    background-color: #1a1b1c !important;
+}
+
+.prose,
+.max-w-prose,
+article,
+main {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* --- 2. NAVIGATION (CORRIGÉ) --- */
+.main-nav-list {
     display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    justify-content: center !important;
-    width: 100% !important;
-    background-color: transparent !important;
+    align-items: center !important;
 }
 
-.gallery img {
-    height: 320px !important; 
-    width: auto !important;
-    
-    /* Utilise les dimensions injectées par le script Python */
-    aspect-ratio: attr(width) / attr(height);
-    
-    flex-grow: 1 !important;
-    flex-basis: 150px !important; 
-    object-fit: cover !important; 
-    
-    margin: 0 !important;
-    border-radius: 4px !important;
-    
-    /* FIX EMPILEMENT : On force une largeur mini et un affichage stable */
-    min-width: 100px !important; 
-    display: inline-block !important; 
-    vertical-align: bottom;
-    
-    /* Optionnel : transition douce lors de l'apparition */
-    transition: opacity 0.3s ease-in;
+.main-nav-list > li {
+    margin-left: 10px !important;
 }
 
-/* Évite que la dernière ligne ne s'étire de façon bizarre */
-.gallery::after {
-    content: "";
-    flex-grow: 100;
+.main-nav-list > li:first-child {
+    margin-left: 0 !important;
 }
 
-/* Cache les images sans source pour éviter les flashs */
-.gallery img:not([src]) {
+.instagram-container {
+    margin-left: 10px !important;
+    padding-left: 15px !important;
+}
+
+.theme-toggle-btn {
+    margin-right: 20px !important;
+}
+
+.non-clickable {
+    pointer-events: none !important;
+    cursor: default !important;
+}
+
+/* Sous-menus Niveaux 2 et 3 */
+.sub-menu-level-2,
+.sub-menu-level-3 {
+    position: absolute !important;
+    width: max-content !important;
+    min-width: 200px !important;
+    display: block !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    z-index: 100 !important;
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
-/* --- 4. SUPPRESSION ÉLÉMENTS (RECHERCHE & FOOTER) --- */
-.navbar-search, #search-button, button[aria-label="Search"], .search-button,
-footer, .footer-text, .footer-powered-by, footer hr {
+.dark .sub-menu-level-2,
+.dark .sub-menu-level-3 {
+    background-color: #1a1b1c !important;
+    border: 1px solid #3f3f46 !important;
+}
+
+/* Positionnement NIVEAU 2 (Sous les Continents) */
+.sub-menu-level-2 {
+    top: 100% !important;
+    left: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Positionnement NIVEAU 3 (À droite des Pays) */
+.sub-menu-level-3 {
+    left: 100% !important;
+    top: 0 !important;
+    margin-left: 1px !important;
+}
+
+/* Affichage au survol */
+.group:hover > .sub-menu-level-2,
+.group\/sub:hover > .sub-menu-level-3 {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Styles des liens et état actif */
+header nav a:not([href="/"]) {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+header nav a[href="/"],
+header nav a[href="/portfolio/"] {
+    color: #3b82f6 !important;
+    font-weight: bold !important;
+}
+
+/* Empêcher le retour à la ligne des noms de villes */
+header nav ul li ul li a {
+    white-space: nowrap !important;
+}
+
+/* --- 3. NETTOYAGE --- */
+.navbar-search,
+footer,
+#search-button {
     display: none !important;
+}
+
+header nav ul,
+header nav li {
+    list-style: none !important;
+}
+
+/* --- 4. CUSTOM LIGHTBOX (CONSERVÉ D'ANTIGRAVITY) --- */
+#custom-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+#custom-lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
