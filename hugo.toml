@@ -92,6 +92,13 @@ title = "Travel"
   url = "#"
   weight = 2
 
+[[menu.main]]
+  name = "Suède"
+  identifier = "menu_suede"
+  parent = "menu_europe"
+  url = "/gallery/suede/"
+  weight = 4
+
 # --- NIVEAU 3 : VILLES ---
 
 # CANADA
@@ -218,7 +225,13 @@ title = "Travel"
   url = "/gallery/naples/"
   weight = 1
 
-# DIRECTS (NIVEAU 2)
+[[menu.main]]
+  name = "Rome"
+  parent = "menu_italie"
+  url = "/gallery/rome/"
+  weight = 2
+
+# DIRECTS / AUTRES
 [[menu.main]]
   name = "Guatemala"
   parent = "menu_am_central"
