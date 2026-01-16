@@ -8,7 +8,8 @@
   .portfolio-grid-final {
     display: grid !important;
     grid-template-columns: repeat(5, 1fr) !important;
-    gap: 8px !important; /* Espacement équilibré */
+    gap: 8px !important;
+    /* Espacement équilibré */
     width: 100% !important;
     margin: 2rem 0 !important;
   }
@@ -17,23 +18,24 @@
     position: relative !important;
     display: block !important;
     aspect-ratio: 1 / 1 !important;
-    overflow: hidden !important; 
+    overflow: hidden !important;
     top: auto !important;
     left: auto !important;
     transform: none !important;
     margin: 0 !important;
     /* TRANSITION PLUS DOUCE */
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    will-change: transform; /* Optimise la fluidité du zoom */
+    will-change: transform;
+    /* Optimise la fluidité du zoom */
     z-index: 1;
     border-radius: 2px;
   }
 
   /* --- ZOOM LÉGER (6%) --- */
-  .portfolio-grid-final > *:hover {
-    transform: scale(1.06) !important; 
+  .portfolio-grid-final>*:hover {
+    transform: scale(1.06) !important;
     z-index: 50 !important;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
   }
 
   .portfolio-grid-final img {
@@ -45,46 +47,125 @@
   }
 
   @media (max-width: 1024px) {
-    .portfolio-grid-final { grid-template-columns: repeat(3, 1fr) !important; }
+    .portfolio-grid-final {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
   }
 
   @media (max-width: 640px) {
-    .portfolio-grid-final { grid-template-columns: repeat(2, 1fr) !important; }
+    .portfolio-grid-final {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // === 1. Injecter le Lightbox si absent ===
     if (!document.getElementById('custom-lightbox')) {
       const lightbox = document.createElement('div');
       lightbox.id = 'custom-lightbox';
-      lightbox.innerHTML = '<img src="" alt="Full size">';
+      lightbox.innerHTML = `
+        <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous image">❮</button>
+        <div class="lightbox-content">
+          <img src="" alt="Full size">
+        </div>
+        <button id="lightbox-next" class="lightbox-nav" aria-label="Next image">❯</button>
+        
+        <div class="lightbox-footer">
+          <div id="lightbox-caption"></div>
+          <div id="lightbox-counter"></div>
+        </div>
+      `;
       document.body.appendChild(lightbox);
 
+      // Fermeture au clic sur le fond (mais pas sur l'image ou boutons)
       lightbox.addEventListener('click', (e) => {
-        if (e.target.id === 'custom-lightbox') {
-          lightbox.style.display = 'none';
+        if (e.target.id === 'custom-lightbox' || e.target.classList.contains('lightbox-content')) {
+          closeLightbox();
         }
       });
 
+      // Fermeture avec Echap
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') lightbox.style.display = 'none';
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
       });
     }
 
+    // === 2. Récupérer les éléments ===
     const lightbox = document.getElementById('custom-lightbox');
     const lightboxImg = lightbox.querySelector('img');
-    const images = document.querySelectorAll('.portfolio-grid-final img');
+    const captionEl = document.getElementById('lightbox-caption');
+    const counterEl = document.getElementById('lightbox-counter');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
 
-    images.forEach(img => {
-      img.setAttribute('data-zoomable', 'false');
+    // Récupérer toutes les images de la galerie
+    const galleryImages = Array.from(document.querySelectorAll('.portfolio-grid-final img'));
+    let currentIndex = 0;
+
+    // === 3. Fonctions de Navigation ===
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Empêche le scroll background
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function updateLightbox() {
+      const currentImg = galleryImages[currentIndex];
+      lightboxImg.src = currentImg.src;
+      lightboxImg.alt = currentImg.alt;
+
+      // Mettre à jour Counter
+      counterEl.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+
+      // Mettre à jour Caption (utilise le title ou alt)
+      const captionText = currentImg.getAttribute('title') || currentImg.getAttribute('alt') || '';
+      captionEl.textContent = captionText;
+    }
+
+    function showNext() {
+      if (galleryImages.length === 0) return;
+      currentIndex = (currentIndex + 1) % galleryImages.length; // Boucle au début
+      updateLightbox();
+    }
+
+    function showPrev() {
+      if (galleryImages.length === 0) return;
+      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; // Boucle à la fin
+      updateLightbox();
+    }
+
+    // === 4. Event Listeners ===
+
+    // Clic sur les boutons next/prev
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showNext();
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showPrev();
+    });
+
+    // Clic sur les images de la galerie
+    galleryImages.forEach((img, index) => {
+      img.setAttribute('data-zoomable', 'false'); // Désactive zoom natif si présent
       img.classList.remove('zoomable');
 
       img.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
+        openLightbox(index);
       });
     });
   });

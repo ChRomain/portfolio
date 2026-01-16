@@ -34,10 +34,7 @@ title = "Travel"
   url = "https://www.instagram.com/romain.charretteur"
 
 # --- NIVEAU 1 : ACCUEIL & CONTINENTS ---
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
+
 
 [[menu.main]]
   name = "Amérique du Nord"

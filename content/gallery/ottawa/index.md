@@ -1,23 +1,24 @@
 ---
 title: "Ottawa"
+description: "Découvrez ma galerie photo de Ottawa. Une collection de clichés capturant l'architecture et l'ambiance de Ottawa."
 layout: "gallery"
 ---
 
 {{< gallery >}}
-  <img src="/gallery/ottawa/ottawa_001.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_002.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_003.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_004.webp" width="1265" height="2250" />
-  <img src="/gallery/ottawa/ottawa_005.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_006.webp" width="2000" height="3555" />
-  <img src="/gallery/ottawa/ottawa_007.webp" width="2000" height="2666" />
-  <img src="/gallery/ottawa/ottawa_008.webp" width="2000" height="2666" />
-  <img src="/gallery/ottawa/ottawa_009.webp" width="2000" height="2666" />
-  <img src="/gallery/ottawa/ottawa_010.webp" width="2000" height="2666" />
-  <img src="/gallery/ottawa/ottawa_011.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_012.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_013.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_014.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_015.webp" width="2000" height="3000" />
-  <img src="/gallery/ottawa/ottawa_016.webp" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_001.webp" alt="Photographie de Ottawa - 1" title="Canon EOS Rebel T100 | f/7.1 | 1/200s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_002.webp" alt="Photographie de Ottawa - 2" title="Canon EOS Rebel T100 | f/7.1 | 1/320s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_003.webp" alt="Photographie de Ottawa - 3" title="Canon EOS Rebel T100 | f/7.1 | 1/125s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_004.webp" alt="Photographie de Ottawa - 4" title="FC3682 | f/1.7 | 1/2000s | ISO 100" width="1265" height="2250" />
+  <img src="/gallery/ottawa/ottawa_005.webp" alt="Photographie de Ottawa - 5" title="Canon EOS Rebel T100 | f/8.0 | 1/250s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_006.webp" alt="Photographie de Ottawa - 6" title="FC3682 | f/1.7 | 1/240s | ISO 100" width="2000" height="3555" />
+  <img src="/gallery/ottawa/ottawa_007.webp" alt="Photographie de Ottawa - 7" title="iPhone 15 | f/1.6 | 1/30s | ISO 640" width="2000" height="2666" />
+  <img src="/gallery/ottawa/ottawa_008.webp" alt="Photographie de Ottawa - 8" title="iPhone 15 | f/1.6 | 1/1500s | ISO 50" width="2000" height="2666" />
+  <img src="/gallery/ottawa/ottawa_009.webp" alt="Photographie de Ottawa - 9" title="iPhone 15 | f/2.4 | 1/280s | ISO 25" width="2000" height="2666" />
+  <img src="/gallery/ottawa/ottawa_010.webp" alt="Photographie de Ottawa - 10" title="iPhone 15 | f/1.6 | 1/1400s | ISO 50" width="2000" height="2666" />
+  <img src="/gallery/ottawa/ottawa_011.webp" alt="Photographie de Ottawa - 11" title="Canon EOS Rebel T100 | f/9.0 | 1/200s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_012.webp" alt="Photographie de Ottawa - 12" title="Canon EOS Rebel T100 | f/9.0 | 1/200s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_013.webp" alt="Photographie de Ottawa - 13" title="Canon EOS Rebel T100 | f/7.1 | 1/250s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_014.webp" alt="Photographie de Ottawa - 14" title="Canon EOS Rebel T100 | f/10.0 | 1/320s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_015.webp" alt="Photographie de Ottawa - 15" title="Canon EOS Rebel T100 | f/9.0 | 1/250s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/ottawa/ottawa_016.webp" alt="Photographie de Ottawa - 16" title="Canon EOS Rebel T100 | f/8.0 | 1/200s | ISO 100" width="2000" height="3000" />
 {{< /gallery >}}

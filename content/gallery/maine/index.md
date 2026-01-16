@@ -1,14 +1,15 @@
 ---
 title: "Maine"
+description: "Découvrez ma galerie photo de Maine. Une collection de clichés capturant l'architecture et l'ambiance de Maine."
 layout: "gallery"
 ---
 
 {{< gallery >}}
-  <img src="/gallery/maine/maine_001.webp" width="2000" height="3555" />
-  <img src="/gallery/maine/maine_002.webp" width="2000" height="3555" />
-  <img src="/gallery/maine/maine_003.webp" width="2000" height="3555" />
-  <img src="/gallery/maine/maine_004.webp" width="2000" height="3000" />
-  <img src="/gallery/maine/maine_005.webp" width="2000" height="3000" />
-  <img src="/gallery/maine/maine_006.webp" width="2000" height="3555" />
-  <img src="/gallery/maine/maine_007.webp" width="2000" height="3000" />
+  <img src="/gallery/maine/maine_001.webp" alt="Photographie de Maine - 1" title="FC3682 | f/1.7 | 1/800s | ISO 100" width="2000" height="3555" />
+  <img src="/gallery/maine/maine_002.webp" alt="Photographie de Maine - 2" title="FC3682 | f/1.7 | 1/640s | ISO 100" width="2000" height="3555" />
+  <img src="/gallery/maine/maine_003.webp" alt="Photographie de Maine - 3" title="FC3682 | f/1.7 | 1/640s | ISO 100" width="2000" height="3555" />
+  <img src="/gallery/maine/maine_004.webp" alt="Photographie de Maine - 4" title="ILCE-6700 | f/5.6 | 1/250s | ISO 640" width="2000" height="3000" />
+  <img src="/gallery/maine/maine_005.webp" alt="Photographie de Maine - 5" title="ILCE-6700 | f/5.6 | 1/160s | ISO 6400" width="2000" height="3000" />
+  <img src="/gallery/maine/maine_006.webp" alt="Photographie de Maine - 6" title="FC3682 | f/1.7 | 1/15s | ISO 200" width="2000" height="3555" />
+  <img src="/gallery/maine/maine_007.webp" alt="Photographie de Maine - 7" title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" width="2000" height="3000" />
 {{< /gallery >}}
