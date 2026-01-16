@@ -1,0 +1,195 @@
+{{ define "main" }}
+<div class="map-page-wrapper" style="max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 20px;">
+    <div class="map-container-wrapper"
+        style="position: relative; width: 100%; height: 600px; background: #111; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05);">
+        <div id="map" style="width: 100%; height: 100%; background: transparent;"></div>
+    </div>
+</div>
+
+<!-- Scripts & Styles -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+<script>
+    (function () {
+        const initMap = () => {
+            if (typeof L === 'undefined' || typeof L.markerClusterGroup === 'undefined') {
+                setTimeout(initMap, 100);
+                return;
+            }
+
+            const locations = [
+                { name: "Paris", coords: [48.8566, 2.3522], url: "/gallery/paris/" },
+                { name: "Lyon", coords: [45.7640, 4.8357], url: "/gallery/lyon/" },
+                { name: "Bordeaux", coords: [44.8378, -0.5792], url: "/gallery/bordeaux/" },
+                { name: "Corse", coords: [42.0396, 9.0129], url: "/gallery/corse/" },
+                { name: "Finistère", coords: [48.3147, -4.1441], url: "/gallery/finistere/" },
+                { name: "Rome", coords: [41.9028, 12.4964], url: "/gallery/rome/" },
+                { name: "Naples", coords: [40.8518, 14.2681], url: "/gallery/naples/" },
+                { name: "Suède", coords: [59.3293, 18.0686], url: "/gallery/suede/" },
+                { name: "Monténégro", coords: [42.7087, 19.3744], url: "/gallery/montenegro/" },
+                { name: "New York", coords: [40.7128, -74.0060], url: "/gallery/new_york/" },
+                { name: "Washington", coords: [38.9072, -77.0369], url: "/gallery/washington/" },
+                { name: "Boston", coords: [42.3601, -71.0589], url: "/gallery/boston/" },
+                { name: "Philadelphia", coords: [39.9526, -75.1652], url: "/gallery/philadelphie/" },
+                { name: "Montreal", coords: [45.5017, -73.5673], url: "/gallery/montreal/" },
+                { name: "Québec", coords: [46.8139, -71.2080], url: "/gallery/quebec/" },
+                { name: "Ottawa", coords: [45.4215, -75.6972], url: "/gallery/ottawa/" },
+                { name: "Toronto", coords: [43.6532, -79.3832], url: "/gallery/toronto/" },
+                { name: "Niagara Falls", coords: [43.0896, -79.0849], url: "/gallery/niagara_falls/" },
+                { name: "Cape Cod", coords: [41.6688, -70.2962], url: "/gallery/cape_cod/" },
+                { name: "Maine", coords: [45.2538, -69.4455], url: "/gallery/maine/" },
+                { name: "Vermont", coords: [44.5588, -72.5778], url: "/gallery/vermont/" },
+                { name: "New Hampshire", coords: [43.1939, -71.5724], url: "/gallery/new_hampshire/" },
+                { name: "Guatemala", coords: [15.7835, -90.2308], url: "/gallery/guatemala/" },
+                { name: "Indonésie", coords: [-8.4095, 115.1889], url: "/gallery/indonesie/" }
+            ];
+
+            const map = L.map('map', {
+                center: [30, -20],
+                zoom: 2,
+                minZoom: 2,
+                maxBounds: [[-85, -180], [85, 180]],
+                scrollWheelZoom: false,
+                zoomControl: false,
+                attributionControl: false
+            });
+
+            // Dark tiles as fallback (very minimalist)
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                opacity: 0.5
+            }).addTo(map);
+
+            // Markers cluster
+            const clusterGroup = L.markerClusterGroup({
+                showCoverageOnHover: false,
+                spiderfyOnMaxZoom: true,
+                maxClusterRadius: 50,
+                iconCreateFunction: function (cluster) {
+                    return L.divIcon({
+                        html: '<div class="custom-cluster"><span>' + cluster.getChildCount() + '</span></div>',
+                        className: 'marker-cluster-custom',
+                        iconSize: L.point(30, 30)
+                    });
+                }
+            });
+
+            locations.forEach(loc => {
+                const marker = L.circleMarker(loc.coords, {
+                    radius: 6,
+                    fillColor: "#3b82f6",
+                    color: "#fff",
+                    weight: 1.5,
+                    opacity: 1,
+                    fillOpacity: 0.9
+                });
+
+                marker.bindTooltip(loc.name, {
+                    direction: 'top',
+                    className: 'map-tooltip',
+                    offset: [0, -5]
+                });
+
+                marker.on('click', () => { window.location.href = loc.url; });
+                clusterGroup.addLayer(marker);
+            });
+
+            map.addLayer(clusterGroup);
+
+            // Optional: GeoJSON for even cleaner shapes if available
+            fetch('https://cdn.jsdelivr.net/gh/datasets/geo-boundaries-world-110m@master/countries.geojson')
+                .then(r => r.json())
+                .then(data => {
+                    L.geoJSON(data, {
+                        style: {
+                            fillColor: "#222",
+                            weight: 0.5,
+                            color: "#333",
+                            fillOpacity: 1
+                        }
+                    }).addTo(map).bringToBack();
+                }).catch(() => { });
+
+            // 3. Zoom control in bottom right
+            L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+            // Fix for map resizing
+            setTimeout(() => map.invalidateSize(), 500);
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMap);
+        } else {
+            initMap();
+        }
+    })();
+</script>
+
+<style>
+    .custom-cluster {
+        width: 30px;
+        height: 30px;
+        background: rgba(59, 130, 246, 0.5);
+        border: 2px solid #3b82f6;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: bold;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+    }
+
+    .map-tooltip {
+        background: #000 !important;
+        color: #fff !important;
+        border: 1px solid #333 !important;
+        border-radius: 4px !important;
+        padding: 4px 8px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .leaflet-container {
+        background: transparent !important;
+        cursor: default !important;
+    }
+
+    .marker-cluster-custom {
+        background: none !important;
+    }
+
+    /* Leaflet Zoom Controls Style */
+    .leaflet-control-zoom {
+        border: none !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .leaflet-control-zoom-in,
+    .leaflet-control-zoom-out {
+        background-color: rgba(38, 38, 38, 0.9) !important;
+        color: #3b82f6 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .leaflet-control-zoom-in:hover,
+    .leaflet-control-zoom-out:hover {
+        background-color: rgba(59, 130, 246, 0.2) !important;
+        color: #ec4899 !important;
+    }
+
+    .leaflet-control-zoom-in {
+        border-radius: 8px 8px 0 0 !important;
+    }
+
+    .leaflet-control-zoom-out {
+        border-radius: 0 0 8px 8px !important;
+    }
+</style>
+{{ end }}

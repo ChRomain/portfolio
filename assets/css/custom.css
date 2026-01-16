@@ -149,6 +149,37 @@ header nav li {
 }
 
 /* Navigation Buttons */
+.lightbox-nav-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10010;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.lightbox-nav-top button {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-nav-top button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.lightbox-nav-top .hidden {
+    display: none;
+}
+
 .lightbox-nav {
     position: absolute;
     top: 50%;
@@ -187,7 +218,6 @@ header nav li {
     color: white;
     z-index: 10010;
     pointer-events: none;
-    /* Let clicks pass through if needed, though usually empty space */
 }
 
 #lightbox-caption {
@@ -196,13 +226,49 @@ header nav li {
     margin-bottom: 8px;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     padding: 0 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#lightbox-caption.hidden-caption {
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 #lightbox-counter {
     font-size: 0.75rem;
     opacity: 0.8;
     font-family: monospace;
-    /* Gives a technical/precise look */
+}
+
+/* --- 5. VIEW TRANSITIONS --- */
+@media (prefers-reduced-motion: no-preference) {
+    ::view-transition-old(root) {
+        animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+    }
+
+    ::view-transition-new(root) {
+        animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes zoomIn {
@@ -215,6 +281,11 @@ header nav li {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.map-container-wrapper {
+    margin-top: 1rem;
+    z-index: 10;
 }
 
 @media (max-width: 768px) {
@@ -234,4 +305,39 @@ header nav li {
     #lightbox-caption {
         font-size: 1rem;
     }
+}
+
+/* --- 6. SPECIAL MENU STYLING --- */
+/* Target the "Map" menu item to make it stand out */
+nav a[href="/map/"] {
+    color: #8b5cf6 !important;
+    /* Purple for light mode */
+    font-weight: 700 !important;
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.2);
+}
+
+.dark nav a[href="/map/"] {
+    color: #ec4899 !important;
+    /* Vibrant Pink for dark mode */
+    text-shadow: 0 0 12px rgba(236, 72, 153, 0.4);
+}
+
+nav a[href="/map/"]:hover {
+    color: #3b82f6 !important;
+    /* Blue on hover */
+    transform: scale(1.05);
+}
+
+/* --- 7. SCROLL REVEAL EFFECT --- */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0, 0.2, 1),
+        transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

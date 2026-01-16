@@ -37,6 +37,11 @@ title = "Travel"
 
 
 [[menu.main]]
+  name = "Map"
+  url = "/map/"
+  weight = 1
+
+[[menu.main]]
   name = "Amérique du Nord"
   identifier = "menu_am_nord"
   url = "#"
