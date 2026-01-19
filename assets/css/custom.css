@@ -1,6 +1,8 @@
 /* --- 1. BASE --- */
 body {
     background-color: #f1f5f9;
+    overflow-x: hidden;
+    /* Prevents horizontal scroll from full-width carousel */
 }
 
 .dark body {
@@ -406,5 +408,47 @@ nav a[href="/map/"]:hover {
         border-radius: 0 !important;
         border: none !important;
         box-shadow: none !important;
+    }
+}
+
+@keyframes mouse-scroll {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+.animate-mouse-scroll {
+    animation: mouse-scroll 2s infinite;
+}
+
+/* --- 11. HERO CAROUSEL --- */
+.hero-carousel-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* Mask removed to ensure arrow visibility */
+}
+
+.carousel-slide.active {
+    z-index: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .hero-carousel-container {
+        height: calc(100vh - 64px) !important;
     }
 }
