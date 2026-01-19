@@ -85,8 +85,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.37138db219f0023c6cd0845d791670ca8bdf7eb5fde6a5d895d6763c9ea0205a4570110048be8fa8ef993afcc9b52a10efe85eb317d4192b9d68c4c77a8fdc3e.css"
-    integrity="sha512-NxONshnwAjxs0IRdeRZwyovffrX95qXYldZ2PJ6gIFpFcBEASL6PqO&#43;ZOvzJtSoQ7&#43;hesxfUGSudaMTHeo/cPg==">
+    href="/css/main.bundle.min.89c86a08159190ae54ab57594426ee47a90f3e8de33fa5e71837b045c93d78381092e75d47142dbaeffc6726459cc7e75f954f002462ae63645273ac9e217d42.css"
+    integrity="sha512-ichqCBWRkK5Uq1dZRCbuR6kPPo3jP6XnGDewRck9eDgQkuddRxQtuu/8ZyZFnMfnX5VPACRirmNkUnOsniF9Qg==">
 
   
   
@@ -178,10 +178,8 @@
 
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
   
 
   
@@ -262,9 +260,16 @@
   </div>
   
   
-  <div class="container flex items-center justify-between mx-auto px-6 h-16">
+  <div class="container flex items-center justify-between mx-auto px-6 h-16 relative z-[100]">
   <div class="flex items-center">
-    <a href="http://localhost:1313/" class="text-2xl font-bold text-neutral-800 dark:text-neutral">
+    <a href="http://localhost:1313/" class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="mr-2 site-logo-icon">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+        <path d="M2 12h20" />
+      </svg>
       Travel
     </a>
   </div>
@@ -626,6 +631,505 @@
       </a>
     </div>
   </nav>
+
+  
+  <div class="flex items-center md:hidden">
+    <button id="mobile-menu-button"
+      class="text-neutral-800 dark:text-neutral hover:text-primary-500 transition-colors focus:outline-none p-2"
+      aria-label="Toggle Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+<div id="mobile-menu-overlay"
+  class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[100000] transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
+  <div class="flex flex-col h-full">
+    <div class="flex items-center justify-between px-6 h-16 border-b border-neutral-200 dark:border-neutral-800">
+      <a href="http://localhost:1313/" class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="mr-2 site-logo-icon">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
+        </svg>
+        Travel
+      </a>
+      <button id="close-mobile-menu" class="text-neutral-800 dark:text-neutral p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex-grow overflow-y-auto px-6 py-8">
+      <ul class="flex flex-col space-y-4 list-none m-0 p-0 text-left">
+        
+        <li class="mobile-nav-item list-none">
+          <div
+            class="mobile-nav-row flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/50 cursor-pointer">
+            <a href="/map/"
+              class=" text-lg font-bold text-neutral-800 dark:text-neutral-100 hover:text-primary-500 transition-colors py-3 flex-grow">
+              Map
+            </a>
+            
+          </div>
+
+          
+        </li>
+        
+        <li class="mobile-nav-item list-none">
+          <div
+            class="mobile-nav-row flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/50 cursor-pointer">
+            <a href="#"
+              class="non-clickable text-lg font-bold text-neutral-800 dark:text-neutral-100 hover:text-primary-500 transition-colors py-3 flex-grow">
+              Amérique du Nord
+            </a>
+            
+            <button class="mobile-submenu-toggle p-4 text-neutral-500 focus:outline-none" aria-label="Toggle Submenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="transition-transform duration-200 pointer-events-none">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            
+          </div>
+
+          
+          <ul
+            class="mobile-submenu hidden flex flex-col space-y-1 mt-2 pl-4 list-none border-l-2 border-neutral-100 dark:border-neutral-800">
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="#"
+                  class="non-clickable text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  Canada
+                </a>
+                
+                <button class="mobile-submenu-toggle p-3 text-neutral-500 focus:outline-none"
+                  aria-label="Toggle Submenu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="transition-transform duration-200 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                
+              </div>
+
+              
+              <ul
+                class="mobile-submenu hidden flex flex-col space-y-1 mt-1 pl-4 list-none border-l-2 border-neutral-50 dark:border-neutral-900">
+                
+                <li class="list-none">
+                  <a href="/gallery/montreal/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Montréal
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/ottawa/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Ottawa
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/quebec/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Québec
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/toronto/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Toronto
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/canada/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Autres
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="#"
+                  class="non-clickable text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  USA
+                </a>
+                
+                <button class="mobile-submenu-toggle p-3 text-neutral-500 focus:outline-none"
+                  aria-label="Toggle Submenu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="transition-transform duration-200 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                
+              </div>
+
+              
+              <ul
+                class="mobile-submenu hidden flex flex-col space-y-1 mt-1 pl-4 list-none border-l-2 border-neutral-50 dark:border-neutral-900">
+                
+                <li class="list-none">
+                  <a href="/gallery/boston/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Boston
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/cape_cod/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Cape Cod
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/maine/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Maine
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/new_hampshire/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    New Hampshire
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/new_york/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    New York
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/niagara_falls/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Niagara Falls
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/philadelphie/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Philadelphia
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/vermont/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Vermont
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/washington/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Washington
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mobile-nav-item list-none">
+          <div
+            class="mobile-nav-row flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/50 cursor-pointer">
+            <a href="#"
+              class="non-clickable text-lg font-bold text-neutral-800 dark:text-neutral-100 hover:text-primary-500 transition-colors py-3 flex-grow">
+              Amérique Centrale
+            </a>
+            
+            <button class="mobile-submenu-toggle p-4 text-neutral-500 focus:outline-none" aria-label="Toggle Submenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="transition-transform duration-200 pointer-events-none">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            
+          </div>
+
+          
+          <ul
+            class="mobile-submenu hidden flex flex-col space-y-1 mt-2 pl-4 list-none border-l-2 border-neutral-100 dark:border-neutral-800">
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="/gallery/guatemala/"
+                  class=" text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  Guatemala
+                </a>
+                
+              </div>
+
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mobile-nav-item list-none">
+          <div
+            class="mobile-nav-row flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/50 cursor-pointer">
+            <a href="#"
+              class="non-clickable text-lg font-bold text-neutral-800 dark:text-neutral-100 hover:text-primary-500 transition-colors py-3 flex-grow">
+              Asie
+            </a>
+            
+            <button class="mobile-submenu-toggle p-4 text-neutral-500 focus:outline-none" aria-label="Toggle Submenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="transition-transform duration-200 pointer-events-none">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            
+          </div>
+
+          
+          <ul
+            class="mobile-submenu hidden flex flex-col space-y-1 mt-2 pl-4 list-none border-l-2 border-neutral-100 dark:border-neutral-800">
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="/gallery/indonesie/"
+                  class=" text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  Indonésie
+                </a>
+                
+              </div>
+
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li class="mobile-nav-item list-none">
+          <div
+            class="mobile-nav-row flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/50 cursor-pointer">
+            <a href="#"
+              class="non-clickable text-lg font-bold text-neutral-800 dark:text-neutral-100 hover:text-primary-500 transition-colors py-3 flex-grow">
+              Europe
+            </a>
+            
+            <button class="mobile-submenu-toggle p-4 text-neutral-500 focus:outline-none" aria-label="Toggle Submenu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="transition-transform duration-200 pointer-events-none">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            
+          </div>
+
+          
+          <ul
+            class="mobile-submenu hidden flex flex-col space-y-1 mt-2 pl-4 list-none border-l-2 border-neutral-100 dark:border-neutral-800">
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="#"
+                  class="non-clickable text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  France
+                </a>
+                
+                <button class="mobile-submenu-toggle p-3 text-neutral-500 focus:outline-none"
+                  aria-label="Toggle Submenu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="transition-transform duration-200 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                
+              </div>
+
+              
+              <ul
+                class="mobile-submenu hidden flex flex-col space-y-1 mt-1 pl-4 list-none border-l-2 border-neutral-50 dark:border-neutral-900">
+                
+                <li class="list-none">
+                  <a href="/gallery/bordeaux/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Bordeaux
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/corse/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Corse
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/finistere/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Finistère
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/lyon/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Lyon
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/paris/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Paris
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="#"
+                  class="non-clickable text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  Italie
+                </a>
+                
+                <button class="mobile-submenu-toggle p-3 text-neutral-500 focus:outline-none"
+                  aria-label="Toggle Submenu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="transition-transform duration-200 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                
+              </div>
+
+              
+              <ul
+                class="mobile-submenu hidden flex flex-col space-y-1 mt-1 pl-4 list-none border-l-2 border-neutral-50 dark:border-neutral-900">
+                
+                <li class="list-none">
+                  <a href="/gallery/naples/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Naples
+                  </a>
+                </li>
+                
+                <li class="list-none">
+                  <a href="/gallery/rome/"
+                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+                    Rome
+                  </a>
+                </li>
+                
+              </ul>
+              
+            </li>
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="/gallery/montenegro/"
+                  class=" text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  Monténégro
+                </a>
+                
+              </div>
+
+              
+            </li>
+            
+            <li class="mobile-nav-item list-none">
+              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
+                <a href="/gallery/suede/"
+                  class=" text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
+                  Suède
+                </a>
+                
+              </div>
+
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+      </ul>
+    </div>
+
+    <div class="px-6 py-8 border-t border-neutral-200 dark:border-neutral-800 flex justify-center space-x-8">
+      
+      <button id="mobile-theme-button"
+        class="text-neutral-400 hover:text-primary-500 transition-colors focus:outline-none flex items-center justify-center">
+        <svg class="sun-icon hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <a href="https://www.instagram.com/romain.charretteur" target="_blank"
+        class="text-neutral-400 hover:text-pink-500 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
 </div>
 
 <div id="scroll-progress-container"
@@ -638,13 +1142,65 @@
 <script>
   (function () {
     
-    const btn = document.getElementById('theme-button');
-    if (btn) {
+    const themeButtons = document.querySelectorAll('#theme-button, #mobile-theme-button');
+    themeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('appearance', isDark ? 'dark' : 'light');
       });
+    });
+
+    
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+    if (mobileMenuButton && mobileMenuOverlay) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden'; 
+      });
     }
+
+    if (closeMobileMenu && mobileMenuOverlay) {
+      closeMobileMenu.addEventListener('click', () => {
+        mobileMenuOverlay.classList.add('translate-x-full');
+        document.body.style.overflow = ''; 
+      });
+    }
+
+    
+    const navRows = mobileMenuOverlay?.querySelectorAll('.mobile-nav-row');
+    navRows?.forEach(row => {
+      row.addEventListener('click', (e) => {
+        const toggle = row.querySelector('.mobile-submenu-toggle');
+        if (!toggle) return; 
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const navItem = row.closest('.mobile-nav-item');
+        const submenu = navItem?.querySelector(':scope > .mobile-submenu');
+        const icon = toggle.querySelector('svg');
+
+        if (submenu) {
+          const isHidden = submenu.classList.contains('hidden');
+          submenu.classList.toggle('hidden');
+          if (icon) {
+            icon.style.transform = isHidden ? 'rotate(180deg)' : '';
+          }
+        }
+      });
+    });
+
+    
+    const mobileLinks = mobileMenuOverlay?.querySelectorAll('a:not(.non-clickable)');
+    mobileLinks?.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.add('translate-x-full');
+        document.body.style.overflow = '';
+      });
+    });
 
     
     const progressBar = document.getElementById('scroll-progress-bar');
@@ -662,9 +1218,8 @@
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
       
-<div class="map-page-wrapper" style="max-width: 1100px; margin: 0 auto; padding: 20px 20px 40px 20px;">
-    <div class="map-container-wrapper"
-        style="position: relative; width: 100%; height: 600px; background: #111; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05);">
+<div class="map-page-wrapper">
+    <div class="map-container-wrapper">
         <div id="map" style="width: 100%; height: 100%; background: transparent;"></div>
     </div>
 </div>
