@@ -6,51 +6,29 @@
 
 <style>
   .portfolio-grid-final {
-    display: grid !important;
-    grid-template-columns: repeat(6, 1fr) !important;
-    /* Passé à 6 colonnes pour plus de flexibilité */
-    grid-auto-rows: 200px !important;
-    /* Hauteur de base pour les lignes */
-    grid-auto-flow: dense !important;
-    /* Remplit les trous automatiquement */
-    gap: 12px !important;
+    column-count: 4;
+    column-gap: 16px;
     width: 100% !important;
     margin: 2rem 0 !important;
+    display: block !important;
   }
 
   .portfolio-grid-final>* {
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
+    display: inline-block !important;
+    vertical-align: top;
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 16px;
     position: relative !important;
-    display: block !important;
     overflow: hidden !important;
-    top: auto !important;
-    left: auto !important;
-    margin: 0 !important;
-    /* TRANSITION DOUCE - On laisse le JS piloter le transform */
+    border-radius: 8px;
     transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
     will-change: transform, box-shadow;
-    /* Optimise la fluidité du zoom */
     z-index: 1;
-    border-radius: 4px;
     perspective: 1000px;
     transform-style: preserve-3d;
-    /* Nécessaire pour l'empilement 3D */
-  }
-
-  /* Patterns Mosaïque */
-  /* Grande photo carrée (2x2) */
-  .portfolio-grid-final>*:nth-child(10n+1) {
-    grid-column: span 2 !important;
-    grid-row: span 2 !important;
-  }
-
-  /* Photo large (2x1) */
-  .portfolio-grid-final>*:nth-child(10n+6) {
-    grid-column: span 2 !important;
-  }
-
-  /* Photo haute (1x2) */
-  .portfolio-grid-final>*:nth-child(10n+8) {
-    grid-row: span 2 !important;
   }
 
   /* Effet de brillance (glare) dynamique */
@@ -72,41 +50,40 @@
     opacity: 1;
   }
 
-  /* On gère tout le transform en JS pour la précision 3D */
   .portfolio-grid-final>*:hover {
     z-index: 50 !important;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4) !important;
     border: 1px solid rgba(59, 130, 246, 0.5) !important;
-    /* Bordure discrète mais visible */
   }
 
   .portfolio-grid-final img {
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    height: auto !important;
     display: block !important;
     cursor: zoom-in;
+    border-radius: 8px;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     .portfolio-grid-final {
-      grid-template-columns: repeat(4, 1fr) !important;
-      grid-auto-rows: 180px !important;
+      column-count: 3;
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .portfolio-grid-final {
-      grid-template-columns: repeat(2, 1fr) !important;
-      grid-auto-rows: 150px !important;
-      gap: 8px !important;
+      column-count: 2;
+      column-gap: 12px;
     }
 
-    /* On simplifie la mosaïque sur mobile pour la lisibilité */
     .portfolio-grid-final>* {
-      grid-column: span 1 !important;
-      grid-row: span 1 !important;
-      aspect-ratio: 1 / 1 !important;
+      margin-bottom: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio-grid-final {
+      column-count: 1;
     }
   }
 </style>

@@ -13,4 +13,11 @@ layout: "gallery"
   <img src="/gallery/indonesie/indonesie_006.webp" alt="Photographie de Indonesie - 6" title="iPhone 13 | f/2.4 | 1/150s | ISO 32" width="2000" height="2666" />
   <img src="/gallery/indonesie/indonesie_007.webp" alt="Photographie de Indonesie - 7" title="iPhone 13 | f/2.4 | 1/720s | ISO 32" width="1592" height="2122" />
   <img src="/gallery/indonesie/indonesie_008.webp" alt="Photographie de Indonesie - 8" title="" width="1178" height="2060" />
+  <img src="/gallery/indonesie/indonesie_009.webp" alt="Photographie de Indonesie - 9" title="" width="1178" height="2065" />
+  <img src="/gallery/indonesie/indonesie_010.webp" alt="Photographie de Indonesie - 10" title="" width="1178" height="2069" />
+  <img src="/gallery/indonesie/indonesie_011.webp" alt="Photographie de Indonesie - 11" title="" width="1178" height="2056" />
+  <img src="/gallery/indonesie/indonesie_012.webp" alt="Photographie de Indonesie - 12" title="" width="1178" height="2074" />
+  <img src="/gallery/indonesie/indonesie_013.webp" alt="Photographie de Indonesie - 13" title="" width="1178" height="2059" />
+  <img src="/gallery/indonesie/indonesie_014.webp" alt="Photographie de Indonesie - 14" title="" width="1178" height="2074" />
+  <img src="/gallery/indonesie/indonesie_015.webp" alt="Photographie de Indonesie - 15" title="" width="1178" height="2065" />
 {{< /gallery >}}
