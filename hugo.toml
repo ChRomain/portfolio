@@ -1,4 +1,4 @@
-disableKinds = ["RSS", "sitemap"]
+disableKinds = ["RSS"]
 baseURL = 'https://rctravel.pages.dev/'
 theme = "blowfish"
 languageCode = "fr"
@@ -25,6 +25,7 @@ title = "Travel"
     showDate = false
     showReadingTime = false
     showAuthor = false
+    showBreadcrumbs = true
     [params.footer]
       showCopyright = false
       showPoweredBy = false
