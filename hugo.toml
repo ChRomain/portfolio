@@ -24,6 +24,7 @@ title = "Travel"
   [params.article]
     showDate = false
     showReadingTime = false
+    showWordCount = false
     showAuthor = false
     showBreadcrumbs = false
     [params.footer]
