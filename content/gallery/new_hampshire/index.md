@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de New Hampshire. Une collection de cl
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Experience the fleeting magic of the Indian Summer. From the fiery foliage of the White Mountains to the golden-hued winding roads of the Kancamagus Highway, lose yourself in a landscape painted in nature’s most vibrant autumn tones.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/new_hampshire/new_hampshire_001.webp" alt="Photographie de New Hampshire - 1" title="ILCE-6700 | f/5.6 | 1/250s | ISO 320" width="2000" height="3000" />
   <img src="/gallery/new_hampshire/new_hampshire_002.webp" alt="Photographie de New Hampshire - 2" title="ILCE-6700 | f/5.6 | 1/250s | ISO 100" width="2000" height="3555" />

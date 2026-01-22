@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Vermont. Une collection de clichés
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Immerse yourself in the tranquil beauty of the Green Mountain State. From the serene shores of Lake Willoughby to the lush, rolling hills that define the landscape, witness a peaceful harmony where nature takes center stage.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/vermont/vermont_001.webp" alt="Photographie de Vermont - 1" title="FC3682 | f/1.7 | 1/1250s | ISO 100" width="2000" height="3555" />
   <img src="/gallery/vermont/vermont_002.webp" alt="Photographie de Vermont - 2" title="ILCE-6700 | f/5.6 | 1/160s | ISO 100" width="2000" height="3000" />

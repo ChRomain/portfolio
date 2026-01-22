@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Lyon. Une collection de clichés ca
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Traverse the layers of time in France’s gastronomic capital. From the shimmering mosaics of the Fourvière Basilica to the secret Renaissance courtyards of the Old Town, uncover a city where architectural grandeur and hidden history gracefully intertwine.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/lyon/lyon_001.webp" alt="Photographie de Lyon - 1" title="iPhone 15 | f/1.6 | 1/35s | ISO 100" width="2000" height="2666" />
   <img src="/gallery/lyon/lyon_002.webp" alt="Photographie de Lyon - 2" title="iPhone 15 | f/1.6 | 1/50s | ISO 250" width="2000" height="2666" />

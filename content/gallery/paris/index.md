@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Paris. Une collection de clichés c
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Experience the timeless allure of the City of Light. From the sparkling iron lattice of the Eiffel Tower at night to the bohemian glow of Montmartre and the red velvet charm of the Moulin Rouge, witness a city that never loses its romantic spark.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/paris/paris_001.webp" alt="Photographie de Paris - 1" title="iPhone XR | f/1.8 | 1/35s | ISO 320" width="2000" height="1525" />
   <img src="/gallery/paris/paris_002.webp" alt="Photographie de Paris - 2" title="iPhone XR | f/1.8 | 1/2400s | ISO 25" width="2000" height="1910" />

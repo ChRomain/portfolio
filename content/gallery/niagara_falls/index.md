@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Niagara Falls. Une collection de cl
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Stand at the edge of the world where thunderous waters meet a neon-lit skyline. Witness the overwhelming force of the falls in all their misty glory, before wandering into the vibrant, cinematic energy of Niagara City’s bustling streets and retro motels.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/niagara_falls/niagara_falls_001.webp" alt="Photographie de Niagara Falls - 1" title="Canon EOS Rebel T100 | f/10.0 | 1/500s | ISO 100" width="2000" height="3000" />
   <img src="/gallery/niagara_falls/niagara_falls_002.webp" alt="Photographie de Niagara Falls - 2" title="Canon EOS Rebel T100 | f/11.0 | 1/500s | ISO 100" width="2000" height="3000" />

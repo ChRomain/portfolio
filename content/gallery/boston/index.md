@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Boston. Une collection de clichés 
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Trace the footsteps of history along the cobblestone paths of Beacon Hill. From the grandeur of Quincy Market to the historic docks of the harbor, encounter a city where the spirit of American independence lives on through every brick and monument.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/boston/boston_001.webp" alt="Photographie de Boston - 1" title="iPhone 15 | f/2.4 | 1/800s | ISO 25" width="2000" height="2666" />
   <img src="/gallery/boston/boston_002.webp" alt="Photographie de Boston - 2" title="iPhone 15 | f/1.6 | 1/60s | ISO 125" width="2000" height="2666" />

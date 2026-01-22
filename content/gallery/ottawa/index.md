@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Ottawa. Une collection de clichés 
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Witness a capital in full bloom. From the vibrant endless fields of the Canadian Tulip Festival to the scenic pathways along the Rideau Canal, explore a city where nature's bright palette perfectly complements the historic stone of Parliament Hill.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/ottawa/ottawa_001.webp" alt="Photographie de Ottawa - 1" title="Canon EOS Rebel T100 | f/7.1 | 1/200s | ISO 100" width="2000" height="3000" />
   <img src="/gallery/ottawa/ottawa_002.webp" alt="Photographie de Ottawa - 2" title="Canon EOS Rebel T100 | f/7.1 | 1/320s | ISO 100" width="2000" height="3000" />

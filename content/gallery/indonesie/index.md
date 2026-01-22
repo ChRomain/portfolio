@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Indonesie. Une collection de clich�
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Between ancestral temples, secret Balinese beaches, volcanic mists, and lush jungles, dive into a visual exploration of Indonesian contrasts—where wild nature meets sacred serenity.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/indonesie/indonesie_001.webp" alt="Photographie de Indonesie - 1" title="iPhone 13 | f/1.6 | 1/620s | ISO 50" width="2000" height="3226" />
   <img src="/gallery/indonesie/indonesie_002.webp" alt="Photographie de Indonesie - 2" title="iPhone 13 | f/1.6 | 1/3200s | ISO 50" width="2000" height="2666" />

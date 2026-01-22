@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Maine. Une collection de clichés c
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Surrender to the rugged charm of the Pine Tree State. From the historic beacons of Portland Head Light to the bustling docks of fishing harbors, discover a coastline where the deep blue Atlantic carves its story into granite shores and salty traditions.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/maine/maine_001.webp" alt="Photographie de Maine - 1" title="FC3682 | f/1.7 | 1/60s | ISO 100" width="2000" height="3555" />
   <img src="/gallery/maine/maine_002.webp" alt="Photographie de Maine - 2" title="FC3682 | f/1.7 | 1/500s | ISO 100" width="2000" height="3555" />

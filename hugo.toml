@@ -252,3 +252,7 @@ title = "Travel"
   parent = "menu_europe"
   url = "/gallery/montenegro/"
   weight = 3
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

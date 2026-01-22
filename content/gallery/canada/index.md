@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Canada. Une collection de clichés 
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Venture into the raw, untamed heart of the Great White North. From close encounters with majestic wildlife in the frozen wilderness to emerald-green shorelines hidden deep within the forest, discover the spontaneous beauty of a land that knows no bounds.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/canada/canada_001.webp" alt="Photographie de Canada - 1" title="Canon EOS Rebel T6 | f/8.0 | 1/500s | ISO 100" width="1280" height="1920" />
   <img src="/gallery/canada/canada_002.webp" alt="Photographie de Canada - 2" title="Canon EOS Rebel T100 | f/4.5 | 1/100s | ISO 100" width="2000" height="1333" />

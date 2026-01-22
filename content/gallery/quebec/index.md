@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Quebec. Une collection de clichés 
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Step into a living fairy tale where cobblestone streets meet the majestic silhouette of the Château Frontenac. From the frost-covered ramparts to the warm glow of Petit Champlain at night, witness the romantic soul of North America’s oldest fortified city.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/quebec/quebec_001.webp" alt="Photographie de Quebec - 1" title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 100" width="2000" height="1333" />
   <img src="/gallery/quebec/quebec_002.webp" alt="Photographie de Quebec - 2" title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 1000" width="2000" height="3000" />

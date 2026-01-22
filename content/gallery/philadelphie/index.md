@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Philadelphie. Une collection de cli
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Immerse yourself in a vibrant urban mosaic where history meets bold creativity. From the intricate glass masterpieces of the Magic Gardens to the towering blue spans of the Ben Franklin Bridge, discover the colorful soul and resilient spirit of the City of Brotherly Love.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/philadelphie/philadelphie_001.webp" alt="Photographie de Philadelphie - 1" title="iPhone 15 | f/1.6 | 1/120s | ISO 80" width="2000" height="2666" />
   <img src="/gallery/philadelphie/philadelphie_002.webp" alt="Photographie de Philadelphie - 2" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="2000" height="2666" />

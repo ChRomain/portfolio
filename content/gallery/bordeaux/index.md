@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Bordeaux. Une collection de cliché
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Contemplate a city where history and modernity find a perfect balance. From the golden stone of the Grosse Cloche to the futuristic curves of the Cité du Vin, embark on an odyssey through Bordeaux’s grand boulevards and its hidden, vibrant street-art sanctuaries.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/bordeaux/bordeaux_001.webp" alt="Photographie de Bordeaux - 1" title="iPhone 15 | f/1.6 | 1/763s | ISO 32" width="2000" height="2666" />
   <img src="/gallery/bordeaux/bordeaux_002.webp" alt="Photographie de Bordeaux - 2" title="iPhone 15 | f/1.6 | 1/50s | ISO 500" width="2000" height="2666" />

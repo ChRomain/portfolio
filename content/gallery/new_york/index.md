@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de New York. Une collection de cliché
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Experience the restless pulse of the world’s most iconic metropolis. From the shimmering neon of Times Square and the industrial majesty of the Brooklyn Bridge to the quiet, sun-drenched paths of Central Park, witness a city of infinite scales and electric ambitions.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/new_york/new_york_001.webp" alt="Photographie de New York - 1" title="Canon EOS Rebel T100 | f/5.6 | 1/60s | ISO 160" width="2000" height="3000" />
   <img src="/gallery/new_york/new_york_002.webp" alt="Photographie de New York - 2" title="Canon EOS Rebel T100 | f/5.6 | 1/500s | ISO 100" width="2000" height="3000" />

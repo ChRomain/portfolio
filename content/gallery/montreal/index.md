@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Montreal. Une collection de cliché
 layout: "gallery"
 ---
 
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Feel the dual soul of North America’s most eclectic island. From the adrenaline of the Formula 1 tracks and towering street murals to the glowing neon of the Quartier des Spectacles, capture the vibrant pulse of a city that lives for the moment.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/montreal/montreal_001.webp" alt="Photographie de Montreal - 1" title="iPhone 15 | f/1.6 | 1/800s | ISO 50" width="2000" height="2666" />
   <img src="/gallery/montreal/montreal_002.webp" alt="Photographie de Montreal - 2" title="" width="1178" height="2066" />

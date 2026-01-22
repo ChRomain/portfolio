@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Suede. Une collection de clichés c
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;Step into a Nordic winter wonderland. From the glowing reindeer displays and festive city lights to the serene, frozen harbors, experience the enchanting magic of a Swedish winter where the darkness of the season is met with a warm, golden glow.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/suede/suede_001.webp" alt="Photographie de Suede - 1" title="iPhone 13 | f/1.6 | 1/1000s | ISO 50" width="2000" height="1500" />
   <img src="/gallery/suede/suede_002.webp" alt="Photographie de Suede - 2" title="iPhone 13 | f/1.6 | 1/50s | ISO 500" width="2000" height="1500" />

@@ -4,6 +4,10 @@ description: "Découvrez ma galerie photo de Cape Cod. Une collection de cliché
 layout: "gallery"
 ---
 
+<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+&nbsp;&nbsp;&nbsp;&nbsp;From iconic lighthouses guarding the vast Atlantic to the serene dance of whales on the horizon, discover the soulful charm of Cape Cod. A captivating journey through New England's coastal landscapes, where peaceful shores meet maritime history.
+</div>
+
 {{< gallery >}}
   <img src="/gallery/cape_cod/cape_cod_001.webp" alt="Photographie de Cape Cod - 1" title="Canon EOS Rebel T100 | f/6.3 | 1/200s | ISO 100" width="2000" height="3000" />
   <img src="/gallery/cape_cod/cape_cod_002.webp" alt="Photographie de Cape Cod - 2" title="FC3682 | f/1.7 | 1/1250s | ISO 100" width="2000" height="3555" />
