@@ -25,7 +25,7 @@ title = "Travel"
     showDate = false
     showReadingTime = false
     showAuthor = false
-    showBreadcrumbs = true
+    showBreadcrumbs = false
     [params.footer]
       showCopyright = false
       showPoweredBy = false
