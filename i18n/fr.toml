@@ -1,8 +1,6 @@
-[hero_title]
-other = "Un voyage en images"
-
-[hero_subtitle]
-other = "Saisir le monde à travers mon objectif"
-
-[collections_title]
-other = "Collections photographiques"
+hero_title = "Un voyage en images"
+hero_subtitle = "Saisir le monde à travers mon objectif"
+cat_urban = "Les Géants Urbains"
+cat_heritage = "Patrimoine Européen"
+cat_wild = "Côtes & Nature"
+cat_canada = "Récits Canadiens"

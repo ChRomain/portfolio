@@ -1,8 +1,6 @@
-[hero_title]
-other = "A journey in frames"
-
-[hero_subtitle]
-other = "Capturing the world through my lens"
-
-[collections_title]
-other = "Photography Collections"
+hero_title = "A journey in frames"
+hero_subtitle = "Capturing the world through my lens"
+cat_urban = "The Urban Giants"
+cat_heritage = "European Heritage"
+cat_wild = "Coastal & Wild"
+cat_canada = "Canadian Tales"

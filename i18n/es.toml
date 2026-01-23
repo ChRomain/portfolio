@@ -1,8 +1,6 @@
-[hero_title]
-other = "Un viaje en fotogramas"
-
-[hero_subtitle]
-other = "Capturando el mundo a través de mi lente"
-
-[collections_title]
-other = "Colecciones de fotos"
+hero_title = "Un viaje en fotogramas"
+hero_subtitle = "Capturando el mundo a través de mi lente"
+cat_urban = "Gigantes Urbanos"
+cat_heritage = "Herencia Europea"
+cat_wild = "Costas y Vida Silvestre"
+cat_canada = "Relatos Canadienses"
