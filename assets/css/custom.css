@@ -353,26 +353,26 @@ header nav li {
 }
 
 /* --- 6. SPECIAL MENU STYLING --- */
-/* Target the "Map" menu item to make it stand out */
-nav a[href="/map/"],
-#mobile-menu-overlay a[href="/map/"] {
+/* Cible le menu "Map" pour toutes les langues */
+nav a[href$="/map/"],
+#mobile-menu-overlay a[href$="/map/"] {
     color: #8b5cf6 !important;
-    /* Purple for light mode */
+    /* Violet pour le mode clair */
     font-weight: 700 !important;
     text-shadow: 0 0 8px rgba(139, 92, 246, 0.2);
 }
 
-.dark nav a[href="/map/"],
-.dark #mobile-menu-overlay a[href="/map/"] {
+.dark nav a[href$="/map/"],
+.dark #mobile-menu-overlay a[href$="/map/"] {
     color: #ec4899 !important;
-    /* Vibrant Pink for dark mode */
+    /* Rose vif pour le mode sombre */
     text-shadow: 0 0 12px rgba(236, 72, 153, 0.4);
 }
 
-nav a[href="/map/"]:hover,
-#mobile-menu-overlay a[href="/map/"]:hover {
+nav a[href$="/map/"]:hover,
+#mobile-menu-overlay a[href$="/map/"]:hover {
     color: #3b82f6 !important;
-    /* Blue on hover */
+    /* Bleu au survol */
     transform: scale(1.05);
 }
 

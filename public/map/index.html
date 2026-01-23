@@ -87,8 +87,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.d5de6d352338a5068e9ccf9a062a9322abb35c6061286d87254700306d3e7969eeba740fd8fc44b86bf4dc075b174e2482f0e96c899847071c1181aa3df857ce.css"
-    integrity="sha512-1d5tNSM4pQaOnM&#43;aBiqTIquzXGBhKG2HJUcAMG0&#43;eWnuunQP2PxEuGv03AdbF04kgvDpbImYRwccEYGqPfhXzg==">
+    href="/css/main.bundle.min.5d59bbdac183341df8d9736271c88bdac7617dee477d8b380297c3afce0dd30658cc2c4006ca63b83805acb6d4386176c380d747221211af4b21faac96d12dbd.css"
+    integrity="sha512-XVm72sGDNB342XNicciL2sdhfe5HfYs4ApfDr84N0wZYzCxABspjuDgFrLbUOGF2w4DXRyISEa9LIfqsltEtvQ==">
 
   
   
@@ -599,6 +599,23 @@
 
         <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
+            <div class="relative flex items-center h-16">
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">🇺🇸</button>
+                <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
+                    
+                    
+                    
+                    
+                    <a href="http://localhost:1313/fr/map/" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇫🇷</a>
+                    
+                    
+                    
+                    <a href="http://localhost:1313/es/map/" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇪🇸</a>
+                    
+                    
+                </div>
+            </div>
+            
 
             <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -838,6 +855,10 @@
             <div class="flex space-x-4">
                 
                 <a href="http://localhost:1313/map/" class="text-3xl">🇺🇸</a>
+                
+                <a href="http://localhost:1313/fr/map/" class="text-3xl">🇫🇷</a>
+                
+                <a href="http://localhost:1313/es/map/" class="text-3xl">🇪🇸</a>
                 
             </div>
             <div class="flex items-center space-x-4">

@@ -201,6 +201,24 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/fr/map/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/map/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/map/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/map/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/fr/gallery/montenegro/</loc>
     <xhtml:link
       rel="alternate"
