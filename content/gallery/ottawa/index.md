@@ -1,10 +1,10 @@
 ---
 title: "Ottawa"
-description: "Découvrez ma galerie photo de Ottawa. Une collection de clichés capturant l'architecture et l'ambiance de Ottawa."
+description: "Discover my photo gallery of Ottawa. A collection of shots capturing the architecture and atmosphere of Ottawa."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Witness a capital in full bloom. From the vibrant endless fields of the Canadian Tulip Festival to the scenic pathways along the Rideau Canal, explore a city where nature's bright palette perfectly complements the historic stone of Parliament Hill.
 </div>
 

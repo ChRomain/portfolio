@@ -1,10 +1,10 @@
 ---
 title: "Toronto"
-description: "Découvrez ma galerie photo de Toronto. Une collection de clichés capturant l'architecture et l'ambiance de Toronto."
+description: "Discover my photo gallery of Toronto. A collection of shots capturing the architecture and atmosphere of Toronto."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Rising above the shores of Lake Ontario, experience the vibrant pulse of Canada's largest metropolis. From the dizzying heights of the CN Tower to the bustling streets of downtown, witness a city where soaring glass towers meet a rich, multicultural heart.
 </div>
 

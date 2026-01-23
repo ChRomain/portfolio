@@ -1,10 +1,10 @@
 ---
 title: "Rome"
-description: "Découvrez ma galerie photo de Rome. Une collection de clichés capturant l'architecture et l'ambiance de Rome."
+description: "Discover my photo gallery of Rome. A collection of shots capturing the architecture and atmosphere of Rome."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Step back through two thousand years of history. From the colossal heights of the Colosseum to the moonlit elegance of the Trevi Fountain and the Pantheon, witness a city where the ancient world and modern life breathe as one.
 </div>
 

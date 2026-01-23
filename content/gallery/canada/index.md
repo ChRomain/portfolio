@@ -1,10 +1,10 @@
 ---
 title: "Canada"
-description: "Découvrez ma galerie photo de Canada. Une collection de clichés capturant l'architecture et l'ambiance de Canada."
+description: "Discover my photo gallery of Canada. A collection of shots capturing the architecture and atmosphere of Canada."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Venture into the raw, untamed heart of the Great White North. From close encounters with majestic wildlife in the frozen wilderness to emerald-green shorelines hidden deep within the forest, discover the spontaneous beauty of a land that knows no bounds.
 </div>
 

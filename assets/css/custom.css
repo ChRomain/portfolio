@@ -66,6 +66,49 @@ main {
     border: 1px solid #3f3f46 !important;
 }
 
+/* --- CORRECTIF MENU LANGUES --- */
+/* --- CORRECTIF MENU LANGUES (COULEURS ALIGNÉES) --- */
+#lang-dropdown {
+    display: none;
+    position: absolute !important;
+    top: 64px !important;
+    right: 0 !important;
+    z-index: 999999 !important;
+
+    /* On utilise les mêmes couleurs que tes autres menus */
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+/* Version Sombre */
+.dark #lang-dropdown {
+    background-color: #1a1b1c !important;
+    border: 1px solid #3f3f46 !important;
+}
+
+#lang-dropdown.flex {
+    display: flex !important;
+}
+
+/* On s'assure que les liens dans le menu langue héritent des couleurs au survol */
+#lang-dropdown a:hover {
+    background-color: #f3f4f6 !important;
+    /* gris très clair */
+}
+
+.dark #lang-dropdown a:hover {
+    background-color: #27272a !important;
+    /* gris sombre */
+}
+
+/* Reste de la config overflow inchangée */
+header,
+.container,
+nav,
+.instagram-container {
+    overflow: visible !important;
+}
+
 /* Positionnement NIVEAU 2 (Sous les Continents) */
 .sub-menu-level-2 {
     top: 100% !important;

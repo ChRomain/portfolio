@@ -1,10 +1,10 @@
 ---
 title: "Philadelphie"
-description: "Découvrez ma galerie photo de Philadelphie. Une collection de clichés capturant l'architecture et l'ambiance de Philadelphie."
+description: "Discover my photo gallery of Philadelphie. A collection of shots capturing the architecture and atmosphere of Philadelphie."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Immerse yourself in a vibrant urban mosaic where history meets bold creativity. From the intricate glass masterpieces of the Magic Gardens to the towering blue spans of the Ben Franklin Bridge, discover the colorful soul and resilient spirit of the City of Brotherly Love.
 </div>
 

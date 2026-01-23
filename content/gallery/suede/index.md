@@ -1,10 +1,10 @@
 ---
 title: "Suede"
-description: "Découvrez ma galerie photo de Suede. Une collection de clichés capturant l'architecture et l'ambiance de Suede."
+description: "Discover my photo gallery of Suede. A collection of shots capturing the architecture and atmosphere of Suede."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Step into a Nordic winter wonderland. From the glowing reindeer displays and festive city lights to the serene, frozen harbors, experience the enchanting magic of a Swedish winter where the darkness of the season is met with a warm, golden glow.
 </div>
 

@@ -1,10 +1,10 @@
 ---
 title: "Quebec"
-description: "Découvrez ma galerie photo de Quebec. Une collection de clichés capturant l'architecture et l'ambiance de Quebec."
+description: "Discover my photo gallery of Quebec. A collection of shots capturing the architecture and atmosphere of Quebec."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Step into a living fairy tale where cobblestone streets meet the majestic silhouette of the Château Frontenac. From the frost-covered ramparts to the warm glow of Petit Champlain at night, witness the romantic soul of North America’s oldest fortified city.
 </div>
 

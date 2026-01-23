@@ -1,10 +1,10 @@
 ---
 title: "New Hampshire"
-description: "Découvrez ma galerie photo de New Hampshire. Une collection de clichés capturant l'architecture et l'ambiance de New Hampshire."
+description: "Discover my photo gallery of New Hampshire. A collection of shots capturing the architecture and atmosphere of New Hampshire."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Experience the fleeting magic of the Indian Summer. From the fiery foliage of the White Mountains to the golden-hued winding roads of the Kancamagus Highway, lose yourself in a landscape painted in nature’s most vibrant autumn tones.
 </div>
 

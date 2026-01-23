@@ -1,10 +1,10 @@
 ---
 title: "Bordeaux"
-description: "Découvrez ma galerie photo de Bordeaux. Une collection de clichés capturant l'architecture et l'ambiance de Bordeaux."
+description: "Discover my photo gallery of Bordeaux. A collection of shots capturing the architecture and atmosphere of Bordeaux."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Contemplate a city where history and modernity find a perfect balance. From the golden stone of the Grosse Cloche to the futuristic curves of the Cité du Vin, embark on an odyssey through Bordeaux’s grand boulevards and its hidden, vibrant street-art sanctuaries.
 </div>
 

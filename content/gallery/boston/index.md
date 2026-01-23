@@ -1,10 +1,10 @@
 ---
 title: "Boston"
-description: "Découvrez ma galerie photo de Boston. Une collection de clichés capturant l'architecture et l'ambiance de Boston."
+description: "Discover my photo gallery of Boston. A collection of shots capturing the architecture and atmosphere of Boston."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Trace the footsteps of history along the cobblestone paths of Beacon Hill. From the grandeur of Quincy Market to the historic docks of the harbor, encounter a city where the spirit of American independence lives on through every brick and monument.
 </div>
 

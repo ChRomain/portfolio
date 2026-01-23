@@ -1,6 +1,6 @@
 ---
 title: "Montreal"
-description: "Découvrez ma galerie photo de Montreal. Une collection de clichés capturant l'architecture et l'ambiance de Montreal."
+description: "Discover my photo gallery of Montreal. A collection of shots capturing the architecture and atmosphere of Montreal."
 layout: "gallery"
 ---
 

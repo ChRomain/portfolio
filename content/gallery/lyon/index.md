@@ -1,10 +1,10 @@
 ---
 title: "Lyon"
-description: "Découvrez ma galerie photo de Lyon. Une collection de clichés capturant l'architecture et l'ambiance de Lyon."
+description: "Discover my photo gallery of Lyon. A collection of shots capturing the architecture and atmosphere of Lyon."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Traverse the layers of time in France’s gastronomic capital. From the shimmering mosaics of the Fourvière Basilica to the secret Renaissance courtyards of the Old Town, uncover a city where architectural grandeur and hidden history gracefully intertwine.
 </div>
 

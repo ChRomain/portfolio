@@ -1,10 +1,10 @@
 ---
 title: "Montenegro"
-description: "Découvrez ma galerie photo de Montenegro. Une collection de clichés capturant l'architecture et l'ambiance de Montenegro."
+description: "Discover my photo gallery of Montenegro. A collection of shots capturing the architecture and atmosphere of Montenegro."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Behold the dramatic meeting of jagged limestone peaks and crystalline waters. Navigate through the winding Bay of Kotor, where ancient stone villages cling to the shoreline beneath the watchful gaze of mountain fortresses—a true hidden gem of the Adriatic.
 </div>
 

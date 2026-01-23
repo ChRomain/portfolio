@@ -13,6 +13,7 @@ title = "Travel"
   showSearch = false
   showSocial = true
   showSocialInHeader = true
+  showLanguageSelector = true
   [params.homepage]
     layout = "card"
     showRecent = true
@@ -35,224 +36,564 @@ title = "Travel"
   name = "instagram"
   url = "https://www.instagram.com/romain.charretteur"
 
-# --- NIVEAU 1 : ACCUEIL & CONTINENTS ---
+# --- LANGUAGES CONFIGURATION ---
+defaultContentLanguage = "en"
 
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      displayName = "🇺🇸 English"
+      flag = "🇺🇸"
+    
+    # English Menu
+    [[languages.en.menu.main]]
+      name = "Map"
+      url = "/map/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "North America"
+      identifier = "menu_am_nord"
+      url = "#"
+      weight = 10
+    [[languages.en.menu.main]]
+      name = "Central America"
+      identifier = "menu_am_central"
+      url = "#"
+      weight = 20
+    [[languages.en.menu.main]]
+      name = "Asia"
+      identifier = "menu_asie"
+      url = "#"
+      weight = 30
+    [[languages.en.menu.main]]
+      name = "Europe"
+      identifier = "menu_europe"
+      url = "#"
+      weight = 40
+    # Level 2 - Countries (EN)
+    [[languages.en.menu.main]]
+      name = "Canada"
+      identifier = "menu_canada"
+      parent = "menu_am_nord"
+      url = "#"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "USA"
+      identifier = "menu_usa"
+      parent = "menu_am_nord"
+      url = "#"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "France"
+      identifier = "menu_france"
+      parent = "menu_europe"
+      url = "#"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Italy"
+      identifier = "menu_italie"
+      parent = "menu_europe"
+      url = "#"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Sweden"
+      identifier = "menu_suede"
+      parent = "menu_europe"
+      url = "/gallery/suede/"
+      weight = 4
+    # Level 3 - Cities (EN)
+    [[languages.en.menu.main]]
+      name = "Montreal"
+      parent = "menu_canada"
+      url = "/gallery/montreal/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Ottawa"
+      parent = "menu_canada"
+      url = "/gallery/ottawa/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Quebec"
+      parent = "menu_canada"
+      url = "/gallery/quebec/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "Toronto"
+      parent = "menu_canada"
+      url = "/gallery/toronto/"
+      weight = 4
+    [[languages.en.menu.main]]
+      name = "Others"
+      parent = "menu_canada"
+      url = "/gallery/canada/"
+      weight = 5
+    [[languages.en.menu.main]]
+      name = "Boston"
+      parent = "menu_usa"
+      url = "/gallery/boston/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Cape Cod"
+      parent = "menu_usa"
+      url = "/gallery/cape_cod/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Maine"
+      parent = "menu_usa"
+      url = "/gallery/maine/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "New Hampshire"
+      parent = "menu_usa"
+      url = "/gallery/new_hampshire/"
+      weight = 4
+    [[languages.en.menu.main]]
+      name = "New York"
+      parent = "menu_usa"
+      url = "/gallery/new_york/"
+      weight = 5
+    [[languages.en.menu.main]]
+      name = "Niagara Falls"
+      parent = "menu_usa"
+      url = "/gallery/niagara_falls/"
+      weight = 6
+    [[languages.en.menu.main]]
+      name = "Philadelphia"
+      parent = "menu_usa"
+      url = "/gallery/philadelphie/"
+      weight = 7
+    [[languages.en.menu.main]]
+      name = "Vermont"
+      parent = "menu_usa"
+      url = "/gallery/vermont/"
+      weight = 8
+    [[languages.en.menu.main]]
+      name = "Washington"
+      parent = "menu_usa"
+      url = "/gallery/washington/"
+      weight = 9
+    [[languages.en.menu.main]]
+      name = "Bordeaux"
+      parent = "menu_france"
+      url = "/gallery/bordeaux/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Corsica"
+      parent = "menu_france"
+      url = "/gallery/corse/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Finistere"
+      parent = "menu_france"
+      url = "/gallery/finistere/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "Lyon"
+      parent = "menu_france"
+      url = "/gallery/lyon/"
+      weight = 4
+    [[languages.en.menu.main]]
+      name = "Paris"
+      parent = "menu_france"
+      url = "/gallery/paris/"
+      weight = 5
+    [[languages.en.menu.main]]
+      name = "Naples"
+      parent = "menu_italie"
+      url = "/gallery/naples/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Rome"
+      parent = "menu_italie"
+      url = "/gallery/rome/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Guatemala"
+      parent = "menu_am_central"
+      url = "/gallery/guatemala/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Indonesia"
+      parent = "menu_asie"
+      url = "/gallery/indonesie/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Montenegro"
+      parent = "menu_europe"
+      url = "/gallery/montenegro/"
+      weight = 3
 
-[[menu.main]]
-  name = "Map"
-  url = "/map/"
-  weight = 1
+  [languages.fr]
+    languageName = "Français"
+    weight = 2
+    [languages.fr.params]
+      displayName = "🇫🇷 Français"
+      flag = "🇫🇷"
 
-[[menu.main]]
-  name = "Amérique du Nord"
-  identifier = "menu_am_nord"
-  url = "#"
-  weight = 10
+    # French Menu
+    [[languages.fr.menu.main]]
+      name = "Carte"
+      url = "/fr/map/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Amérique du Nord"
+      identifier = "menu_am_nord"
+      url = "#"
+      weight = 10
+    [[languages.fr.menu.main]]
+      name = "Amérique Centrale"
+      identifier = "menu_am_central"
+      url = "#"
+      weight = 20
+    [[languages.fr.menu.main]]
+      name = "Asie"
+      identifier = "menu_asie"
+      url = "#"
+      weight = 30
+    [[languages.fr.menu.main]]
+      name = "Europe"
+      identifier = "menu_europe"
+      url = "#"
+      weight = 40
+    # Level 2 - Pays (FR)
+    [[languages.fr.menu.main]]
+      name = "Canada"
+      identifier = "menu_canada"
+      parent = "menu_am_nord"
+      url = "#"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "États-Unis"
+      identifier = "menu_usa"
+      parent = "menu_am_nord"
+      url = "#"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "France"
+      identifier = "menu_france"
+      parent = "menu_europe"
+      url = "#"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Italie"
+      identifier = "menu_italie"
+      parent = "menu_europe"
+      url = "#"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "Suède"
+      identifier = "menu_suede"
+      parent = "menu_europe"
+      url = "/fr/gallery/suede/"
+      weight = 4
+    # Level 3 - Villes (FR)
+    [[languages.fr.menu.main]]
+      name = "Montréal"
+      parent = "menu_canada"
+      url = "/fr/gallery/montreal/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Ottawa"
+      parent = "menu_canada"
+      url = "/fr/gallery/ottawa/"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "Québec"
+      parent = "menu_canada"
+      url = "/fr/gallery/quebec/"
+      weight = 3
+    [[languages.fr.menu.main]]
+      name = "Toronto"
+      parent = "menu_canada"
+      url = "/fr/gallery/toronto/"
+      weight = 4
+    [[languages.fr.menu.main]]
+      name = "Autres"
+      parent = "menu_canada"
+      url = "/fr/gallery/canada/"
+      weight = 5
+    [[languages.fr.menu.main]]
+      name = "Boston"
+      parent = "menu_usa"
+      url = "/fr/gallery/boston/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Cape Cod"
+      parent = "menu_usa"
+      url = "/fr/gallery/cape_cod/"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "Maine"
+      parent = "menu_usa"
+      url = "/fr/gallery/maine/"
+      weight = 3
+    [[languages.fr.menu.main]]
+      name = "New Hampshire"
+      parent = "menu_usa"
+      url = "/fr/gallery/new_hampshire/"
+      weight = 4
+    [[languages.fr.menu.main]]
+      name = "New York"
+      parent = "menu_usa"
+      url = "/fr/gallery/new_york/"
+      weight = 5
+    [[languages.fr.menu.main]]
+      name = "Chutes du Niagara"
+      parent = "menu_usa"
+      url = "/fr/gallery/niagara_falls/"
+      weight = 6
+    [[languages.fr.menu.main]]
+      name = "Philadelphie"
+      parent = "menu_usa"
+      url = "/fr/gallery/philadelphie/"
+      weight = 7
+    [[languages.fr.menu.main]]
+      name = "Vermont"
+      parent = "menu_usa"
+      url = "/fr/gallery/vermont/"
+      weight = 8
+    [[languages.fr.menu.main]]
+      name = "Washington"
+      parent = "menu_usa"
+      url = "/fr/gallery/washington/"
+      weight = 9
+    [[languages.fr.menu.main]]
+      name = "Bordeaux"
+      parent = "menu_france"
+      url = "/fr/gallery/bordeaux/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Corse"
+      parent = "menu_france"
+      url = "/fr/gallery/corse/"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "Finistère"
+      parent = "menu_france"
+      url = "/fr/gallery/finistere/"
+      weight = 3
+    [[languages.fr.menu.main]]
+      name = "Lyon"
+      parent = "menu_france"
+      url = "/fr/gallery/lyon/"
+      weight = 4
+    [[languages.fr.menu.main]]
+      name = "Paris"
+      parent = "menu_france"
+      url = "/fr/gallery/paris/"
+      weight = 5
+    [[languages.fr.menu.main]]
+      name = "Naples"
+      parent = "menu_italie"
+      url = "/fr/gallery/naples/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Rome"
+      parent = "menu_italie"
+      url = "/fr/gallery/rome/"
+      weight = 2
+    [[languages.fr.menu.main]]
+      name = "Guatemala"
+      parent = "menu_am_central"
+      url = "/fr/gallery/guatemala/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Indonésie"
+      parent = "menu_asie"
+      url = "/fr/gallery/indonesie/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Monténégro"
+      parent = "menu_europe"
+      url = "/fr/gallery/montenegro/"
+      weight = 3
 
-[[menu.main]]
-  name = "Amérique Centrale"
-  identifier = "menu_am_central"
-  url = "#"
-  weight = 20
+  [languages.es]
+    languageName = "Español"
+    weight = 3
+    [languages.es.params]
+      displayName = "🇪🇸 Español"
+      flag = "🇪🇸"
 
-[[menu.main]]
-  name = "Asie"
-  identifier = "menu_asie"
-  url = "#"
-  weight = 30
-
-[[menu.main]]
-  name = "Europe"
-  identifier = "menu_europe"
-  url = "#"
-  weight = 40
-
-# --- NIVEAU 2 : PAYS ---
-[[menu.main]]
-  name = "Canada"
-  identifier = "menu_canada"
-  parent = "menu_am_nord"
-  url = "#"
-  weight = 1
-
-[[menu.main]]
-  name = "USA"
-  identifier = "menu_usa"
-  parent = "menu_am_nord"
-  url = "#"
-  weight = 2
-
-[[menu.main]]
-  name = "France"
-  identifier = "menu_france"
-  parent = "menu_europe"
-  url = "#"
-  weight = 1
-
-[[menu.main]]
-  name = "Italie"
-  identifier = "menu_italie"
-  parent = "menu_europe"
-  url = "#"
-  weight = 2
-
-[[menu.main]]
-  name = "Suède"
-  identifier = "menu_suede"
-  parent = "menu_europe"
-  url = "/gallery/suede/"
-  weight = 4
-
-# --- NIVEAU 3 : VILLES ---
-
-# CANADA
-[[menu.main]]
-  name = "Montréal"
-  parent = "menu_canada"
-  url = "/gallery/montreal/"
-  weight = 1
-
-[[menu.main]]
-  name = "Ottawa"
-  parent = "menu_canada"
-  url = "/gallery/ottawa/"
-  weight = 2
-
-[[menu.main]]
-  name = "Québec"
-  parent = "menu_canada"
-  url = "/gallery/quebec/"
-  weight = 3
-
-[[menu.main]]
-  name = "Toronto"
-  parent = "menu_canada"
-  url = "/gallery/toronto/"
-  weight = 4
-
-[[menu.main]]
-  name = "Autres"
-  parent = "menu_canada"
-  url = "/gallery/canada/"
-  weight = 5
-
-# USA
-[[menu.main]]
-  name = "Boston"
-  parent = "menu_usa"
-  url = "/gallery/boston/"
-  weight = 1
-
-[[menu.main]]
-  name = "Cape Cod"
-  parent = "menu_usa"
-  url = "/gallery/cape_cod/"
-  weight = 2
-
-[[menu.main]]
-  name = "Maine"
-  parent = "menu_usa"
-  url = "/gallery/maine/"
-  weight = 3
-
-[[menu.main]]
-  name = "New Hampshire"
-  parent = "menu_usa"
-  url = "/gallery/new_hampshire/"
-  weight = 4
-
-[[menu.main]]
-  name = "New York"
-  parent = "menu_usa"
-  url = "/gallery/new_york/"
-  weight = 5
-
-[[menu.main]]
-  name = "Niagara Falls"
-  parent = "menu_usa"
-  url = "/gallery/niagara_falls/"
-  weight = 6
-
-[[menu.main]]
-  name = "Philadelphia"
-  parent = "menu_usa"
-  url = "/gallery/philadelphie/"
-  weight = 7
-
-[[menu.main]]
-  name = "Vermont"
-  parent = "menu_usa"
-  url = "/gallery/vermont/"
-  weight = 8
-
-[[menu.main]]
-  name = "Washington"
-  parent = "menu_usa"
-  url = "/gallery/washington/"
-  weight = 9
-
-# FRANCE
-[[menu.main]]
-  name = "Bordeaux"
-  parent = "menu_france"
-  url = "/gallery/bordeaux/"
-  weight = 1
-
-[[menu.main]]
-  name = "Corse"
-  parent = "menu_france"
-  url = "/gallery/corse/"
-  weight = 2
-
-[[menu.main]]
-  name = "Finistère"
-  parent = "menu_france"
-  url = "/gallery/finistere/"
-  weight = 3
-
-[[menu.main]]
-  name = "Lyon"
-  parent = "menu_france"
-  url = "/gallery/lyon/"
-  weight = 4
-
-[[menu.main]]
-  name = "Paris"
-  parent = "menu_france"
-  url = "/gallery/paris/"
-  weight = 5
-
-# ITALIE
-[[menu.main]]
-  name = "Naples"
-  parent = "menu_italie"
-  url = "/gallery/naples/"
-  weight = 1
-
-[[menu.main]]
-  name = "Rome"
-  parent = "menu_italie"
-  url = "/gallery/rome/"
-  weight = 2
-
-# DIRECTS / AUTRES
-[[menu.main]]
-  name = "Guatemala"
-  parent = "menu_am_central"
-  url = "/gallery/guatemala/"
-  weight = 1
-
-[[menu.main]]
-  name = "Indonésie"
-  parent = "menu_asie"
-  url = "/gallery/indonesie/"
-  weight = 1
-
-[[menu.main]]
-  name = "Monténégro"
-  parent = "menu_europe"
-  url = "/gallery/montenegro/"
-  weight = 3
+    # Spanish Menu
+    [[languages.es.menu.main]]
+      name = "Mapa"
+      url = "/es/map/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "América del Norte"
+      identifier = "menu_am_nord"
+      url = "#"
+      weight = 10
+    [[languages.es.menu.main]]
+      name = "América Central"
+      identifier = "menu_am_central"
+      url = "#"
+      weight = 20
+    [[languages.es.menu.main]]
+      name = "Asia"
+      identifier = "menu_asie"
+      url = "#"
+      weight = 30
+    [[languages.es.menu.main]]
+      name = "Europa"
+      identifier = "menu_europe"
+      url = "#"
+      weight = 40
+    # Level 2 - Países (ES)
+    [[languages.es.menu.main]]
+      name = "Canadá"
+      identifier = "menu_canada"
+      parent = "menu_am_nord"
+      url = "#"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "EE. UU."
+      identifier = "menu_usa"
+      parent = "menu_am_nord"
+      url = "#"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Francia"
+      identifier = "menu_france"
+      parent = "menu_europe"
+      url = "#"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Italia"
+      identifier = "menu_italie"
+      parent = "menu_europe"
+      url = "#"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Suecia"
+      identifier = "menu_suede"
+      parent = "menu_europe"
+      url = "/es/gallery/suede/"
+      weight = 4
+    # Level 3 - Ciudades (ES)
+    [[languages.es.menu.main]]
+      name = "Montreal"
+      parent = "menu_canada"
+      url = "/es/gallery/montreal/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Ottawa"
+      parent = "menu_canada"
+      url = "/es/gallery/ottawa/"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Quebec"
+      parent = "menu_canada"
+      url = "/es/gallery/quebec/"
+      weight = 3
+    [[languages.es.menu.main]]
+      name = "Toronto"
+      parent = "menu_canada"
+      url = "/es/gallery/toronto/"
+      weight = 4
+    [[languages.es.menu.main]]
+      name = "Otros"
+      parent = "menu_canada"
+      url = "/es/gallery/canada/"
+      weight = 5
+    [[languages.es.menu.main]]
+      name = "Boston"
+      parent = "menu_usa"
+      url = "/es/gallery/boston/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Cape Cod"
+      parent = "menu_usa"
+      url = "/es/gallery/cape_cod/"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Maine"
+      parent = "menu_usa"
+      url = "/es/gallery/maine/"
+      weight = 3
+    [[languages.es.menu.main]]
+      name = "New Hampshire"
+      parent = "menu_usa"
+      url = "/es/gallery/new_hampshire/"
+      weight = 4
+    [[languages.es.menu.main]]
+      name = "Nueva York"
+      parent = "menu_usa"
+      url = "/es/gallery/new_york/"
+      weight = 5
+    [[languages.es.menu.main]]
+      name = "Cataratas del Niágara"
+      parent = "menu_usa"
+      url = "/es/gallery/niagara_falls/"
+      weight = 6
+    [[languages.es.menu.main]]
+      name = "Filadelfia"
+      parent = "menu_usa"
+      url = "/es/gallery/philadelphie/"
+      weight = 7
+    [[languages.es.menu.main]]
+      name = "Vermont"
+      parent = "menu_usa"
+      url = "/es/gallery/vermont/"
+      weight = 8
+    [[languages.es.menu.main]]
+      name = "Washington"
+      parent = "menu_usa"
+      url = "/es/gallery/washington/"
+      weight = 9
+    [[languages.es.menu.main]]
+      name = "Bordeaux"
+      parent = "menu_france"
+      url = "/es/gallery/bordeaux/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Corse"
+      parent = "menu_france"
+      url = "/es/gallery/corse/"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Finistere"
+      parent = "menu_france"
+      url = "/es/gallery/finistere/"
+      weight = 3
+    [[languages.es.menu.main]]
+      name = "Lyon"
+      parent = "menu_france"
+      url = "/es/gallery/lyon/"
+      weight = 4
+    [[languages.es.menu.main]]
+      name = "París"
+      parent = "menu_france"
+      url = "/es/gallery/paris/"
+      weight = 5
+    [[languages.es.menu.main]]
+      name = "Nápoles"
+      parent = "menu_italie"
+      url = "/es/gallery/naples/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Roma"
+      parent = "menu_italie"
+      url = "/es/gallery/rome/"
+      weight = 2
+    [[languages.es.menu.main]]
+      name = "Guatemala"
+      parent = "menu_am_central"
+      url = "/es/gallery/guatemala/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Indonesia"
+      parent = "menu_asie"
+      url = "/es/gallery/indonesie/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Montenegro"
+      parent = "menu_europe"
+      url = "/es/gallery/montenegro/"
+      weight = 3
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

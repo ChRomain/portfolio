@@ -1,10 +1,10 @@
 ---
 title: "Paris"
-description: "Découvrez ma galerie photo de Paris. Une collection de clichés capturant l'architecture et l'ambiance de Paris."
+description: "Discover my photo gallery of Paris. A collection of shots capturing the architecture and atmosphere of Paris."
 layout: "gallery"
 ---
 
-<div class="gallery-description text-center max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
+<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Experience the timeless allure of the City of Light. From the sparkling iron lattice of the Eiffel Tower at night to the bohemian glow of Montmartre and the red velvet charm of the Moulin Rouge, witness a city that never loses its romantic spark.
 </div>
 

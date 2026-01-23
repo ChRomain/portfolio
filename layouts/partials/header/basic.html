@@ -1,317 +1,220 @@
-<div class="container flex items-center justify-between mx-auto px-6 h-16 relative z-[100]">
-  <div class="flex items-center">
-    <a href="{{ .Site.BaseURL }}" class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-        class="mr-2 site-logo-icon">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-        <path d="M2 12h20" />
-      </svg>
-      {{ .Site.Title }}
-    </a>
-  </div>
-
-  <nav class="hidden md:flex items-center">
-    <ul class="main-nav-list flex items-center list-none m-0 p-0">
-      {{ range .Site.Menus.main }}
-      <li class="relative group flex items-center">
-        <a href="{{ .URL }}"
-          class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-medium text-neutral-800 dark:text-neutral hover:text-primary-500 py-4 px-3 flex items-center transition-colors">
-          {{ .Name }}
-          {{ if .HasChildren }}<span class="ml-1 text-[10px] opacity-50">▼</span>{{ end }}
-        </a>
-
-        {{ if .HasChildren }}
-        <ul
-          class="sub-menu-level-2 absolute left-0 top-full invisible opacity-0 group-hover:visible group-hover:opacity-100 bg-white dark:bg-[#1a1b1c] border border-neutral-200 dark:border-neutral-700 shadow-xl z-50 rounded-md py-2 transition-all duration-200 list-none m-0">
-          {{ range .Children }}
-          <li class="relative group/sub list-none">
-            <a href="{{ .URL }}"
-              class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 flex items-center justify-between whitespace-nowrap">
-              <span>{{ .Name }}</span>
-              {{ if .HasChildren }}<span class="ml-4 text-[10px]">▶</span>{{ end }}
-            </a>
-
-            {{ if .HasChildren }}
-            <ul
-              class="sub-menu-level-3 absolute invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 left-full top-0 ml-px bg-white dark:bg-[#1a1b1c] border border-neutral-200 dark:border-neutral-700 shadow-xl rounded-md py-2 transition-all duration-200 list-none m-0">
-              {{ range .Children }}
-              <li class="list-none">
-                <a href="{{ .URL }}"
-                  class="block px-6 py-2 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 whitespace-nowrap">
-                  {{ .Name }}
-                </a>
-              </li>
-              {{ end }}
-            </ul>
-            {{ end }}
-          </li>
-          {{ end }}
-        </ul>
-        {{ end }}
-      </li>
-      {{ end }}
-    </ul>
-
-    <div
-      class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4">
-      <button id="theme-button"
-        class="theme-toggle-btn text-neutral-400 hover:text-primary-500 transition-colors focus:outline-none flex items-center justify-center">
-        <svg id="sun-icon" class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg id="moon-icon" class="block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
-
-      <a href="https://www.instagram.com/romain.charretteur" target="_blank"
-        class="insta-icon-link text-neutral-400 hover:text-pink-500 transition-colors ml-4">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      </a>
+<div id="scroll-progress-container"
+     style="position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 2147483647; pointer-events: none;">
+    <div id="scroll-progress-bar"
+         style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); transition: width 0.1s ease-out;">
     </div>
-  </nav>
-
-  <!-- Mobile Hamburger Button -->
-  <div class="flex items-center md:hidden">
-    <button id="mobile-menu-button"
-      class="text-neutral-800 dark:text-neutral hover:text-primary-500 transition-colors focus:outline-none p-2"
-      aria-label="Toggle Menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
-  </div>
 </div>
 
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay"
-  class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[100000] transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto">
-  <div class="flex flex-col h-full">
-    <div class="flex items-center justify-between px-6 h-16 border-b border-neutral-200 dark:border-neutral-800">
-      <a href="{{ .Site.BaseURL }}" class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="mr-2 site-logo-icon">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-          <path d="M2 12h20" />
-        </svg>
-        {{ .Site.Title }}
-      </a>
-      <button id="close-mobile-menu" class="text-neutral-800 dark:text-neutral p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
+<div class="container flex items-center justify-between mx-auto px-6 h-16 relative z-[100]">
+    <div class="flex items-center">
+        <a href="{{ .Site.Home.RelPermalink }}"
+           class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="mr-2 site-logo-icon">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+            </svg>
+            {{ .Site.Title }}
+        </a>
     </div>
 
-    <div class="flex-grow overflow-y-auto px-6 py-8">
-      <ul class="flex flex-col space-y-4 list-none m-0 p-0 text-left">
-        {{ range .Site.Menus.main }}
-        <li class="mobile-nav-item list-none">
-          <div
-            class="mobile-nav-row flex items-center justify-between border-b border-neutral-100 dark:border-neutral-800/50 cursor-pointer">
-            <a href="{{ .URL }}"
-              class="{{ if .HasChildren }}non-clickable{{ end }} text-lg font-bold text-neutral-800 dark:text-neutral-100 hover:text-primary-500 transition-colors py-3 flex-grow">
-              {{ .Name }}
-            </a>
-            {{ if .HasChildren }}
-            <button class="mobile-submenu-toggle p-4 text-neutral-500 focus:outline-none" aria-label="Toggle Submenu">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="transition-transform duration-200 pointer-events-none">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            {{ end }}
-          </div>
-
-          {{ if .HasChildren }}
-          <ul
-            class="mobile-submenu hidden flex flex-col space-y-1 mt-2 pl-4 list-none border-l-2 border-neutral-100 dark:border-neutral-800">
-            {{ range .Children }}
-            <li class="mobile-nav-item list-none">
-              <div class="mobile-nav-row flex items-center justify-between cursor-pointer">
-                <a href="{{ .URL }}"
-                  class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-500 transition-colors py-2 flex-grow">
-                  {{ .Name }}
-                </a>
-                {{ if .HasChildren }}
-                <button class="mobile-submenu-toggle p-3 text-neutral-500 focus:outline-none"
-                  aria-label="Toggle Submenu">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="transition-transform duration-200 pointer-events-none">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                {{ end }}
-              </div>
-
-              {{ if .HasChildren }}
-              <ul
-                class="mobile-submenu hidden flex flex-col space-y-1 mt-1 pl-4 list-none border-l-2 border-neutral-50 dark:border-neutral-900">
-                {{ range .Children }}
-                <li class="list-none">
-                  <a href="{{ .URL }}"
-                    class="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-500 transition-colors py-1 block">
+    <nav class="hidden md:flex items-center">
+        <ul class="main-nav-list flex items-center list-none m-0 p-0">
+            {{ range .Site.Menus.main }}
+            <li class="relative group flex items-center">
+                <a href="{{ .URL | relLangURL }}"
+                   class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-500 py-4 px-3 flex items-center transition-colors">
                     {{ .Name }}
-                  </a>
-                </li>
+                    {{ if .HasChildren }}<span class="ml-1 text-[10px] opacity-50">▼</span>{{ end }}
+                </a>
+
+                {{ if .HasChildren }}
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                    {{ range .Children }}
+                    <li class="relative group/sub list-none">
+                        <a href="{{ .URL | relLangURL }}"
+                           class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 flex items-center justify-between whitespace-nowrap">
+                            <span>{{ .Name }}</span>
+                            {{ if .HasChildren }}<span class="ml-4 text-[10px]">▶</span>{{ end }}
+                        </a>
+
+                        {{ if .HasChildren }}
+                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                            {{ range .Children }}
+                            <li class="list-none">
+                                <a href="{{ .URL | relLangURL }}"
+                                   class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 whitespace-nowrap">
+                                    {{ .Name }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </li>
+                    {{ end }}
+                </ul>
                 {{ end }}
-              </ul>
-              {{ end }}
             </li>
             {{ end }}
-          </ul>
-          {{ end }}
-        </li>
-        {{ end }}
-      </ul>
-    </div>
+        </ul>
 
-    <div class="px-6 py-8 border-t border-neutral-200 dark:border-neutral-800 flex justify-center space-x-8">
-      <!-- Replicate theme toggle and insta for mobile menu -->
-      <button id="mobile-theme-button"
-        class="text-neutral-400 hover:text-primary-500 transition-colors focus:outline-none flex items-center justify-center">
-        <svg class="sun-icon hidden dark:block" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon-icon block dark:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
+        <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
+            {{ if .IsTranslated }}
+            <div class="relative flex items-center h-16">
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">{{ .Site.Language.Params.flag }}</button>
+                <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
+                    {{ range .AllTranslations }}
+                    {{ if ne .Language.Lang $.Site.Language.Lang }}
+                    <a href="{{ .Permalink }}" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">{{ .Language.Params.flag }}</a>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
 
-      <a href="https://www.instagram.com/romain.charretteur" target="_blank"
-        class="text-neutral-400 hover:text-pink-500 transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      </a>
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
+                <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="p-2 text-neutral-400 hover:text-pink-500">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="flex items-center md:hidden">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
     </div>
-  </div>
 </div>
 
-</div>
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
+    <div class="flex justify-between items-center mb-8">
+        <span class="text-xl font-bold dark:text-white">{{ .Site.Title }}</span>
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
 
-<div id="scroll-progress-container"
-  style="position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 2147483647; pointer-events: none;">
-  <div id="scroll-progress-bar"
-    style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); transition: width 0.1s ease-out;">
-  </div>
+    <nav class="flex-grow">
+        <ul class="flex flex-col space-y-6 list-none p-0">
+            {{ range .Site.Menus.main }}
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="{{ .URL | relLangURL }}" class="text-2xl font-semibold dark:text-white">{{ .Name }}</a>
+                    {{ if .HasChildren }}
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    {{ end }}
+                </div>
+                {{ if .HasChildren }}
+                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
+                    {{ range .Children }}
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="{{ .URL | relLangURL }}" class="text-lg text-neutral-600 dark:text-neutral-400">{{ .Name }}</a>
+                            {{ if .HasChildren }}
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            {{ end }}
+                        </div>
+                        {{ if .HasChildren }}
+                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                            {{ range .Children }}
+                            <li><a href="{{ .URL | relLangURL }}" class="text-base text-neutral-500">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+
+    <div class="mt-auto pt-8 border-t border-neutral-200 dark:border-neutral-800">
+        <div class="flex items-center justify-between">
+            <div class="flex space-x-4">
+                {{ range .AllTranslations }}
+                <a href="{{ .Permalink }}" class="text-3xl">{{ .Language.Params.flag }}</a>
+                {{ end }}
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300">
+                    <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+                    <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-pink-500">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
-  (function () {
-    // Theme toggle logic
-    const themeButtons = document.querySelectorAll('#theme-button, #mobile-theme-button');
-    themeButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('appearance', isDark ? 'dark' : 'light');
-      });
-    });
+    (function () {
+        // 1. THEME TOGGLE (Desktop & Mobile)
+        const toggleTheme = () => {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('appearance', isDark ? 'dark' : 'light');
+        };
+        document.getElementById('theme-button')?.addEventListener('click', toggleTheme);
+        document.getElementById('theme-button-mobile')?.addEventListener('click', toggleTheme);
 
-    // Mobile Menu Logic
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const closeMobileMenu = document.getElementById('close-mobile-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        // 2. LANG DROPDOWN (Desktop Fix)
+        window.toggleLangMenu = function (e) {
+            e.stopPropagation();
+            const dropdown = document.getElementById('lang-dropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('hidden');
+                dropdown.classList.toggle('flex'); // Force l'affichage flex pour le dropdown
+            }
+        };
 
-    if (mobileMenuButton && mobileMenuOverlay) {
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenuOverlay.classList.remove('translate-x-full');
-        document.body.style.overflow = 'hidden'; // Prevent scroll
-      });
-    }
+        // Fermer le dropdown langues si on clique ailleurs
+        document.addEventListener('click', (e) => {
+            const dropdown = document.getElementById('lang-dropdown');
+            if (dropdown && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+                dropdown.classList.remove('flex');
+            }
+        });
 
-    if (closeMobileMenu && mobileMenuOverlay) {
-      closeMobileMenu.addEventListener('click', () => {
-        mobileMenuOverlay.classList.add('translate-x-full');
-        document.body.style.overflow = ''; // Restore scroll
-      });
-    }
+        // 3. SCROLL PROGRESS
+        const progressBar = document.getElementById('scroll-progress-bar');
+        window.addEventListener('scroll', () => {
+            if (!progressBar) return;
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            progressBar.style.width = scrollPercent + '%';
+        });
 
-    // Mobile Accordion Logic
-    const navRows = mobileMenuOverlay?.querySelectorAll('.mobile-nav-row');
-    navRows?.forEach(row => {
-      row.addEventListener('click', (e) => {
-        const toggle = row.querySelector('.mobile-submenu-toggle');
-        if (!toggle) return; // Not a category
+        // 4. MOBILE MENU OVERLAY
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
 
-        e.preventDefault();
-        e.stopPropagation();
+        mobileBtn?.addEventListener('click', () => {
+            overlay?.classList.remove('hidden');
+            overlay?.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
 
-        const navItem = row.closest('.mobile-nav-item');
-        const submenu = navItem?.querySelector(':scope > .mobile-submenu');
-        const icon = toggle.querySelector('svg');
-
-        if (submenu) {
-          const isHidden = submenu.classList.contains('hidden');
-          submenu.classList.toggle('hidden');
-          if (icon) {
-            icon.style.transform = isHidden ? 'rotate(180deg)' : '';
-          }
-        }
-      });
-    });
-
-    // Close mobile menu on link click (only for actual links, not parents with submenus)
-    const mobileLinks = mobileMenuOverlay?.querySelectorAll('a:not(.non-clickable)');
-    mobileLinks?.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuOverlay.classList.add('translate-x-full');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Scroll Progress Logic
-    const progressBar = document.getElementById('scroll-progress-bar');
-    if (progressBar) {
-      window.addEventListener('scroll', () => {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
-        progressBar.style.width = scrollPercent + '%';
-      });
-    }
-  })();
+        closeBtn?.addEventListener('click', () => {
+            overlay?.classList.add('hidden');
+            overlay?.classList.remove('flex');
+            document.body.style.overflow = '';
+        });
+    })();
 </script>
