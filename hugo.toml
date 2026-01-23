@@ -52,16 +52,28 @@ defaultContentLanguage = "en"
       name = "Map"
       url = "/map/"
       weight = 1
+
+    # Level 1 - Americas
+    [[languages.en.menu.main]]
+      name = "Americas"
+      identifier = "menu_americas"
+      url = "#"
+      weight = 10
+
+    # Level 2 - Regions (Under Americas)
     [[languages.en.menu.main]]
       name = "North America"
       identifier = "menu_am_nord"
+      parent = "menu_americas"
       url = "#"
-      weight = 10
+      weight = 1
     [[languages.en.menu.main]]
       name = "Central America"
       identifier = "menu_am_central"
+      parent = "menu_americas"
       url = "#"
-      weight = 20
+      weight = 2
+
     [[languages.en.menu.main]]
       name = "Asia"
       identifier = "menu_asie"
@@ -72,7 +84,8 @@ defaultContentLanguage = "en"
       identifier = "menu_europe"
       url = "#"
       weight = 40
-    # Level 2 - Countries (EN)
+
+    # Level 3 - Countries (Under Regions)
     [[languages.en.menu.main]]
       name = "Canada"
       identifier = "menu_canada"
@@ -103,7 +116,23 @@ defaultContentLanguage = "en"
       parent = "menu_europe"
       url = "/gallery/suede/"
       weight = 4
-    # Level 3 - Cities (EN)
+    [[languages.en.menu.main]]
+      name = "Guatemala"
+      parent = "menu_am_central"
+      url = "/gallery/guatemala/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Indonesia"
+      parent = "menu_asie"
+      url = "/gallery/indonesie/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Montenegro"
+      parent = "menu_europe"
+      url = "/gallery/montenegro/"
+      weight = 3
+
+    # Level 4 - Cities
     [[languages.en.menu.main]]
       name = "Montreal"
       parent = "menu_canada"
@@ -209,21 +238,6 @@ defaultContentLanguage = "en"
       parent = "menu_italie"
       url = "/gallery/rome/"
       weight = 2
-    [[languages.en.menu.main]]
-      name = "Guatemala"
-      parent = "menu_am_central"
-      url = "/gallery/guatemala/"
-      weight = 1
-    [[languages.en.menu.main]]
-      name = "Indonesia"
-      parent = "menu_asie"
-      url = "/gallery/indonesie/"
-      weight = 1
-    [[languages.en.menu.main]]
-      name = "Montenegro"
-      parent = "menu_europe"
-      url = "/gallery/montenegro/"
-      weight = 3
 
   [languages.fr]
     languageName = "Français"
@@ -237,16 +251,28 @@ defaultContentLanguage = "en"
       name = "Carte"
       url = "/fr/map/"
       weight = 1
+
+    # Niveau 1 - Amériques
+    [[languages.fr.menu.main]]
+      name = "Amériques"
+      identifier = "menu_americas"
+      url = "#"
+      weight = 10
+
+    # Niveau 2 - Régions
     [[languages.fr.menu.main]]
       name = "Amérique du Nord"
       identifier = "menu_am_nord"
+      parent = "menu_americas"
       url = "#"
-      weight = 10
+      weight = 1
     [[languages.fr.menu.main]]
       name = "Amérique Centrale"
       identifier = "menu_am_central"
+      parent = "menu_americas"
       url = "#"
-      weight = 20
+      weight = 2
+
     [[languages.fr.menu.main]]
       name = "Asie"
       identifier = "menu_asie"
@@ -257,7 +283,8 @@ defaultContentLanguage = "en"
       identifier = "menu_europe"
       url = "#"
       weight = 40
-    # Level 2 - Pays (FR)
+
+    # Niveau 3 - Pays
     [[languages.fr.menu.main]]
       name = "Canada"
       identifier = "menu_canada"
@@ -288,7 +315,23 @@ defaultContentLanguage = "en"
       parent = "menu_europe"
       url = "/fr/gallery/suede/"
       weight = 4
-    # Level 3 - Villes (FR)
+    [[languages.fr.menu.main]]
+      name = "Guatemala"
+      parent = "menu_am_central"
+      url = "/fr/gallery/guatemala/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Indonésie"
+      parent = "menu_asie"
+      url = "/fr/gallery/indonesie/"
+      weight = 1
+    [[languages.fr.menu.main]]
+      name = "Monténégro"
+      parent = "menu_europe"
+      url = "/fr/gallery/montenegro/"
+      weight = 3
+
+    # Niveau 4 - Villes
     [[languages.fr.menu.main]]
       name = "Montréal"
       parent = "menu_canada"
@@ -394,21 +437,6 @@ defaultContentLanguage = "en"
       parent = "menu_italie"
       url = "/fr/gallery/rome/"
       weight = 2
-    [[languages.fr.menu.main]]
-      name = "Guatemala"
-      parent = "menu_am_central"
-      url = "/fr/gallery/guatemala/"
-      weight = 1
-    [[languages.fr.menu.main]]
-      name = "Indonésie"
-      parent = "menu_asie"
-      url = "/fr/gallery/indonesie/"
-      weight = 1
-    [[languages.fr.menu.main]]
-      name = "Monténégro"
-      parent = "menu_europe"
-      url = "/fr/gallery/montenegro/"
-      weight = 3
 
   [languages.es]
     languageName = "Español"
@@ -422,16 +450,28 @@ defaultContentLanguage = "en"
       name = "Mapa"
       url = "/es/map/"
       weight = 1
+
+    # Nivel 1 - Américas
+    [[languages.es.menu.main]]
+      name = "Américas"
+      identifier = "menu_americas"
+      url = "#"
+      weight = 10
+
+    # Nivel 2 - Regiones
     [[languages.es.menu.main]]
       name = "América del Norte"
       identifier = "menu_am_nord"
+      parent = "menu_americas"
       url = "#"
-      weight = 10
+      weight = 1
     [[languages.es.menu.main]]
       name = "América Central"
       identifier = "menu_am_central"
+      parent = "menu_americas"
       url = "#"
-      weight = 20
+      weight = 2
+
     [[languages.es.menu.main]]
       name = "Asia"
       identifier = "menu_asie"
@@ -442,7 +482,8 @@ defaultContentLanguage = "en"
       identifier = "menu_europe"
       url = "#"
       weight = 40
-    # Level 2 - Países (ES)
+
+    # Nivel 3 - Países
     [[languages.es.menu.main]]
       name = "Canadá"
       identifier = "menu_canada"
@@ -473,7 +514,23 @@ defaultContentLanguage = "en"
       parent = "menu_europe"
       url = "/es/gallery/suede/"
       weight = 4
-    # Level 3 - Ciudades (ES)
+    [[languages.es.menu.main]]
+      name = "Guatemala"
+      parent = "menu_am_central"
+      url = "/es/gallery/guatemala/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Indonesia"
+      parent = "menu_asie"
+      url = "/es/gallery/indonesie/"
+      weight = 1
+    [[languages.es.menu.main]]
+      name = "Montenegro"
+      parent = "menu_europe"
+      url = "/es/gallery/montenegro/"
+      weight = 3
+
+    # Nivel 4 - Ciudades
     [[languages.es.menu.main]]
       name = "Montreal"
       parent = "menu_canada"
@@ -579,21 +636,7 @@ defaultContentLanguage = "en"
       parent = "menu_italie"
       url = "/es/gallery/rome/"
       weight = 2
-    [[languages.es.menu.main]]
-      name = "Guatemala"
-      parent = "menu_am_central"
-      url = "/es/gallery/guatemala/"
-      weight = 1
-    [[languages.es.menu.main]]
-      name = "Indonesia"
-      parent = "menu_asie"
-      url = "/es/gallery/indonesie/"
-      weight = 1
-    [[languages.es.menu.main]]
-      name = "Montenegro"
-      parent = "menu_europe"
-      url = "/es/gallery/montenegro/"
-      weight = 3
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

@@ -27,7 +27,7 @@
                 <a href="{{ .URL | relLangURL }}"
                    class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-500 py-4 px-3 flex items-center transition-colors">
                     {{ .Name }}
-                    {{ if .HasChildren }}<span class="ml-1 text-[10px] opacity-50">▼</span>{{ end }}
+                    {{ if .HasChildren }}<span class="ml-3 text-[10px] opacity-50">▼</span>{{ end }}
                 </a>
 
                 {{ if .HasChildren }}
@@ -43,11 +43,25 @@
                         {{ if .HasChildren }}
                         <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                             {{ range .Children }}
-                            <li class="list-none">
+                            <li class="relative group/subsub list-none">
                                 <a href="{{ .URL | relLangURL }}"
-                                   class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 whitespace-nowrap">
-                                    {{ .Name }}
+                                   class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 flex items-center justify-between whitespace-nowrap">
+                                    <span>{{ .Name }}</span>
+                                    {{ if .HasChildren }}<span class="ml-4 text-[10px]">▶</span>{{ end }}
                                 </a>
+
+                                {{ if .HasChildren }}
+                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                                    {{ range .Children }}
+                                    <li class="list-none">
+                                        <a href="{{ .URL | relLangURL }}"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 whitespace-nowrap">
+                                            {{ .Name }}
+                                        </a>
+                                    </li>
+                                    {{ end }}
+                                </ul>
+                                {{ end }}
                             </li>
                             {{ end }}
                         </ul>
@@ -130,7 +144,21 @@
                         {{ if .HasChildren }}
                         <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
                             {{ range .Children }}
-                            <li><a href="{{ .URL | relLangURL }}" class="text-base text-neutral-500">{{ .Name }}</a></li>
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="{{ .URL | relLangURL }}" class="text-base text-neutral-500">{{ .Name }}</a>
+                                    {{ if .HasChildren }}
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    {{ end }}
+                                </div>
+                                {{ if .HasChildren }}
+                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                                    {{ range .Children }}
+                                    <li><a href="{{ .URL | relLangURL }}" class="text-sm text-neutral-400 py-1 block">{{ .Name }}</a></li>
+                                    {{ end }}
+                                </ul>
+                                {{ end }}
+                            </li>
                             {{ end }}
                         </ul>
                         {{ end }}
@@ -165,7 +193,6 @@
 
 <script>
     (function () {
-        // 1. THEME TOGGLE (Desktop & Mobile)
         const toggleTheme = () => {
             const isDark = document.documentElement.classList.toggle('dark');
             localStorage.setItem('appearance', isDark ? 'dark' : 'light');
@@ -173,17 +200,15 @@
         document.getElementById('theme-button')?.addEventListener('click', toggleTheme);
         document.getElementById('theme-button-mobile')?.addEventListener('click', toggleTheme);
 
-        // 2. LANG DROPDOWN (Desktop Fix)
         window.toggleLangMenu = function (e) {
             e.stopPropagation();
             const dropdown = document.getElementById('lang-dropdown');
             if (dropdown) {
                 dropdown.classList.toggle('hidden');
-                dropdown.classList.toggle('flex'); // Force l'affichage flex pour le dropdown
+                dropdown.classList.toggle('flex');
             }
         };
 
-        // Fermer le dropdown langues si on clique ailleurs
         document.addEventListener('click', (e) => {
             const dropdown = document.getElementById('lang-dropdown');
             if (dropdown && !dropdown.contains(e.target)) {
@@ -192,7 +217,6 @@
             }
         });
 
-        // 3. SCROLL PROGRESS
         const progressBar = document.getElementById('scroll-progress-bar');
         window.addEventListener('scroll', () => {
             if (!progressBar) return;
@@ -200,7 +224,6 @@
             progressBar.style.width = scrollPercent + '%';
         });
 
-        // 4. MOBILE MENU OVERLAY
         const mobileBtn = document.getElementById('mobile-menu-button');
         const closeBtn = document.getElementById('close-mobile-menu');
         const overlay = document.getElementById('mobile-menu-overlay');
