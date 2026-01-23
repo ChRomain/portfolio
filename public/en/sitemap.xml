@@ -489,6 +489,9 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/videos/</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/gallery/washington/</loc>
     <xhtml:link
       rel="alternate"

@@ -53,6 +53,11 @@ defaultContentLanguage = "en"
       url = "/map/"
       weight = 1
 
+    [[languages.en.menu.main]]
+      name = "Videos"
+      url = "/videos/"
+      weight = 5
+
     # Level 1 - Americas
     [[languages.en.menu.main]]
       name = "Americas"
@@ -252,6 +257,11 @@ defaultContentLanguage = "en"
       url = "/fr/map/"
       weight = 1
 
+    [[languages.fr.menu.main]]
+      name = "Vidéos"
+      url = "/fr/videos/"
+      weight = 5
+
     # Niveau 1 - Amériques
     [[languages.fr.menu.main]]
       name = "Amériques"
@@ -450,6 +460,11 @@ defaultContentLanguage = "en"
       name = "Mapa"
       url = "/es/map/"
       weight = 1
+
+    [[languages.es.menu.main]]
+      name = "Videos"
+      url = "/es/videos/"
+      weight = 5
 
     # Nivel 1 - Américas
     [[languages.es.menu.main]]
