@@ -108,6 +108,30 @@ main {
     opacity: 1 !important;
 }
 
+@media (max-width: 768px) {
+    .video-item {
+        /* Empêche le clic d'ouvrir la lightbox ou le lecteur natif */
+        pointer-events: none !important;
+
+        /* Optionnel : retire les effets de transformation 3D qui 
+           peuvent être lourds pour le processeur mobile au scroll */
+        transform: none !important;
+    }
+
+    .video-element {
+        /* Cache les contrôles sur mobile car ils ne seraient pas cliquables */
+        appearance: none;
+    }
+}
+
+/* --- Activation uniquement sur PC --- */
+@media (min-width: 769px) {
+    .video-item {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
+
 /* --- CORRECTIF MENU LANGUES --- */
 /* --- CORRECTIF MENU LANGUES (COULEURS ALIGNÉES) --- */
 #lang-dropdown {
