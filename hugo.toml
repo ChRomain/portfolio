@@ -65,7 +65,7 @@ defaultContentLanguage = "en"
       url = "#"
       weight = 10
 
-    # Level 2 - Regions (Under Americas)
+    # Level 2 - Regions
     [[languages.en.menu.main]]
       name = "North America"
       identifier = "menu_am_nord"
@@ -90,7 +90,7 @@ defaultContentLanguage = "en"
       url = "#"
       weight = 40
 
-    # Level 3 - Countries (Under Regions)
+    # Level 3 - Countries
     [[languages.en.menu.main]]
       name = "Canada"
       identifier = "menu_canada"
@@ -243,6 +243,12 @@ defaultContentLanguage = "en"
       parent = "menu_italie"
       url = "/gallery/rome/"
       weight = 2
+
+    # LAST ELEMENT - About
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/about/"
+      weight = 100
 
   [languages.fr]
     languageName = "Français"
@@ -448,6 +454,12 @@ defaultContentLanguage = "en"
       url = "/fr/gallery/rome/"
       weight = 2
 
+    # DERNIER ÉLÉMENT - A Propos
+    [[languages.fr.menu.main]]
+      name = "À Propos"
+      url = "/fr/about/"
+      weight = 100
+
   [languages.es]
     languageName = "Español"
     weight = 3
@@ -537,7 +549,7 @@ defaultContentLanguage = "en"
     [[languages.es.menu.main]]
       name = "Indonesia"
       parent = "menu_asie"
-      url = "/es/gallery/indonesie/"
+      url = "/es/gallery/indonésie/"
       weight = 1
     [[languages.es.menu.main]]
       name = "Montenegro"
@@ -651,6 +663,12 @@ defaultContentLanguage = "en"
       parent = "menu_italie"
       url = "/es/gallery/rome/"
       weight = 2
+
+    # ÚLTIMO ELEMENTO - Sobre mí
+    [[languages.es.menu.main]]
+      name = "Sobre mí"
+      url = "/es/about/"
+      weight = 100
 
 [markup]
   [markup.goldmark]
