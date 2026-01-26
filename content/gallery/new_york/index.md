@@ -9,6 +9,10 @@ layout: "gallery"
 </div>
 
 {{< gallery >}}
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-06%2023-47-51.mp4" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-08%2012-20-58.mov" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-06-23%2013-16-26.mov" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-06%2000-27-10.mov" type="video/mp4"></video>
   <img src="/gallery/new_york/new_york_001.webp" alt="Photographie de New York - 1" title="Canon EOS Rebel T100 | f/5.6 | 1/60s | ISO 160" width="2000" height="3000" />
   <img src="/gallery/new_york/new_york_002.webp" alt="Photographie de New York - 2" title="Canon EOS Rebel T100 | f/5.6 | 1/500s | ISO 100" width="2000" height="3000" />
   <img src="/gallery/new_york/new_york_003.webp" alt="Photographie de New York - 3" title="Canon EOS Rebel T100 | f/5.6 | 1/640s | ISO 100" width="2000" height="3000" />

@@ -5,10 +5,13 @@ layout: "gallery"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
-&nbsp;&nbsp;&nbsp;&nbsp;Contempla la majestuosidad cruda del 'Fin de la Tierra'. Desde los faros legendarios de Saint-Mathieu que custodian los acantilados escarpados hasta las aguas turquesas de calas ocultas, embárcate en un viaje visual a través de la costa indómita de Bretaña, donde el Atlántico se encuentra con el alma de la tierra.
+&nbsp;&nbsp;&nbsp;&nbsp;Contempla la majestuosidad cruda del 'Fin de la Tierra'. Desde los faros legendarios de Saint-Mathieu que custodian los acantilados escarpados hasta las aguas turquesas de calas ocultas, embárcate en un voyage visual a través de la costa indómita de Bretaña, donde el Atlántico se encuentra con el alma de la tierra.
 </div>
 
 {{< gallery >}}
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-05-21%2017-30-11.mov" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-19%2014-54-12.mp4" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-19%2014-53-02.mp4" type="video/mp4"></video>
   <img src="/gallery/finistere/finistere_001.webp" alt="Photographie de Finistere - 1" title="iPhone 15 | f/1.6 | 1/9s | ISO 1000" width="2000" height="2666" />
   <img src="/gallery/finistere/finistere_002.webp" alt="Photographie de Finistere - 2" title="FC3682 | f/1.7 | 1/1000s | ISO 100" width="2000" height="3555" />
   <img src="/gallery/finistere/finistere_003.webp" alt="Photographie de Finistere - 3" title="FC3682 | f/1.7 | 1/640s | ISO 100" width="2000" height="3555" />

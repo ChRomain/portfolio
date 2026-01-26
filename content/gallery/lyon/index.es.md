@@ -5,7 +5,7 @@ layout: "gallery"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
-&nbsp;&nbsp;&nbsp;&nbsp;Atraviesa las capas del tiempo en la capital gastronómica de Francia. Desde los mosaicos brillantes de la Basílica de Fourvière hasta los patios secretos del Renacimiento en el casco antiguo, descubre una ciudad donde la grandeza arquitectónica y la historia oculta se entrelazan con gracia.
+&nbsp;&nbsp;&nbsp;&nbsp;Atraviesa las capas del tiempo en la capital gastronomique de Francia. Desde los mosaicos brillantes de la Basílica de Fourvière hasta los patios secretos del Renacimiento en el casco antiguo, descubre una ciudad donde la grandeur architecturale et l'histoire cachée s'entremêlent gracieusement.
 </div>
 
 {{< gallery >}}

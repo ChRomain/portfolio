@@ -5,7 +5,7 @@ layout: "gallery"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
-&nbsp;&nbsp;&nbsp;&nbsp;Sigue los pasos de la historia a lo largo de los caminos empedrados de Beacon Hill. Desde la grandeza del Quincy Market hasta los muelles históricos del puerto, encuentra una ciudad donde el espíritu de la independencia estadounidense perdura a través de cada ladrillo y monumento.
+&nbsp;&nbsp;&nbsp;&nbsp;Sigue los pasos de la historia a lo largo de los caminos empedrados de Beacon Hill. Desde la grandeur del Quincy Market hasta los muelles históricos del puerto, encuentra una ciudad donde el espíritu de la independencia estadounidense perdura a través de cada ladrillo y monumento.
 </div>
 
 {{< gallery >}}

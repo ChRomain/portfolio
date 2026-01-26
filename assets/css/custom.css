@@ -101,9 +101,9 @@ main {
 }
 
 /* Affichage au survol */
-.group:hover > .sub-menu-level-2,
-.group\/sub:hover > .sub-menu-level-3,
-.group\/subsub:hover > .sub-menu-level-4 {
+.group:hover>.sub-menu-level-2,
+.group\/sub:hover>.sub-menu-level-3,
+.group\/subsub:hover>.sub-menu-level-4 {
     visibility: visible !important;
     opacity: 1 !important;
 }

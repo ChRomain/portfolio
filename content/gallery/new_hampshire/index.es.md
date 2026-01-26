@@ -9,6 +9,7 @@ layout: "gallery"
 </div>
 
 {{< gallery >}}
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-06%2011-54-14.mov" type="video/mp4"></video>
   <img src="/gallery/new_hampshire/new_hampshire_001.webp" alt="Photographie de New Hampshire - 1" title="ILCE-6700 | f/5.6 | 1/250s | ISO 320" width="2000" height="3000" />
   <img src="/gallery/new_hampshire/new_hampshire_002.webp" alt="Photographie de New Hampshire - 2" title="ILCE-6700 | f/5.6 | 1/250s | ISO 100" width="2000" height="3555" />
   <img src="/gallery/new_hampshire/new_hampshire_003.webp" alt="Photographie de New Hampshire - 3" title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" width="2000" height="3000" />

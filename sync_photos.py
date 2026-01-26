@@ -12,6 +12,44 @@ ASSETS_DIR = "./static/gallery"
 QUALITY = 80          # Qualité WebP
 MAX_WIDTH = 2000      # Largeur max
 
+# --- BASE DE DONNÉES VIDÉOS ---
+VIDEOS = {
+    "new_york": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-06%2023-47-51.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-08%2012-20-58.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-06-23%2013-16-26.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-06%2000-27-10.mov"
+    ],
+    "finistere": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-05-21%2017-30-11.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-19%2014-54-12.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-19%2014-53-02.mp4"
+    ],
+    "new_hampshire": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-06%2011-54-14.mov"
+    ],
+    "montreal": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-07%2000-04-23.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-09%2021-46-58.mov"
+    ],
+    "niagara_falls": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-08-24%2010-38-55.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-08-24%2013-22-45.mp4"
+    ],
+    "quebec": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-14%2000-31-25.mov"
+    ],
+    "canada": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-08%2023-38-40.mov"
+    ],
+    "guatemala": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-10%2014-31-25.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-01-23%2010-52-09.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-03%2008-48-03.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-11%2019-05-15.mov"
+    ]
+}
+
 DESCRIPTIONS = {
     "indonesie": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Between ancestral temples, secret Balinese beaches, volcanic mists, and lush jungles, dive into a visual exploration of Indonesian contrasts—where wild nature meets sacred serenity.",
@@ -25,7 +63,7 @@ DESCRIPTIONS = {
     },
     "cape_cod": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;From iconic lighthouses guarding the vast Atlantic to the serene dance of whales on the horizon, discover the soulful charm of Cape Cod. A captivating journey through New England's coastal landscapes, where peaceful shores meet maritime history.",
-        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Des phares emblématiques gardant le vaste Atlantique à la danse sereine des baleines à l'horizon, découvrez le charme émouvant de Cape Cod. Un voyage captivant à travers les paysages côtiers de la Nouvelle-Angleterre, où les rivages paisibles rencontrent l'histoire maritime.",
+        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Des phares emblématiques gardant le vaste Atlantique à la danse sereine des baleines à l'horizon, découvrez le charme émouvant de Cape Cod. Un voyage captivant à travers les paysages couteaux de la Nouvelle-Angleterre, où les rivages paisibles rencontrent l'histoire maritime.",
         "es": "&nbsp;&nbsp;&nbsp;&nbsp;Desde los faros icónicos que custodian el vasto Atlántico hasta la danza serena de las ballenas en el horizonte, descubre el encanto conmovedor de Cape Cod. Un viaje cautivador a través de los paisajes costeros de Nueva Inglaterra, donde las orillas pacíficas se encuentran con la historia marítima."
     },
     "vermont": {
@@ -71,7 +109,7 @@ DESCRIPTIONS = {
     "lyon": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Traverse the layers of time in France’s gastronomic capital. From the shimmering mosaics of the Fourvière Basilica to the secret Renaissance courtyards of the Old Town, uncover a city where architectural grandeur and hidden history gracefully intertwine.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Traversez les couches du temps dans la capitale gastronomique de la France. Des mosaïques scintillantes de la basilique de Fourvière aux cours secrètes de la Renaissance du Vieux Lyon, découvrez une ville où la grandeur architecturale et l'histoire cachée s'entremêlent gracieusement.",
-        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Atraviesa las capas del tiempo en la capital gastronómica de Francia. Desde los mosaicos brillantes de la Basílica de Fourvière hasta los patios secretos del Renacimiento en el casco antiguo, descubre una ciudad donde la grandeza arquitectónica y la historia oculta se entrelazan con gracia."
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Atraviesa las capas del tiempo en la capital gastronomique de Francia. Desde los mosaicos brillantes de la Basílica de Fourvière hasta los patios secretos del Renacimiento en el casco antiguo, descubre una ciudad donde la grandeur architecturale et l'histoire cachée s'entremêlent gracieusement."
     },
     "bordeaux": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Contemplate a city where history and modernity find a perfect balance. From the golden stone of the Grosse Cloche to the futuristic curves of the Cité du Vin, embark on an odyssey through Bordeaux’s grand boulevards and its hidden, vibrant street-art sanctuaries.",
@@ -81,12 +119,12 @@ DESCRIPTIONS = {
     "finistere": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Contemplate the raw majesty of the 'Land's End'. From the legendary lighthouses of Saint-Mathieu guarding the rugged cliffs to the turquoise waters of hidden coves, embark on a visual journey through Brittany’s untamed coastline where the Atlantic meets the soul of the earth.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Contemplez la majesté brute du 'Bout du Monde'. Des phares légendaires de Saint-Mathieu gardant les falaises escarpées aux eaux turquoise des criques cachées, embarquez pour un voyage visuel à travers le littoral sauvage de la Bretagne où l'Atlantique rencontre l'âme de la terre.",
-        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Contempla la majestuosidad cruda del 'Fin de la Tierra'. Desde los faros legendarios de Saint-Mathieu que custodian los acantilados escarpados hasta las aguas turquesas de calas ocultas, embárcate en un viaje visual a través de la costa indómita de Bretaña, donde el Atlántico se encuentra con el alma de la tierra."
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Contempla la majestuosidad cruda del 'Fin de la Tierra'. Desde los faros legendarios de Saint-Mathieu que custodian los acantilados escarpados hasta las aguas turquesas de calas ocultas, embárcate en un voyage visual a través de la costa indómita de Bretaña, donde el Atlántico se encuentra con el alma de la tierra."
     },
     "boston": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Trace the footsteps of history along the cobblestone paths of Beacon Hill. From the grandeur of Quincy Market to the historic docks of the harbor, encounter a city where the spirit of American independence lives on through every brick and monument.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Retracez les pas de l'histoire le long des sentiers pavés de Beacon Hill. De la grandeur du marché Quincy aux quais historiques du port, rencontrez une ville où l'esprit de l'indépendance américaine perdure à travers chaque brique et monument.",
-        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Sigue los pasos de la historia a lo largo de los caminos empedrados de Beacon Hill. Desde la grandeza del Quincy Market hasta los muelles históricos del puerto, encuentra una ciudad donde el espíritu de la independencia estadounidense perdura a través de cada ladrillo y monumento."
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Sigue los pasos de la historia a lo largo de los caminos empedrados de Beacon Hill. Desde la grandeur del Quincy Market hasta los muelles históricos del puerto, encuentra una ciudad donde el espíritu de la independencia estadounidense perdura a través de cada ladrillo y monumento."
     },
     "new_york": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Experience the restless pulse of the world’s most iconic metropolis. From the shimmering neon of Times Square and the industrial majesty of the Brooklyn Bridge to the quiet, sun-drenched paths of Central Park, witness a city of infinite scales and electric ambitions.",
@@ -126,7 +164,7 @@ DESCRIPTIONS = {
     "ottawa": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Witness a capital in full bloom. From the vibrant endless fields of the Canadian Tulip Festival to the scenic pathways along the Rideau Canal, explore a city where nature's bright palette perfectly complements the historic stone of Parliament Hill.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Témoignez d'une capitale en pleine floraison. Des champs infinis et vibrants du Festival canadien des tulipes aux sentiers pittoresques le long du canal Rideau, explorez une ville où la palette lumineuse de la nature complète parfaitement la pierre historique de la Colline du Parlement.",
-        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Presencia una capital en plena floración. Desde los vibrantes campos interminables del Festival Canadiense de los Tulipanes hasta los pintorescos senderos a lo largo del Canal Rideau, explora una ciudad donde la paleta brillante de la naturaleza complementa perfectamente la piedra histórica de la Colina del Parlamento."
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Presencia una capital en plena floración. Desde los vibrantes campos interminables del Festival Canadiense de los Tulipanes hasta los pintorescos senderos a lo largo del Canal Rideau, explora una ciudad donde la paleta brillante de la naturaleza complementa perfectamente la pierre historique de la Colline du Parlement."
     },
     "quebec": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Step into a living fairy tale where cobblestone streets meet the majestic silhouette of the Château Frontenac. From the frost-covered ramparts to the warm glow of Petit Champlain at night, witness the romantic soul of North America’s oldest fortified city.",
@@ -150,26 +188,17 @@ def get_exif_data(img_path):
     try:
         img = Image.open(img_path)
         exif_dict = piexif.load(img.info['exif'])
-        
-        # Boîtier (Model)
         model = exif_dict['0th'].get(piexif.ImageIFD.Model, b"").decode().strip()
-        # Ouverture (F-Stop)
         f_stop = exif_dict['Exif'].get(piexif.ExifIFD.FNumber)
-        # ISO
         iso = exif_dict['Exif'].get(piexif.ExifIFD.ISOSpeedRatings)
-        # Vitesse d'obturation (Exposure Time)
         shutter = exif_dict['Exif'].get(piexif.ExifIFD.ExposureTime)
-
         parts = []
         if model: parts.append(model)
-        if f_stop:
-            parts.append(f"f/{f_stop[0]/f_stop[1]}")
+        if f_stop: parts.append(f"f/{f_stop[0]/f_stop[1]}")
         if shutter:
             val = f"{shutter[0]}/{shutter[1]}s" if shutter[1] > 1 else f"{shutter[0]}s"
             parts.append(val)
-        if iso:
-            parts.append(f"ISO {iso}")
-        
+        if iso: parts.append(f"ISO {iso}")
         return " | ".join(parts)
     except Exception:
         return ""
@@ -193,9 +222,16 @@ def sync_portfolio():
         os.makedirs(hugo_content_path, exist_ok=True)
         os.makedirs(hugo_assets_path, exist_ok=True)
 
-        img_list_markdown = ""
+        # On prépare le bloc HTML qui ira dans {{< gallery >}}
+        inner_gallery_html = ""
+
+        # --- 1. AJOUT DES VIDÉOS SI ELLES EXISTENT ---
+        if folder_clean in VIDEOS:
+            for v_url in VIDEOS[folder_clean]:
+                inner_gallery_html += f'  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="{v_url}" type="video/mp4"></video>\n'
+
+        # --- 2. TRAITEMENT ET AJOUT DES IMAGES ---
         images = [f for f in os.listdir(source_folder_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'webp'))]
-        
         for i, img_name in enumerate(sorted(images)):
             img_num = i + 1
             img_clean = f"{folder_clean}_{img_num:03d}.webp"
@@ -216,9 +252,7 @@ def sync_portfolio():
                     img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
                     width, height = MAX_WIDTH, new_height 
 
-                # Version standard sans lazy loading
-                img_list_markdown += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}" width="{width}" height="{height}" />\n'
-
+                inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}" width="{width}" height="{height}" />\n'
                 img.save(target_path, "WEBP", quality=QUALITY, method=6)
                 
             except Exception as e:
@@ -237,7 +271,6 @@ def sync_portfolio():
         }
 
         gallery_desc_map = DESCRIPTIONS.get(folder_clean, {})
-        # Fallback pour string simple si le dict n'est pas utilisé (compatibilité vieux code, mais on a tout migré)
         if isinstance(gallery_desc_map, str):
             gallery_desc_map = {"en": gallery_desc_map, "fr": gallery_desc_map, "es": gallery_desc_map}
 
@@ -250,7 +283,8 @@ def sync_portfolio():
                 f.write(f'---\ntitle: "{display_title}"\ndescription: "{meta_desc}"\nlayout: "gallery"\n---\n\n')
                 if gallery_desc:
                     f.write(f'<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">\n{gallery_desc}\n</div>\n\n')
-                f.write(f'{{{{< gallery >}}}}\n{img_list_markdown}{{{{< /gallery >}}}}')
+                
+                f.write(f'{{{{< gallery >}}}}\n{inner_gallery_html}{{{{< /gallery >}}}}')
         
         print(f"✅ Dossier traité : {folder} -> {folder_clean} (EN, FR, ES)")
 

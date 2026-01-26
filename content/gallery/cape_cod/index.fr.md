@@ -5,7 +5,7 @@ layout: "gallery"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
-&nbsp;&nbsp;&nbsp;&nbsp;Des phares emblématiques gardant le vaste Atlantique à la danse sereine des baleines à l'horizon, découvrez le charme émouvant de Cape Cod. Un voyage captivant à travers les paysages côtiers de la Nouvelle-Angleterre, où les rivages paisibles rencontrent l'histoire maritime.
+&nbsp;&nbsp;&nbsp;&nbsp;Des phares emblématiques gardant le vaste Atlantique à la danse sereine des baleines à l'horizon, découvrez le charme émouvant de Cape Cod. Un voyage captivant à travers les paysages couteaux de la Nouvelle-Angleterre, où les rivages paisibles rencontrent l'histoire maritime.
 </div>
 
 {{< gallery >}}

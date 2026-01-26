@@ -28,13 +28,7 @@
 
         {{ range $videos }}
         <div class="video-item">
-            <video
-                    autoplay
-                    loop
-                    controls
-                    preload="metadata"
-                    class="video-element"
-                    loading="lazy">
+            <video autoplay loop muted playsinline controls preload="metadata" class="video-element" loading="lazy">
                 <source src="{{ . }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -75,7 +69,10 @@
     .video-item::after {
         content: "";
         position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%), rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 60%);
         opacity: 0;
         transition: opacity 0.3s;
@@ -95,15 +92,31 @@
 
     .video-element {
         width: 100% !important;
-        height: auto !important; /* Laisse la vidéo prendre sa hauteur réelle */
+        height: auto !important;
+        /* Laisse la vidéo prendre sa hauteur réelle */
         display: block !important;
         border-radius: 8px;
     }
 
     /* Adaptabilité mobile */
-    @media (max-width: 1200px) { .portfolio-grid-final { column-count: 3; } }
-    @media (max-width: 768px) { .portfolio-grid-final { column-count: 2; column-gap: 12px; } }
-    @media (max-width: 480px) { .portfolio-grid-final { column-count: 1; } }
+    @media (max-width: 1200px) {
+        .portfolio-grid-final {
+            column-count: 3;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .portfolio-grid-final {
+            column-count: 2;
+            column-gap: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .portfolio-grid-final {
+            column-count: 1;
+        }
+    }
 
     /* Reveal Item Animation */
     .reveal-item {
@@ -111,6 +124,7 @@
         transform: translateY(30px);
         transition: opacity 0.8s cubic-bezier(0.2, 0, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
     }
+
     .reveal-item.visible {
         opacity: 1;
         transform: translateY(0);

@@ -490,6 +490,21 @@
   </url>
   <url>
     <loc>http://localhost:1313/videos/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/videos/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/videos/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/videos/"
+    />
   </url>
   <url>
     <loc>http://localhost:1313/gallery/washington/</loc>

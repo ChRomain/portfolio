@@ -9,6 +9,7 @@ layout: "gallery"
 </div>
 
 {{< gallery >}}
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-08%2023-38-40.mov" type="video/mp4"></video>
   <img src="/gallery/canada/canada_001.webp" alt="Photographie de Canada - 1" title="Canon EOS Rebel T6 | f/8.0 | 1/500s | ISO 100" width="1280" height="1920" />
   <img src="/gallery/canada/canada_002.webp" alt="Photographie de Canada - 2" title="Canon EOS Rebel T100 | f/4.5 | 1/100s | ISO 100" width="2000" height="1333" />
   <img src="/gallery/canada/canada_003.webp" alt="Photographie de Canada - 3" title="Canon EOS Rebel T100 | f/5.6 | 1/250s | ISO 100" width="2000" height="3000" />

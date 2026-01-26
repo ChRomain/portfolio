@@ -5,7 +5,7 @@ layout: "gallery"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
-&nbsp;&nbsp;&nbsp;&nbsp;Presencia una capital en plena floración. Desde los vibrantes campos interminables del Festival Canadiense de los Tulipanes hasta los pintorescos senderos a lo largo del Canal Rideau, explora una ciudad donde la paleta brillante de la naturaleza complementa perfectamente la piedra histórica de la Colina del Parlamento.
+&nbsp;&nbsp;&nbsp;&nbsp;Presencia una capital en plena floración. Desde los vibrantes campos interminables del Festival Canadiense de los Tulipanes hasta los pintorescos senderos a lo largo del Canal Rideau, explora una ciudad donde la paleta brillante de la naturaleza complementa perfectamente la pierre historique de la Colline du Parlement.
 </div>
 
 {{< gallery >}}
