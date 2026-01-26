@@ -6,6 +6,7 @@ title = "Travel"
 
 [params]
   googleAnalytics = "G-9R0TKHM8NV"
+  analytics = { provider = "google", id = "G-9R0TKHM8NV" }
   showRecent = false
   mainSections = ["gallery"]
   showDate = false
