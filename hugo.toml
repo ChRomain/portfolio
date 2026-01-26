@@ -190,7 +190,7 @@ defaultContentLanguage = "en"
       weight = 5
     [[languages.en.menu.main]]
       name = "Niagara Falls"
-      parent = "menu_usa"
+      parent = "menu_canada"
       url = "/gallery/niagara_falls/"
       weight = 6
     [[languages.en.menu.main]]
@@ -400,7 +400,7 @@ defaultContentLanguage = "en"
       weight = 5
     [[languages.fr.menu.main]]
       name = "Chutes du Niagara"
-      parent = "menu_usa"
+      parent = "menu_canada"
       url = "/fr/gallery/niagara_falls/"
       weight = 6
     [[languages.fr.menu.main]]
@@ -610,7 +610,7 @@ defaultContentLanguage = "en"
       weight = 5
     [[languages.es.menu.main]]
       name = "Cataratas del Niágara"
-      parent = "menu_usa"
+      parent = "menu_canada"
       url = "/es/gallery/niagara_falls/"
       weight = 6
     [[languages.es.menu.main]]
