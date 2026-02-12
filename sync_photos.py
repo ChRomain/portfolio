@@ -40,7 +40,8 @@ VIDEOS = {
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-14%2000-31-25.mov"
     ],
     "canada": [
-        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-08%2023-38-40.mov"
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-08%2023-38-40.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-02-11%2014-29-22.mov"
     ],
     "guatemala": [
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-10%2014-31-25.mp4",
