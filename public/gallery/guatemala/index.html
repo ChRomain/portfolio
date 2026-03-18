@@ -248,7 +248,15 @@
 
   
   
-    <meta name="view-transition" content="same-origin">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0TKHM8NV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9R0TKHM8NV');
+</script>
   
 
   
@@ -684,7 +692,7 @@
         <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
             <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">🇺🇸</button>
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Language menu">🇺🇸</button>
                 <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     
                     
@@ -701,7 +709,7 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none" aria-label="Toggle dark mode">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
@@ -713,7 +721,7 @@
     </nav>
 
     <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2" aria-label="Open mobile menu">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -726,7 +734,7 @@
 <div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
     <div class="flex justify-between items-center mb-8">
         <span class="text-xl font-bold dark:text-white">Travel</span>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200">
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Close mobile menu">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -757,7 +765,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/#" class="text-2xl font-semibold dark:text-white">Americas</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                     
                 </div>
                 
@@ -767,7 +775,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">North America</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -777,7 +785,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/#" class="text-base text-neutral-500">Canada</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Toggle submenu">▼</button>
                                     
                                 </div>
                                 
@@ -803,7 +811,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/#" class="text-base text-neutral-500">USA</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Toggle submenu">▼</button>
                                     
                                 </div>
                                 
@@ -837,7 +845,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">Central America</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -863,7 +871,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/#" class="text-2xl font-semibold dark:text-white">Asia</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                     
                 </div>
                 
@@ -885,7 +893,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/#" class="text-2xl font-semibold dark:text-white">Europe</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                     
                 </div>
                 
@@ -895,7 +903,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">France</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -949,7 +957,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">Italy</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -1018,7 +1026,7 @@
                 
             </div>
             <div class="flex items-center space-x-4">
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300">
+                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Toggle dark mode">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
@@ -1200,46 +1208,46 @@
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-01-23%2010-52-09.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-03%2008-48-03.mp4" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-11%2019-05-15.mov" type="video/mp4"></video>
-  <img src="/gallery/guatemala/guatemala_001.webp" alt="Photographie de Guatemala - 1" title="FC3682                        | f/1.7 | 1/15s | ISO 200" width="2000" height="3555" />
+  <img src="/gallery/guatemala/guatemala_001.webp" alt="Photographie de Guatemala - 1" title="FC3682                        | f/1.7 | 1/15s | ISO 200" width="1600" height="2844" />
   <img src="/gallery/guatemala/guatemala_002.webp" alt="Photographie de Guatemala - 2" title="" width="1178" height="1563" />
-  <img src="/gallery/guatemala/guatemala_003.webp" alt="Photographie de Guatemala - 3" title="iPhone 15 | f/1.6 | 1/60s | ISO 160" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_004.webp" alt="Photographie de Guatemala - 4" title="ILCE-6700 | f/4.0 | 1/160s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_005.webp" alt="Photographie de Guatemala - 5" title="ILCE-6700 | f/5.0 | 1/80s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_006.webp" alt="Photographie de Guatemala - 6" title="FC3682 | f/1.7 | 1/1000s | ISO 100" width="2000" height="3555" />
-  <img src="/gallery/guatemala/guatemala_007.webp" alt="Photographie de Guatemala - 7" title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_008.webp" alt="Photographie de Guatemala - 8" title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_009.webp" alt="Photographie de Guatemala - 9" title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_010.webp" alt="Photographie de Guatemala - 10" title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_011.webp" alt="Photographie de Guatemala - 11" title="ILCE-6700 | f/5.6 | 1/200s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_012.webp" alt="Photographie de Guatemala - 12" title="FC3682 | f/1.7 | 1/3s | ISO 1600" width="2000" height="3555" />
-  <img src="/gallery/guatemala/guatemala_013.webp" alt="Photographie de Guatemala - 13" title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_014.webp" alt="Photographie de Guatemala - 14" title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_015.webp" alt="Photographie de Guatemala - 15" title="iPhone 15 | f/1.6 | 1/1543s | ISO 32" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_016.webp" alt="Photographie de Guatemala - 16" title="iPhone 15 | f/1.6 | 1s | ISO 5000" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_017.webp" alt="Photographie de Guatemala - 17" title="iPhone 15 | f/1.6 | 1s | ISO 10000" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_018.webp" alt="Photographie de Guatemala - 18" title="iPhone 15 | f/1.6 | 1/2s | ISO 3200" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_019.webp" alt="Photographie de Guatemala - 19" title="iPhone 15 | f/1.6 | 1/15s | ISO 800" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_020.webp" alt="Photographie de Guatemala - 20" title="iPhone 15 | f/1.6 | 1/35s | ISO 320" width="2000" height="2666" />
-  <img src="/gallery/guatemala/guatemala_021.webp" alt="Photographie de Guatemala - 21" title="ILCE-6700 | f/5.6 | 1/160s | ISO 2000" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_022.webp" alt="Photographie de Guatemala - 22" title="ILCE-6700 | f/4.0 | 1/160s | ISO 1000" width="2000" height="1333" />
-  <img src="/gallery/guatemala/guatemala_023.webp" alt="Photographie de Guatemala - 23" title="ILCE-6700 | f/4.0 | 1/60s | ISO 160" width="2000" height="1333" />
-  <img src="/gallery/guatemala/guatemala_024.webp" alt="Photographie de Guatemala - 24" title="ILCE-6700 | f/4.0 | 1/160s | ISO 500" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_025.webp" alt="Photographie de Guatemala - 25" title="ILCE-6700 | f/9.0 | 1/250s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_026.webp" alt="Photographie de Guatemala - 26" title="ILCE-6700 | f/4.5 | 1/60s | ISO 640" width="2000" height="3000" />
+  <img src="/gallery/guatemala/guatemala_003.webp" alt="Photographie de Guatemala - 3" title="iPhone 15 | f/1.6 | 1/60s | ISO 160" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_004.webp" alt="Photographie de Guatemala - 4" title="ILCE-6700 | f/4.0 | 1/160s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_005.webp" alt="Photographie de Guatemala - 5" title="ILCE-6700 | f/5.0 | 1/80s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_006.webp" alt="Photographie de Guatemala - 6" title="FC3682 | f/1.7 | 1/1000s | ISO 100" width="1600" height="2844" />
+  <img src="/gallery/guatemala/guatemala_007.webp" alt="Photographie de Guatemala - 7" title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_008.webp" alt="Photographie de Guatemala - 8" title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_009.webp" alt="Photographie de Guatemala - 9" title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_010.webp" alt="Photographie de Guatemala - 10" title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_011.webp" alt="Photographie de Guatemala - 11" title="ILCE-6700 | f/5.6 | 1/200s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_012.webp" alt="Photographie de Guatemala - 12" title="FC3682 | f/1.7 | 1/3s | ISO 1600" width="1600" height="2844" />
+  <img src="/gallery/guatemala/guatemala_013.webp" alt="Photographie de Guatemala - 13" title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_014.webp" alt="Photographie de Guatemala - 14" title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_015.webp" alt="Photographie de Guatemala - 15" title="iPhone 15 | f/1.6 | 1/1543s | ISO 32" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_016.webp" alt="Photographie de Guatemala - 16" title="iPhone 15 | f/1.6 | 1s | ISO 5000" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_017.webp" alt="Photographie de Guatemala - 17" title="iPhone 15 | f/1.6 | 1s | ISO 10000" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_018.webp" alt="Photographie de Guatemala - 18" title="iPhone 15 | f/1.6 | 1/2s | ISO 3200" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_019.webp" alt="Photographie de Guatemala - 19" title="iPhone 15 | f/1.6 | 1/15s | ISO 800" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_020.webp" alt="Photographie de Guatemala - 20" title="iPhone 15 | f/1.6 | 1/35s | ISO 320" width="1600" height="2133" />
+  <img src="/gallery/guatemala/guatemala_021.webp" alt="Photographie de Guatemala - 21" title="ILCE-6700 | f/5.6 | 1/160s | ISO 2000" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_022.webp" alt="Photographie de Guatemala - 22" title="ILCE-6700 | f/4.0 | 1/160s | ISO 1000" width="1600" height="1066" />
+  <img src="/gallery/guatemala/guatemala_023.webp" alt="Photographie de Guatemala - 23" title="ILCE-6700 | f/4.0 | 1/60s | ISO 160" width="1600" height="1066" />
+  <img src="/gallery/guatemala/guatemala_024.webp" alt="Photographie de Guatemala - 24" title="ILCE-6700 | f/4.0 | 1/160s | ISO 500" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_025.webp" alt="Photographie de Guatemala - 25" title="ILCE-6700 | f/9.0 | 1/250s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_026.webp" alt="Photographie de Guatemala - 26" title="ILCE-6700 | f/4.5 | 1/60s | ISO 640" width="1600" height="2400" />
   <img src="/gallery/guatemala/guatemala_027.webp" alt="Photographie de Guatemala - 27" title="" width="1600" height="1200" />
-  <img src="/gallery/guatemala/guatemala_028.webp" alt="Photographie de Guatemala - 28" title="ILCE-6700 | f/5.6 | 1/160s | ISO 1250" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_029.webp" alt="Photographie de Guatemala - 29" title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_030.webp" alt="Photographie de Guatemala - 30" title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_031.webp" alt="Photographie de Guatemala - 31" title="ILCE-6700 | f/5.6 | 1/200s | ISO 125" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_032.webp" alt="Photographie de Guatemala - 32" title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_033.webp" alt="Photographie de Guatemala - 33" title="ILCE-6700 | f/5.0 | 1/1000s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_034.webp" alt="Photographie de Guatemala - 34" title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_035.webp" alt="Photographie de Guatemala - 35" title="ILCE-6700 | f/5.0 | 1/320s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/guatemala/guatemala_028.webp" alt="Photographie de Guatemala - 28" title="ILCE-6700 | f/5.6 | 1/160s | ISO 1250" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_029.webp" alt="Photographie de Guatemala - 29" title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_030.webp" alt="Photographie de Guatemala - 30" title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_031.webp" alt="Photographie de Guatemala - 31" title="ILCE-6700 | f/5.6 | 1/200s | ISO 125" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_032.webp" alt="Photographie de Guatemala - 32" title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_033.webp" alt="Photographie de Guatemala - 33" title="ILCE-6700 | f/5.0 | 1/1000s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_034.webp" alt="Photographie de Guatemala - 34" title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_035.webp" alt="Photographie de Guatemala - 35" title="ILCE-6700 | f/5.0 | 1/320s | ISO 100" width="1600" height="2400" />
   <img src="/gallery/guatemala/guatemala_036.webp" alt="Photographie de Guatemala - 36" title="ILCE-6700 | f/4.0 | 1/160s | ISO 250" width="599" height="899" />
-  <img src="/gallery/guatemala/guatemala_037.webp" alt="Photographie de Guatemala - 37" title="FC3682                        | f/1.7 | 1/1250s | ISO 100" width="2000" height="3555" />
-  <img src="/gallery/guatemala/guatemala_038.webp" alt="Photographie de Guatemala - 38" title="ILCE-6700 | f/6.3 | 1/100s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/guatemala/guatemala_039.webp" alt="Photographie de Guatemala - 39" title="ILCE-6700 | f/6.3 | 1/125s | ISO 100" width="2000" height="1333" />
-  <img src="/gallery/guatemala/guatemala_040.webp" alt="Photographie de Guatemala - 40" title="ILCE-6700 | f/6.3 | 1/100s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/guatemala/guatemala_037.webp" alt="Photographie de Guatemala - 37" title="FC3682                        | f/1.7 | 1/1250s | ISO 100" width="1600" height="2844" />
+  <img src="/gallery/guatemala/guatemala_038.webp" alt="Photographie de Guatemala - 38" title="ILCE-6700 | f/6.3 | 1/100s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/guatemala/guatemala_039.webp" alt="Photographie de Guatemala - 39" title="ILCE-6700 | f/6.3 | 1/125s | ISO 100" width="1600" height="1066" />
+  <img src="/gallery/guatemala/guatemala_040.webp" alt="Photographie de Guatemala - 40" title="ILCE-6700 | f/6.3 | 1/100s | ISO 100" width="1600" height="2400" />
 
 </div>
 

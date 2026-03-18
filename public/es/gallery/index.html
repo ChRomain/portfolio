@@ -21,6 +21,8 @@
 
   
   
+    <meta name="description" content="Diarios de viaje: fotografías inmersivas y relatos de aventuras por todo el mundo.">
+  
   
   
   
@@ -35,12 +37,14 @@
   <meta property="og:url" content="http://localhost:1313/es/gallery/">
   <meta property="og:site_name" content="Travel">
   <meta property="og:title" content="Galleries">
+  <meta property="og:description" content="Diarios de viaje: fotografías inmersivas y relatos de aventuras por todo el mundo.">
   <meta property="og:locale" content="es">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Galleries">
+  <meta name="twitter:description" content="Diarios de viaje: fotografías inmersivas y relatos de aventuras por todo el mundo.">
 
   
   
@@ -219,7 +223,15 @@
 
   
   
-    <meta name="view-transition" content="same-origin">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0TKHM8NV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9R0TKHM8NV');
+</script>
   
 
   
@@ -655,7 +667,7 @@
         <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
             <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">🇪🇸</button>
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Menú de idioma">🇪🇸</button>
                 <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     
                     
@@ -672,7 +684,7 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none" aria-label="Modo oscuro">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
@@ -684,7 +696,7 @@
     </nav>
 
     <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2" aria-label="Abrir menú móvil">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -697,7 +709,7 @@
 <div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
     <div class="flex justify-between items-center mb-8">
         <span class="text-xl font-bold dark:text-white">Travel</span>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200">
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Cerrar menú móvil">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -728,7 +740,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/es/#" class="text-2xl font-semibold dark:text-white">Américas</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                     
                 </div>
                 
@@ -738,7 +750,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">América del Norte</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -748,7 +760,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/es/#" class="text-base text-neutral-500">Canadá</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Alternar submenú">▼</button>
                                     
                                 </div>
                                 
@@ -774,7 +786,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/es/#" class="text-base text-neutral-500">EE. UU.</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Alternar submenú">▼</button>
                                     
                                 </div>
                                 
@@ -808,7 +820,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">América Central</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -834,7 +846,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/es/#" class="text-2xl font-semibold dark:text-white">Asia</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                     
                 </div>
                 
@@ -856,7 +868,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/es/#" class="text-2xl font-semibold dark:text-white">Europa</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                     
                 </div>
                 
@@ -866,7 +878,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">Francia</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -920,7 +932,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">Italia</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -989,7 +1001,7 @@
                 
             </div>
             <div class="flex items-center space-x-4">
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300">
+                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Modo oscuro">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
@@ -1184,7 +1196,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/washington/feature_hu_6c58bda3570ad615.webp"
+        src="/gallery/washington/feature_hu_f48eb9365b84ba8c.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -1325,7 +1337,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/vermont/feature_hu_be286c4a2db59f39.webp"
+        src="/gallery/vermont/feature_hu_142943c97df0e2f0.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -1466,7 +1478,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/toronto/feature_hu_f029c1cdf7b47df4.webp"
+        src="/gallery/toronto/feature_hu_fa81b28e6dc28c6b.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -1607,7 +1619,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/suede/feature_hu_def33d92f3f7c1c9.webp"
+        src="/gallery/suede/feature_hu_67b5377f36fd0486.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -1748,7 +1760,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/rome/feature_hu_9302a684c70cb503.webp"
+        src="/gallery/rome/feature_hu_f9415c105da0e463.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -1889,7 +1901,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/quebec/feature_hu_8a610be6faefb8aa.webp"
+        src="/gallery/quebec/feature_hu_62e3109771de7217.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -2030,7 +2042,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/philadelphie/feature_hu_a003250eb4974f85.webp"
+        src="/gallery/philadelphie/feature_hu_4aa1dc8fd1865f3c.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -2171,7 +2183,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/paris/feature_hu_f2da1675c9d37aea.webp"
+        src="/gallery/paris/feature_hu_7263ef90c0fa5ec4.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -2312,7 +2324,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/ottawa/feature_hu_f2693d3102d17b80.webp"
+        src="/gallery/ottawa/feature_hu_f764c7d4557a9b3d.webp"
         role="presentation"
         loading="lazy"
         decoding="async"
@@ -2453,7 +2465,7 @@
   
     <div class="flex-none relative overflow-hidden  thumbnail-shadow md:mr-7 thumbnail">
       <img
-        src="/gallery/niagara_falls/feature_hu_6ac2b4487b0c1534.webp"
+        src="/gallery/niagara_falls/feature_hu_43f4915ee5f955da.webp"
         role="presentation"
         loading="lazy"
         decoding="async"

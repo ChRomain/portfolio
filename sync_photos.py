@@ -9,8 +9,8 @@ CONTENT_DIR = "./content/gallery"
 ASSETS_DIR = "./static/gallery" 
 
 # --- PARAMÈTRES D'OPTIMISATION ---
-QUALITY = 80          # Qualité WebP
-MAX_WIDTH = 2000      # Largeur max
+QUALITY = 55          # Qualité WebP
+MAX_WIDTH = 1600      # Largeur max
 
 # --- BASE DE DONNÉES VIDÉOS ---
 VIDEOS = {

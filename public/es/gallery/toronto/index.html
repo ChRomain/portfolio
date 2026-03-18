@@ -248,7 +248,15 @@
 
   
   
-    <meta name="view-transition" content="same-origin">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0TKHM8NV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9R0TKHM8NV');
+</script>
   
 
   
@@ -684,7 +692,7 @@
         <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
             <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">🇪🇸</button>
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Menú de idioma">🇪🇸</button>
                 <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     
                     
@@ -701,7 +709,7 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none" aria-label="Modo oscuro">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
@@ -713,7 +721,7 @@
     </nav>
 
     <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2" aria-label="Abrir menú móvil">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -726,7 +734,7 @@
 <div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
     <div class="flex justify-between items-center mb-8">
         <span class="text-xl font-bold dark:text-white">Travel</span>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200">
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Cerrar menú móvil">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -757,7 +765,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/es/#" class="text-2xl font-semibold dark:text-white">Américas</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                     
                 </div>
                 
@@ -767,7 +775,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">América del Norte</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -777,7 +785,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/es/#" class="text-base text-neutral-500">Canadá</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Alternar submenú">▼</button>
                                     
                                 </div>
                                 
@@ -803,7 +811,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/es/#" class="text-base text-neutral-500">EE. UU.</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Alternar submenú">▼</button>
                                     
                                 </div>
                                 
@@ -837,7 +845,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">América Central</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -863,7 +871,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/es/#" class="text-2xl font-semibold dark:text-white">Asia</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                     
                 </div>
                 
@@ -885,7 +893,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/es/#" class="text-2xl font-semibold dark:text-white">Europa</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                     
                 </div>
                 
@@ -895,7 +903,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">Francia</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -949,7 +957,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/es/#" class="text-lg text-neutral-600 dark:text-neutral-400">Italia</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
                             
                         </div>
                         
@@ -1018,7 +1026,7 @@
                 
             </div>
             <div class="flex items-center space-x-4">
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300">
+                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Modo oscuro">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
@@ -1196,26 +1204,26 @@
   
   
   
-  <img src="/gallery/toronto/toronto_001.webp" alt="Photographie de Toronto - 1" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_002.webp" alt="Photographie de Toronto - 2" title="iPhone 15 | f/2.4 | 1/290s | ISO 25" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_003.webp" alt="Photographie de Toronto - 3" title="iPhone 15 | f/1.6 | 1/90s | ISO 50" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_004.webp" alt="Photographie de Toronto - 4" title="iPhone 15 | f/1.6 | 1/20s | ISO 1250" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_005.webp" alt="Photographie de Toronto - 5" title="iPhone 15 | f/1.6 | 1/60s | ISO 250" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_006.webp" alt="Photographie de Toronto - 6" title="iPhone 15 | f/1.6 | 1/60s | ISO 160" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_007.webp" alt="Photographie de Toronto - 7" title="iPhone 15 | f/1.6 | 1/1200s | ISO 50" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_008.webp" alt="Photographie de Toronto - 8" title="iPhone 15 | f/1.6 | 1/120s | ISO 40" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_009.webp" alt="Photographie de Toronto - 9" title="iPhone 15 | f/1.6 | 1/60s | ISO 125" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_010.webp" alt="Photographie de Toronto - 10" title="iPhone 15 | f/1.6 | 1/60s | ISO 200" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_011.webp" alt="Photographie de Toronto - 11" title="Canon EOS Rebel T100 | f/4.5 | 1/100s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_012.webp" alt="Photographie de Toronto - 12" title="Canon EOS Rebel T100 | f/9.0 | 1/320s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_013.webp" alt="Photographie de Toronto - 13" title="Canon EOS Rebel T100 | f/7.1 | 1/200s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_014.webp" alt="Photographie de Toronto - 14" title="Canon EOS Rebel T100 | f/10.0 | 1/250s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_015.webp" alt="Photographie de Toronto - 15" title="Canon EOS Rebel T100 | f/5.6 | 1/80s | ISO 125" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_016.webp" alt="Photographie de Toronto - 16" title="Canon EOS Rebel T100 | f/16.0 | 1/800s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_017.webp" alt="Photographie de Toronto - 17" title="iPhone 15 | f/1.6 | 1/9s | ISO 1600" width="2000" height="2666" />
-  <img src="/gallery/toronto/toronto_018.webp" alt="Photographie de Toronto - 18" title="Canon EOS Rebel T100 | f/9.0 | 1/200s | ISO 100" width="2000" height="1333" />
-  <img src="/gallery/toronto/toronto_019.webp" alt="Photographie de Toronto - 19" title="Canon EOS Rebel T100 | f/8.0 | 1/400s | ISO 100" width="2000" height="3000" />
-  <img src="/gallery/toronto/toronto_020.webp" alt="Photographie de Toronto - 20" title="Canon EOS Rebel T100 | f/8.0 | 1/400s | ISO 100" width="2000" height="3000" />
+  <img src="/gallery/toronto/toronto_001.webp" alt="Photographie de Toronto - 1" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_002.webp" alt="Photographie de Toronto - 2" title="iPhone 15 | f/2.4 | 1/290s | ISO 25" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_003.webp" alt="Photographie de Toronto - 3" title="iPhone 15 | f/1.6 | 1/90s | ISO 50" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_004.webp" alt="Photographie de Toronto - 4" title="iPhone 15 | f/1.6 | 1/20s | ISO 1250" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_005.webp" alt="Photographie de Toronto - 5" title="iPhone 15 | f/1.6 | 1/60s | ISO 250" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_006.webp" alt="Photographie de Toronto - 6" title="iPhone 15 | f/1.6 | 1/60s | ISO 160" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_007.webp" alt="Photographie de Toronto - 7" title="iPhone 15 | f/1.6 | 1/1200s | ISO 50" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_008.webp" alt="Photographie de Toronto - 8" title="iPhone 15 | f/1.6 | 1/120s | ISO 40" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_009.webp" alt="Photographie de Toronto - 9" title="iPhone 15 | f/1.6 | 1/60s | ISO 125" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_010.webp" alt="Photographie de Toronto - 10" title="iPhone 15 | f/1.6 | 1/60s | ISO 200" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_011.webp" alt="Photographie de Toronto - 11" title="Canon EOS Rebel T100 | f/4.5 | 1/100s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_012.webp" alt="Photographie de Toronto - 12" title="Canon EOS Rebel T100 | f/9.0 | 1/320s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_013.webp" alt="Photographie de Toronto - 13" title="Canon EOS Rebel T100 | f/7.1 | 1/200s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_014.webp" alt="Photographie de Toronto - 14" title="Canon EOS Rebel T100 | f/10.0 | 1/250s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_015.webp" alt="Photographie de Toronto - 15" title="Canon EOS Rebel T100 | f/5.6 | 1/80s | ISO 125" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_016.webp" alt="Photographie de Toronto - 16" title="Canon EOS Rebel T100 | f/16.0 | 1/800s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_017.webp" alt="Photographie de Toronto - 17" title="iPhone 15 | f/1.6 | 1/9s | ISO 1600" width="1600" height="2133" />
+  <img src="/gallery/toronto/toronto_018.webp" alt="Photographie de Toronto - 18" title="Canon EOS Rebel T100 | f/9.0 | 1/200s | ISO 100" width="1600" height="1066" />
+  <img src="/gallery/toronto/toronto_019.webp" alt="Photographie de Toronto - 19" title="Canon EOS Rebel T100 | f/8.0 | 1/400s | ISO 100" width="1600" height="2400" />
+  <img src="/gallery/toronto/toronto_020.webp" alt="Photographie de Toronto - 20" title="Canon EOS Rebel T100 | f/8.0 | 1/400s | ISO 100" width="1600" height="2400" />
 
 </div>
 
@@ -1311,25 +1319,25 @@
       lightbox.id = 'custom-lightbox';
       lightbox.innerHTML = `
         <div class="lightbox-nav-top">
-          <button id="lightbox-download" aria-label="Download image">
+          <button id="lightbox-download" aria-label="Descargar imagen">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           </button>
-          <button id="lightbox-play-pause" aria-label="Start slideshow">
+          <button id="lightbox-play-pause" aria-label="Iniciar presentación">
             <svg id="play-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             <svg id="pause-icon" class="hidden" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
           </button>
-          <button id="lightbox-info-toggle" aria-label="Show image info">
+          <button id="lightbox-info-toggle" aria-label="Mostrar información de la imagen">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           </button>
-          <button id="lightbox-fullscreen" aria-label="Toggle full screen">
+          <button id="lightbox-fullscreen" aria-label="Pantalla completa">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
           </button>
         </div>
-        <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous image">❮</button>
+        <button id="lightbox-prev" class="lightbox-nav" aria-label="Imagen anterior">❮</button>
         <div class="lightbox-content">
           <img src="" alt="Full size">
         </div>
-        <button id="lightbox-next" class="lightbox-nav" aria-label="Next image">❯</button>
+        <button id="lightbox-next" class="lightbox-nav" aria-label="Imagen siguiente">❯</button>
         
         <div class="lightbox-footer">
           <div id="lightbox-caption" class="hidden-caption"></div>

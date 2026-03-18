@@ -96,25 +96,25 @@
       lightbox.id = 'custom-lightbox';
       lightbox.innerHTML = `
         <div class="lightbox-nav-top">
-          <button id="lightbox-download" aria-label="Download image">
+          <button id="lightbox-download" aria-label="{{ i18n "aria_download_image" }}">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           </button>
-          <button id="lightbox-play-pause" aria-label="Start slideshow">
+          <button id="lightbox-play-pause" aria-label="{{ i18n "aria_start_slideshow" }}">
             <svg id="play-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             <svg id="pause-icon" class="hidden" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
           </button>
-          <button id="lightbox-info-toggle" aria-label="Show image info">
+          <button id="lightbox-info-toggle" aria-label="{{ i18n "aria_show_image_info" }}">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           </button>
-          <button id="lightbox-fullscreen" aria-label="Toggle full screen">
+          <button id="lightbox-fullscreen" aria-label="{{ i18n "aria_toggle_fullscreen" }}">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
           </button>
         </div>
-        <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous image">❮</button>
+        <button id="lightbox-prev" class="lightbox-nav" aria-label="{{ i18n "aria_prev_image" }}">❮</button>
         <div class="lightbox-content">
           <img src="" alt="Full size">
         </div>
-        <button id="lightbox-next" class="lightbox-nav" aria-label="Next image">❯</button>
+        <button id="lightbox-next" class="lightbox-nav" aria-label="{{ i18n "aria_next_image" }}">❯</button>
         
         <div class="lightbox-footer">
           <div id="lightbox-caption" class="hidden-caption"></div>

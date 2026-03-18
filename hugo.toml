@@ -48,6 +48,7 @@ defaultContentLanguage = "en"
     [languages.en.params]
       displayName = "🇺🇸 English"
       flag = "🇺🇸"
+      description = "Travel diaries: immersive photography and adventure stories from around the world."
     
     # English Menu
     [[languages.en.menu.main]]
@@ -258,6 +259,7 @@ defaultContentLanguage = "en"
     [languages.fr.params]
       displayName = "🇫🇷 Français"
       flag = "🇫🇷"
+      description = "Carnets de voyage : photographies immersives et récits d'aventures à travers le monde."
 
     # French Menu
     [[languages.fr.menu.main]]
@@ -468,6 +470,7 @@ defaultContentLanguage = "en"
     [languages.es.params]
       displayName = "🇪🇸 Español"
       flag = "🇪🇸"
+      description = "Diarios de viaje: fotografías inmersivas y relatos de aventuras por todo el mundo."
 
     # Spanish Menu
     [[languages.es.menu.main]]

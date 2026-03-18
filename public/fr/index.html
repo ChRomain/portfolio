@@ -22,6 +22,8 @@
 
   
   
+    <meta name="description" content="Carnets de voyage : photographies immersives et récits d&#39;aventures à travers le monde.">
+  
   
   
   
@@ -36,12 +38,14 @@
   <meta property="og:url" content="http://localhost:1313/fr/">
   <meta property="og:site_name" content="Travel">
   <meta property="og:title" content="Voyage">
+  <meta property="og:description" content="Carnets de voyage : photographies immersives et récits d&#39;aventures à travers le monde.">
   <meta property="og:locale" content="fr">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Voyage">
+  <meta name="twitter:description" content="Carnets de voyage : photographies immersives et récits d&#39;aventures à travers le monde.">
 
   
   
@@ -192,7 +196,7 @@
     "@type": "WebSite",
     "@id": "http://localhost:1313/fr/",
     "name": "Travel",
-    
+    "description": "Carnets de voyage : photographies immersives et récits d\u0027aventures à travers le monde.",
     "inLanguage": "fr",
     "url": "http://localhost:1313/fr/",
     
@@ -210,7 +214,15 @@
 
   
   
-    <meta name="view-transition" content="same-origin">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0TKHM8NV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9R0TKHM8NV');
+</script>
   
 
   
@@ -646,7 +658,7 @@
         <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
             <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">🇫🇷</button>
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Menu de langue">🇫🇷</button>
                 <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     
                     
@@ -663,7 +675,7 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none" aria-label="Mode sombre">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
@@ -675,7 +687,7 @@
     </nav>
 
     <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2" aria-label="Ouvrir le menu mobile">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -688,7 +700,7 @@
 <div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
     <div class="flex justify-between items-center mb-8">
         <span class="text-xl font-bold dark:text-white">Travel</span>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200">
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Fermer le menu mobile">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -719,7 +731,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/fr/#" class="text-2xl font-semibold dark:text-white">Amériques</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                     
                 </div>
                 
@@ -729,7 +741,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/fr/#" class="text-lg text-neutral-600 dark:text-neutral-400">Amérique du Nord</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                             
                         </div>
                         
@@ -739,7 +751,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/fr/#" class="text-base text-neutral-500">Canada</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                                     
                                 </div>
                                 
@@ -765,7 +777,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/fr/#" class="text-base text-neutral-500">États-Unis</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                                     
                                 </div>
                                 
@@ -799,7 +811,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/fr/#" class="text-lg text-neutral-600 dark:text-neutral-400">Amérique Centrale</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                             
                         </div>
                         
@@ -825,7 +837,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/fr/#" class="text-2xl font-semibold dark:text-white">Asie</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                     
                 </div>
                 
@@ -847,7 +859,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/fr/#" class="text-2xl font-semibold dark:text-white">Europe</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                     
                 </div>
                 
@@ -857,7 +869,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/fr/#" class="text-lg text-neutral-600 dark:text-neutral-400">France</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                             
                         </div>
                         
@@ -911,7 +923,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/fr/#" class="text-lg text-neutral-600 dark:text-neutral-400">Italie</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
                             
                         </div>
                         
@@ -980,7 +992,7 @@
                 
             </div>
             <div class="flex items-center space-x-4">
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300">
+                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Mode sombre">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
@@ -1051,49 +1063,58 @@
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
         
         
+        
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 active opacity-100">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2019-09-02%2013-06-26.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/2019-09-02%2013-06-26_hu_e0c8e14282604f4b.webp" width="1920" height="1440" alt="Hero Image" class="w-full h-full object-cover" fetchpriority="high">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2022-06-06%2013-22-20.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/2022-06-06%2013-22-20_hu_cd340ce3f9e80730.webp" width="1920" height="1440" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2024-05-11%2002-10-18.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/2024-05-11%2002-10-18_hu_a030badb733bffa8.webp" width="1920" height="1440" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/canada00001.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/canada00001_hu_bc8814a9b2c127a3.webp" width="1920" height="1280" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/guatemala00020.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/guatemala00020_hu_ba473eb4e9dfbbfe.webp" width="1920" height="1280" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/guatemala00038.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/guatemala00038_hu_1e9243993bb99118.webp" width="1920" height="1280" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/montreal00002.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/montreal00002_hu_8f2dbe1747e2ca44.webp" width="1920" height="1280" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/montreal00003.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/montreal00003_hu_15dcc353d6953ef6.webp" width="1920" height="1280" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
+        
         
         <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 ">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/toronto00006.jpeg" alt="Hero Image" class="w-full h-full object-cover">
+            <img src="/img/hero/toronto00006_hu_abbf08e18a91b08c.webp" width="1920" height="1280" alt="Hero Image" class="w-full h-full object-cover" loading="lazy">
         </div>
         
     </div>
@@ -1141,7 +1162,7 @@
 <a href="http://localhost:1313/fr/gallery/boston/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/boston/feature_hu_3c4d9bc210caeb68.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/boston/feature_hu_547e2024761b2d3b.webp');"></div>
     
     <span class="card-title">Boston</span>
 </a>
@@ -1176,7 +1197,7 @@
 <a href="http://localhost:1313/fr/gallery/new_york/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/new_york/feature_hu_da91067458686577.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/new_york/feature_hu_2c0580c0e2c100fb.webp');"></div>
     
     <span class="card-title">New York</span>
 </a>
@@ -1193,7 +1214,7 @@
 <a href="http://localhost:1313/fr/gallery/philadelphie/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/philadelphie/feature_hu_7c58b9c5ee94da91.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/philadelphie/feature_hu_b0dbfaa57887a426.webp');"></div>
     
     <span class="card-title">Philadelphie</span>
 </a>
@@ -1210,7 +1231,7 @@
 <a href="http://localhost:1313/fr/gallery/toronto/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/toronto/feature_hu_7849d76b5d984d27.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/toronto/feature_hu_8530f8487a01808a.webp');"></div>
     
     <span class="card-title">Toronto</span>
 </a>
@@ -1223,7 +1244,7 @@
 <a href="http://localhost:1313/fr/gallery/washington/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/washington/feature_hu_88dcdd293020086f.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/washington/feature_hu_ba154fc7e4d2c641.webp');"></div>
     
     <span class="card-title">Washington</span>
 </a>
@@ -1247,7 +1268,7 @@
 <a href="http://localhost:1313/fr/gallery/bordeaux/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/bordeaux/feature_hu_75d585945b29738d.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/bordeaux/feature_hu_e25791d82592aa48.webp');"></div>
     
     <span class="card-title">Bordeaux</span>
 </a>
@@ -1272,7 +1293,7 @@
 <a href="http://localhost:1313/fr/gallery/lyon/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/lyon/feature_hu_dbc52e235afce9be.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/lyon/feature_hu_d829761c5fce7df8.webp');"></div>
     
     <span class="card-title">Lyon</span>
 </a>
@@ -1285,7 +1306,7 @@
 <a href="http://localhost:1313/fr/gallery/montenegro/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/montenegro/feature_hu_e314f386217e8273.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/montenegro/feature_hu_569aa2a8d2810dde.webp');"></div>
     
     <span class="card-title">Montenegro</span>
 </a>
@@ -1298,7 +1319,7 @@
 <a href="http://localhost:1313/fr/gallery/naples/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/naples/feature_hu_1cee50f0ff8a2fef.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/naples/feature_hu_ed9464f0b4075133.webp');"></div>
     
     <span class="card-title">Naples</span>
 </a>
@@ -1317,7 +1338,7 @@
 <a href="http://localhost:1313/fr/gallery/paris/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/paris/feature_hu_d7bbb71cbc341e0c.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/paris/feature_hu_ebe57c9659db8f0.webp');"></div>
     
     <span class="card-title">Paris</span>
 </a>
@@ -1332,7 +1353,7 @@
 <a href="http://localhost:1313/fr/gallery/rome/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/rome/feature_hu_27b513dec6541297.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/rome/feature_hu_2a8933624f77b765.webp');"></div>
     
     <span class="card-title">Rome</span>
 </a>
@@ -1370,7 +1391,7 @@
 <a href="http://localhost:1313/fr/gallery/cape_cod/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/cape_cod/feature_hu_1d4c9b82fafd0eca.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/cape_cod/feature_hu_a27c0e2f28dd67c2.webp');"></div>
     
     <span class="card-title">Cape Cod</span>
 </a>
@@ -1381,7 +1402,7 @@
 <a href="http://localhost:1313/fr/gallery/corse/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/corse/feature_hu_8ed908ea3a080727.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/corse/feature_hu_253d3060c0070ad8.webp');"></div>
     
     <span class="card-title">Corse</span>
 </a>
@@ -1392,7 +1413,7 @@
 <a href="http://localhost:1313/fr/gallery/finistere/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/finistere/feature_hu_a59ed935db2728e0.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/finistere/feature_hu_725772056df6fc4d.webp');"></div>
     
     <span class="card-title">Finistere</span>
 </a>
@@ -1403,7 +1424,7 @@
 <a href="http://localhost:1313/fr/gallery/guatemala/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/guatemala/feature_hu_91970ac45b2b21dd.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/guatemala/feature_hu_4ba127a7590f1b96.webp');"></div>
     
     <span class="card-title">Guatemala</span>
 </a>
@@ -1414,7 +1435,7 @@
 <a href="http://localhost:1313/fr/gallery/indonesie/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/indonesie/feature_hu_28796a5db706a999.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/indonesie/feature_hu_7073dd8a7114ea7a.webp');"></div>
     
     <span class="card-title">Indonesie</span>
 </a>
@@ -1427,7 +1448,7 @@
 <a href="http://localhost:1313/fr/gallery/maine/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/maine/feature_hu_34d53f98579fa602.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/maine/feature_hu_cd440736dc18760b.webp');"></div>
     
     <span class="card-title">Maine</span>
 </a>
@@ -1444,7 +1465,7 @@
 <a href="http://localhost:1313/fr/gallery/new_hampshire/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/new_hampshire/feature_hu_57052f69e705092c.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/new_hampshire/feature_hu_c89f6e4e5f510970.webp');"></div>
     
     <span class="card-title">New Hampshire</span>
 </a>
@@ -1457,7 +1478,7 @@
 <a href="http://localhost:1313/fr/gallery/niagara_falls/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/niagara_falls/feature_hu_17749bcc37553e3e.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/niagara_falls/feature_hu_e301bb557993fcee.webp');"></div>
     
     <span class="card-title">Niagara Falls</span>
 </a>
@@ -1478,7 +1499,7 @@
 <a href="http://localhost:1313/fr/gallery/suede/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/suede/feature_hu_231c956276018616.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/suede/feature_hu_a0c6233c594fa084.webp');"></div>
     
     <span class="card-title">Suede</span>
 </a>
@@ -1491,7 +1512,7 @@
 <a href="http://localhost:1313/fr/gallery/vermont/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/vermont/feature_hu_2c904b05510f0744.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/vermont/feature_hu_a2a0ef3ae0ef3af0.webp');"></div>
     
     <span class="card-title">Vermont</span>
 </a>
@@ -1521,7 +1542,7 @@
 <a href="http://localhost:1313/fr/gallery/canada/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/canada/feature_hu_14aaaf1e68f313ff.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/canada/feature_hu_e71635835245607b.webp');"></div>
     
     <span class="card-title">Canada</span>
 </a>
@@ -1548,7 +1569,7 @@
 <a href="http://localhost:1313/fr/gallery/montreal/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/montreal/feature_hu_846f62bfef9cbf99.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/montreal/feature_hu_960631a5fe18bd37.webp');"></div>
     
     <span class="card-title">Montreal</span>
 </a>
@@ -1567,7 +1588,7 @@
 <a href="http://localhost:1313/fr/gallery/ottawa/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/ottawa/feature_hu_5a45ebcaf2fe3e37.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/ottawa/feature_hu_46aa62ad7da5a59.webp');"></div>
     
     <span class="card-title">Ottawa</span>
 </a>
@@ -1582,7 +1603,7 @@
 <a href="http://localhost:1313/fr/gallery/quebec/" class="gallery-card">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/quebec/feature_hu_7f4137a64fa7bf78.webp');"></div>
+    <div class="card-bg" style="background-image: url('/gallery/quebec/feature_hu_8066f2ac5bc917ef.webp');"></div>
     
     <span class="card-title">Quebec</span>
 </a>

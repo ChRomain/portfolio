@@ -248,7 +248,15 @@
 
   
   
-    <meta name="view-transition" content="same-origin">
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0TKHM8NV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9R0TKHM8NV');
+</script>
   
 
   
@@ -684,7 +692,7 @@
         <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
             <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer">🇺🇸</button>
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Language menu">🇺🇸</button>
                 <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     
                     
@@ -701,7 +709,7 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none">
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none" aria-label="Toggle dark mode">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
@@ -713,7 +721,7 @@
     </nav>
 
     <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2" aria-label="Open mobile menu">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -726,7 +734,7 @@
 <div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
     <div class="flex justify-between items-center mb-8">
         <span class="text-xl font-bold dark:text-white">Travel</span>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200">
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Close mobile menu">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -757,7 +765,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/#" class="text-2xl font-semibold dark:text-white">Americas</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                     
                 </div>
                 
@@ -767,7 +775,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">North America</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -777,7 +785,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/#" class="text-base text-neutral-500">Canada</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Toggle submenu">▼</button>
                                     
                                 </div>
                                 
@@ -803,7 +811,7 @@
                                 <div class="flex justify-between items-center">
                                     <a href="/#" class="text-base text-neutral-500">USA</a>
                                     
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400">▼</button>
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Toggle submenu">▼</button>
                                     
                                 </div>
                                 
@@ -837,7 +845,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">Central America</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -863,7 +871,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/#" class="text-2xl font-semibold dark:text-white">Asia</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                     
                 </div>
                 
@@ -885,7 +893,7 @@
                 <div class="flex justify-between items-center">
                     <a href="/#" class="text-2xl font-semibold dark:text-white">Europe</a>
                     
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                     
                 </div>
                 
@@ -895,7 +903,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">France</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -949,7 +957,7 @@
                         <div class="flex justify-between items-center">
                             <a href="/#" class="text-lg text-neutral-600 dark:text-neutral-400">Italy</a>
                             
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400">▼</button>
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
                             
                         </div>
                         
@@ -1018,7 +1026,7 @@
                 
             </div>
             <div class="flex items-center space-x-4">
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300">
+                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Toggle dark mode">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
@@ -1196,12 +1204,12 @@
   
   
   
-  <img src="/gallery/indonesie/indonesie_001.webp" alt="Photographie de Indonesie - 1" title="iPhone 13 | f/1.6 | 1/620s | ISO 50" width="2000" height="3226" />
-  <img src="/gallery/indonesie/indonesie_002.webp" alt="Photographie de Indonesie - 2" title="iPhone 13 | f/1.6 | 1/3200s | ISO 50" width="2000" height="2666" />
-  <img src="/gallery/indonesie/indonesie_003.webp" alt="Photographie de Indonesie - 3" title="iPhone 13 | f/2.4 | 1/950s | ISO 32" width="2000" height="2666" />
-  <img src="/gallery/indonesie/indonesie_004.webp" alt="Photographie de Indonesie - 4" title="iPhone 13 | f/1.6 | 1/1150s | ISO 50" width="2000" height="2666" />
-  <img src="/gallery/indonesie/indonesie_005.webp" alt="Photographie de Indonesie - 5" title="iPhone 13 | f/2.4 | 1/160s | ISO 32" width="2000" height="1500" />
-  <img src="/gallery/indonesie/indonesie_006.webp" alt="Photographie de Indonesie - 6" title="iPhone 13 | f/2.4 | 1/150s | ISO 32" width="2000" height="2666" />
+  <img src="/gallery/indonesie/indonesie_001.webp" alt="Photographie de Indonesie - 1" title="iPhone 13 | f/1.6 | 1/620s | ISO 50" width="1600" height="2581" />
+  <img src="/gallery/indonesie/indonesie_002.webp" alt="Photographie de Indonesie - 2" title="iPhone 13 | f/1.6 | 1/3200s | ISO 50" width="1600" height="2133" />
+  <img src="/gallery/indonesie/indonesie_003.webp" alt="Photographie de Indonesie - 3" title="iPhone 13 | f/2.4 | 1/950s | ISO 32" width="1600" height="2133" />
+  <img src="/gallery/indonesie/indonesie_004.webp" alt="Photographie de Indonesie - 4" title="iPhone 13 | f/1.6 | 1/1150s | ISO 50" width="1600" height="2133" />
+  <img src="/gallery/indonesie/indonesie_005.webp" alt="Photographie de Indonesie - 5" title="iPhone 13 | f/2.4 | 1/160s | ISO 32" width="1600" height="1200" />
+  <img src="/gallery/indonesie/indonesie_006.webp" alt="Photographie de Indonesie - 6" title="iPhone 13 | f/2.4 | 1/150s | ISO 32" width="1600" height="2133" />
   <img src="/gallery/indonesie/indonesie_007.webp" alt="Photographie de Indonesie - 7" title="iPhone 13 | f/2.4 | 1/720s | ISO 32" width="1592" height="2122" />
   <img src="/gallery/indonesie/indonesie_008.webp" alt="Photographie de Indonesie - 8" title="" width="1178" height="2060" />
   <img src="/gallery/indonesie/indonesie_009.webp" alt="Photographie de Indonesie - 9" title="" width="1178" height="2065" />
