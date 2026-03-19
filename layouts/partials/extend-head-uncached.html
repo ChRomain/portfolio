@@ -1,0 +1,13 @@
+{{/* Preload de la première image hero sur la page d'accueil uniquement (améliore le LCP) */}}
+{{ if .IsHome }}
+  {{ $heroImages := resources.Match "img/hero/*" }}
+  {{ with index $heroImages 0 }}
+    {{ $desktop := .Resize "1440x webp q65" }}
+    {{ $mobile  := .Resize "768x webp q65" }}
+    <link rel="preload" as="image"
+          href="{{ $desktop.RelPermalink }}"
+          imagesrcset="{{ $mobile.RelPermalink }} 768w, {{ $desktop.RelPermalink }} 1440w"
+          imagesizes="(max-width: 768px) 768px, 1440px"
+          fetchpriority="high">
+  {{ end }}
+{{ end }}

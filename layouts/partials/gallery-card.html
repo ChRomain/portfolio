@@ -1,5 +1,5 @@
 {{ $image := .Resources.GetMatch "feature*" }}
-<a href="{{ .Permalink }}" class="gallery-card">
+<a href="{{ .Permalink }}" aria-label="{{ i18n "aria_gallery_link" }} {{ .Title }}" class="gallery-card">
     {{ with $image }}
     {{ $optimized := .Fill "500x120 webp q75" }}
     <div class="card-bg" style="background-image: url('{{ $optimized.RelPermalink }}');"></div>

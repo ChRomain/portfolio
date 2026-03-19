@@ -4,12 +4,32 @@
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
         {{ $heroImages := resources.Match "img/hero/*" }}
         {{ range $index, $img := $heroImages }}
-        {{ $resized := $img.Resize "1920x webp q80" }}
-        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 {{ if eq $index 0 }}active opacity-100{{ end }}">
+        {{ if eq $index 0 }}
+        {{/* Première image (LCP) : srcset responsive pour charger une version plus légère sur mobile */}}
+        {{ $desktop := $img.Resize "1440x webp q65" }}
+        {{ $mobile  := $img.Resize "768x webp q65" }}
+        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 active opacity-100">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="Hero Image" class="w-full h-full object-cover" {{ if eq $index 0 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}>
+            <img
+                srcset="{{ $mobile.RelPermalink }} 768w, {{ $desktop.RelPermalink }} 1440w"
+                sizes="(max-width: 768px) 768px, 1440px"
+                src="{{ $desktop.RelPermalink }}"
+                width="{{ $desktop.Width }}" height="{{ $desktop.Height }}"
+                alt="Hero Image"
+                class="w-full h-full object-cover"
+                fetchpriority="high"
+                decoding="async">
+        </div>
+        {{ else }}
+        {{/* Images suivantes : qualité réduite + lazy loading */}}
+        {{ $resized := $img.Resize "1440x webp q65" }}
+        <div class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
+            <div class="absolute inset-0 bg-black/30 z-10"></div>
+            <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
         </div>
         {{ end }}
+        {{ end }}
+
     </div>
 
     <div class="absolute inset-0 z-20 flex items-center justify-center px-6 pointer-events-none">

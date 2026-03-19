@@ -7,7 +7,7 @@
 
 <div class="container flex items-center justify-between mx-auto px-6 h-16 relative z-[100]">
     <div class="flex items-center">
-        <a href="{{ .Site.Home.RelPermalink }}"
+        <a href="{{ .Site.Home.RelPermalink }}" aria-label="{{ i18n "aria_go_home" }}"
            class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -24,8 +24,8 @@
         <ul class="main-nav-list flex items-center list-none m-0 p-0">
             {{ range .Site.Menus.main }}
             <li class="relative group flex items-center">
-                <a href="{{ .URL | relLangURL }}"
-                   class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-500 py-4 px-3 flex items-center transition-colors">
+                <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}"
+                   class="{{ if .HasChildren }}non-clickable{{ end }} text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     {{ .Name }}
                     {{ if .HasChildren }}<span class="ml-3 text-[10px] opacity-50">▼</span>{{ end }}
                 </a>
@@ -34,8 +34,8 @@
                 <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                     {{ range .Children }}
                     <li class="relative group/sub list-none">
-                        <a href="{{ .URL | relLangURL }}"
-                           class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 flex items-center justify-between whitespace-nowrap">
+                        <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}"
+                           class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>{{ .Name }}</span>
                             {{ if .HasChildren }}<span class="ml-4 text-[10px]">▶</span>{{ end }}
                         </a>
@@ -44,8 +44,8 @@
                         <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                             {{ range .Children }}
                             <li class="relative group/subsub list-none">
-                                <a href="{{ .URL | relLangURL }}"
-                                   class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 flex items-center justify-between whitespace-nowrap">
+                                <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}"
+                                   class="{{ if .HasChildren }}non-clickable{{ end }} block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>{{ .Name }}</span>
                                     {{ if .HasChildren }}<span class="ml-4 text-[10px]">▶</span>{{ end }}
                                 </a>
@@ -54,8 +54,8 @@
                                 <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                                     {{ range .Children }}
                                     <li class="list-none">
-                                        <a href="{{ .URL | relLangURL }}"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-500 whitespace-nowrap">
+                                        <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             {{ .Name }}
                                         </a>
                                     </li>
@@ -81,26 +81,26 @@
                 <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     {{ range .AllTranslations }}
                     {{ if ne .Language.Lang $.Site.Language.Lang }}
-                    <a href="{{ .Permalink }}" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">{{ .Language.Params.flag }}</a>
+                    <a href="{{ .Permalink }}" aria-label="{{ i18n "aria_switch_lang" }} {{ .Language.LanguageName }}" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">{{ .Language.Params.flag }}</a>
                     {{ end }}
                     {{ end }}
                 </div>
             </div>
             {{ end }}
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-primary-500 focus:outline-none" aria-label="{{ i18n "aria_toggle_dark_mode" }}">
+            <button id="theme-button" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none" aria-label="{{ i18n "aria_toggle_dark_mode" }}">
                 <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
 
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="p-2 text-neutral-400 hover:text-pink-500">
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="{{ i18n "aria_instagram" }}" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-pink-500">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
         </div>
     </nav>
 
     <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-500 p-2" aria-label="{{ i18n "aria_open_mobile_menu" }}">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="{{ i18n "aria_open_mobile_menu" }}">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -126,7 +126,7 @@
             {{ range .Site.Menus.main }}
             <li>
                 <div class="flex justify-between items-center">
-                    <a href="{{ .URL | relLangURL }}" class="text-2xl font-semibold dark:text-white">{{ .Name }}</a>
+                    <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}" class="text-2xl font-semibold dark:text-white">{{ .Name }}</a>
                     {{ if .HasChildren }}
                     <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="{{ i18n "aria_toggle_submenu" }}">▼</button>
                     {{ end }}
@@ -136,7 +136,7 @@
                     {{ range .Children }}
                     <li>
                         <div class="flex justify-between items-center">
-                            <a href="{{ .URL | relLangURL }}" class="text-lg text-neutral-600 dark:text-neutral-400">{{ .Name }}</a>
+                            <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}" class="text-lg text-neutral-600 dark:text-neutral-400">{{ .Name }}</a>
                             {{ if .HasChildren }}
                             <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="{{ i18n "aria_toggle_submenu" }}">▼</button>
                             {{ end }}
@@ -146,7 +146,7 @@
                             {{ range .Children }}
                             <li>
                                 <div class="flex justify-between items-center">
-                                    <a href="{{ .URL | relLangURL }}" class="text-base text-neutral-500">{{ .Name }}</a>
+                                    <a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}" class="text-base text-neutral-500">{{ .Name }}</a>
                                     {{ if .HasChildren }}
                                     <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="{{ i18n "aria_toggle_submenu" }}">▼</button>
                                     {{ end }}
@@ -154,7 +154,7 @@
                                 {{ if .HasChildren }}
                                 <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
                                     {{ range .Children }}
-                                    <li><a href="{{ .URL | relLangURL }}" class="text-sm text-neutral-400 py-1 block">{{ .Name }}</a></li>
+                                    <li><a href="{{ .URL | relLangURL }}" aria-label="{{ i18n "aria_nav_link" }} {{ .Name }}" class="text-sm text-neutral-400 py-1 block">{{ .Name }}</a></li>
                                     {{ end }}
                                 </ul>
                                 {{ end }}
@@ -175,7 +175,7 @@
         <div class="flex items-center justify-between">
             <div class="flex space-x-4">
                 {{ range .AllTranslations }}
-                <a href="{{ .Permalink }}" class="text-3xl">{{ .Language.Params.flag }}</a>
+                <a href="{{ .Permalink }}" aria-label="{{ i18n "aria_switch_lang" }} {{ .Language.LanguageName }}" class="text-3xl">{{ .Language.Params.flag }}</a>
                 {{ end }}
             </div>
             <div class="flex items-center space-x-4">
@@ -183,7 +183,7 @@
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
-                <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-pink-500">
+                <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="{{ i18n "aria_instagram" }}" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-pink-600 dark:text-pink-500">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
             </div>

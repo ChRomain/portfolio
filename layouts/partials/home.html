@@ -3,7 +3,7 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     
     {{ range (where .Site.RegularPages "Section" "gallery") }}
-    <a href="{{ .Permalink }}" class="flex items-center justify-center p-4 min-h-[80px] rounded-lg border border-neutral-200 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 transition-all hover:scale-105 hover:border-primary-500 text-center">
+    <a href="{{ .Permalink }}" aria-label="{{ i18n "aria_gallery_link" }} {{ .Title }}" class="flex items-center justify-center p-4 min-h-[80px] rounded-lg border border-neutral-200 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 transition-all hover:scale-105 hover:border-primary-500 text-center">
       <h2 class="text-base font-bold text-neutral-800 dark:text-neutral-100">
         {{ .Title }}
       </h2>
