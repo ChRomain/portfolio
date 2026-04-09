@@ -48,6 +48,23 @@ VIDEOS = {
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-01-23%2010-52-09.mov",
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-03%2008-48-03.mp4",
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-11%2019-05-15.mov"
+    ],
+    "keys": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2019-10-13.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2023-15-36.mp4"
+    ],
+    "miami": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-07-17.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-08-17.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-06-15.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-05%2020-26-44.mov"
+    ],
+    "everglades": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-09-58.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-12-38.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-13-27.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-12.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-59.mov"
     ]
 }
 
@@ -175,7 +192,22 @@ DESCRIPTIONS = {
     "philadelphie": {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Immerse yourself in a vibrant urban mosaic where history meets bold creativity. From the intricate glass masterpieces of the Magic Gardens to the towering blue spans of the Ben Franklin Bridge, discover the colorful soul and resilient spirit of the City of Brotherly Love.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Plongez-vous dans une mosaïque urbaine vibrante où l'histoire rencontre une créativité audacieuse. Des chefs-d'œuvre de verre complexes des Magic Gardens aux travées bleues imposantes du pont Ben Franklin, découvrez l'âme colorée et l'esprit résilient de la ville de l'amour fraternel.",
-        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Sumérgete en un vibrante mosaico urbano donde la historia se encuentra con la creatividad audaz. Desde las intrincadas obras maestras de vidrio de los Jardines Mágicos hasta los imponentes tramos azules del Puente Ben Franklin, descubre el alma colorida y el espíritu resistente de la Ciudad del Amor Fraternal."
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Sumérgete en un vibrante mosaico urbano donde la historia se encuentra con la creatividad audaz. Desde las intrincadas obras maestras de vidrio de los Jardines Mágico de Filadelfia hasta los imponentes tramos azules del Puente Ben Franklin, descubre el alma colorida y el espíritu resistente de la Ciudad del Amor Fraternal."
+    },
+    "miami": {
+        "en": "&nbsp;&nbsp;&nbsp;&nbsp;Dive into the electric energy of the Vice City. From the pastel-hued Art Deco facades of Ocean Drive to the sun-soaked shores of South Beach, experience a world where tropical glamour meets a vibrant, multicultural pulse.",
+        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Plongez dans l'énergie électrique de la \"Vice City\". Des façades Art déco aux teintes pastel d'Ocean Drive aux rives ensoleillées de South Beach, découvrez un monde où le glamour tropical rencontre un pouls multiculturel vibrant.",
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Sumérgete en la energía eléctrica de la \"Vice City\". Desde las fachadas Art Deco en tonos pastel de Ocean Drive hasta las costas bañadas por el sol de South Beach, descubre un mundo donde el glamour tropical se encuentra con un vibrante pulso multicultural."
+    },
+    "keys": {
+        "en": "&nbsp;&nbsp;&nbsp;&nbsp;Follow the Overseas Highway to a realm of turquoise waters and island time. From the historic charm of Key West’s colorful streets to the serene beauty of coral reefs, discover a Caribbean-style paradise at the southernmost tip of the United States.",
+        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Suivez l'Overseas Highway vers un royaume d'eaux turquoise et de temps suspendu. Du charme historique des rues colorées de Key West à la beauté sereine des récifs coralliens, découvrez un paradis de style caraïbe à la pointe sud des États-Unis.",
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Sigue la Overseas Highway hacia un reino de aguas turquesas y tiempo pausado. Desde el encanto histórico de las coloridas calles de Key West hasta la belleza serena de los arrecifes de coral, descubre un paraíso de estilo caribeño en el extremo sur de los Estados Unidos."
+    },
+    "everglades": {
+        "en": "&nbsp;&nbsp;&nbsp;&nbsp;Venture into the mysterious 'River of Grass'. From the ancient sawsedge marshes to the hidden alligator trails beneath the cypress canopy, witness a unique wilderness where water and sky merge in a silent, primordial dance.",
+        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Aventurez-vous dans la mystérieuse \"Rivière d'Herbe\". Des anciens marais de scirpe aux sentiers cachés des alligators sous la canopée des cyprès, témoignez d'une nature sauvage unique où l'eau et le ciel se fondent dans une danse silencieuse et primordiale.",
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Aventúrate en el misterioso \"Río de Hierba\". Desde las antiguas marismas de juncos hasta los senderos ocultos de los caimanes bajo el dosel de los cipreses, presencia una naturaleza salvaje única donde el agua y el cielo se funden en una danza silenciosa y primordial."
     }
 }
 

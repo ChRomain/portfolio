@@ -111,6 +111,24 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/fr/gallery/everglades/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/gallery/everglades/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/gallery/everglades/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/gallery/everglades/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/fr/gallery/finistere/</loc>
     <xhtml:link
       rel="alternate"
@@ -183,6 +201,24 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/fr/gallery/keys/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/gallery/keys/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/gallery/keys/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/gallery/keys/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/fr/gallery/lyon/</loc>
     <xhtml:link
       rel="alternate"
@@ -234,6 +270,24 @@
       rel="alternate"
       hreflang="fr"
       href="http://localhost:1313/fr/map/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/fr/gallery/miami/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/gallery/miami/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/gallery/miami/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/gallery/miami/"
     />
   </url>
   <url>

@@ -212,6 +212,21 @@ defaultContentLanguage = "en"
       url = "/gallery/washington/"
       weight = 9
     [[languages.en.menu.main]]
+      name = "Everglades"
+      parent = "menu_usa"
+      url = "/gallery/everglades/"
+      weight = 10
+    [[languages.en.menu.main]]
+      name = "Keys"
+      parent = "menu_usa"
+      url = "/gallery/keys/"
+      weight = 11
+    [[languages.en.menu.main]]
+      name = "Miami"
+      parent = "menu_usa"
+      url = "/gallery/miami/"
+      weight = 12
+    [[languages.en.menu.main]]
       name = "Bordeaux"
       parent = "menu_france"
       url = "/gallery/bordeaux/"
@@ -423,6 +438,21 @@ defaultContentLanguage = "en"
       url = "/fr/gallery/washington/"
       weight = 9
     [[languages.fr.menu.main]]
+      name = "Everglades"
+      parent = "menu_usa"
+      url = "/fr/gallery/everglades/"
+      weight = 10
+    [[languages.fr.menu.main]]
+      name = "Keys"
+      parent = "menu_usa"
+      url = "/fr/gallery/keys/"
+      weight = 11
+    [[languages.fr.menu.main]]
+      name = "Miami"
+      parent = "menu_usa"
+      url = "/fr/gallery/miami/"
+      weight = 12
+    [[languages.fr.menu.main]]
       name = "Bordeaux"
       parent = "menu_france"
       url = "/fr/gallery/bordeaux/"
@@ -633,6 +663,21 @@ defaultContentLanguage = "en"
       parent = "menu_usa"
       url = "/es/gallery/washington/"
       weight = 9
+    [[languages.es.menu.main]]
+      name = "Everglades"
+      parent = "menu_usa"
+      url = "/es/gallery/everglades/"
+      weight = 10
+    [[languages.es.menu.main]]
+      name = "Keys"
+      parent = "menu_usa"
+      url = "/es/gallery/keys/"
+      weight = 11
+    [[languages.es.menu.main]]
+      name = "Miami"
+      parent = "menu_usa"
+      url = "/es/gallery/miami/"
+      weight = 12
     [[languages.es.menu.main]]
       name = "Bordeaux"
       parent = "menu_france"
