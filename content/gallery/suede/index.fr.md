@@ -2,6 +2,7 @@
 title: "Suede"
 description: "Découvrez ma galerie photo de Suede. Une collection de clichés capturant l'architecture et l'ambiance de Suede."
 layout: "gallery"
+dominant_color: "#716761"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

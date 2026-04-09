@@ -2,6 +2,7 @@
 title: "Paris"
 description: "Descubre mi galería de fotos de Paris. Una colección de tomas capturando la arquitectura y la atmósfera de Paris."
 layout: "gallery"
+dominant_color: "#5d483b"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

@@ -2,6 +2,7 @@
 title: "Naples"
 description: "Discover my photo gallery of Naples. A collection of shots capturing the architecture and atmosphere of Naples."
 layout: "gallery"
+dominant_color: "#536b7a"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

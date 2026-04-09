@@ -2,6 +2,7 @@
 title: "Suede"
 description: "Discover my photo gallery of Suede. A collection of shots capturing the architecture and atmosphere of Suede."
 layout: "gallery"
+dominant_color: "#716761"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

@@ -2,6 +2,7 @@
 title: "Corse"
 description: "Descubre mi galería de fotos de Corse. Una colección de tomas capturando la arquitectura y la atmósfera de Corse."
 layout: "gallery"
+dominant_color: "#567f80"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

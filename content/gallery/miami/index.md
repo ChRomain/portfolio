@@ -2,6 +2,7 @@
 title: "Miami"
 description: "Discover my photo gallery of Miami. A collection of shots capturing the architecture and atmosphere of Miami."
 layout: "gallery"
+dominant_color: "#9b877a"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

@@ -2,6 +2,7 @@
 title: "Boston"
 description: "Discover my photo gallery of Boston. A collection of shots capturing the architecture and atmosphere of Boston."
 layout: "gallery"
+dominant_color: "#8b8a7e"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

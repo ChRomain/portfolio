@@ -2,6 +2,30 @@
 <div class="map-page-wrapper">
     <div class="map-container-wrapper">
         <div id="map" style="width: 100%; height: 100%; background: transparent;"></div>
+        
+        <!-- Dashboard de l'Explorateur -->
+        <div id="map-dashboard" class="glass-dashboard animate-fade-in">
+            <div class="dashboard-item">
+                <span class="dashboard-value" id="stats-countries">0</span>
+                <span class="dashboard-label">Pays</span>
+            </div>
+            <div class="dashboard-divider"></div>
+            <div class="dashboard-item">
+                <span class="dashboard-value" id="stats-cities">0</span>
+                <span class="dashboard-label">Villes</span>
+            </div>
+            <div class="dashboard-divider"></div>
+            <div class="dashboard-item">
+                <span class="dashboard-value">+1200</span>
+                <span class="dashboard-label">Photos</span>
+            </div>
+        </div>
+
+        <!-- Bouton Immersion Totale -->
+        <button id="map-fullscreen-toggle" class="glass-button animate-fade-in" title="Immersion Totale">
+            <svg id="fs-expand-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+            <svg id="fs-collapse-icon" class="hidden-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+        </button>
     </div>
 </div>
 
@@ -31,44 +55,52 @@
             }
 
             const locations = [
-                { name: "Paris", coords: [48.8566, 2.3522], url: "/gallery/paris/" },
-                { name: "Lyon", coords: [45.7640, 4.8357], url: "/gallery/lyon/" },
-                { name: "Bordeaux", coords: [44.8378, -0.5792], url: "/gallery/bordeaux/" },
-                { name: "Corse", coords: [42.0396, 9.0129], url: "/gallery/corse/" },
-                { name: "Finistère", coords: [48.3147, -4.1441], url: "/gallery/finistere/" },
-                { name: "Rome", coords: [41.9028, 12.4964], url: "/gallery/rome/" },
-                { name: "Naples", coords: [40.8518, 14.2681], url: "/gallery/naples/" },
-                { name: "Suède", coords: [59.3293, 18.0686], url: "/gallery/suede/" },
-                { name: "Monténégro", coords: [42.7087, 19.3744], url: "/gallery/montenegro/" },
-                { name: "New York", coords: [40.7128, -74.0060], url: "/gallery/new_york/" },
-                { name: "Washington", coords: [38.9072, -77.0369], url: "/gallery/washington/" },
-                { name: "Boston", coords: [42.3601, -71.0589], url: "/gallery/boston/" },
-                { name: "Philadelphia", coords: [39.9526, -75.1652], url: "/gallery/philadelphie/" },
-                { name: "Montreal", coords: [45.5017, -73.5673], url: "/gallery/montreal/" },
-                { name: "Québec", coords: [46.8139, -71.2080], url: "/gallery/quebec/" },
-                { name: "Ottawa", coords: [45.4215, -75.6972], url: "/gallery/ottawa/" },
-                { name: "Toronto", coords: [43.6532, -79.3832], url: "/gallery/toronto/" },
-                { name: "Niagara Falls", coords: [43.0896, -79.0849], url: "/gallery/niagara_falls/" },
-                { name: "Cape Cod", coords: [41.6688, -70.2962], url: "/gallery/cape_cod/" },
-                { name: "Maine", coords: [45.2538, -69.4455], url: "/gallery/maine/" },
-                { name: "Vermont", coords: [44.5588, -72.5778], url: "/gallery/vermont/" },
-                { name: "New Hampshire", coords: [43.1939, -71.5724], url: "/gallery/new_hampshire/" },
-                { name: "Guatemala", coords: [15.7835, -90.2308], url: "/gallery/guatemala/" },
-                { name: "Indonésie", coords: [-8.4095, 115.1889], url: "/gallery/indonesie/" },
-                { name: "Miami", coords: [25.7617, -80.1918], url: "/gallery/miami/" },
-                { name: "Keys", coords: [24.5551, -81.7800], url: "/gallery/keys/" },
-                { name: "Everglades", coords: [25.2866, -80.8987], url: "/gallery/everglades/" }
+                { name: "Paris", coords: [48.8566, 2.3522], url: "/gallery/paris/", country: "France" },
+                { name: "Lyon", coords: [45.7640, 4.8357], url: "/gallery/lyon/", country: "France" },
+                { name: "Bordeaux", coords: [44.8378, -0.5792], url: "/gallery/bordeaux/", country: "France" },
+                { name: "Corse", coords: [42.0396, 9.0129], url: "/gallery/corse/", country: "France" },
+                { name: "Finistère", coords: [48.3147, -4.1441], url: "/gallery/finistere/", country: "France" },
+                { name: "Rome", coords: [41.9028, 12.4964], url: "/gallery/rome/", country: "Italie" },
+                { name: "Naples", coords: [40.8518, 14.2681], url: "/gallery/naples/", country: "Italie" },
+                { name: "Suède", coords: [59.3293, 18.0686], url: "/gallery/suede/", country: "Suède" },
+                { name: "Monténégro", coords: [42.7087, 19.3744], url: "/gallery/montenegro/", country: "Monténégro" },
+                { name: "New York", coords: [40.7128, -74.0060], url: "/gallery/new_york/", country: "USA" },
+                { name: "Washington", coords: [38.9072, -77.0369], url: "/gallery/washington/", country: "USA" },
+                { name: "Boston", coords: [42.3601, -71.0589], url: "/gallery/boston/", country: "USA" },
+                { name: "Philadelphia", coords: [39.9526, -75.1652], url: "/gallery/philadelphie/", country: "USA" },
+                { name: "Montreal", coords: [45.5017, -73.5673], url: "/gallery/montreal/", country: "Canada" },
+                { name: "Québec", coords: [46.8139, -71.2080], url: "/gallery/quebec/", country: "Canada" },
+                { name: "Ottawa", coords: [45.4215, -75.6972], url: "/gallery/ottawa/", country: "Canada" },
+                { name: "Toronto", coords: [43.6532, -79.3832], url: "/gallery/toronto/", country: "Canada" },
+                { name: "Niagara Falls", coords: [43.0896, -79.0849], url: "/gallery/niagara_falls/", country: "Canada" },
+                { name: "Cape Cod", coords: [41.6688, -70.2962], url: "/gallery/cape_cod/", country: "USA" },
+                { name: "Maine", coords: [45.2538, -69.4455], url: "/gallery/maine/", country: "USA" },
+                { name: "Vermont", coords: [44.5588, -72.5778], url: "/gallery/vermont/", country: "USA" },
+                { name: "New Hampshire", coords: [43.1939, -71.5724], url: "/gallery/new_hampshire/", country: "USA" },
+                { name: "Guatemala", coords: [15.7835, -90.2308], url: "/gallery/guatemala/", country: "Guatemala" },
+                { name: "Indonésie", coords: [-8.4095, 115.1889], url: "/gallery/indonesie/", country: "Indonésie" },
+                { name: "Miami", coords: [25.7617, -80.1918], url: "/gallery/miami/", country: "USA" },
+                { name: "Keys", coords: [24.5551, -81.7800], url: "/gallery/keys/", country: "USA" },
+                { name: "Everglades", coords: [25.2866, -80.8987], url: "/gallery/everglades/", country: "USA" }
             ];
 
             const map = L.map('map', {
-                center: [30, -20],
-                zoom: 2,
+                center: [15, 0], // Starting point (middle of the ocean/world)
+                zoom: 1.5,       // Start very far
                 minZoom: 2,
                 maxBounds: [[-85, -180], [85, 180]],
                 scrollWheelZoom: false,
                 zoomControl: false,
                 attributionControl: false
             });
+
+            // Cinematic Fly-To effect on load
+            setTimeout(() => {
+                map.flyTo([35, -30], 3, {
+                    duration: 3.5,
+                    easeLinearity: 0.1
+                });
+            }, 500);
 
             // Dark tiles as fallback (very minimalist)
             L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
@@ -90,13 +122,19 @@
             });
 
             locations.forEach(loc => {
-                const marker = L.circleMarker(loc.coords, {
-                    radius: 6,
-                    fillColor: "#3b82f6",
-                    color: "#fff",
-                    weight: 1.5,
-                    opacity: 1,
-                    fillOpacity: 0.9
+                const photoMarkerHtml = `
+                    <div class="photo-marker" style="background-image: url('${loc.url}feature.webp');">
+                        <div class="photo-marker-border"></div>
+                    </div>
+                `;
+
+                const marker = L.marker(loc.coords, {
+                    icon: L.divIcon({
+                        html: photoMarkerHtml,
+                        className: 'custom-photo-marker',
+                        iconSize: [40, 40],
+                        iconAnchor: [20, 20]
+                    })
                 });
 
                 const tooltipContent = `
@@ -134,6 +172,42 @@
 
             // 3. Zoom control in bottom right
             L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+            // 4. Update Dashboard Stats
+            const uniqueCountries = new Set(locations.map(l => l.country)).size;
+            document.getElementById('stats-countries').textContent = uniqueCountries;
+            document.getElementById('stats-cities').textContent = locations.length;
+
+            // 5. Fullscreen Logic
+            const fsBtn = document.getElementById('map-fullscreen-toggle');
+            const fsContainer = document.querySelector('.map-container-wrapper');
+            const expandIcon = document.getElementById('fs-expand-icon');
+            const collapseIcon = document.getElementById('fs-collapse-icon');
+
+            const toggleFullscreen = () => {
+                if (!document.fullscreenElement) {
+                    fsContainer.requestFullscreen().catch(err => {
+                        console.error(`Fullscreen Error: ${err.message}`);
+                    });
+                } else {
+                    document.exitFullscreen();
+                }
+            };
+
+            fsBtn.addEventListener('click', toggleFullscreen);
+
+            document.addEventListener('fullscreenchange', () => {
+                if (document.fullscreenElement) {
+                    expandIcon.classList.add('hidden-icon');
+                    collapseIcon.classList.remove('hidden-icon');
+                    fsContainer.classList.add('is-fullscreen');
+                } else {
+                    expandIcon.classList.remove('hidden-icon');
+                    collapseIcon.classList.add('hidden-icon');
+                    fsContainer.classList.remove('is-fullscreen');
+                }
+                setTimeout(() => map.invalidateSize(), 300);
+            });
 
             // Fix for map resizing
             setTimeout(() => map.invalidateSize(), 500);
@@ -206,12 +280,172 @@
         color: #ec4899 !important;
     }
 
-    .leaflet-control-zoom-in {
-        border-radius: 8px 8px 0 0 !important;
-    }
-
     .leaflet-control-zoom-out {
         border-radius: 0 0 8px 8px !important;
+    }
+
+    /* Photo-Markers Styles */
+    .custom-photo-marker {
+        background: none !important;
+        border: none !important;
+    }
+
+    .photo-marker {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        border: 2px solid white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .photo-marker:hover {
+        transform: scale(1.3);
+        z-index: 1000 !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        border-color: #3b82f6;
+    }
+
+    .photo-marker::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #3b82f6;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .photo-marker:hover::after {
+        opacity: 1;
+    }
+
+    /* Explorateur Dashboard Styles */
+    .glass-dashboard {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        z-index: 1000;
+        background: rgba(20, 20, 20, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        pointer-events: auto;
+    }
+
+    .dashboard-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-value {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+        background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .dashboard-label {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-top: 2px;
+    }
+
+    .dashboard-divider {
+        width: 1px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+        .glass-dashboard {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            justify-content: space-between;
+            padding: 12px 20px;
+        }
+        .dashboard-value {
+            font-size: 1.2rem;
+        }
+        .glass-button {
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    /* Fullscreen specific */
+    .glass-button {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        z-index: 1000;
+        background: rgba(20, 20, 20, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass-button:hover {
+        background: rgba(59, 130, 246, 0.2);
+        border-color: #3b82f6;
+        color: #3b82f6;
+        transform: scale(1.05);
+    }
+
+    .hidden-icon {
+        display: none !important;
+    }
+
+    .map-container-wrapper.is-fullscreen {
+        width: 100vw !important;
+        height: 100vh !important;
+        background: #111;
     }
 </style>
 {{ end }}

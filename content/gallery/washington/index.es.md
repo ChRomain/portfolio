@@ -2,6 +2,7 @@
 title: "Washington"
 description: "Descubre mi galería de fotos de Washington. Una colección de tomas capturando la arquitectura y la atmósfera de Washington."
 layout: "gallery"
+dominant_color: "#606653"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

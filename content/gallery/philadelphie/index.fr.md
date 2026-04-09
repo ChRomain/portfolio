@@ -2,6 +2,7 @@
 title: "Philadelphie"
 description: "Découvrez ma galerie photo de Philadelphie. Une collection de clichés capturant l'architecture et l'ambiance de Philadelphie."
 layout: "gallery"
+dominant_color: "#636149"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

@@ -2,6 +2,7 @@
 title: "New Hampshire"
 description: "Découvrez ma galerie photo de New Hampshire. Une collection de clichés capturant l'architecture et l'ambiance de New Hampshire."
 layout: "gallery"
+dominant_color: "#5d4933"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

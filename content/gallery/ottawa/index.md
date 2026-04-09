@@ -2,6 +2,7 @@
 title: "Ottawa"
 description: "Discover my photo gallery of Ottawa. A collection of shots capturing the architecture and atmosphere of Ottawa."
 layout: "gallery"
+dominant_color: "#9e6c31"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

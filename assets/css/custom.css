@@ -620,3 +620,21 @@ nav a[href$="/map/"]:hover,
         height: 14px;
     }
 }
+
+/* --- 13. SELECTION --- */
+*::selection {
+    background-color: #f97316 !important; /* Orange Test */
+    color: #ffffff !important;
+}
+*::-moz-selection {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+}
+.dark *::selection {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+}
+.dark *::-moz-selection {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+}

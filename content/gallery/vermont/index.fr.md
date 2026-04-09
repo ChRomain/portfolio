@@ -2,6 +2,7 @@
 title: "Vermont"
 description: "Découvrez ma galerie photo de Vermont. Une collection de clichés capturant l'architecture et l'ambiance de Vermont."
 layout: "gallery"
+dominant_color: "#517452"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

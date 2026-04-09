@@ -2,6 +2,7 @@
 title: "Niagara Falls"
 description: "Découvrez ma galerie photo de Niagara Falls. Une collection de clichés capturant l'architecture et l'ambiance de Niagara Falls."
 layout: "gallery"
+dominant_color: "#606f7e"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

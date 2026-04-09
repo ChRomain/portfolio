@@ -2,6 +2,7 @@
 title: "Rome"
 description: "Découvrez ma galerie photo de Rome. Une collection de clichés capturant l'architecture et l'ambiance de Rome."
 layout: "gallery"
+dominant_color: "#614e2d"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

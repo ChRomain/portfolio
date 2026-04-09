@@ -2,6 +2,7 @@
 title: "Bordeaux"
 description: "Découvrez ma galerie photo de Bordeaux. Une collection de clichés capturant l'architecture et l'ambiance de Bordeaux."
 layout: "gallery"
+dominant_color: "#6b7b8e"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

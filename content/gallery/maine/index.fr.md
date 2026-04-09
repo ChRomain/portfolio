@@ -2,6 +2,7 @@
 title: "Maine"
 description: "Découvrez ma galerie photo de Maine. Une collection de clichés capturant l'architecture et l'ambiance de Maine."
 layout: "gallery"
+dominant_color: "#5a5f63"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

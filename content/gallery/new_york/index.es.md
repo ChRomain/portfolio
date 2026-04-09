@@ -2,6 +2,7 @@
 title: "New York"
 description: "Descubre mi galería de fotos de New York. Una colección de tomas capturando la arquitectura y la atmósfera de New York."
 layout: "gallery"
+dominant_color: "#66797d"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

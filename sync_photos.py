@@ -1,8 +1,5 @@
-import os
-import re
-import shutil
-from PIL import Image, ImageOps
 import piexif
+import json
 
 SOURCE_DIR = "/Users/romaincharretteur/pCloud Drive/Portfolio_Images"
 CONTENT_DIR = "./content/gallery"
