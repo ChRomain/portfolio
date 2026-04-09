@@ -99,10 +99,17 @@
                     fillOpacity: 0.9
                 });
 
-                marker.bindTooltip(loc.name, {
+                const tooltipContent = `
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 140px; padding: 6px;">
+                        <img src="${loc.url}feature.webp" alt="${loc.name}" style="width: 100%; height: 90px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);" loading="lazy" onerror="this.style.display='none'">
+                        <span style="font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px;">${loc.name}</span>
+                    </div>
+                `;
+
+                marker.bindTooltip(tooltipContent, {
                     direction: 'top',
-                    className: 'map-tooltip',
-                    offset: [0, -5]
+                    className: 'map-tooltip-fancy',
+                    offset: [0, -10]
                 });
 
                 marker.on('click', () => { window.location.href = loc.url; });
@@ -157,13 +164,17 @@
         box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
     }
 
-    .map-tooltip {
-        background: #000 !important;
-        color: #fff !important;
-        border: 1px solid #333 !important;
-        border-radius: 4px !important;
-        padding: 4px 8px !important;
-        font-size: 0.75rem !important;
+    .map-tooltip-fancy {
+        background: rgba(20, 20, 20, 0.85) !important;
+        color: #f8fafc !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 10px !important;
+        padding: 0 !important;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6) !important;
+    }
+    .leaflet-tooltip-top.map-tooltip-fancy::before {
+        border-top-color: rgba(20, 20, 20, 0.85) !important;
     }
 
     .leaflet-container {

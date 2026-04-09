@@ -285,7 +285,7 @@ def sync_portfolio():
                     img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
                     width, height = MAX_WIDTH, new_height 
 
-                inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}" width="{width}" height="{height}" />\n'
+                inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}" width="{width}" height="{height}" loading="lazy" decoding="async" />\n'
                 img.save(target_path, "WEBP", quality=QUALITY, method=6)
                 
             except Exception as e:
