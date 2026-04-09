@@ -10,7 +10,7 @@ layout: "gallery"
 
 {{< gallery >}}
   <img src="/gallery/lyon/lyon_001.webp" alt="Photographie de Lyon - 1" title="iPhone 15 | f/1.6 | 1/35s | ISO 100" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/lyon/lyon_002.webp" alt="Photographie de Lyon - 2" title="iPhone 15 | f/1.6 | 1/50s | ISO 250" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/lyon/lyon_002.webp" alt="Photographie de Lyon - 2" title="iPhone 15 | f/1.6 | 1/50s | ISO 250" data-gps="45.76219,4.82211" width="1600" height="2133" loading="lazy" decoding="async" />
   <img src="/gallery/lyon/lyon_003.webp" alt="Photographie de Lyon - 3" title="ILCE-6700 | f/6.3 | 1/200s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
   <img src="/gallery/lyon/lyon_004.webp" alt="Photographie de Lyon - 4" title="ILCE-6700 | f/2.8 | 1/160s | ISO 2500" width="1600" height="2400" loading="lazy" decoding="async" />
   <img src="/gallery/lyon/lyon_005.webp" alt="Photographie de Lyon - 5" title="ILCE-6700 | f/5.6 | 1/80s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />

@@ -9,8 +9,8 @@ layout: "gallery"
 </div>
 
 {{< gallery >}}
-  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2019-10-13.mp4" type="video/mp4"></video>
-  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2023-15-36.mp4" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2019-10-13.mov" type="video/mp4"></video>
+  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2023-15-36.mov" type="video/mp4"></video>
   <img src="/gallery/keys/keys_001.webp" alt="Photographie de Keys - 1" title="ILCE-6700 | f/6.3 | 1/500s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
   <img src="/gallery/keys/keys_002.webp" alt="Photographie de Keys - 2" title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
   <img src="/gallery/keys/keys_003.webp" alt="Photographie de Keys - 3" title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />

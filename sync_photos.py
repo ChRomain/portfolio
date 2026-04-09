@@ -50,8 +50,8 @@ VIDEOS = {
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-09-11%2019-05-15.mov"
     ],
     "keys": [
-        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2019-10-13.mp4",
-        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2023-15-36.mp4"
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2019-10-13.mov",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-07%2023-15-36.mov"
     ],
     "miami": [
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-07-17.mov",
@@ -216,11 +216,26 @@ def clean_name(name):
     name = re.sub(r'[^a-z0-9_]+', '', name)
     return name.strip('_')
 
+def get_decimal_from_dms(dms, ref):
+    if not dms or len(dms) != 3: return None
+    try:
+        degrees = dms[0][0] / dms[0][1] if dms[0][1] != 0 else 0
+        minutes = dms[1][0] / dms[1][1] if dms[1][1] != 0 else 0
+        seconds = dms[2][0] / dms[2][1] if dms[2][1] != 0 else 0
+        val = degrees + (minutes / 60.0) + (seconds / 3600.0)
+        if ref in [b'S', b'W', 'S', 'W']:
+            val = -val
+        return val
+    except Exception:
+        return None
+
 def get_exif_data(img_path):
-    """Extrait les réglages techniques de l'image"""
+    """Extrait les réglages techniques de l'image et ses coordonnées GPS"""
     try:
         img = Image.open(img_path)
         exif_dict = piexif.load(img.info['exif'])
+        
+        # 1. Extraction EXIF Classique
         model = exif_dict['0th'].get(piexif.ImageIFD.Model, b"").decode().strip()
         f_stop = exif_dict['Exif'].get(piexif.ExifIFD.FNumber)
         iso = exif_dict['Exif'].get(piexif.ExifIFD.ISOSpeedRatings)
@@ -232,9 +247,25 @@ def get_exif_data(img_path):
             val = f"{shutter[0]}/{shutter[1]}s" if shutter[1] > 1 else f"{shutter[0]}s"
             parts.append(val)
         if iso: parts.append(f"ISO {iso}")
-        return " | ".join(parts)
+        exif_str = " | ".join(parts)
+        
+        # 2. Extraction GPS
+        gps_str = ""
+        gps_dict = exif_dict.get('GPS', {})
+        if gps_dict:
+            lat = gps_dict.get(2)
+            lat_ref = gps_dict.get(1)
+            lng = gps_dict.get(4)
+            lng_ref = gps_dict.get(3)
+            if lat and lat_ref and lng and lng_ref:
+                lat_dec = get_decimal_from_dms(lat, lat_ref)
+                lng_dec = get_decimal_from_dms(lng, lng_ref)
+                if lat_dec is not None and lng_dec is not None:
+                    gps_str = f"{lat_dec:.5f},{lng_dec:.5f}"
+                    
+        return exif_str, gps_str
     except Exception:
-        return ""
+        return "", ""
 
 def sync_portfolio():
     if os.path.exists(CONTENT_DIR): shutil.rmtree(CONTENT_DIR)
@@ -271,8 +302,9 @@ def sync_portfolio():
             full_source_path = os.path.join(source_folder_path, img_name)
             target_path = os.path.join(hugo_assets_path, img_clean)
             
-            exif_info = get_exif_data(full_source_path)
+            exif_info, gps_info = get_exif_data(full_source_path)
             alt_text = f"Photographie de {display_title} - {img_num}"
+            gps_attr = f' data-gps="{gps_info}"' if gps_info else ""
             
             try:
                 img = Image.open(full_source_path)
@@ -285,7 +317,7 @@ def sync_portfolio():
                     img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
                     width, height = MAX_WIDTH, new_height 
 
-                inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}" width="{width}" height="{height}" loading="lazy" decoding="async" />\n'
+                inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}"{gps_attr} width="{width}" height="{height}" loading="lazy" decoding="async" />\n'
                 img.save(target_path, "WEBP", quality=QUALITY, method=6)
                 
             except Exception as e:

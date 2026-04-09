@@ -54,8 +54,8 @@ layout: "gallery"
   <img src="/gallery/montreal/montreal_041.webp" alt="Photographie de Montreal - 41" title="Canon EOS Rebel T100 | f/5.6 | 1/500s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
   <img src="/gallery/montreal/montreal_042.webp" alt="Photographie de Montreal - 42" title="Canon EOS Rebel T100 | f/5.6 | 1/320s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
   <img src="/gallery/montreal/montreal_043.webp" alt="Photographie de Montreal - 43" title="" width="1179" height="671" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_044.webp" alt="Photographie de Montreal - 44" title="iPhone 15 | f/1.6 | 1/60s | ISO 500" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_045.webp" alt="Photographie de Montreal - 45" title="FC3682 | f/1.7 | 1/8s | ISO 800" width="1600" height="2844" loading="lazy" decoding="async" />
+  <img src="/gallery/montreal/montreal_044.webp" alt="Photographie de Montreal - 44" title="iPhone 15 | f/1.6 | 1/60s | ISO 500" data-gps="44.59162,-75.68429" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/montreal/montreal_045.webp" alt="Photographie de Montreal - 45" title="FC3682 | f/1.7 | 1/8s | ISO 800" data-gps="45.52042,-73.53301" width="1600" height="2844" loading="lazy" decoding="async" />
   <img src="/gallery/montreal/montreal_046.webp" alt="Photographie de Montreal - 46" title="iPhone 15 | f/1.6 | 1/2s | ISO 1250" width="1600" height="2133" loading="lazy" decoding="async" />
   <img src="/gallery/montreal/montreal_047.webp" alt="Photographie de Montreal - 47" title="iPhone 15 | f/1.6 | 1/2s | ISO 1250" width="1600" height="2133" loading="lazy" decoding="async" />
   <img src="/gallery/montreal/montreal_048.webp" alt="Photographie de Montreal - 48" title="iPhone 15 | f/1.6 | 1/30s | ISO 640" width="1600" height="2133" loading="lazy" decoding="async" />
