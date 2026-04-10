@@ -17,7 +17,55 @@ main {
     width: 100% !important;
 }
 
-/* --- 2. NAVIGATION (CORRIGÉ) --- */
+#main-content {
+    padding-top: 7.5rem; /* Increased to ensure enough space on pages without breadcrumbs */
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        padding-top: 6.5rem;
+    }
+}
+
+/* --- 2. NAVIGATION GLASSMORPHISM --- */
+#main-header {
+    pointer-events: none; /* Allow clicks through the padding area */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000000 !important; /* Extremely high to be above everything */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.glass-nav {
+    pointer-events: auto; /* Re-enable clicks on the bar itself */
+    background: rgba(255, 255, 255, 0.8); /* More opaque for contrast */
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .glass-nav {
+    background: rgba(15, 15, 17, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* State when scrolled */
+.nav-scrolled .glass-nav {
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dark .nav-scrolled .glass-nav {
+    background: rgba(15, 15, 17, 0.85);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
 .main-nav-list {
     display: flex !important;
     align-items: center !important;
@@ -25,15 +73,6 @@ main {
 
 .main-nav-list>li {
     margin-left: 10px !important;
-}
-
-.main-nav-list>li:first-child {
-    margin-left: 0 !important;
-}
-
-.instagram-container {
-    margin-left: 10px !important;
-    padding-left: 15px !important;
 }
 
 .theme-toggle-btn {
@@ -45,25 +84,32 @@ main {
     cursor: default !important;
 }
 
-/* Sous-menus Niveaux 2 et 3 */
+/* Sous-menus Glassmorphism */
 .sub-menu-level-2,
-.sub-menu-level-3 {
+.sub-menu-level-3,
+.sub-menu-level-4 {
     position: absolute !important;
     width: max-content !important;
     min-width: 200px !important;
     display: block !important;
-    background-color: #ffffff !important;
-    border: 1px solid #e5e7eb !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
     z-index: 100 !important;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
 }
 
 .dark .sub-menu-level-2,
-.dark .sub-menu-level-3 {
-    background-color: #1a1b1c !important;
-    border: 1px solid #3f3f46 !important;
+.dark .sub-menu-level-3,
+.dark .sub-menu-level-4 {
+    background: rgba(26, 27, 28, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4) !important;
 }
 
 /* Positionnement NIVEAU 2 (Sous le menu principal) */
@@ -232,7 +278,7 @@ header nav li {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.95);
-    z-index: 10000;
+    z-index: 10000000; /* Plus haut que le menu (qui est à 1M) */
     display: none;
     justify-content: center;
     align-items: center;
@@ -264,7 +310,7 @@ header nav li {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 10010;
+    z-index: 10000010;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -301,7 +347,7 @@ header nav li {
     font-size: 3rem;
     padding: 20px;
     cursor: pointer;
-    z-index: 10010;
+    z-index: 10000010;
     transition: color 0.2s ease, transform 0.2s ease;
     user-select: none;
 }
@@ -327,7 +373,7 @@ header nav li {
     width: 100%;
     text-align: center;
     color: white;
-    z-index: 10010;
+    z-index: 10000010;
     pointer-events: none;
 }
 
@@ -460,16 +506,19 @@ nav a[href$="/map/"]:hover,
     z-index: 100000 !important;
 }
 
+.glass-overlay {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.dark .glass-overlay {
+    background: rgba(20, 20, 22, 0.9) !important;
+    color: #e5e7eb !important;
+}
+
 .dark #mobile-menu-overlay {
-    background-color: #1a1b1c !important;
-}
-
-.dark #mobile-nav-row {
-    border-color: rgba(63, 63, 70, 0.5) !important;
-}
-
-#mobile-menu-overlay a {
-    color: inherit;
+    background: transparent !important; /* Managed by glass-overlay */
 }
 
 .dark #mobile-menu-overlay a {
@@ -552,7 +601,13 @@ nav a[href$="/map/"]:hover,
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    /* Mask removed to ensure arrow visibility */
+    margin-top: -7.5rem; /* Pull back up to be behind the navbar */
+}
+
+@media (max-width: 768px) {
+    .hero-carousel-container {
+        margin-top: -6.5rem;
+    }
 }
 
 .carousel-slide.active {
@@ -637,4 +692,30 @@ nav a[href$="/map/"]:hover,
 .dark *::-moz-selection {
     background-color: #f97316 !important;
     color: #ffffff !important;
+}
+
+/* --- 14. WEATHER WIDGET GLASSMORPHISM --- */
+.glass-weather-nav {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: inline-flex;
+    align-self: flex-start;
+}
+
+.dark .glass-weather-nav {
+    background: rgba(30, 30, 32, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+#weather-clock-widget svg {
+    opacity: 0.8;
+}
+
+#weather-temp {
+    margin-left: 2px;
+    letter-spacing: -0.01em;
 }

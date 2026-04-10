@@ -16,15 +16,21 @@
             </div>
             <div class="dashboard-divider"></div>
             <div class="dashboard-item">
-                <span class="dashboard-value">+1200</span>
+                <span class="dashboard-value">{{ if .Site.Data.stats }}+{{ .Site.Data.stats.total_images }}{{ else }}+1200{{ end }}</span>
                 <span class="dashboard-label">Photos</span>
             </div>
         </div>
 
         <!-- Bouton Immersion Totale -->
-        <button id="map-fullscreen-toggle" class="glass-button animate-fade-in" title="Immersion Totale">
+        <button id="map-fullscreen-toggle" class="glass-button animate-fade-in" style="top: 20px;" title="Immersion Totale">
             <svg id="fs-expand-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
             <svg id="fs-collapse-icon" class="hidden-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+        </button>
+
+        <!-- Bouton Style de Carte (Satellite) -->
+        <button id="map-style-toggle" class="glass-button animate-fade-in" style="top: 75px;" title="Changer de vue">
+            <svg id="style-satellite-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg id="style-dark-icon" class="hidden-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
     </div>
 </div>
@@ -54,35 +60,7 @@
                 return;
             }
 
-            const locations = [
-                { name: "Paris", coords: [48.8566, 2.3522], url: "/gallery/paris/", country: "France" },
-                { name: "Lyon", coords: [45.7640, 4.8357], url: "/gallery/lyon/", country: "France" },
-                { name: "Bordeaux", coords: [44.8378, -0.5792], url: "/gallery/bordeaux/", country: "France" },
-                { name: "Corse", coords: [42.0396, 9.0129], url: "/gallery/corse/", country: "France" },
-                { name: "Finistère", coords: [48.3147, -4.1441], url: "/gallery/finistere/", country: "France" },
-                { name: "Rome", coords: [41.9028, 12.4964], url: "/gallery/rome/", country: "Italie" },
-                { name: "Naples", coords: [40.8518, 14.2681], url: "/gallery/naples/", country: "Italie" },
-                { name: "Suède", coords: [59.3293, 18.0686], url: "/gallery/suede/", country: "Suède" },
-                { name: "Monténégro", coords: [42.7087, 19.3744], url: "/gallery/montenegro/", country: "Monténégro" },
-                { name: "New York", coords: [40.7128, -74.0060], url: "/gallery/new_york/", country: "USA" },
-                { name: "Washington", coords: [38.9072, -77.0369], url: "/gallery/washington/", country: "USA" },
-                { name: "Boston", coords: [42.3601, -71.0589], url: "/gallery/boston/", country: "USA" },
-                { name: "Philadelphia", coords: [39.9526, -75.1652], url: "/gallery/philadelphie/", country: "USA" },
-                { name: "Montreal", coords: [45.5017, -73.5673], url: "/gallery/montreal/", country: "Canada" },
-                { name: "Québec", coords: [46.8139, -71.2080], url: "/gallery/quebec/", country: "Canada" },
-                { name: "Ottawa", coords: [45.4215, -75.6972], url: "/gallery/ottawa/", country: "Canada" },
-                { name: "Toronto", coords: [43.6532, -79.3832], url: "/gallery/toronto/", country: "Canada" },
-                { name: "Niagara Falls", coords: [43.0896, -79.0849], url: "/gallery/niagara_falls/", country: "Canada" },
-                { name: "Cape Cod", coords: [41.6688, -70.2962], url: "/gallery/cape_cod/", country: "USA" },
-                { name: "Maine", coords: [45.2538, -69.4455], url: "/gallery/maine/", country: "USA" },
-                { name: "Vermont", coords: [44.5588, -72.5778], url: "/gallery/vermont/", country: "USA" },
-                { name: "New Hampshire", coords: [43.1939, -71.5724], url: "/gallery/new_hampshire/", country: "USA" },
-                { name: "Guatemala", coords: [15.7835, -90.2308], url: "/gallery/guatemala/", country: "Guatemala" },
-                { name: "Indonésie", coords: [-8.4095, 115.1889], url: "/gallery/indonesie/", country: "Indonésie" },
-                { name: "Miami", coords: [25.7617, -80.1918], url: "/gallery/miami/", country: "USA" },
-                { name: "Keys", coords: [24.5551, -81.7800], url: "/gallery/keys/", country: "USA" },
-                { name: "Everglades", coords: [25.2866, -80.8987], url: "/gallery/everglades/", country: "USA" }
-            ];
+            const locations = {{ site.Data.locations | default slice | jsonify | safeJS }};
 
             const map = L.map('map', {
                 center: [15, 0], // Starting point (middle of the ocean/world)
@@ -102,10 +80,16 @@
                 });
             }, 500);
 
-            // Dark tiles as fallback (very minimalist)
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+            // Tile Layers
+            const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
                 opacity: 0.5
-            }).addTo(map);
+            });
+
+            const satelliteTiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            });
+
+            darkTiles.addTo(map);
 
             // Markers cluster
             const clusterGroup = L.markerClusterGroup({
@@ -147,27 +131,39 @@
                 marker.bindTooltip(tooltipContent, {
                     direction: 'top',
                     className: 'map-tooltip-fancy',
-                    offset: [0, -10]
+                    offset: [0, -10],
+                    interactive: true
                 });
 
-                marker.on('click', () => { window.location.href = loc.url; });
+                // Redirection fix (Marker or Tooltip click)
+                const navigate = () => { window.location.href = loc.url; };
+                marker.on('click tap', navigate);
+                marker.on('tooltipopen', (e) => {
+                    L.DomEvent.on(e.tooltip.getElement(), 'click', navigate);
+                });
+
                 clusterGroup.addLayer(marker);
             });
 
             map.addLayer(clusterGroup);
 
-            // Optional: GeoJSON for even cleaner shapes if available
+            // GeoJSON Borders
+            const getGeoJsonStyle = () => ({
+                fillColor: map.hasLayer(satelliteTiles) ? "transparent" : "#353535",
+                weight: map.hasLayer(satelliteTiles) ? 1.5 : 0.8,
+                color: map.hasLayer(satelliteTiles) ? "rgba(255,255,255,0.4)" : "#555",
+                fillOpacity: map.hasLayer(satelliteTiles) ? 0 : 1
+            });
+
+            const geoJsonLayer = L.geoJSON(null, {
+                style: getGeoJsonStyle
+            }).addTo(map);
+
             fetch('https://cdn.jsdelivr.net/gh/datasets/geo-boundaries-world-110m@master/countries.geojson')
                 .then(r => r.json())
                 .then(data => {
-                    L.geoJSON(data, {
-                        style: {
-                            fillColor: "#353535", // Lighter grey for land
-                            weight: 0.8,
-                            color: "#555", // Distinct border
-                            fillOpacity: 1
-                        }
-                    }).addTo(map).bringToBack();
+                    geoJsonLayer.addData(data);
+                    geoJsonLayer.bringToBack();
                 }).catch(() => { });
 
             // 3. Zoom control in bottom right
@@ -184,29 +180,78 @@
             const expandIcon = document.getElementById('fs-expand-icon');
             const collapseIcon = document.getElementById('fs-collapse-icon');
 
-            const toggleFullscreen = () => {
-                if (!document.fullscreenElement) {
-                    fsContainer.requestFullscreen().catch(err => {
-                        console.error(`Fullscreen Error: ${err.message}`);
-                    });
+            const updateFSUI = (isFullscreen) => {
+                if (isFullscreen) {
+                    expandIcon.classList.add('hidden-icon');
+                    collapseIcon.classList.remove('hidden-icon');
+                    fsContainer.classList.add('is-fullscreen');
+                    document.body.style.overflow = 'hidden'; // Block background scroll
                 } else {
-                    document.exitFullscreen();
+                    expandIcon.classList.remove('hidden-icon');
+                    collapseIcon.classList.add('hidden-icon');
+                    fsContainer.classList.remove('is-fullscreen');
+                    fsContainer.classList.remove('is-pseudo-fullscreen');
+                    document.body.style.overflow = '';
+                }
+                setTimeout(() => map.invalidateSize(), 300);
+            };
+
+            const toggleFullscreen = () => {
+                const fsElement = document.fullscreenElement || document.webkitFullscreenElement;
+                const isPseudo = fsContainer.classList.contains('is-pseudo-fullscreen');
+
+                if (!fsElement && !isPseudo) {
+                    if (fsContainer.requestFullscreen) {
+                        fsContainer.requestFullscreen();
+                    } else if (fsContainer.webkitRequestFullscreen) {
+                        fsContainer.webkitRequestFullscreen();
+                    } else {
+                        // iOS / Pseudo-fullscreen Fallback
+                        fsContainer.classList.add('is-pseudo-fullscreen');
+                        updateFSUI(true);
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (isPseudo) {
+                        updateFSUI(false);
+                    }
                 }
             };
 
             fsBtn.addEventListener('click', toggleFullscreen);
 
-            document.addEventListener('fullscreenchange', () => {
-                if (document.fullscreenElement) {
-                    expandIcon.classList.add('hidden-icon');
-                    collapseIcon.classList.remove('hidden-icon');
-                    fsContainer.classList.add('is-fullscreen');
+            // 6. Style Toggle Logic
+            const styleBtn = document.getElementById('map-style-toggle');
+            const satIcon = document.getElementById('style-satellite-icon');
+            const moonIcon = document.getElementById('style-dark-icon');
+
+            styleBtn.addEventListener('click', () => {
+                const isSatellite = map.hasLayer(satelliteTiles);
+                if (!isSatellite) {
+                    map.removeLayer(darkTiles);
+                    satelliteTiles.addTo(map);
+                    satelliteTiles.bringToBack();
+                    satIcon.classList.add('hidden-icon');
+                    moonIcon.classList.remove('hidden-icon');
                 } else {
-                    expandIcon.classList.remove('hidden-icon');
-                    collapseIcon.classList.add('hidden-icon');
-                    fsContainer.classList.remove('is-fullscreen');
+                    map.removeLayer(satelliteTiles);
+                    darkTiles.addTo(map);
+                    darkTiles.bringToBack();
+                    satIcon.classList.remove('hidden-icon');
+                    moonIcon.classList.add('hidden-icon');
                 }
-                setTimeout(() => map.invalidateSize(), 300);
+                geoJsonLayer.setStyle(getGeoJsonStyle()); // Proper style update
+                if (geoJsonLayer) geoJsonLayer.bringToBack();
+            });
+
+            ['fullscreenchange', 'webkitfullscreenchange'].forEach(evt => {
+                document.addEventListener(evt, () => {
+                    const isFS = !!(document.fullscreenElement || document.webkitFullscreenElement);
+                    updateFSUI(isFS);
+                });
             });
 
             // Fix for map resizing
@@ -442,10 +487,18 @@
         display: none !important;
     }
 
-    .map-container-wrapper.is-fullscreen {
+    .map-container-wrapper.is-fullscreen,
+    .map-container-wrapper.is-pseudo-fullscreen {
         width: 100vw !important;
         height: 100vh !important;
         background: #111;
+        z-index: 99999 !important;
+    }
+
+    .map-container-wrapper.is-pseudo-fullscreen {
+        position: fixed !important;
+        top: 0;
+        left: 0;
     }
 </style>
 {{ end }}

@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="hero-carousel-container relative w-full overflow-hidden bg-neutral-900"
-    style="height: calc(100vh - 50px); min-height: 500px; z-index: 1;">
+    style="height: 100vh; min-height: 500px; z-index: 1;">
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
         {{ $heroImages := resources.Match "img/hero/*" }}
         {{ range $index, $img := $heroImages }}
@@ -44,7 +44,7 @@
 
     <!-- Indicateurs de progression -->
     <div id="hero-indicators" class="absolute flex space-x-3 backdrop-blur-md p-2 hover:bg-black/40 transition-colors" 
-         style="bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 100000; background: rgba(0,0,0,0.3); border-radius: 50px;">
+         style="bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 50; background: rgba(0,0,0,0.3); border-radius: 50px;">
         {{ range $index, $img := $heroImages }}
         <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
              style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
@@ -53,7 +53,7 @@
         {{ end }}
     </div>
 
-    <div id="hero-scroll-btn" class="absolute bottom-24 left-1/2 -translate-x-1/2 z-[99999] cursor-pointer"
+    <div id="hero-scroll-btn" class="absolute bottom-24 left-1/2 -translate-x-1/2 z-[40] cursor-pointer"
         style="pointer-events: auto !important;"
         onclick="document.getElementById('articles-section').scrollIntoView({ behavior: 'smooth' })">
         <div

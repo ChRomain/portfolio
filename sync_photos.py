@@ -1,5 +1,9 @@
 import piexif
 import json
+import os
+import shutil
+import re
+from PIL import Image, ImageOps 
 
 SOURCE_DIR = "/Users/romaincharretteur/pCloud Drive/Portfolio_Images"
 CONTENT_DIR = "./content/gallery"
@@ -208,6 +212,30 @@ DESCRIPTIONS = {
     }
 }
 
+# --- MAPPING DOSSIER -> PAYS (pour stats carte) ---
+FOLDER_TO_COUNTRY = {
+    "paris": "France", "lyon": "France", "bordeaux": "France", "corse": "France", "finistere": "France",
+    "rome": "Italie", "naples": "Italie",
+    "suede": "Suède",
+    "montenegro": "Monténégro",
+    "new_york": "USA", "washington": "USA", "boston": "USA", "philadelphie": "USA", "cape_cod": "USA", "maine": "USA", "vermont": "USA", "new_hampshire": "USA", "miami": "USA", "keys": "USA", "everglades": "USA",
+    "montreal": "Canada", "quebec": "Canada", "ottawa": "Canada", "toronto": "Canada", "niagara_falls": "Canada", "canada": "Canada",
+    "guatemala": "Guatemala",
+    "indonesie": "Indonésie"
+}
+
+# --- COORDONNÉES PAR DÉFAUT (Fallback si pas de GPS dans les photos) ---
+DEFAULT_GPS = {
+    "paris": [48.8566, 2.3522], "lyon": [45.7640, 4.8357], "bordeaux": [44.8378, -0.5792], "corse": [42.0396, 9.0129], "finistere": [48.3147, -4.1441],
+    "rome": [41.9028, 12.4964], "naples": [40.8518, 14.2681],
+    "suede": [59.3293, 18.0686],
+    "montenegro": [42.7087, 19.3744],
+    "new_york": [40.7128, -74.0060], "washington": [38.9072, -77.0369], "boston": [42.3601, -71.0589], "philadelphie": [39.9526, -75.1652], "cape_cod": [41.6688, -70.2962], "maine": [45.2538, -69.4455], "vermont": [44.5588, -72.5778], "new_hampshire": [43.1939, -71.5724], "miami": [25.7617, -80.1918], "keys": [24.5551, -81.7800], "everglades": [25.2866, -80.8987],
+    "montreal": [45.5017, -73.5673], "quebec": [46.8139, -71.2080], "ottawa": [45.4215, -75.6972], "toronto": [43.6532, -79.3832], "niagara_falls": [43.0896, -79.0849], "canada": [45.5017, -73.5673],
+    "guatemala": [15.7835, -90.2308],
+    "indonesie": [-8.4095, 115.1889]
+}
+
 def clean_name(name):
     name = name.lower().replace(" ", "_")
     name = re.sub(r'[^a-z0-9_]+', '', name)
@@ -266,10 +294,13 @@ def get_exif_data(img_path):
 
 def sync_portfolio():
     if os.path.exists(CONTENT_DIR): shutil.rmtree(CONTENT_DIR)
-    if os.path.exists(ASSETS_DIR): shutil.rmtree(ASSETS_DIR)
+    # On ne supprime plus ASSETS_DIR pour permettre l'incrémental
     
     os.makedirs(CONTENT_DIR, exist_ok=True)
     os.makedirs(ASSETS_DIR, exist_ok=True)
+
+    total_images_count = 0
+    all_locations = []
 
     for folder in os.listdir(SOURCE_DIR):
         source_folder_path = os.path.join(SOURCE_DIR, folder)
@@ -282,6 +313,9 @@ def sync_portfolio():
         hugo_assets_path = os.path.join(ASSETS_DIR, folder_clean)
         os.makedirs(hugo_content_path, exist_ok=True)
         os.makedirs(hugo_assets_path, exist_ok=True)
+
+        # Représentant GPS pour la carte
+        folder_gps = None
 
         # On prépare le bloc HTML qui ira dans {{< gallery >}}
         inner_gallery_html = ""
@@ -300,22 +334,45 @@ def sync_portfolio():
             target_path = os.path.join(hugo_assets_path, img_clean)
             
             exif_info, gps_info = get_exif_data(full_source_path)
-            alt_text = f"Photographie de {display_title} - {img_num}"
+            
+            # Si on n'a pas encore de GPS pour ce dossier, on prend le premier valide
+            if gps_info and not folder_gps:
+                try:
+                    lat_s, lng_s = gps_info.split(',')
+                    folder_gps = [float(lat_s), float(lng_s)]
+                except: pass
+
+            # SEO optimized alt text
+            alt_text = f"Photographie de {display_title} par Romain Charretteur - Prise de vue {img_num}"
             gps_attr = f' data-gps="{gps_info}"' if gps_info else ""
             
             try:
-                img = Image.open(full_source_path)
-                img = ImageOps.exif_transpose(img)
-                width, height = img.size
-                
-                if img.width > MAX_WIDTH:
-                    ratio = MAX_WIDTH / float(img.width)
-                    new_height = int(float(img.height) * float(ratio))
-                    img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
-                    width, height = MAX_WIDTH, new_height 
+                if not os.path.exists(target_path):
+                    img = Image.open(full_source_path)
+                    img = ImageOps.exif_transpose(img)
+                    width, height = img.size
+                    
+                    if img.width > MAX_WIDTH:
+                        ratio = MAX_WIDTH / float(img.width)
+                        new_height = int(float(img.height) * float(ratio))
+                        img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
+                        width, height = MAX_WIDTH, new_height 
 
+                    img.save(target_path, "WEBP", quality=QUALITY, method=6)
+                    print(f"    ↳ [{img_num}/{len(images)}] {img_clean} optimisée.")
+                else:
+                    # On évite d'ouvrir l'image si elle existe déjà pour gagner du temps
+                    # Mais on a besoin des dimensions pour le HTML de Hugo
+                    try:
+                        with Image.open(target_path) as img_fast:
+                            width, height = img_fast.size
+                    except:
+                        # Fallback si le fichier est corrompu
+                        os.remove(target_path)
+                        continue
+                
                 inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}"{gps_attr} width="{width}" height="{height}" loading="lazy" decoding="async" />\n'
-                img.save(target_path, "WEBP", quality=QUALITY, method=6)
+                total_images_count += 1
                 
             except Exception as e:
                 print(f"❌ Erreur sur {img_name}: {e}")
@@ -327,9 +384,21 @@ def sync_portfolio():
 
         # Langues à générer
         languages = {
-            "en": {"file": "index.md", "title_prefix": "Discover my photo gallery of", "desc_prefix": "A collection of shots capturing the architecture and atmosphere of"},
-            "fr": {"file": "index.fr.md", "title_prefix": "Découvrez ma galerie photo de", "desc_prefix": "Une collection de clichés capturant l'architecture et l'ambiance de"},
-            "es": {"file": "index.es.md", "title_prefix": "Descubre mi galería de fotos de", "desc_prefix": "Una colección de tomas capturando la arquitectura y la atmósfera de"}
+            "en": {
+                "file": "index.md", 
+                "title_prefix": "Travel photography gallery of", 
+                "desc_prefix": "Explore my immersive photography portfolio from"
+            },
+            "fr": {
+                "file": "index.fr.md", 
+                "title_prefix": "Galerie photo de voyage à", 
+                "desc_prefix": "Découvrez mes plus beaux clichés et récits de voyage à"
+            },
+            "es": {
+                "file": "index.es.md", 
+                "title_prefix": "Galería de fotos de viaje en", 
+                "desc_prefix": "Explore mi portafolio fotográfico inmersivo de"
+            }
         }
 
         gallery_desc_map = DESCRIPTIONS.get(folder_clean, {})
@@ -338,7 +407,7 @@ def sync_portfolio():
 
         for lang, config in languages.items():
             filename = config["file"]
-            meta_desc = f"{config['title_prefix']} {display_title}. {config['desc_prefix']} {display_title}."
+            meta_desc = f"{config['desc_prefix']} {display_title}. Un carnet de voyage visuel par Romain Charretteur."
             gallery_desc = gallery_desc_map.get(lang, "")
 
             with open(os.path.join(hugo_content_path, filename), "w") as f:
@@ -348,7 +417,37 @@ def sync_portfolio():
                 
                 f.write(f'{{{{< gallery >}}}}\n{inner_gallery_html}{{{{< /gallery >}}}}')
         
-        print(f"✅ Dossier traité : {folder} -> {folder_clean} (EN, FR, ES)")
+        
+        # Ajout à la liste des points pour la carte
+        # Fallback sur les coordonnées par défaut si pas de GPS trouvé
+        if not folder_gps:
+            folder_gps = DEFAULT_GPS.get(folder_clean)
+
+        if folder_gps:
+            all_locations.append({
+                "name": display_title,
+                "coords": folder_gps,
+                "url": f"/gallery/{folder_clean}/",
+                "country": FOLDER_TO_COUNTRY.get(folder_clean, "Inconnu")
+            })
+
+
+        print(f"✅ {display_title} : {len(images)} photos synchronisées.")
+
+    # --- 3. EXPORT DES STATISTIQUES ---
+    stats = {
+        "total_images": total_images_count
+    }
+    os.makedirs("data", exist_ok=True)
+    with open("data/stats.json", "w") as f:
+        json.dump(stats, f, indent=4)
+        
+    # --- 4. EXPORT DES LOCATIONS (MAP) ---
+    with open("data/locations.json", "w") as f:
+        json.dump(all_locations, f, indent=4)
+
+    print(f"\n📊 Statistiques générées : {total_images_count} photos au total.")
+    print(f"📍 Carte : {len(all_locations)} points générés dynamiquement.")
 
 if __name__ == "__main__":
     sync_portfolio()

@@ -11,17 +11,17 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color">
+  <meta name="theme-color" content="#1a1b1c">
 
   
   
-    <title>Sobre mí &middot; Travel</title>
-    <meta name="title" content="Sobre mí &middot; Travel">
+    <title>Sobre mí | Romain Charretteur | Photographie de Voyage</title>
+    <meta name="title" content="Sobre mí | Romain Charretteur | Photographie de Voyage">
   
 
   
   
-    <meta name="description" content="Diarios de viaje: fotografías inmersivas y relatos de aventuras por todo el mundo.">
+    <meta name="description" content="Portafolio de fotografía de viaje de Romain Charretteur. Relatos visuales inmersivos y aventuras por todo el mundo.">
   
   
   
@@ -35,7 +35,7 @@
 
   
   <meta property="og:url" content="http://localhost:1313/es/about/">
-  <meta property="og:site_name" content="Travel">
+  <meta property="og:site_name" content="Romain Charretteur | Photographie de Voyage">
   <meta property="og:title" content="Sobre mí">
   <meta property="og:description" content="      Nacido en 1995 en Brest (Francia), soy un desarrollador de software que vive actualmente en Montreal.
       Empecé la fotografía como afición tras mudarme a Canadá. Utilizo este sitio para compartir mis fotos de viajes por Europa y Norteamérica, centrándome en la arquitectura de las ciudades y los paisajes naturales.">
@@ -93,8 +93,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.ae32bb4e408eb70d46eeb97e31d51f18ff1b3b2d23a4f6b94f5b2bd84be338fa4eadd17805896260ebd1fe319f372373901de4c8272eb1e13bd75b6a23ed4d4c.css"
-    integrity="sha512-rjK7TkCOtw1G7rl&#43;MdUfGP8bOy0jpPa5T1sr2EvjOPpOrdF4BYliYOvR/jGfNyNzkB3kyCcuseE711tqI&#43;1NTA==">
+    href="/css/main.bundle.min.1819f9c3cca14fbfaaa0f736f6dd029b78b601b87b242bd247a67e85dcf578d24061f225b316b06cd18f3955b4c8d6f468470906d7b43c8f793dd52030d63012.css"
+    integrity="sha512-GBn5w8yhT7&#43;qoPc29t0Cm3i2Abh7JCvSR6Z&#43;hdz1eNJAYfIlsxawbNGPOVW0yNb0aEcJBte0PI95PdUgMNYwEg==">
 
   
   
@@ -219,6 +219,10 @@
   </script>
 
 
+  
+
+
+
 
   
   
@@ -328,10 +332,13 @@
     </div>
 </div>
 
-<div class="container flex items-center justify-between mx-auto px-6 h-16 relative z-[100]">
+
+<header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
+    <div class="glass-nav container flex items-center justify-between mx-auto px-6 h-16 relative pointer-events-auto transition-all duration-500">
+
     <div class="flex items-center">
         <a href="/es/" aria-label="Ir a la página de inicio"
-           class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
+           class="flex items-center text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                  class="mr-2 site-logo-icon">
@@ -339,7 +346,7 @@
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                 <path d="M2 12h20" />
             </svg>
-            Travel
+            Romain Charretteur | Photographie de Voyage
         </a>
     </div>
 
@@ -774,10 +781,11 @@
         </button>
     </div>
 </div>
+</header>
 
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">
-        <span class="text-xl font-bold dark:text-white">Travel</span>
+        <a href="/es/" class="text-lg font-bold dark:text-white">Romain Charretteur | Photographie de Voyage</a>
         <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Cerrar menú móvil">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1115,10 +1123,24 @@
         });
 
         const progressBar = document.getElementById('scroll-progress-bar');
+        const mainHeader = document.getElementById('main-header');
+        const glassNav = document.querySelector('.glass-nav');
+
         window.addEventListener('scroll', () => {
-            if (!progressBar) return;
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            progressBar.style.width = scrollPercent + '%';
+            const scrollY = window.scrollY;
+            if (progressBar) {
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            }
+
+            
+            if (scrollY > 20) {
+                mainHeader?.classList.add('nav-scrolled');
+                glassNav?.classList.add('glass-scrolled');
+            } else {
+                mainHeader?.classList.remove('nav-scrolled');
+                glassNav?.classList.remove('glass-scrolled');
+            }
         });
 
         const mobileBtn = document.getElementById('mobile-menu-button');

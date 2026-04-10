@@ -14,14 +14,21 @@
     {{ end }}
 
     {{/* Header */}}
-    <header id="single_header" class="mt-5 max-w-prose">
+    <header id="single_header" class="mt-8 max-w-prose">
       {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
         {{ partial "breadcrumbs.html" . }}
       {{ end }}
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        {{ .Title | emojify }}
-      </h1>
-      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mt-4">
+        <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+          {{ .Title | emojify }}
+        </h1>
+        <div class="mb-1">
+          {{ partial "weather-widget.html" . }}
+        </div>
+      </div>
+
+      <div class="mt-4 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         {{ partial "article-meta/basic.html" (dict "context" . "scope" "single") }}
       </div>
       {{ if not (.Params.showAuthorBottom | default (site.Params.article.showAuthorBottom | default false)) }}

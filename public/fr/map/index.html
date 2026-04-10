@@ -11,17 +11,17 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color">
+  <meta name="theme-color" content="#1a1b1c">
 
   
   
-    <title>Map &middot; Travel</title>
-    <meta name="title" content="Map &middot; Travel">
+    <title>Map | Romain Charretteur | Photographie de Voyage</title>
+    <meta name="title" content="Map | Romain Charretteur | Photographie de Voyage">
   
 
   
   
-    <meta name="description" content="Carnets de voyage : photographies immersives et récits d&#39;aventures à travers le monde.">
+    <meta name="description" content="Portfolio de photographie de voyage de Romain Charretteur. Récits visuels immersifs et aventures à travers le monde.">
   
   
   
@@ -35,16 +35,16 @@
 
   
   <meta property="og:url" content="http://localhost:1313/fr/map/">
-  <meta property="og:site_name" content="Travel">
+  <meta property="og:site_name" content="Romain Charretteur | Photographie de Voyage">
   <meta property="og:title" content="Map">
-  <meta property="og:description" content="Carnets de voyage : photographies immersives et récits d&#39;aventures à travers le monde.">
+  <meta property="og:description" content="Portfolio de photographie de voyage de Romain Charretteur. Récits visuels immersifs et aventures à travers le monde.">
   <meta property="og:locale" content="fr">
   <meta property="og:type" content="article">
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Map">
-  <meta name="twitter:description" content="Carnets de voyage : photographies immersives et récits d&#39;aventures à travers le monde.">
+  <meta name="twitter:description" content="Portfolio de photographie de voyage de Romain Charretteur. Récits visuels immersifs et aventures à travers le monde.">
 
   
   
@@ -91,8 +91,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.ae32bb4e408eb70d46eeb97e31d51f18ff1b3b2d23a4f6b94f5b2bd84be338fa4eadd17805896260ebd1fe319f372373901de4c8272eb1e13bd75b6a23ed4d4c.css"
-    integrity="sha512-rjK7TkCOtw1G7rl&#43;MdUfGP8bOy0jpPa5T1sr2EvjOPpOrdF4BYliYOvR/jGfNyNzkB3kyCcuseE711tqI&#43;1NTA==">
+    href="/css/main.bundle.min.1819f9c3cca14fbfaaa0f736f6dd029b78b601b87b242bd247a67e85dcf578d24061f225b316b06cd18f3955b4c8d6f468470906d7b43c8f793dd52030d63012.css"
+    integrity="sha512-GBn5w8yhT7&#43;qoPc29t0Cm3i2Abh7JCvSR6Z&#43;hdz1eNJAYfIlsxawbNGPOVW0yNb0aEcJBte0PI95PdUgMNYwEg==">
 
   
   
@@ -217,6 +217,10 @@
   </script>
 
 
+  
+
+
+
 
   
   
@@ -326,10 +330,13 @@
     </div>
 </div>
 
-<div class="container flex items-center justify-between mx-auto px-6 h-16 relative z-[100]">
+
+<header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
+    <div class="glass-nav container flex items-center justify-between mx-auto px-6 h-16 relative pointer-events-auto transition-all duration-500">
+
     <div class="flex items-center">
         <a href="/fr/" aria-label="Retour à l&#39;accueil"
-           class="flex items-center text-2xl font-bold text-neutral-800 dark:text-neutral">
+           class="flex items-center text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                  class="mr-2 site-logo-icon">
@@ -337,7 +344,7 @@
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                 <path d="M2 12h20" />
             </svg>
-            Travel
+            Romain Charretteur | Photographie de Voyage
         </a>
     </div>
 
@@ -772,10 +779,11 @@
         </button>
     </div>
 </div>
+</header>
 
-<div id="mobile-menu-overlay" class="fixed inset-0 bg-white dark:bg-[#1a1b1c] z-[99999] hidden flex-col p-6 overflow-y-auto">
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">
-        <span class="text-xl font-bold dark:text-white">Travel</span>
+        <a href="/fr/" class="text-lg font-bold dark:text-white">Romain Charretteur | Photographie de Voyage</a>
         <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Fermer le menu mobile">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1113,10 +1121,24 @@
         });
 
         const progressBar = document.getElementById('scroll-progress-bar');
+        const mainHeader = document.getElementById('main-header');
+        const glassNav = document.querySelector('.glass-nav');
+
         window.addEventListener('scroll', () => {
-            if (!progressBar) return;
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            progressBar.style.width = scrollPercent + '%';
+            const scrollY = window.scrollY;
+            if (progressBar) {
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            }
+
+            
+            if (scrollY > 20) {
+                mainHeader?.classList.add('nav-scrolled');
+                glassNav?.classList.add('glass-scrolled');
+            } else {
+                mainHeader?.classList.remove('nav-scrolled');
+                glassNav?.classList.remove('glass-scrolled');
+            }
         });
 
         const mobileBtn = document.getElementById('mobile-menu-button');
@@ -1157,15 +1179,21 @@
             </div>
             <div class="dashboard-divider"></div>
             <div class="dashboard-item">
-                <span class="dashboard-value">+1200</span>
+                <span class="dashboard-value">+452</span>
                 <span class="dashboard-label">Photos</span>
             </div>
         </div>
 
         
-        <button id="map-fullscreen-toggle" class="glass-button animate-fade-in" title="Immersion Totale">
+        <button id="map-fullscreen-toggle" class="glass-button animate-fade-in" style="top: 20px;" title="Immersion Totale">
             <svg id="fs-expand-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
             <svg id="fs-collapse-icon" class="hidden-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+        </button>
+
+        
+        <button id="map-style-toggle" class="glass-button animate-fade-in" style="top: 75px;" title="Changer de vue">
+            <svg id="style-satellite-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <svg id="style-dark-icon" class="hidden-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
     </div>
 </div>
@@ -1195,35 +1223,7 @@
                 return;
             }
 
-            const locations = [
-                { name: "Paris", coords: [48.8566, 2.3522], url: "/gallery/paris/", country: "France" },
-                { name: "Lyon", coords: [45.7640, 4.8357], url: "/gallery/lyon/", country: "France" },
-                { name: "Bordeaux", coords: [44.8378, -0.5792], url: "/gallery/bordeaux/", country: "France" },
-                { name: "Corse", coords: [42.0396, 9.0129], url: "/gallery/corse/", country: "France" },
-                { name: "Finistère", coords: [48.3147, -4.1441], url: "/gallery/finistere/", country: "France" },
-                { name: "Rome", coords: [41.9028, 12.4964], url: "/gallery/rome/", country: "Italie" },
-                { name: "Naples", coords: [40.8518, 14.2681], url: "/gallery/naples/", country: "Italie" },
-                { name: "Suède", coords: [59.3293, 18.0686], url: "/gallery/suede/", country: "Suède" },
-                { name: "Monténégro", coords: [42.7087, 19.3744], url: "/gallery/montenegro/", country: "Monténégro" },
-                { name: "New York", coords: [40.7128, -74.0060], url: "/gallery/new_york/", country: "USA" },
-                { name: "Washington", coords: [38.9072, -77.0369], url: "/gallery/washington/", country: "USA" },
-                { name: "Boston", coords: [42.3601, -71.0589], url: "/gallery/boston/", country: "USA" },
-                { name: "Philadelphia", coords: [39.9526, -75.1652], url: "/gallery/philadelphie/", country: "USA" },
-                { name: "Montreal", coords: [45.5017, -73.5673], url: "/gallery/montreal/", country: "Canada" },
-                { name: "Québec", coords: [46.8139, -71.2080], url: "/gallery/quebec/", country: "Canada" },
-                { name: "Ottawa", coords: [45.4215, -75.6972], url: "/gallery/ottawa/", country: "Canada" },
-                { name: "Toronto", coords: [43.6532, -79.3832], url: "/gallery/toronto/", country: "Canada" },
-                { name: "Niagara Falls", coords: [43.0896, -79.0849], url: "/gallery/niagara_falls/", country: "Canada" },
-                { name: "Cape Cod", coords: [41.6688, -70.2962], url: "/gallery/cape_cod/", country: "USA" },
-                { name: "Maine", coords: [45.2538, -69.4455], url: "/gallery/maine/", country: "USA" },
-                { name: "Vermont", coords: [44.5588, -72.5778], url: "/gallery/vermont/", country: "USA" },
-                { name: "New Hampshire", coords: [43.1939, -71.5724], url: "/gallery/new_hampshire/", country: "USA" },
-                { name: "Guatemala", coords: [15.7835, -90.2308], url: "/gallery/guatemala/", country: "Guatemala" },
-                { name: "Indonésie", coords: [-8.4095, 115.1889], url: "/gallery/indonesie/", country: "Indonésie" },
-                { name: "Miami", coords: [25.7617, -80.1918], url: "/gallery/miami/", country: "USA" },
-                { name: "Keys", coords: [24.5551, -81.7800], url: "/gallery/keys/", country: "USA" },
-                { name: "Everglades", coords: [25.2866, -80.8987], url: "/gallery/everglades/", country: "USA" }
-            ];
+            const locations = [{"coords":[44.59162,-75.68429],"country":"Canada","name":"Montreal","url":"/gallery/montreal/"},{"coords":[43.6532,-79.3832],"country":"Canada","name":"Toronto","url":"/gallery/toronto/"},{"coords":[45.5017,-73.5673],"country":"Canada","name":"Canada","url":"/gallery/canada/"},{"coords":[45.4215,-75.6972],"country":"Canada","name":"Ottawa","url":"/gallery/ottawa/"},{"coords":[46.8139,-71.208],"country":"Canada","name":"Quebec","url":"/gallery/quebec/"},{"coords":[-8.4095,115.1889],"country":"Indonésie","name":"Indonesie","url":"/gallery/indonesie/"},{"coords":[39.9526,-75.1652],"country":"USA","name":"Philadelphie","url":"/gallery/philadelphie/"},{"coords":[38.9072,-77.0369],"country":"USA","name":"Washington","url":"/gallery/washington/"},{"coords":[40.7128,-74.006],"country":"USA","name":"New York","url":"/gallery/new_york/"},{"coords":[42.36554,-71.05316],"country":"USA","name":"Boston","url":"/gallery/boston/"},{"coords":[43.0896,-79.0849],"country":"Canada","name":"Niagara Falls","url":"/gallery/niagara_falls/"},{"coords":[43.30587,-70.56435],"country":"USA","name":"Maine","url":"/gallery/maine/"},{"coords":[44.72085,-72.03098],"country":"USA","name":"Vermont","url":"/gallery/vermont/"},{"coords":[43.1939,-71.5724],"country":"USA","name":"New Hampshire","url":"/gallery/new_hampshire/"},{"coords":[41.6688,-70.2962],"country":"USA","name":"Cape Cod","url":"/gallery/cape_cod/"},{"coords":[14.73768,-91.16121],"country":"Guatemala","name":"Guatemala","url":"/gallery/guatemala/"},{"coords":[48.45056,-4.24887],"country":"France","name":"Finistere","url":"/gallery/finistere/"},{"coords":[45.76219,4.82211],"country":"France","name":"Lyon","url":"/gallery/lyon/"},{"coords":[44.86324,-0.5512],"country":"France","name":"Bordeaux","url":"/gallery/bordeaux/"},{"coords":[42.7087,19.3744],"country":"Monténégro","name":"Montenegro","url":"/gallery/montenegro/"},{"coords":[40.8518,14.2681],"country":"Italie","name":"Naples","url":"/gallery/naples/"},{"coords":[41.83853,9.30907],"country":"France","name":"Corse","url":"/gallery/corse/"},{"coords":[48.8566,2.3522],"country":"France","name":"Paris","url":"/gallery/paris/"},{"coords":[59.3293,18.0686],"country":"Suède","name":"Suede","url":"/gallery/suede/"},{"coords":[41.9028,12.4964],"country":"Italie","name":"Rome","url":"/gallery/rome/"},{"coords":[25.7617,-80.1918],"country":"USA","name":"Miami","url":"/gallery/miami/"},{"coords":[25.2866,-80.8987],"country":"USA","name":"Everglades","url":"/gallery/everglades/"},{"coords":[24.5551,-81.78],"country":"USA","name":"Keys","url":"/gallery/keys/"}];
 
             const map = L.map('map', {
                 center: [15, 0], 
@@ -1244,9 +1244,15 @@
             }, 500);
 
             
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+            const darkTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
                 opacity: 0.5
-            }).addTo(map);
+            });
+
+            const satelliteTiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            });
+
+            darkTiles.addTo(map);
 
             
             const clusterGroup = L.markerClusterGroup({
@@ -1288,27 +1294,39 @@
                 marker.bindTooltip(tooltipContent, {
                     direction: 'top',
                     className: 'map-tooltip-fancy',
-                    offset: [0, -10]
+                    offset: [0, -10],
+                    interactive: true
                 });
 
-                marker.on('click', () => { window.location.href = loc.url; });
+                
+                const navigate = () => { window.location.href = loc.url; };
+                marker.on('click tap', navigate);
+                marker.on('tooltipopen', (e) => {
+                    L.DomEvent.on(e.tooltip.getElement(), 'click', navigate);
+                });
+
                 clusterGroup.addLayer(marker);
             });
 
             map.addLayer(clusterGroup);
 
             
+            const getGeoJsonStyle = () => ({
+                fillColor: map.hasLayer(satelliteTiles) ? "transparent" : "#353535",
+                weight: map.hasLayer(satelliteTiles) ? 1.5 : 0.8,
+                color: map.hasLayer(satelliteTiles) ? "rgba(255,255,255,0.4)" : "#555",
+                fillOpacity: map.hasLayer(satelliteTiles) ? 0 : 1
+            });
+
+            const geoJsonLayer = L.geoJSON(null, {
+                style: getGeoJsonStyle
+            }).addTo(map);
+
             fetch('https://cdn.jsdelivr.net/gh/datasets/geo-boundaries-world-110m@master/countries.geojson')
                 .then(r => r.json())
                 .then(data => {
-                    L.geoJSON(data, {
-                        style: {
-                            fillColor: "#353535", 
-                            weight: 0.8,
-                            color: "#555", 
-                            fillOpacity: 1
-                        }
-                    }).addTo(map).bringToBack();
+                    geoJsonLayer.addData(data);
+                    geoJsonLayer.bringToBack();
                 }).catch(() => { });
 
             
@@ -1325,29 +1343,78 @@
             const expandIcon = document.getElementById('fs-expand-icon');
             const collapseIcon = document.getElementById('fs-collapse-icon');
 
-            const toggleFullscreen = () => {
-                if (!document.fullscreenElement) {
-                    fsContainer.requestFullscreen().catch(err => {
-                        console.error(`Fullscreen Error: ${err.message}`);
-                    });
+            const updateFSUI = (isFullscreen) => {
+                if (isFullscreen) {
+                    expandIcon.classList.add('hidden-icon');
+                    collapseIcon.classList.remove('hidden-icon');
+                    fsContainer.classList.add('is-fullscreen');
+                    document.body.style.overflow = 'hidden'; 
                 } else {
-                    document.exitFullscreen();
+                    expandIcon.classList.remove('hidden-icon');
+                    collapseIcon.classList.add('hidden-icon');
+                    fsContainer.classList.remove('is-fullscreen');
+                    fsContainer.classList.remove('is-pseudo-fullscreen');
+                    document.body.style.overflow = '';
+                }
+                setTimeout(() => map.invalidateSize(), 300);
+            };
+
+            const toggleFullscreen = () => {
+                const fsElement = document.fullscreenElement || document.webkitFullscreenElement;
+                const isPseudo = fsContainer.classList.contains('is-pseudo-fullscreen');
+
+                if (!fsElement && !isPseudo) {
+                    if (fsContainer.requestFullscreen) {
+                        fsContainer.requestFullscreen();
+                    } else if (fsContainer.webkitRequestFullscreen) {
+                        fsContainer.webkitRequestFullscreen();
+                    } else {
+                        
+                        fsContainer.classList.add('is-pseudo-fullscreen');
+                        updateFSUI(true);
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (isPseudo) {
+                        updateFSUI(false);
+                    }
                 }
             };
 
             fsBtn.addEventListener('click', toggleFullscreen);
 
-            document.addEventListener('fullscreenchange', () => {
-                if (document.fullscreenElement) {
-                    expandIcon.classList.add('hidden-icon');
-                    collapseIcon.classList.remove('hidden-icon');
-                    fsContainer.classList.add('is-fullscreen');
+            
+            const styleBtn = document.getElementById('map-style-toggle');
+            const satIcon = document.getElementById('style-satellite-icon');
+            const moonIcon = document.getElementById('style-dark-icon');
+
+            styleBtn.addEventListener('click', () => {
+                const isSatellite = map.hasLayer(satelliteTiles);
+                if (!isSatellite) {
+                    map.removeLayer(darkTiles);
+                    satelliteTiles.addTo(map);
+                    satelliteTiles.bringToBack();
+                    satIcon.classList.add('hidden-icon');
+                    moonIcon.classList.remove('hidden-icon');
                 } else {
-                    expandIcon.classList.remove('hidden-icon');
-                    collapseIcon.classList.add('hidden-icon');
-                    fsContainer.classList.remove('is-fullscreen');
+                    map.removeLayer(satelliteTiles);
+                    darkTiles.addTo(map);
+                    darkTiles.bringToBack();
+                    satIcon.classList.remove('hidden-icon');
+                    moonIcon.classList.add('hidden-icon');
                 }
-                setTimeout(() => map.invalidateSize(), 300);
+                geoJsonLayer.setStyle(getGeoJsonStyle()); 
+                if (geoJsonLayer) geoJsonLayer.bringToBack();
+            });
+
+            ['fullscreenchange', 'webkitfullscreenchange'].forEach(evt => {
+                document.addEventListener(evt, () => {
+                    const isFS = !!(document.fullscreenElement || document.webkitFullscreenElement);
+                    updateFSUI(isFS);
+                });
             });
 
             
@@ -1583,10 +1650,18 @@
         display: none !important;
     }
 
-    .map-container-wrapper.is-fullscreen {
+    .map-container-wrapper.is-fullscreen,
+    .map-container-wrapper.is-pseudo-fullscreen {
         width: 100vw !important;
         height: 100vh !important;
         background: #111;
+        z-index: 99999 !important;
+    }
+
+    .map-container-wrapper.is-pseudo-fullscreen {
+        position: fixed !important;
+        top: 0;
+        left: 0;
     }
 </style>
 

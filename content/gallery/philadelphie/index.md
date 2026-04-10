@@ -1,8 +1,7 @@
 ---
 title: "Philadelphie"
-description: "Discover my photo gallery of Philadelphie. A collection of shots capturing the architecture and atmosphere of Philadelphie."
+description: "Explore my immersive photography portfolio from Philadelphie. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
-dominant_color: "#636149"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -10,11 +9,11 @@ dominant_color: "#636149"
 </div>
 
 {{< gallery >}}
-  <img src="/gallery/philadelphie/philadelphie_001.webp" alt="Photographie de Philadelphie - 1" title="iPhone 15 | f/1.6 | 1/120s | ISO 80" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/philadelphie/philadelphie_002.webp" alt="Photographie de Philadelphie - 2" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/philadelphie/philadelphie_003.webp" alt="Photographie de Philadelphie - 3" title="iPhone 15 | f/1.6 | 1/2500s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/philadelphie/philadelphie_004.webp" alt="Photographie de Philadelphie - 4" title="iPhone 15 | f/2.4 | 1/210s | ISO 25" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/philadelphie/philadelphie_005.webp" alt="Photographie de Philadelphie - 5" title="iPhone 15 | f/1.6 | 1/4600s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/philadelphie/philadelphie_006.webp" alt="Photographie de Philadelphie - 6" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/philadelphie/philadelphie_007.webp" alt="Photographie de Philadelphie - 7" title="iPhone 15 | f/1.6 | 1/2200s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_001.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 1" title="iPhone 15 | f/1.6 | 1/120s | ISO 80" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_002.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 2" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_003.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 3" title="iPhone 15 | f/1.6 | 1/2500s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_004.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 4" title="iPhone 15 | f/2.4 | 1/210s | ISO 25" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_005.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 5" title="iPhone 15 | f/1.6 | 1/4600s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_006.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 6" title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
+  <img src="/gallery/philadelphie/philadelphie_007.webp" alt="Photographie de Philadelphie par Romain Charretteur - Prise de vue 7" title="iPhone 15 | f/1.6 | 1/2200s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
 {{< /gallery >}}

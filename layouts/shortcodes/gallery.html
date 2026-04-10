@@ -192,7 +192,9 @@
       currentIndex = index;
       updateLightbox();
       lightbox.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // Empêche le scroll background
+      document.body.style.overflow = 'hidden'; 
+      document.getElementById('main-header').style.opacity = '0';
+      document.getElementById('main-header').style.pointerEvents = 'none';
     }
 
     function closeLightbox() {
@@ -202,7 +204,9 @@
       }
       lightbox.style.display = 'none';
       document.body.style.overflow = '';
-      captionEl.classList.add('hidden-caption'); // Toujours cacher à la fermeture
+      document.getElementById('main-header').style.opacity = '1';
+      document.getElementById('main-header').style.pointerEvents = 'auto';
+      captionEl.classList.add('hidden-caption'); 
       const exifEl = document.getElementById('lightbox-exif');
       if (exifEl) exifEl.classList.add('hidden-caption');
     }

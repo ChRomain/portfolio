@@ -2,7 +2,7 @@ disableKinds = ["RSS"]
 baseURL = 'https://rctravel.pages.dev/'
 theme = "blowfish"
 languageCode = "fr"
-title = "Travel"
+title = "Romain Charretteur | Photographie de Voyage"
 
 [params]
   googleAnalytics = "G-9R0TKHM8NV"
@@ -16,6 +16,16 @@ title = "Travel"
   showSocial = true
   showSocialInHeader = true
   showLanguageSelector = true
+  
+  # SEO & Social
+  description = "Portfolio de photographie de voyage de Romain Charretteur. Découvrez des récits visuels immersifs à travers l'Europe, l'Amérique et l'Asie."
+  
+  [params.twitter]
+    card = "summary_large_image"
+    site = "@romain.charretteur"
+    
+  [params.opengraph]
+    site_name = "Romain Charretteur Photography"
   [params.homepage]
     layout = "card"
     showRecent = true
@@ -48,7 +58,8 @@ defaultContentLanguage = "en"
     [languages.en.params]
       displayName = "🇺🇸 English"
       flag = "🇺🇸"
-      description = "Travel diaries: immersive photography and adventure stories from around the world."
+      title = "Romain Charretteur | Travel Photography"
+      description = "Travel photography portfolio of Romain Charretteur. Immersive visual stories and adventures from around the world."
     
     # English Menu
     [[languages.en.menu.main]]
@@ -274,7 +285,8 @@ defaultContentLanguage = "en"
     [languages.fr.params]
       displayName = "🇫🇷 Français"
       flag = "🇫🇷"
-      description = "Carnets de voyage : photographies immersives et récits d'aventures à travers le monde."
+      title = "Romain Charretteur | Photographie de Voyage"
+      description = "Portfolio de photographie de voyage de Romain Charretteur. Récits visuels immersifs et aventures à travers le monde."
 
     # French Menu
     [[languages.fr.menu.main]]
@@ -500,7 +512,8 @@ defaultContentLanguage = "en"
     [languages.es.params]
       displayName = "🇪🇸 Español"
       flag = "🇪🇸"
-      description = "Diarios de viaje: fotografías inmersivas y relatos de aventuras por todo el mundo."
+      title = "Romain Charretteur | Fotografía de Viaje"
+      description = "Portafolio de fotografía de viaje de Romain Charretteur. Relatos visuales inmersivos y aventuras por todo el mundo."
 
     # Spanish Menu
     [[languages.es.menu.main]]
