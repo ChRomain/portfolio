@@ -1,8 +1,12 @@
 disableKinds = ["RSS"]
+enableRobotsTXT = true
 baseURL = 'https://rctravel.pages.dev/'
 theme = "blowfish"
 languageCode = "fr"
 title = "Romain Charretteur | Photographie de Voyage"
+
+[outputs]
+  home = ["HTML", "JSON"]
 
 [params]
   googleAnalytics = "G-9R0TKHM8NV"
@@ -12,7 +16,8 @@ title = "Romain Charretteur | Photographie de Voyage"
   showDate = false
   showReadingTime = false
   showEdit = false
-  showSearch = false
+  showSearch = true
+  enableSearch = true
   showSocial = true
   showSocialInHeader = true
   showLanguageSelector = true

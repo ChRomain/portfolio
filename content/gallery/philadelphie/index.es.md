@@ -2,6 +2,8 @@
 title: "Philadelphie"
 description: "Explore mi portafolio fotográfico inmersivo de Philadelphie. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#3e4728"
+tags: ["urban", "ocean", "vintage"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

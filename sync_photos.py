@@ -241,6 +241,53 @@ def clean_name(name):
     name = re.sub(r'[^a-z0-9_]+', '', name)
     return name.strip('_')
 
+def get_dominant_color(img_path):
+    """Extrait la couleur dominante d'une image en format Hex"""
+    try:
+        with Image.open(img_path) as img:
+            img = img.resize((50, 50))
+            img = img.convert('RGB')
+            # Réduit à une palette de 8 couleurs pour isoler la dominante
+            img_p = img.quantize(colors=8).convert('RGB')
+            colors = img_p.getcolors(50*50)
+            # Trie par fréquence
+            colors.sort(key=lambda x: x[0], reverse=True)
+            dominant = colors[0][1] # (R, G, B)
+            return '#%02x%02x%02x' % dominant
+    except:
+        return ""
+
+def get_mood_tags(title, descriptions, hex_color):
+    """Génère des tags basés sur le titre, les descriptions et la couleur"""
+    tags = set()
+    
+    # 1. Analyse des mots clés dans le titre et les descriptions
+    all_text = (title + " " + " ".join(descriptions.values())).lower()
+    
+    keywords = {
+        "neige": ["snow", "winter", "cold", "white", "hiver", "glace", "ice"],
+        "ocean": ["sea", "water", "blue", "beach", "coast", "plage", "mer", "turquoise"],
+        "sunset": ["orange", "warm", "golden", "sun", "dusk", "soir", "coucher", "sunrise"],
+        "nature": ["green", "forest", "jungle", "lush", "mountains", "vert", "sauvage"],
+        "urban": ["city", "architecture", "street", "night", "lights", "ville", "building"],
+        "vintage": ["old", "history", "retro", "ancestral", "ancient", "antique"]
+    }
+    
+    for tag, keys in keywords.items():
+        if any(k in all_text for k in keys):
+            tags.add(tag)
+            
+    # 2. Analyse de la couleur
+    if hex_color:
+        r, g, b = int(hex_color[1:3], 16), int(hex_color[3:5], 16), int(hex_color[5:7], 16)
+        if r > 150 and g < 120 and b < 100: tags.add("warm")
+        if b > 150 and r < 120: tags.add("cold")
+        if g > 150 and r < 120: tags.add("lush")
+        if r > 200 and g > 200 and b > 200: tags.add("bright")
+        if r < 50 and g < 50 and b < 50: tags.add("dark")
+
+    return list(tags)
+
 def get_decimal_from_dms(dms, ref):
     if not dms or len(dms) != 3: return None
     try:
@@ -255,16 +302,21 @@ def get_decimal_from_dms(dms, ref):
         return None
 
 def get_exif_data(img_path):
-    """Extrait les réglages techniques de l'image et ses coordonnées GPS"""
+    """Extrait les réglages techniques, les coordonnées GPS et la date de l'image"""
     try:
         img = Image.open(img_path)
-        exif_dict = piexif.load(img.info['exif'])
+        exif_raw = img.info.get('exif')
+        if not exif_raw: return "", "", ""
+        
+        exif_dict = piexif.load(exif_raw)
         
         # 1. Extraction EXIF Classique
-        model = exif_dict['0th'].get(piexif.ImageIFD.Model, b"").decode().strip()
-        f_stop = exif_dict['Exif'].get(piexif.ExifIFD.FNumber)
-        iso = exif_dict['Exif'].get(piexif.ExifIFD.ISOSpeedRatings)
-        shutter = exif_dict['Exif'].get(piexif.ExifIFD.ExposureTime)
+        model = exif_dict.get('0th', {}).get(piexif.ImageIFD.Model, b"").decode().strip()
+        f_stop = exif_dict.get('Exif', {}).get(piexif.ExifIFD.FNumber)
+        iso = exif_dict.get('Exif', {}).get(piexif.ExifIFD.ISOSpeedRatings)
+        shutter = exif_dict.get('Exif', {}).get(piexif.ExifIFD.ExposureTime)
+        date_raw = exif_dict.get('Exif', {}).get(piexif.ExifIFD.DateTimeOriginal, b"").decode().strip()
+        
         parts = []
         if model: parts.append(model)
         if f_stop: parts.append(f"f/{f_stop[0]/f_stop[1]}")
@@ -274,6 +326,11 @@ def get_exif_data(img_path):
         if iso: parts.append(f"ISO {iso}")
         exif_str = " | ".join(parts)
         
+        # Formatage Date (YYYY:MM:DD HH:MM:SS -> YYYY-MM-DD)
+        date_str = ""
+        if date_raw:
+            date_str = date_raw.split(" ")[0].replace(":", "-")
+
         # 2. Extraction GPS
         gps_str = ""
         gps_dict = exif_dict.get('GPS', {})
@@ -288,7 +345,9 @@ def get_exif_data(img_path):
                 if lat_dec is not None and lng_dec is not None:
                     gps_str = f"{lat_dec:.5f},{lng_dec:.5f}"
                     
-        return exif_str, gps_str
+        return exif_str, gps_str, date_str
+    except Exception:
+        return "", "", ""
     except Exception:
         return "", ""
 
@@ -314,8 +373,9 @@ def sync_portfolio():
         os.makedirs(hugo_content_path, exist_ok=True)
         os.makedirs(hugo_assets_path, exist_ok=True)
 
-        # Représentant GPS pour la carte
+        # Représentant GPS et Date pour la carte
         folder_gps = None
+        folder_date = None
 
         # On prépare le bloc HTML qui ira dans {{< gallery >}}
         inner_gallery_html = ""
@@ -333,14 +393,17 @@ def sync_portfolio():
             full_source_path = os.path.join(source_folder_path, img_name)
             target_path = os.path.join(hugo_assets_path, img_clean)
             
-            exif_info, gps_info = get_exif_data(full_source_path)
+            exif_info, gps_info, date_info = get_exif_data(full_source_path)
             
-            # Si on n'a pas encore de GPS pour ce dossier, on prend le premier valide
+            # Si on n'a pas encore de GPS ou Date pour ce dossier, on prend le premier valide
             if gps_info and not folder_gps:
                 try:
                     lat_s, lng_s = gps_info.split(',')
                     folder_gps = [float(lat_s), float(lng_s)]
                 except: pass
+            
+            if date_info and not folder_date:
+                folder_date = date_info
 
             # SEO optimized alt text
             alt_text = f"Photographie de {display_title} par Romain Charretteur - Prise de vue {img_num}"
@@ -379,8 +442,15 @@ def sync_portfolio():
 
         if images:
             first_img_renamed = f"{folder_clean}_001.webp"
-            shutil.copy(os.path.join(hugo_assets_path, first_img_renamed), 
-                        os.path.join(hugo_content_path, "feature.webp"))
+            first_img_path = os.path.join(hugo_assets_path, first_img_renamed)
+            shutil.copy(first_img_path, os.path.join(hugo_content_path, "feature.webp"))
+            
+            # Analyse de la couleur dominante et des moods
+            dom_color = get_dominant_color(first_img_path)
+            mood_tags = get_mood_tags(display_title, DESCRIPTIONS.get(folder_clean, {}), dom_color)
+        else:
+            dom_color = ""
+            mood_tags = []
 
         # Langues à générer
         languages = {
@@ -411,7 +481,13 @@ def sync_portfolio():
             gallery_desc = gallery_desc_map.get(lang, "")
 
             with open(os.path.join(hugo_content_path, filename), "w") as f:
-                f.write(f'---\ntitle: "{display_title}"\ndescription: "{meta_desc}"\nlayout: "gallery"\n---\n\n')
+                f.write('---\n')
+                f.write(f'title: "{display_title}"\n')
+                f.write(f'description: "{meta_desc}"\n')
+                f.write(f'layout: "gallery"\n')
+                f.write(f'dominant_color: "{dom_color}"\n')
+                f.write(f'tags: {json.dumps(mood_tags)}\n')
+                f.write('---\n\n')
                 if gallery_desc:
                     f.write(f'<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">\n{gallery_desc}\n</div>\n\n')
                 
@@ -428,7 +504,10 @@ def sync_portfolio():
                 "name": display_title,
                 "coords": folder_gps,
                 "url": f"/gallery/{folder_clean}/",
-                "country": FOLDER_TO_COUNTRY.get(folder_clean, "Inconnu")
+                "country": FOLDER_TO_COUNTRY.get(folder_clean, "Inconnu"),
+                "date": folder_date if folder_date else "2024-01-01",
+                "color": dom_color,
+                "tags": mood_tags
             })
 
 
@@ -442,6 +521,9 @@ def sync_portfolio():
     with open("data/stats.json", "w") as f:
         json.dump(stats, f, indent=4)
         
+    # Tri par date pour le "Cinematic Journey"
+    all_locations.sort(key=lambda x: x['date'])
+
     # --- 4. EXPORT DES LOCATIONS (MAP) ---
     with open("data/locations.json", "w") as f:
         json.dump(all_locations, f, indent=4)

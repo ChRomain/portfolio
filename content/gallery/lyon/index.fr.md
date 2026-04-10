@@ -2,6 +2,8 @@
 title: "Lyon"
 description: "Découvrez mes plus beaux clichés et récits de voyage à Lyon. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#816c69"
+tags: ["urban", "ocean", "vintage"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

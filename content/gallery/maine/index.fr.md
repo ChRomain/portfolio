@@ -2,6 +2,8 @@
 title: "Maine"
 description: "Découvrez mes plus beaux clichés et récits de voyage à Maine. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#506273"
+tags: ["ocean", "nature", "vintage"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

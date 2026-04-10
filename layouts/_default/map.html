@@ -21,6 +21,30 @@
             </div>
         </div>
 
+        <!-- Cinematic Journey Timeline -->
+        <div id="journey-timeline" class="glass-timeline animate-fade-in">
+            <button id="journey-play-pause" class="timeline-play-btn" title="Lancer le voyage">
+                <svg id="journey-play-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <svg id="journey-pause-icon" class="hidden-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            </button>
+            <div id="timeline-track-wrapper">
+                <div id="journey-timeline-track"></div>
+            </div>
+            <div id="journey-current-date" class="timeline-date-display">...</div>
+        </div>
+
+        <!-- Travel Card Overlay (Cinematic) -->
+        <div id="travel-card" class="travel-card-overlay">
+            <div class="travel-card-content">
+                <h2 id="travel-card-title">Destination</h2>
+                <div id="travel-card-meta">
+                    <span id="travel-card-date">Date</span>
+                    <span class="meta-dot">•</span>
+                    <span id="travel-card-country">Country</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Bouton Immersion Totale -->
         <button id="map-fullscreen-toggle" class="glass-button animate-fade-in" style="top: 20px;" title="Immersion Totale">
             <svg id="fs-expand-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
@@ -91,6 +115,9 @@
 
             darkTiles.addTo(map);
 
+            // Markers Map for filtering
+            const markersMap = new Map();
+
             // Markers cluster
             const clusterGroup = L.markerClusterGroup({
                 showCoverageOnHover: false,
@@ -143,9 +170,26 @@
                 });
 
                 clusterGroup.addLayer(marker);
+                markersMap.set(loc.url, marker);
             });
 
             map.addLayer(clusterGroup);
+
+            // Magic Search Filtering Function
+            window.filterMapMarkers = (matchingUrls) => {
+                locations.forEach(loc => {
+                    const marker = markersMap.get(loc.url);
+                    if (!marker) return;
+
+                    const isMatch = matchingUrls.length === 0 || matchingUrls.some(url => url.includes(loc.url) || loc.url.includes(url));
+                    
+                    if (isMatch) {
+                        if (!clusterGroup.hasLayer(marker)) clusterGroup.addLayer(marker);
+                    } else {
+                        if (clusterGroup.hasLayer(marker)) clusterGroup.removeLayer(marker);
+                    }
+                });
+            };
 
             // GeoJSON Borders
             const getGeoJsonStyle = () => ({
@@ -256,6 +300,105 @@
 
             // Fix for map resizing
             setTimeout(() => map.invalidateSize(), 500);
+
+            // --- 7. Journey Autopilot Logic ---
+            const journeyPlayBtn = document.getElementById('journey-play-pause');
+            const journeyPlayIcon = document.getElementById('journey-play-icon');
+            const journeyPauseIcon = document.getElementById('journey-pause-icon');
+            const journeyTrack = document.getElementById('journey-timeline-track');
+            const dateDisplay = document.getElementById('journey-current-date');
+            const travelCard = document.getElementById('travel-card');
+            
+            let currentJourneyIndex = -1;
+            let isJourneyPlaying = false;
+            let journeyTimeout = null;
+
+            // Sort locations by date (just in case)
+            const sortedLocs = [...locations].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            // Create timeline bubbles
+            sortedLocs.forEach((loc, index) => {
+                const bubble = document.createElement('div');
+                bubble.className = 'timeline-bubble';
+                bubble.title = `${loc.name} (${new Date(loc.date).toLocaleDateString()})`;
+                bubble.addEventListener('click', () => {
+                    stopJourney();
+                    jumpToJourneyStep(index);
+                });
+                journeyTrack.appendChild(bubble);
+            });
+
+            function jumpToJourneyStep(index) {
+                if (index < 0 || index >= sortedLocs.length) return;
+                currentJourneyIndex = index;
+                const loc = sortedLocs[index];
+                
+                // Update Timeline UI
+                const bubbles = document.querySelectorAll('.timeline-bubble');
+                bubbles.forEach((b, i) => {
+                    b.classList.toggle('active', i === index);
+                    b.classList.toggle('passed', i < index);
+                });
+
+                // Update date display
+                const tripDate = new Date(loc.date);
+                dateDisplay.textContent = tripDate.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+
+                // Fly to destination
+                map.flyTo(loc.coords, 8, {
+                    duration: 2.5,
+                    easeLinearity: 0.25
+                });
+
+                // Show Travel Card
+                setTimeout(() => {
+                    showTravelCard(loc);
+                }, 1500);
+
+                if (isJourneyPlaying) {
+                    journeyTimeout = setTimeout(() => {
+                        if (currentJourneyIndex < sortedLocs.length - 1) {
+                            jumpToJourneyStep(currentJourneyIndex + 1);
+                        } else {
+                            stopJourney();
+                        }
+                    }, 6000); // 2.5s flight + 3.5s pause
+                }
+            }
+
+            function showTravelCard(loc) {
+                document.getElementById('travel-card-title').textContent = loc.name;
+                document.getElementById('travel-card-country').textContent = loc.country;
+                document.getElementById('travel-card-date').textContent = new Date(loc.date).toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+                
+                travelCard.classList.add('visible');
+                setTimeout(() => {
+                    travelCard.classList.remove('visible');
+                }, 4000);
+            }
+
+            function startJourney() {
+                isJourneyPlaying = true;
+                journeyPlayIcon.classList.add('hidden-icon');
+                journeyPauseIcon.classList.remove('hidden-icon');
+                
+                if (currentJourneyIndex >= sortedLocs.length - 1) {
+                    currentJourneyIndex = -1;
+                }
+                jumpToJourneyStep(currentJourneyIndex + 1);
+            }
+
+            function stopJourney() {
+                isJourneyPlaying = false;
+                journeyPlayIcon.classList.remove('hidden-icon');
+                journeyPauseIcon.classList.add('hidden-icon');
+                if (journeyTimeout) clearTimeout(journeyTimeout);
+            }
+
+            journeyPlayBtn.addEventListener('click', () => {
+                if (isJourneyPlaying) stopJourney();
+                else startJourney();
+            });
         };
 
         if (document.readyState === 'loading') {
@@ -377,8 +520,9 @@
     /* Explorateur Dashboard Styles */
     .glass-dashboard {
         position: absolute;
-        bottom: 30px;
+        top: 30px;
         left: 30px;
+        bottom: auto;
         z-index: 1000;
         background: rgba(20, 20, 20, 0.7);
         backdrop-filter: blur(12px);
@@ -437,9 +581,10 @@
 
     @media (max-width: 640px) {
         .glass-dashboard {
-            bottom: 20px;
+            top: 20px;
             left: 20px;
             right: 20px;
+            bottom: auto;
             justify-content: space-between;
             padding: 12px 20px;
         }
@@ -447,10 +592,13 @@
             font-size: 1.2rem;
         }
         .glass-button {
-            top: 20px;
+            top: 85px;
             right: 20px;
             width: 40px;
             height: 40px;
+        }
+        #map-style-toggle {
+            top: 135px;
         }
     }
 
@@ -499,6 +647,184 @@
         position: fixed !important;
         top: 0;
         left: 0;
+    }
+    /* Journey Timeline Styles */
+    .glass-timeline {
+        position: absolute;
+        bottom: 30px;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: 450px;
+        max-width: 90vw;
+        z-index: 1000;
+        background: rgba(20, 20, 20, 0.6);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 100px;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .timeline-play-btn {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s, background 0.2s;
+        flex-shrink: 0;
+    }
+
+    .timeline-play-btn:hover {
+        transform: scale(1.1);
+        background: #2563eb;
+    }
+
+    #timeline-track-wrapper {
+        flex-grow: 1;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    #journey-timeline-track {
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .timeline-bubble {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        z-index: 2;
+    }
+
+    .timeline-bubble:hover {
+        transform: scale(1.8);
+        background: #fff;
+    }
+
+    .timeline-bubble.active {
+        width: 14px;
+        height: 14px;
+        background: #3b82f6;
+        box-shadow: 0 0 15px #3b82f6;
+        transform: scale(1.2);
+    }
+
+    .timeline-bubble.passed {
+        background: #3b82f6;
+        opacity: 0.6;
+    }
+
+    .timeline-date-display {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #fff;
+        min-width: 100px;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Travel Card Overlay */
+    .travel-card-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -120%);
+        z-index: 2000;
+        background: rgba(20, 20, 20, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(59, 130, 246, 0.4);
+        border-radius: 24px;
+        padding: 30px 50px;
+        width: fit-content;
+        min-width: 300px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+    }
+
+    .travel-card-overlay.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -150%);
+    }
+
+    /* Small adjustments for timeline readability */
+    .timeline-date-display {
+        min-width: 80px;
+        font-size: 0.7rem;
+    }
+
+    #travel-card-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin: 0;
+        background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1px;
+    }
+
+    #travel-card-meta {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .meta-dot {
+        color: #3b82f6;
+    }
+
+    @media (max-width: 800px) {
+        .glass-timeline {
+            bottom: 30px;
+            left: 50% !important;
+            right: auto !important;
+            transform: translateX(-50%) !important;
+            width: auto !important;
+            min-width: 0 !important;
+            padding: 6px 15px !important;
+        }
+        #timeline-track-wrapper, .timeline-date-display {
+            display: none !important;
+        }
+        #travel-card-title {
+            font-size: 1.8rem;
+        }
     }
 </style>
 {{ end }}

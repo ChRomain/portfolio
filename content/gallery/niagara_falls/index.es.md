@@ -2,6 +2,8 @@
 title: "Niagara Falls"
 description: "Explore mi portafolio fotográfico inmersivo de Niagara Falls. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#221f1e"
+tags: ["urban", "ocean", "vintage", "dark"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

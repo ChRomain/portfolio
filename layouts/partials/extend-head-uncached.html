@@ -1,3 +1,48 @@
+<!-- SEO: HrefLang for multi-language -->
+{{ if .IsTranslated }}
+    {{ range .AllTranslations }}
+        <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+    {{ end }}
+{{ end }}
+
+<!-- SEO: Dynamic social sharing image -->
+{{ $featureImage := .Resources.GetMatch "feature.webp" }}
+{{ if $featureImage }}
+    <meta property="og:image" content="{{ $featureImage.Permalink }}">
+    <meta name="twitter:image" content="{{ $featureImage.Permalink }}">
+    <!-- Performance: Preload gallery feature image -->
+    <link rel="preload" as="image" href="{{ $featureImage.Permalink }}">
+{{ end }}
+
+<!-- Structured Data (JSON-LD) -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Romain Charretteur",
+  "url": "{{ .Site.BaseURL }}",
+  "jobTitle": "Travel Photographer",
+  "sameAs": [
+    "https://www.instagram.com/romain.charretteur"
+  ]
+}
+</script>
+{{ else if eq .Layout "gallery" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "creator": {
+    "@type": "Person",
+    "name": "Romain Charretteur"
+  }
+}
+</script>
+{{ end }}
+
 {{/* Preload de la première image hero sur la page d'accueil uniquement (améliore le LCP) */}}
 {{ if .IsHome }}
   {{ $heroImages := resources.Match "img/hero/*" }}

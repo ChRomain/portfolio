@@ -2,6 +2,8 @@
 title: "Washington"
 description: "Découvrez mes plus beaux clichés et récits de voyage à Washington. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#463d26"
+tags: ["urban", "ocean", "vintage", "neige"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

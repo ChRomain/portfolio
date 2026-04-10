@@ -2,6 +2,8 @@
 title: "Boston"
 description: "Explore my immersive photography portfolio from Boston. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#6c5a53"
+tags: ["urban", "ocean", "vintage"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

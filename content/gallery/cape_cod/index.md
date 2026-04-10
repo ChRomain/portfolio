@@ -2,6 +2,8 @@
 title: "Cape Cod"
 description: "Explore my immersive photography portfolio from Cape Cod. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#313128"
+tags: ["ocean", "vintage", "dark"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

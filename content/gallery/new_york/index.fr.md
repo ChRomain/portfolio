@@ -2,6 +2,8 @@
 title: "New York"
 description: "Découvrez mes plus beaux clichés et récits de voyage à New York. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#2f3538"
+tags: ["sunset", "ocean", "urban"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

@@ -2,6 +2,8 @@
 title: "Suede"
 description: "Explore my immersive photography portfolio from Suede. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#b0a6a0"
+tags: ["ocean", "neige", "vintage", "sunset", "urban"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

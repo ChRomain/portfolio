@@ -2,6 +2,8 @@
 title: "Toronto"
 description: "Découvrez mes plus beaux clichés et récits de voyage à Toronto. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#584d3f"
+tags: ["urban", "nature"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

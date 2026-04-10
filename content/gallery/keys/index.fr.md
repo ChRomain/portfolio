@@ -2,6 +2,8 @@
 title: "Keys"
 description: "Découvrez mes plus beaux clichés et récits de voyage à Keys. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#cfe5f4"
+tags: ["urban", "ocean", "bright"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

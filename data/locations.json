@@ -1,201 +1,18 @@
 [
     {
-        "name": "Montreal",
-        "coords": [
-            44.59162,
-            -75.68429
-        ],
-        "url": "/gallery/montreal/",
-        "country": "Canada"
-    },
-    {
-        "name": "Toronto",
-        "coords": [
-            43.6532,
-            -79.3832
-        ],
-        "url": "/gallery/toronto/",
-        "country": "Canada"
-    },
-    {
-        "name": "Canada",
-        "coords": [
-            45.5017,
-            -73.5673
-        ],
-        "url": "/gallery/canada/",
-        "country": "Canada"
-    },
-    {
-        "name": "Ottawa",
-        "coords": [
-            45.4215,
-            -75.6972
-        ],
-        "url": "/gallery/ottawa/",
-        "country": "Canada"
-    },
-    {
-        "name": "Quebec",
-        "coords": [
-            46.8139,
-            -71.208
-        ],
-        "url": "/gallery/quebec/",
-        "country": "Canada"
-    },
-    {
-        "name": "Indonesie",
-        "coords": [
-            -8.4095,
-            115.1889
-        ],
-        "url": "/gallery/indonesie/",
-        "country": "Indon\u00e9sie"
-    },
-    {
-        "name": "Philadelphie",
-        "coords": [
-            39.9526,
-            -75.1652
-        ],
-        "url": "/gallery/philadelphie/",
-        "country": "USA"
-    },
-    {
-        "name": "Washington",
-        "coords": [
-            38.9072,
-            -77.0369
-        ],
-        "url": "/gallery/washington/",
-        "country": "USA"
-    },
-    {
-        "name": "New York",
-        "coords": [
-            40.7128,
-            -74.006
-        ],
-        "url": "/gallery/new_york/",
-        "country": "USA"
-    },
-    {
-        "name": "Boston",
-        "coords": [
-            42.36554,
-            -71.05316
-        ],
-        "url": "/gallery/boston/",
-        "country": "USA"
-    },
-    {
-        "name": "Niagara Falls",
-        "coords": [
-            43.0896,
-            -79.0849
-        ],
-        "url": "/gallery/niagara_falls/",
-        "country": "Canada"
-    },
-    {
-        "name": "Maine",
-        "coords": [
-            43.30587,
-            -70.56435
-        ],
-        "url": "/gallery/maine/",
-        "country": "USA"
-    },
-    {
-        "name": "Vermont",
-        "coords": [
-            44.72085,
-            -72.03098
-        ],
-        "url": "/gallery/vermont/",
-        "country": "USA"
-    },
-    {
-        "name": "New Hampshire",
-        "coords": [
-            43.1939,
-            -71.5724
-        ],
-        "url": "/gallery/new_hampshire/",
-        "country": "USA"
-    },
-    {
-        "name": "Cape Cod",
-        "coords": [
-            41.6688,
-            -70.2962
-        ],
-        "url": "/gallery/cape_cod/",
-        "country": "USA"
-    },
-    {
-        "name": "Guatemala",
-        "coords": [
-            14.73768,
-            -91.16121
-        ],
-        "url": "/gallery/guatemala/",
-        "country": "Guatemala"
-    },
-    {
-        "name": "Finistere",
-        "coords": [
-            48.45056,
-            -4.24887
-        ],
-        "url": "/gallery/finistere/",
-        "country": "France"
-    },
-    {
-        "name": "Lyon",
-        "coords": [
-            45.76219,
-            4.82211
-        ],
-        "url": "/gallery/lyon/",
-        "country": "France"
-    },
-    {
-        "name": "Bordeaux",
-        "coords": [
-            44.86324,
-            -0.5512
-        ],
-        "url": "/gallery/bordeaux/",
-        "country": "France"
-    },
-    {
         "name": "Montenegro",
         "coords": [
             42.7087,
             19.3744
         ],
         "url": "/gallery/montenegro/",
-        "country": "Mont\u00e9n\u00e9gro"
-    },
-    {
-        "name": "Naples",
-        "coords": [
-            40.8518,
-            14.2681
-        ],
-        "url": "/gallery/naples/",
-        "country": "Italie"
-    },
-    {
-        "name": "Corse",
-        "coords": [
-            41.83853,
-            9.30907
-        ],
-        "url": "/gallery/corse/",
-        "country": "France"
+        "country": "Mont\u00e9n\u00e9gro",
+        "date": "2019-09-02",
+        "color": "#96755a",
+        "tags": [
+            "ocean",
+            "vintage"
+        ]
     },
     {
         "name": "Paris",
@@ -204,16 +21,31 @@
             2.3522
         ],
         "url": "/gallery/paris/",
-        "country": "France"
+        "country": "France",
+        "date": "2019-12-29",
+        "color": "#0f1718",
+        "tags": [
+            "urban",
+            "vintage",
+            "dark",
+            "neige"
+        ]
     },
     {
-        "name": "Suede",
+        "name": "Naples",
         "coords": [
-            59.3293,
-            18.0686
+            40.8518,
+            14.2681
         ],
-        "url": "/gallery/suede/",
-        "country": "Su\u00e8de"
+        "url": "/gallery/naples/",
+        "country": "Italie",
+        "date": "2020-02-22",
+        "color": "#886743",
+        "tags": [
+            "sunset",
+            "vintage",
+            "urban"
+        ]
     },
     {
         "name": "Rome",
@@ -222,7 +54,355 @@
             12.4964
         ],
         "url": "/gallery/rome/",
-        "country": "Italie"
+        "country": "Italie",
+        "date": "2021-11-21",
+        "color": "#846237",
+        "tags": [
+            "urban",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Corse",
+        "coords": [
+            41.83853,
+            9.30907
+        ],
+        "url": "/gallery/corse/",
+        "country": "France",
+        "date": "2022-06-03",
+        "color": "#56512b",
+        "tags": [
+            "ocean",
+            "nature",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Suede",
+        "coords": [
+            59.3293,
+            18.0686
+        ],
+        "url": "/gallery/suede/",
+        "country": "Su\u00e8de",
+        "date": "2022-12-06",
+        "color": "#b0a6a0",
+        "tags": [
+            "ocean",
+            "neige",
+            "vintage",
+            "sunset",
+            "urban"
+        ]
+    },
+    {
+        "name": "Indonesie",
+        "coords": [
+            -8.4095,
+            115.1889
+        ],
+        "url": "/gallery/indonesie/",
+        "country": "Indon\u00e9sie",
+        "date": "2024-05-03",
+        "color": "#7b8576",
+        "tags": [
+            "ocean",
+            "nature",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Washington",
+        "coords": [
+            38.9072,
+            -77.0369
+        ],
+        "url": "/gallery/washington/",
+        "country": "USA",
+        "date": "2024-08-17",
+        "color": "#463d26",
+        "tags": [
+            "urban",
+            "ocean",
+            "vintage",
+            "neige"
+        ]
+    },
+    {
+        "name": "Philadelphie",
+        "coords": [
+            39.9526,
+            -75.1652
+        ],
+        "url": "/gallery/philadelphie/",
+        "country": "USA",
+        "date": "2024-08-20",
+        "color": "#3e4728",
+        "tags": [
+            "urban",
+            "ocean",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Boston",
+        "coords": [
+            42.36554,
+            -71.05316
+        ],
+        "url": "/gallery/boston/",
+        "country": "USA",
+        "date": "2024-09-02",
+        "color": "#6c5a53",
+        "tags": [
+            "urban",
+            "ocean",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Montreal",
+        "coords": [
+            44.59162,
+            -75.68429
+        ],
+        "url": "/gallery/montreal/",
+        "country": "Canada",
+        "date": "2024-10-20",
+        "color": "#4f5041",
+        "tags": [
+            "urban",
+            "ocean"
+        ]
+    },
+    {
+        "name": "Quebec",
+        "coords": [
+            46.8139,
+            -71.208
+        ],
+        "url": "/gallery/quebec/",
+        "country": "Canada",
+        "date": "2024-12-07",
+        "color": "#f1edeb",
+        "tags": [
+            "ocean",
+            "bright",
+            "vintage",
+            "sunset",
+            "urban",
+            "nature"
+        ]
+    },
+    {
+        "name": "Toronto",
+        "coords": [
+            43.6532,
+            -79.3832
+        ],
+        "url": "/gallery/toronto/",
+        "country": "Canada",
+        "date": "2025-01-03",
+        "color": "#584d3f",
+        "tags": [
+            "urban",
+            "nature"
+        ]
+    },
+    {
+        "name": "Canada",
+        "coords": [
+            45.5017,
+            -73.5673
+        ],
+        "url": "/gallery/canada/",
+        "country": "Canada",
+        "date": "2025-02-15",
+        "color": "#cfd0d0",
+        "tags": [
+            "ocean",
+            "bright",
+            "nature",
+            "neige"
+        ]
+    },
+    {
+        "name": "Niagara Falls",
+        "coords": [
+            43.0896,
+            -79.0849
+        ],
+        "url": "/gallery/niagara_falls/",
+        "country": "Canada",
+        "date": "2025-04-20",
+        "color": "#221f1e",
+        "tags": [
+            "urban",
+            "ocean",
+            "vintage",
+            "dark"
+        ]
+    },
+    {
+        "name": "Ottawa",
+        "coords": [
+            45.4215,
+            -75.6972
+        ],
+        "url": "/gallery/ottawa/",
+        "country": "Canada",
+        "date": "2025-05-11",
+        "color": "#4b522d",
+        "tags": [
+            "urban"
+        ]
+    },
+    {
+        "name": "Cape Cod",
+        "coords": [
+            41.6688,
+            -70.2962
+        ],
+        "url": "/gallery/cape_cod/",
+        "country": "USA",
+        "date": "2025-05-17",
+        "color": "#313128",
+        "tags": [
+            "ocean",
+            "vintage",
+            "dark"
+        ]
+    },
+    {
+        "name": "New York",
+        "coords": [
+            40.7128,
+            -74.006
+        ],
+        "url": "/gallery/new_york/",
+        "country": "USA",
+        "date": "2025-06-20",
+        "color": "#2f3538",
+        "tags": [
+            "sunset",
+            "ocean",
+            "urban"
+        ]
+    },
+    {
+        "name": "Vermont",
+        "coords": [
+            44.72085,
+            -72.03098
+        ],
+        "url": "/gallery/vermont/",
+        "country": "USA",
+        "date": "2025-07-19",
+        "color": "#426534",
+        "tags": [
+            "ocean",
+            "nature"
+        ]
+    },
+    {
+        "name": "Maine",
+        "coords": [
+            43.30587,
+            -70.56435
+        ],
+        "url": "/gallery/maine/",
+        "country": "USA",
+        "date": "2025-08-01",
+        "color": "#506273",
+        "tags": [
+            "ocean",
+            "nature",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Guatemala",
+        "coords": [
+            14.73768,
+            -91.16121
+        ],
+        "url": "/gallery/guatemala/",
+        "country": "Guatemala",
+        "date": "2025-09-04",
+        "color": "#15242d",
+        "tags": [
+            "urban",
+            "vintage",
+            "dark"
+        ]
+    },
+    {
+        "name": "New Hampshire",
+        "coords": [
+            43.1939,
+            -71.5724
+        ],
+        "url": "/gallery/new_hampshire/",
+        "country": "USA",
+        "date": "2025-09-30",
+        "color": "#8c7e6d",
+        "tags": [
+            "ocean",
+            "neige",
+            "vintage",
+            "sunset",
+            "nature"
+        ]
+    },
+    {
+        "name": "Finistere",
+        "coords": [
+            48.45056,
+            -4.24887
+        ],
+        "url": "/gallery/finistere/",
+        "country": "France",
+        "date": "2025-12-16",
+        "color": "#692018",
+        "tags": [
+            "ocean",
+            "nature",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Bordeaux",
+        "coords": [
+            44.86324,
+            -0.5512
+        ],
+        "url": "/gallery/bordeaux/",
+        "country": "France",
+        "date": "2026-01-02",
+        "color": "#8babd7",
+        "tags": [
+            "sunset",
+            "ocean",
+            "vintage",
+            "urban"
+        ]
+    },
+    {
+        "name": "Lyon",
+        "coords": [
+            45.76219,
+            4.82211
+        ],
+        "url": "/gallery/lyon/",
+        "country": "France",
+        "date": "2026-01-08",
+        "color": "#816c69",
+        "tags": [
+            "urban",
+            "ocean",
+            "vintage"
+        ]
     },
     {
         "name": "Miami",
@@ -231,16 +411,17 @@
             -80.1918
         ],
         "url": "/gallery/miami/",
-        "country": "USA"
-    },
-    {
-        "name": "Everglades",
-        "coords": [
-            25.2866,
-            -80.8987
-        ],
-        "url": "/gallery/everglades/",
-        "country": "USA"
+        "country": "USA",
+        "date": "2026-04-02",
+        "color": "#75a1c0",
+        "tags": [
+            "ocean",
+            "neige",
+            "sunset",
+            "cold",
+            "urban",
+            "lush"
+        ]
     },
     {
         "name": "Keys",
@@ -249,6 +430,29 @@
             -81.78
         ],
         "url": "/gallery/keys/",
-        "country": "USA"
+        "country": "USA",
+        "date": "2026-04-03",
+        "color": "#cfe5f4",
+        "tags": [
+            "urban",
+            "ocean",
+            "bright"
+        ]
+    },
+    {
+        "name": "Everglades",
+        "coords": [
+            25.2866,
+            -80.8987
+        ],
+        "url": "/gallery/everglades/",
+        "country": "USA",
+        "date": "2026-04-04",
+        "color": "#43464c",
+        "tags": [
+            "ocean",
+            "nature",
+            "vintage"
+        ]
     }
 ]

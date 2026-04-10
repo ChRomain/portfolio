@@ -260,8 +260,7 @@ header nav ul li ul li a {
 }
 
 /* --- 3. NETTOYAGE --- */
-.navbar-search,
-#search-button {
+.navbar-search {
     display: none !important;
 }
 
@@ -718,4 +717,25 @@ nav a[href$="/map/"]:hover,
 #weather-temp {
     margin-left: 2px;
     letter-spacing: -0.01em;
+}
+
+/* --- 15. SEARCH UI SOBER RECOVERY --- */
+#search-wrapper *, 
+#search-wrapper a, 
+#search-wrapper span, 
+#search-wrapper div {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.search-result-item a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.search-result-item a:hover {
+    background: rgba(120, 120, 120, 0.05) !important;
 }

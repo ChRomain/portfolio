@@ -2,6 +2,8 @@
 title: "Canada"
 description: "Explore my immersive photography portfolio from Canada. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#cfd0d0"
+tags: ["ocean", "bright", "nature", "neige"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

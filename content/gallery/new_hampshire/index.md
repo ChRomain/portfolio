@@ -2,6 +2,8 @@
 title: "New Hampshire"
 description: "Explore my immersive photography portfolio from New Hampshire. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#8c7e6d"
+tags: ["ocean", "neige", "vintage", "sunset", "nature"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

@@ -2,6 +2,8 @@
 title: "Miami"
 description: "Explore my immersive photography portfolio from Miami. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#75a1c0"
+tags: ["ocean", "neige", "sunset", "cold", "urban", "lush"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">

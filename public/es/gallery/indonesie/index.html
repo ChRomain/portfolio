@@ -24,6 +24,8 @@
     <meta name="description" content="Explore mi portafolio fotográfico inmersivo de Indonesie. Un carnet de voyage visuel par Romain Charretteur.">
   
   
+    <meta name="keywords" content="ocean,nature,vintage,">
+  
   
   
   <link rel="canonical" href="http://localhost:1313/es/gallery/indonesie/">
@@ -41,6 +43,9 @@
   <meta property="og:locale" content="es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="gallery">
+    <meta property="article:tag" content="Ocean">
+    <meta property="article:tag" content="Nature">
+    <meta property="article:tag" content="Vintage">
     <meta property="og:image" content="http://localhost:1313/gallery/indonesie/feature.webp">
 
   
@@ -94,8 +99,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1819f9c3cca14fbfaaa0f736f6dd029b78b601b87b242bd247a67e85dcf578d24061f225b316b06cd18f3955b4c8d6f468470906d7b43c8f793dd52030d63012.css"
-    integrity="sha512-GBn5w8yhT7&#43;qoPc29t0Cm3i2Abh7JCvSR6Z&#43;hdz1eNJAYfIlsxawbNGPOVW0yNb0aEcJBte0PI95PdUgMNYwEg==">
+    href="/css/main.bundle.min.3c1c73ebcdd3d52b366dd8ec8d2209deb6aa80ac8024a30f72223eca8b6c130068630453804aec9be06adac33e1bf41d3e25f7dd45575371858603e0acec078d.css"
+    integrity="sha512-PBxz683T1Ss2bdjsjSIJ3raqgKyAJKMPciI&#43;yotsEwBoYwRTgErsm&#43;Bq2sM&#43;G/QdPiX33UVXU3GFhgPgrOwHjQ==">
 
   
   
@@ -234,7 +239,7 @@
     
     
     
-    
+    "keywords": ["ocean","nature","vintage"],
     
     "mainEntityOfPage": "true",
     "wordCount": "31"
@@ -269,6 +274,9 @@
     
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R0TKHM8NV"></script>
 <script>
@@ -303,6 +311,42 @@
   
   
     
+
+    
+        <link rel="alternate" hreflang="en" href="http://localhost:1313/gallery/indonesie/" />
+    
+        <link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/gallery/indonesie/" />
+    
+        <link rel="alternate" hreflang="es" href="http://localhost:1313/es/gallery/indonesie/" />
+    
+
+
+
+
+
+    <meta property="og:image" content="http://localhost:1313/gallery/indonesie/feature.webp">
+    <meta name="twitter:image" content="http://localhost:1313/gallery/indonesie/feature.webp">
+    
+    <link rel="preload" as="image" href="http://localhost:1313/gallery/indonesie/feature.webp">
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Indonesie",
+  "description": "Explore mi portafolio fotográfico inmersivo de Indonesie. Un carnet de voyage visuel par Romain Charretteur.",
+  "creator": {
+    "@type": "Person",
+    "name": "Romain Charretteur"
+  }
+}
+</script>
+
+
+
 
 
 <style>
@@ -808,14 +852,20 @@
         </div>
     </nav>
 
-    <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Abrir menú móvil">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+    <div class="flex items-center space-x-1">
+        <button id="search-button-global" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none transition-colors" aria-label="Recherche Magique" title="Rechercher (Cmd+K)">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
+
+        <div class="flex items-center md:hidden">
+            <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Abrir menú móvil">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
     </div>
 </div>
 </header>
@@ -1121,6 +1171,9 @@
                 
             </div>
             <div class="flex items-center space-x-4">
+                <button id="search-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-primary-600 dark:text-primary-400" aria-label="Recherche">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
                 <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Modo oscuro">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
@@ -1226,7 +1279,7 @@
 
 <script>
 (function() {
-    const locations = [{"coords":[44.59162,-75.68429],"country":"Canada","name":"Montreal","url":"/gallery/montreal/"},{"coords":[43.6532,-79.3832],"country":"Canada","name":"Toronto","url":"/gallery/toronto/"},{"coords":[45.5017,-73.5673],"country":"Canada","name":"Canada","url":"/gallery/canada/"},{"coords":[45.4215,-75.6972],"country":"Canada","name":"Ottawa","url":"/gallery/ottawa/"},{"coords":[46.8139,-71.208],"country":"Canada","name":"Quebec","url":"/gallery/quebec/"},{"coords":[-8.4095,115.1889],"country":"Indonésie","name":"Indonesie","url":"/gallery/indonesie/"},{"coords":[39.9526,-75.1652],"country":"USA","name":"Philadelphie","url":"/gallery/philadelphie/"},{"coords":[38.9072,-77.0369],"country":"USA","name":"Washington","url":"/gallery/washington/"},{"coords":[40.7128,-74.006],"country":"USA","name":"New York","url":"/gallery/new_york/"},{"coords":[42.36554,-71.05316],"country":"USA","name":"Boston","url":"/gallery/boston/"},{"coords":[43.0896,-79.0849],"country":"Canada","name":"Niagara Falls","url":"/gallery/niagara_falls/"},{"coords":[43.30587,-70.56435],"country":"USA","name":"Maine","url":"/gallery/maine/"},{"coords":[44.72085,-72.03098],"country":"USA","name":"Vermont","url":"/gallery/vermont/"},{"coords":[43.1939,-71.5724],"country":"USA","name":"New Hampshire","url":"/gallery/new_hampshire/"},{"coords":[41.6688,-70.2962],"country":"USA","name":"Cape Cod","url":"/gallery/cape_cod/"},{"coords":[14.73768,-91.16121],"country":"Guatemala","name":"Guatemala","url":"/gallery/guatemala/"},{"coords":[48.45056,-4.24887],"country":"France","name":"Finistere","url":"/gallery/finistere/"},{"coords":[45.76219,4.82211],"country":"France","name":"Lyon","url":"/gallery/lyon/"},{"coords":[44.86324,-0.5512],"country":"France","name":"Bordeaux","url":"/gallery/bordeaux/"},{"coords":[42.7087,19.3744],"country":"Monténégro","name":"Montenegro","url":"/gallery/montenegro/"},{"coords":[40.8518,14.2681],"country":"Italie","name":"Naples","url":"/gallery/naples/"},{"coords":[41.83853,9.30907],"country":"France","name":"Corse","url":"/gallery/corse/"},{"coords":[48.8566,2.3522],"country":"France","name":"Paris","url":"/gallery/paris/"},{"coords":[59.3293,18.0686],"country":"Suède","name":"Suede","url":"/gallery/suede/"},{"coords":[41.9028,12.4964],"country":"Italie","name":"Rome","url":"/gallery/rome/"},{"coords":[25.7617,-80.1918],"country":"USA","name":"Miami","url":"/gallery/miami/"},{"coords":[25.2866,-80.8987],"country":"USA","name":"Everglades","url":"/gallery/everglades/"},{"coords":[24.5551,-81.78],"country":"USA","name":"Keys","url":"/gallery/keys/"}];
+    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["ocean","vintage"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["urban","vintage","dark","neige"],"url":"/gallery/paris/"},{"color":"#886743","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["sunset","vintage","urban"],"url":"/gallery/naples/"},{"color":"#846237","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["urban","vintage"],"url":"/gallery/rome/"},{"color":"#56512b","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["ocean","nature","vintage"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["ocean","neige","vintage","sunset","urban"],"url":"/gallery/suede/"},{"color":"#7b8576","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["ocean","nature","vintage"],"url":"/gallery/indonesie/"},{"color":"#463d26","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["urban","ocean","vintage","neige"],"url":"/gallery/washington/"},{"color":"#3e4728","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["urban","ocean","vintage"],"url":"/gallery/philadelphie/"},{"color":"#6c5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["urban","ocean","vintage"],"url":"/gallery/boston/"},{"color":"#4f5041","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1edeb","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["ocean","bright","vintage","sunset","urban","nature"],"url":"/gallery/quebec/"},{"color":"#584d3f","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#cfd0d0","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["ocean","bright","nature","neige"],"url":"/gallery/canada/"},{"color":"#221f1e","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["urban","ocean","vintage","dark"],"url":"/gallery/niagara_falls/"},{"color":"#4b522d","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313128","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["ocean","vintage","dark"],"url":"/gallery/cape_cod/"},{"color":"#2f3538","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["sunset","ocean","urban"],"url":"/gallery/new_york/"},{"color":"#426534","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["ocean","nature"],"url":"/gallery/vermont/"},{"color":"#506273","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["ocean","nature","vintage"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["urban","vintage","dark"],"url":"/gallery/guatemala/"},{"color":"#8c7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","neige","vintage","sunset","nature"],"url":"/gallery/new_hampshire/"},{"color":"#692018","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["ocean","nature","vintage"],"url":"/gallery/finistere/"},{"color":"#8babd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["sunset","ocean","vintage","urban"],"url":"/gallery/bordeaux/"},{"color":"#816c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["urban","ocean","vintage"],"url":"/gallery/lyon/"},{"color":"#75a1c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["ocean","neige","sunset","cold","urban","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f4","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["urban","ocean","bright"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["ocean","nature","vintage"],"url":"/gallery/everglades/"}];
     const rawURL = window.location.pathname;
     
     console.log("WeatherWidget: Init for URL:", rawURL);
@@ -1429,8 +1482,6 @@
 </div>
 
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
   .portfolio-grid-final {
@@ -2000,39 +2051,251 @@
 
 <script src="https://unpkg.com/instant.page@5.2.0/instantpage.js" type="module" integrity="sha384-jnZyxPjiipXnE0yVDsZ//e68KWewE1h0XJpx2rCg44Bf11RWeC4+b6oB6wB/rW4w"></script><div
   id="search-wrapper"
-  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  class="hidden fixed inset-0 h-screen w-screen cursor-default flex-col bg-neutral-100/10 p-4 backdrop-blur-xl dark:bg-neutral-900/10 sm:p-6 md:p-[15vh] lg:p-[20vh]"
+  style="z-index: 2147483647;"
   data-url="http://localhost:1313/es/">
   <div
     id="search-modal"
-    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
-    <header class="relative z-10 flex items-center justify-between flex-none px-2">
-      <form class="flex items-center flex-auto min-w-0">
-        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
-          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-</span>
+    class="flex flex-col w-full max-w-lg min-h-0 mx-auto transition-all duration-500 transform scale-95 opacity-0">
+    
+    <header class="relative z-10 flex items-center mb-8">
+      <form class="flex items-center flex-auto min-w-0 bg-white/60 dark:bg-neutral-800/60 rounded-full px-5 shadow-sm border border-neutral-200/30 dark:border-neutral-700/30">
+        <div class="flex items-center justify-center w-6 h-6 text-neutral-400">
+           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </div>
         <input
           type="search"
           id="search-query"
-          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
-          placeholder="Buscar"
+          class="flex flex-auto h-12 mx-3 bg-transparent appearance-none focus:outline-none text-base font-light placeholder-neutral-400 dark:placeholder-neutral-500 border-none"
+          placeholder="Rechercher..."
           tabindex="0">
       </form>
-      <button
-        id="close-search-button"
-        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-        title="Cerrar (Esc)">
-        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
-</span>
-      </button>
     </header>
-    <section class="flex-auto px-2 overflow-auto">
-      <ul id="search-results">
+
+    <section class="flex-auto overflow-auto max-h-[50vh] custom-scrollbar px-2">
+      <ul id="search-results" class="space-y-1">
         
       </ul>
+      <div id="search-empty-state" class="flex flex-col items-center justify-center py-10 text-neutral-400 dark:text-neutral-500 hidden font-light text-sm italic">
+          <p>Aucun cliché trouvé</p>
+      </div>
     </section>
   </div>
 </div>
+
+<style>
+#search-modal.active {
+    transform: scale(1);
+    opacity: 1;
+}
+#search-modal *, 
+#search-modal a, 
+#search-modal span,
+#search-modal div {
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.search-result-item a:hover {
+    background: rgba(120, 120, 120, 0.05) !important;
+    text-decoration: none !important;
+}
+.search-result-item .mood-tag {
+    font-size: 9px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: rgba(120, 120, 120, 0.1);
+    color: #888;
+    margin-right: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.search-result-item .color-preview {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(120,120,120,0.2); border-radius: 10px; }
+</style>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const searchWrapper = document.getElementById('search-wrapper');
+    const searchModal = document.getElementById('search-modal');
+    const searchButtonGlobal = document.getElementById('search-button-global');
+    const searchButtonMobile = document.getElementById('search-button-mobile');
+    const closeButton = document.getElementById('close-search-button');
+    const searchQuery = document.getElementById('search-query');
+    const searchResults = document.getElementById('search-results');
+    const emptyState = document.getElementById('search-empty-state');
+    
+    let fuse = null;
+    let searchData = [];
+
+    
+    const toggleSearch = (show) => {
+        console.log("Magic Search: Toggling to", show);
+        if (!searchWrapper || !searchModal) {
+            console.error("Magic Search: Elements missing!", {wrapper: !!searchWrapper, modal: !!searchModal});
+            return;
+        }
+
+        if (show) {
+            searchWrapper.classList.remove('hidden');
+            searchWrapper.classList.add('flex');
+            searchWrapper.style.display = 'flex'; 
+            setTimeout(() => {
+                searchModal.classList.add('active');
+                if (searchQuery) searchQuery.focus();
+            }, 50);
+        } else {
+            searchModal.classList.remove('active');
+            setTimeout(() => {
+                searchWrapper.classList.add('hidden');
+                searchWrapper.classList.remove('flex');
+                searchWrapper.style.display = 'none';
+            }, 300);
+        }
+    };
+
+    console.log("Magic Search: Script loaded. Global button:", !!searchButtonGlobal);
+    if (searchButtonGlobal) searchButtonGlobal.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleSearch(true);
+    });
+
+    if (searchButtonMobile) searchButtonMobile.addEventListener('click', () => {
+        const mobileOverlay = document.getElementById('mobile-menu-overlay');
+        if (mobileOverlay) {
+            mobileOverlay.classList.add('hidden');
+            mobileOverlay.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        toggleSearch(true);
+    });
+
+    if (closeButton) closeButton.addEventListener('click', () => toggleSearch(false));
+    
+    
+    searchWrapper.addEventListener('click', (e) => {
+        if (e.target === searchWrapper) {
+            toggleSearch(false);
+        }
+    });
+    
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') toggleSearch(false);
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+            e.preventDefault();
+            toggleSearch(true);
+        }
+        if (e.key === 'Enter' && !searchWrapper.classList.contains('hidden')) {
+            const firstResult = searchResults.querySelector('a');
+            if (firstResult) {
+                e.preventDefault();
+                window.location.href = firstResult.href;
+            }
+        }
+    });
+    
+    
+    loadSearchData();
+
+    async function loadSearchData() {
+        if (fuse) return;
+        const queryInput = document.getElementById('search-query');
+        if (queryInput) queryInput.placeholder = "Chargement de la magie...";
+        
+        console.log("Magic Search: Loading index...");
+        const url = searchWrapper.getAttribute('data-url') + 'index.json';
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error("Fichier index.json introuvable. Lancez sync_photos.py !");
+            searchData = await res.json();
+            
+            if (typeof Fuse === 'undefined') {
+                console.warn("Magic Search: Fuse.js not found, loading from CDN...");
+                const module = await import('https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js');
+                window.Fuse = module.default;
+            }
+
+            fuse = new Fuse(searchData, {
+                keys: ['title', 'summary', 'tags', 'content'],
+                threshold: 0.3,
+                includeMatches: true
+            });
+            if (queryInput) queryInput.placeholder = "Recherche Magique : Sunset, Blue...";
+            console.log("Magic Search: Index loaded successfully.");
+        } catch (err) {
+            console.error("Magic Search: Error loading index", err);
+            if (queryInput) queryInput.placeholder = "⚠️ Erreur : Lancez sync_photos.py !";
+        }
+    }
+
+    searchQuery.addEventListener('input', () => {
+        const query = searchQuery.value.trim();
+        if (!fuse || query.length < 2) {
+            searchResults.innerHTML = '';
+            emptyState.classList.add('hidden');
+            
+            if (window.filterMapMarkers) window.filterMapMarkers([]);
+            return;
+        }
+
+        const results = fuse.search(query);
+        renderResults(results);
+        
+        
+        if (window.filterMapMarkers) {
+            const matchingUrls = results.map(r => r.item.permalink);
+            window.filterMapMarkers(matchingUrls);
+        }
+    });
+
+    function renderResults(results) {
+        if (results.length === 0) {
+            searchResults.innerHTML = '';
+            emptyState.classList.remove('hidden');
+            return;
+        }
+
+        emptyState.classList.add('hidden');
+        searchResults.innerHTML = results.slice(0, 10).map(res => {
+            const item = res.item;
+            const tags = (item.tags || []).map(t => `<span class="mood-tag">${t}</span>`).join('');
+            const colorCircle = item.color ? `<div class="color-preview" style="background: ${item.color}" title="Ambience dominant: ${item.color}"></div>` : '';
+            
+            return `
+                <li class="search-result-item" style="text-decoration: none !important;">
+                    <a href="${item.permalink}" class="flex items-center p-4 rounded-2xl bg-white dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 hover:border-primary-500 transition-all group shadow-sm no-underline" style="text-decoration: none !important; border-bottom: none !important; box-shadow: none !important;">
+                        <div class="mr-4 flex-shrink-0" style="text-decoration: none !important;">
+                            <div class="w-12 h-12 rounded-xl bg-neutral-100 dark:bg-neutral-700 flex items-center justify-center overflow-hidden" style="text-decoration: none !important;">
+                                ${colorCircle || '<svg class="w-6 h-6 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>'}
+                            </div>
+                        </div>
+                        <div class="grow min-w-0" style="text-decoration: none !important;">
+                            <div class="flex items-center gap-2 mb-1" style="text-decoration: none !important;">
+                                <span class="text-xs font-bold text-primary-500 uppercase tracking-tighter no-underline" style="text-decoration: none !important; border-bottom: none !important;">${item.section}</span>
+                                ${tags}
+                            </div>
+                            <div class="text-base font-bold text-neutral-800 dark:text-neutral-100 group-hover:text-primary-500 transition-colors truncate no-underline" style="text-decoration: none !important;">${item.title}</div>
+                            <div class="text-xs text-neutral-500 italic truncate no-underline" style="text-decoration: none !important;">${item.summary || ''}</div>
+                        </div>
+                        <div class="ml-4 text-neutral-300 group-hover:text-primary-500 transition-transform group-hover:translate-x-1" style="text-decoration: none !important;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h14"/></svg>
+                        </div>
+                    </a>
+                </li>
+            `;
+        }).join('');
+    }
+});
+</script>
+
 
     </div>
   </body>

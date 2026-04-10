@@ -2,6 +2,8 @@
 title: "Montenegro"
 description: "Explore my immersive photography portfolio from Montenegro. Un carnet de voyage visuel par Romain Charretteur."
 layout: "gallery"
+dominant_color: "#96755a"
+tags: ["ocean", "vintage"]
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
