@@ -1,0 +1,41 @@
+{
+  "username": "romain.charretteur",
+  "posts": [
+    {
+      "image": "/gallery/new_york/feature.webp",
+      "likes": 142,
+      "comments": 12,
+      "url": "https://www.instagram.com/romain.charretteur"
+    },
+    {
+      "image": "/gallery/paris/feature.webp",
+      "likes": 256,
+      "comments": 18,
+      "url": "https://www.instagram.com/romain.charretteur"
+    },
+    {
+      "image": "/gallery/montenegro/feature.webp",
+      "likes": 189,
+      "comments": 9,
+      "url": "https://www.instagram.com/romain.charretteur"
+    },
+    {
+      "image": "/gallery/guatemala/feature.webp",
+      "likes": 210,
+      "comments": 15,
+      "url": "https://www.instagram.com/romain.charretteur"
+    },
+    {
+      "image": "/gallery/niagara_falls/feature.webp",
+      "likes": 167,
+      "comments": 7,
+      "url": "https://www.instagram.com/romain.charretteur"
+    },
+    {
+      "image": "/gallery/corse/feature.webp",
+      "likes": 302,
+      "comments": 24,
+      "url": "https://www.instagram.com/romain.charretteur"
+    }
+  ]
+}

@@ -95,8 +95,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.1003e9088415c5aff423dbea1c58a4242ee54da0fc7fa26de58d18dc2a8b5e8ba3c776e64527d4a8a6d4bfcbc85b90c9e22b63fc76d65f58f9de9323972c530a.css"
-    integrity="sha512-EAPpCIQVxa/0I9vqHFikJC7lTaD8f6Jt5Y0Y3CqLXoujx3bmRSfUqKbUv8vIW5DJ4itj/HbWX1j53pMjlyxTCg==">
+    href="/css/main.bundle.min.cf96064124e89cebdb2da7f604975943bf5d3cc5c8b356615e6e154c106a524f0ccc0c55a51e88dd94c50183fe3db1a00fdef707a9c737deec760f136b823813.css"
+    integrity="sha512-z5YGQSTonOvbLaf2BJdZQ79dPMXIs1ZhXm4VTBBqUk8MzAxVpR6I3ZTFAYP&#43;PbGgD973B6nHN97sdg8Ta4I4Ew==">
 
   
   
@@ -236,6 +236,11 @@
   
   
     
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
@@ -410,7 +415,8 @@
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                 <path d="M2 12h20" />
             </svg>
-            Romain Charretteur | Photographie de Voyage
+            <span class="truncate">Romain Charretteur</span>
+            <span class="hidden sm:inline text-neutral-500 dark:text-neutral-400 font-medium ml-2 border-l border-neutral-300 dark:border-neutral-700 pl-2">Photographie de Voyage</span>
         </a>
     </div>
 
@@ -886,7 +892,9 @@
 
 <div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">
-        <a href="/" class="text-lg font-bold dark:text-white">Romain Charretteur | Photographie de Voyage</a>
+        <a href="/" class="text-lg font-bold dark:text-white">
+            <span>Romain Charretteur</span>
+        </a>
         <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Close mobile menu">
             <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1268,6 +1276,14 @@
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
         
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+
 <div class="hero-carousel-container relative w-full overflow-hidden bg-neutral-900"
     style="height: 100vh; min-height: 500px; z-index: 1;">
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
@@ -1475,7 +1491,7 @@
 
     <div id="hero-scroll-btn" class="absolute bottom-24 left-1/2 -translate-x-1/2 z-[40] cursor-pointer"
         style="pointer-events: auto !important;"
-        onclick="document.getElementById('articles-section').scrollIntoView({ behavior: 'smooth' })">
+        onclick="document.getElementById('travel-dashboard').scrollIntoView({ behavior: 'smooth' })">
         <div
             class="bg-white/20 backdrop-blur-lg p-5 rounded-full border-2 border-white/50 hover:bg-white/40 hover:border-white transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -1485,6 +1501,143 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<section id="travel-dashboard" class="relative z-30 container mx-auto px-4 py-4 mt-20">
+    <div class="dashboard-glass shadow-md py-6 md:py-8 px-8 md:px-12 flex flex-nowrap justify-between items-center gap-1 md:gap-4 overflow-hidden">
+        
+        
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="8">0</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                Pays
+            </span>
+        </div>
+
+        
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="28">0</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                Villes
+            </span>
+        </div>
+
+        
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="452">0</span>
+                <span class="text-sm md:text-lg ml-0.5 text-primary-500 font-normal">+</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                Photos
+            </span>
+        </div>
+
+        
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="30">0</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                Vidéos
+            </span>
+        </div>
+
+    </div>
+</section>
+
 
 <div id="articles-section" style="width: 100%; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
 
@@ -2021,6 +2174,86 @@
             
         </div>
     </div>
+
+    
+    <section id="homepage-map-section" class="relative w-full overflow-hidden bg-neutral-900 border-y border-white/5" style="height: 500px;">
+        <div id="mini-map" class="w-full h-full"></div>
+    </section>
+
+    
+    
+    <section id="instagram-feed-section" class="mt-20">
+        <div class="insta-grid">
+            
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
+                <img src="/gallery/new_york/feature.webp" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 142</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 12</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
+                <img src="/gallery/paris/feature.webp" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 256</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 18</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
+                <img src="/gallery/montenegro/feature.webp" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 189</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 9</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
+                <img src="/gallery/guatemala/feature.webp" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 210</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 15</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
+                <img src="/gallery/niagara_falls/feature.webp" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 167</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 7</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
+                <img src="/gallery/corse/feature.webp" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 302</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 24</span>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+    
 </div>
 
 <script>
@@ -2125,6 +2358,129 @@
         cards.forEach((card) => {
             revealObserver.observe(card);
         });
+        
+        const initMiniMap = () => {
+            if (typeof L === 'undefined' || typeof L.markerClusterGroup === 'undefined') {
+                setTimeout(initMiniMap, 200);
+                return;
+            }
+
+            const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["vintage","ocean"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["neige","vintage","urban","dark"],"url":"/gallery/paris/"},{"color":"#886643","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["vintage","urban","sunset"],"url":"/gallery/naples/"},{"color":"#533d21","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["vintage","urban"],"url":"/gallery/rome/"},{"color":"#9ac6de","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["vintage","nature","ocean"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["urban","ocean","vintage","sunset","neige"],"url":"/gallery/suede/"},{"color":"#5f6144","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["vintage","nature","ocean"],"url":"/gallery/indonesie/"},{"color":"#463c25","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["neige","vintage","urban","ocean"],"url":"/gallery/washington/"},{"color":"#3e4726","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["vintage","urban","ocean"],"url":"/gallery/philadelphie/"},{"color":"#6b5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["vintage","urban","ocean"],"url":"/gallery/boston/"},{"color":"#a5adb1","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1eeec","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["urban","ocean","vintage","nature","sunset","bright"],"url":"/gallery/quebec/"},{"color":"#594d40","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#d1d2d2","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["neige","bright","nature","ocean"],"url":"/gallery/canada/"},{"color":"#9ba7b6","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["vintage","urban","ocean"],"url":"/gallery/niagara_falls/"},{"color":"#626e39","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313028","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["vintage","dark","ocean"],"url":"/gallery/cape_cod/"},{"color":"#2f3537","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["urban","sunset","ocean"],"url":"/gallery/new_york/"},{"color":"#426533","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["nature","ocean"],"url":"/gallery/vermont/"},{"color":"#506274","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["vintage","nature","ocean"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["vintage","urban","dark"],"url":"/gallery/guatemala/"},{"color":"#8d7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","vintage","nature","sunset","neige"],"url":"/gallery/new_hampshire/"},{"color":"#030100","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["vintage","dark","nature","ocean"],"url":"/gallery/finistere/"},{"color":"#8cacd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["vintage","urban","sunset","ocean"],"url":"/gallery/bordeaux/"},{"color":"#826c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["vintage","urban","ocean"],"url":"/gallery/lyon/"},{"color":"#77a2c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["urban","cold","ocean","sunset","neige","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f5","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["bright","urban","ocean"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["vintage","nature","ocean"],"url":"/gallery/everglades/"}];
+            const map = L.map('mini-map', {
+                center: [20, -20],
+                zoom: 2.5,
+                minZoom: 2,
+                scrollWheelZoom: false,
+                zoomControl: false,
+                attributionControl: false
+            });
+
+            
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                opacity: 0.5
+            }).addTo(map);
+
+            
+            const geoJsonLayer = L.geoJSON(null, {
+                style: {
+                    fillColor: "#353535",
+                    weight: 0.8,
+                    color: "#555",
+                    fillOpacity: 1
+                }
+            }).addTo(map);
+
+            fetch('https://cdn.jsdelivr.net/gh/datasets/geo-boundaries-world-110m@master/countries.geojson')
+                .then(r => r.json())
+                .then(data => {
+                    geoJsonLayer.addData(data);
+                    geoJsonLayer.bringToBack();
+                });
+
+            const clusterGroup = L.markerClusterGroup({
+                showCoverageOnHover: false,
+                maxClusterRadius: 45,
+                iconCreateFunction: (cluster) => L.divIcon({
+                    html: `<div class="mini-map-cluster"><span>${cluster.getChildCount()}</span></div>`,
+                    className: '',
+                    iconSize: [30, 30]
+                })
+            });
+
+            locations.forEach(loc => {
+                const marker = L.marker(loc.coords, {
+                    icon: L.divIcon({
+                        html: `<div class="home-photo-marker" style="background-image: url('${loc.url}feature.webp');"></div>`,
+                        className: '',
+                        iconSize: [32, 32]
+                    })
+                });
+
+                const tooltipContent = `
+                    <div class="mini-map-tooltip">
+                        <img src="${loc.url}feature.webp" style="width: 100%; height: 60px; object-fit: cover; border-radius: 4px;">
+                        <span style="color: #ffffff !important; font-weight: 900 !important; font-size: 0.85rem !important;">${loc.name}</span>
+                    </div>
+                `;
+
+                marker.bindTooltip(tooltipContent, {
+                    direction: 'top',
+                    offset: [0, -10],
+                    className: 'mini-map-tooltip-container'
+                });
+
+                marker.on('click', () => { window.location.href = loc.url; });
+                clusterGroup.addLayer(marker);
+            });
+
+            map.addLayer(clusterGroup);
+            
+            
+            setTimeout(() => {
+                map.flyTo([30, -30], 3, { duration: 3, easeLinearity: 0.1 });
+            }, 500);
+        };
+
+        initMiniMap();
+
+        
+        const animateCountUp = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const duration = 2000; 
+            const start = 0;
+            const startTime = performance.now();
+
+            const update = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                
+                const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+                const currentCount = Math.floor(easeOutExpo(progress) * (target - start) + start);
+                
+                el.innerText = currentCount;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.innerText = target;
+                }
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        const dashboardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.count-up').forEach(c => animateCountUp(c));
+                    dashboardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const dashboard = document.getElementById('travel-dashboard');
+        if (dashboard) dashboardObserver.observe(dashboard);
     });
 </script>
 

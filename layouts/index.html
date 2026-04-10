@@ -1,4 +1,12 @@
 {{ define "main" }}
+<!-- Leaflet & Map assets -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+
 <div class="hero-carousel-container relative w-full overflow-hidden bg-neutral-900"
     style="height: 100vh; min-height: 500px; z-index: 1;">
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
@@ -55,7 +63,7 @@
 
     <div id="hero-scroll-btn" class="absolute bottom-24 left-1/2 -translate-x-1/2 z-[40] cursor-pointer"
         style="pointer-events: auto !important;"
-        onclick="document.getElementById('articles-section').scrollIntoView({ behavior: 'smooth' })">
+        onclick="document.getElementById('travel-dashboard').scrollIntoView({ behavior: 'smooth' })">
         <div
             class="bg-white/20 backdrop-blur-lg p-5 rounded-full border-2 border-white/50 hover:bg-white/40 hover:border-white transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -65,6 +73,69 @@
         </div>
     </div>
 </div>
+
+<!-- Travel Dashboard Section -->
+{{ $locations := .Site.Data.locations | default slice }}
+{{ $countries := slice }}
+{{ range $locations }}
+    {{ $countries = $countries | append .country }}
+{{ end }}
+{{ $uniqueCountries := $countries | uniq | len }}
+{{ $citiesCount := len $locations }}
+{{ $imagesCount := .Site.Data.stats.total_images | default 450 }}
+{{ $videosTotal := 0 }}
+{{ range .Site.Data.videos.videos }}
+    {{ $videosTotal = add $videosTotal (len .) }}
+{{ end }}
+{{ $videosCount := $videosTotal }}
+
+<section id="travel-dashboard" class="relative z-30 container mx-auto px-4 py-4 mt-20">
+    <div class="dashboard-glass shadow-md py-6 md:py-8 px-8 md:px-12 flex flex-nowrap justify-between items-center gap-1 md:gap-4 overflow-hidden">
+        
+        <!-- Stat Item: Pays -->
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="{{ $uniqueCountries }}">0</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                {{ T "stats_countries" | default "Pays" }}
+            </span>
+        </div>
+
+        <!-- Stat Item: Villes -->
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="{{ $citiesCount }}">0</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                {{ T "stats_cities" | default "Villes" }}
+            </span>
+        </div>
+
+        <!-- Stat Item: Photos -->
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="{{ $imagesCount }}">0</span>
+                <span class="text-sm md:text-lg ml-0.5 text-primary-500 font-normal">+</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                {{ T "stats_photos" | default "Photos" }}
+            </span>
+        </div>
+
+        <!-- Stat Item: Vidéos -->
+        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
+            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
+                <span class="count-up" data-target="{{ $videosCount }}">0</span>
+            </div>
+            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
+                {{ T "stats_videos" | default "Vidéos" }}
+            </span>
+        </div>
+
+    </div>
+</section>
+
 
 <div id="articles-section" style="width: 100%; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
 
@@ -142,6 +213,31 @@
             {{ end }}
         </div>
     </div>
+
+    <!-- Section Mini-Map Gateway (Full Width) -->
+    <section id="homepage-map-section" class="relative w-full overflow-hidden bg-neutral-900 border-y border-white/5" style="height: 500px;">
+        <div id="mini-map" class="w-full h-full"></div>
+    </section>
+
+    <!-- Instagram Live Feed Immersif (Full Width) -->
+    {{ with .Site.Data.instagram }}
+    <section id="instagram-feed-section" class="mt-20">
+        <div class="insta-grid">
+            {{ range .posts }}
+            <a href="{{ .url }}" target="_blank" class="insta-tile group">
+                <img src="{{ .image }}" alt="Instagram Post" loading="lazy">
+                <div class="insta-overlay">
+                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="insta-stats">
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> {{ .likes }}</span>
+                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> {{ .comments }}</span>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
 </div>
 
 <script>
@@ -246,6 +342,129 @@
         cards.forEach((card) => {
             revealObserver.observe(card);
         });
+        // --- Homepage Mini-Map Logic ---
+        const initMiniMap = () => {
+            if (typeof L === 'undefined' || typeof L.markerClusterGroup === 'undefined') {
+                setTimeout(initMiniMap, 200);
+                return;
+            }
+
+            const locations = {{ site.Data.locations | default slice | jsonify | safeJS }};
+            const map = L.map('mini-map', {
+                center: [20, -20],
+                zoom: 2.5,
+                minZoom: 2,
+                scrollWheelZoom: false,
+                zoomControl: false,
+                attributionControl: false
+            });
+
+            // Exact same tiles as main map
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                opacity: 0.5
+            }).addTo(map);
+
+            // World Borders (GeoJSON) - Same as main map
+            const geoJsonLayer = L.geoJSON(null, {
+                style: {
+                    fillColor: "#353535",
+                    weight: 0.8,
+                    color: "#555",
+                    fillOpacity: 1
+                }
+            }).addTo(map);
+
+            fetch('https://cdn.jsdelivr.net/gh/datasets/geo-boundaries-world-110m@master/countries.geojson')
+                .then(r => r.json())
+                .then(data => {
+                    geoJsonLayer.addData(data);
+                    geoJsonLayer.bringToBack();
+                });
+
+            const clusterGroup = L.markerClusterGroup({
+                showCoverageOnHover: false,
+                maxClusterRadius: 45,
+                iconCreateFunction: (cluster) => L.divIcon({
+                    html: `<div class="mini-map-cluster"><span>${cluster.getChildCount()}</span></div>`,
+                    className: '',
+                    iconSize: [30, 30]
+                })
+            });
+
+            locations.forEach(loc => {
+                const marker = L.marker(loc.coords, {
+                    icon: L.divIcon({
+                        html: `<div class="home-photo-marker" style="background-image: url('${loc.url}feature.webp');"></div>`,
+                        className: '',
+                        iconSize: [32, 32]
+                    })
+                });
+
+                const tooltipContent = `
+                    <div class="mini-map-tooltip">
+                        <img src="${loc.url}feature.webp" style="width: 100%; height: 60px; object-fit: cover; border-radius: 4px;">
+                        <span style="color: #ffffff !important; font-weight: 900 !important; font-size: 0.85rem !important;">${loc.name}</span>
+                    </div>
+                `;
+
+                marker.bindTooltip(tooltipContent, {
+                    direction: 'top',
+                    offset: [0, -10],
+                    className: 'mini-map-tooltip-container'
+                });
+
+                marker.on('click', () => { window.location.href = loc.url; });
+                clusterGroup.addLayer(marker);
+            });
+
+            map.addLayer(clusterGroup);
+            
+            // Fly to initial view
+            setTimeout(() => {
+                map.flyTo([30, -30], 3, { duration: 3, easeLinearity: 0.1 });
+            }, 500);
+        };
+
+        initMiniMap();
+
+        // --- Travel Dashboard CountUp Logic ---
+        const animateCountUp = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const start = 0;
+            const startTime = performance.now();
+
+            const update = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function: easeOutExpo
+                const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+                const currentCount = Math.floor(easeOutExpo(progress) * (target - start) + start);
+                
+                el.innerText = currentCount;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.innerText = target;
+                }
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        const dashboardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.count-up').forEach(c => animateCountUp(c));
+                    dashboardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const dashboard = document.getElementById('travel-dashboard');
+        if (dashboard) dashboardObserver.observe(dashboard);
     });
 </script>
 
