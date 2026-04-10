@@ -3,6 +3,8 @@ import json
 import os
 import shutil
 import re
+import base64
+import io
 from PIL import Image, ImageOps 
 
 SOURCE_DIR = "/Users/romaincharretteur/pCloud Drive/Portfolio_Images"
@@ -224,6 +226,84 @@ FOLDER_TO_COUNTRY = {
     "indonesie": "Indonésie"
 }
 
+# --- DICTIONNAIRES SEO POUR L'IA SÉMANTIQUE ---
+SEO_VOCAB = {
+    "fr": {
+        "neige": ["hivernale", "enneigée", "glaciale", "pure"],
+        "ocean": ["maritime", "aquatique", "côtière", "azur"],
+        "sunset": ["crépusculaire", "dorée", "chaleureuse", "poétique"],
+        "nature": ["sauvage", "verdoyante", "naturelle", "organique"],
+        "urban": ["urbaine", "architecturale", "citadine", "moderne"],
+        "vintage": ["nostalgique", "historique", "intemporelle", "rétro"],
+        "warm": "aux tons chauds",
+        "cold": "aux reflets froids",
+        "lush": "luxuriante",
+        "bright": "lumineuse",
+        "dark": "sombre et mystérieuse",
+        "templates": [
+            "Une vue {mood} de {location}. {spec}",
+            "Cliché {mood} immortalisé à {location} par Romain Charretteur.",
+            "Atmosphère {mood} à {location}, une photographie {spec}.",
+            "Exploration visuelle de {location}, révélant une esthétique {mood}."
+        ]
+    },
+    "en": {
+        "neige": ["wintry", "snowy", "frozen", "pure"],
+        "ocean": ["maritime", "aquatic", "coastal", "azure"],
+        "sunset": ["cinematic", "golden", "warm", "poetic"],
+        "nature": ["wild", "green", "natural", "organic"],
+        "urban": ["urban", "architectural", "modern", "vibrant"],
+        "vintage": ["nostalgic", "historic", "timeless", "retro"],
+        "warm": "with warm tones",
+        "cold": "with cold reflections",
+        "lush": "lush and vibrant",
+        "bright": "bright and clear",
+        "dark": "dark and mysterious",
+        "templates": [
+            "A {mood} view of {location}. {spec}",
+            "Capturing the {mood} essence of {location}. Photo by Romain Charretteur.",
+            "The {mood} atmosphere of {location}, a {spec} shot.",
+            "Visual exploration of {location}, featuring a {mood} aesthetic."
+        ]
+    },
+    "es": {
+        "neige": ["invernal", "nevada", "glacial", "pura"],
+        "ocean": ["marítima", "acuática", "costera", "azul"],
+        "sunset": ["cinematográfica", "dorada", "cálida", "poética"],
+        "nature": ["salvaje", "verde", "natural", "orgánica"],
+        "urban": ["urbana", "arquitectónica", "moderna", "vibrante"],
+        "vintage": ["nostálgica", "histórica", "atemporal", "retro"],
+        "warm": "con tonos cálidos",
+        "cold": "con reflejos fríos",
+        "lush": "exuberante",
+        "bright": "luminosa",
+        "dark": "oscura y misteriosa",
+        "templates": [
+            "Una vista {mood} de {location}. {spec}",
+            "Capturando la esencia {mood} de {location}. Foto de Romain Charretteur.",
+            "La atmósfera {mood} de {location}, una toma {spec}.",
+            "Exploración visual de {location}, con una estética {mood}."
+        ]
+    }
+}
+
+import random
+
+def generate_smart_alt(lang, location, tags, color_mood):
+    vocab = SEO_VOCAB.get(lang, SEO_VOCAB["en"])
+    
+    # Choisir un mood au hasard parmi les tags ou défaut
+    mood_word = "unique"
+    if tags:
+        primary_tag = tags[0]
+        words = vocab.get(primary_tag, ["unique"])
+        mood_word = random.choice(words) if isinstance(words, list) else words
+        
+    spec_word = vocab.get(color_mood, "artistique")
+    template = random.choice(vocab["templates"])
+    
+    return template.format(mood=mood_word, location=location, spec=spec_word)
+
 # --- COORDONNÉES PAR DÉFAUT (Fallback si pas de GPS dans les photos) ---
 DEFAULT_GPS = {
     "paris": [48.8566, 2.3522], "lyon": [45.7640, 4.8357], "bordeaux": [44.8378, -0.5792], "corse": [42.0396, 9.0129], "finistere": [48.3147, -4.1441],
@@ -240,6 +320,19 @@ def clean_name(name):
     name = name.lower().replace(" ", "_")
     name = re.sub(r'[^a-z0-9_]+', '', name)
     return name.strip('_')
+
+def get_decimal_from_dms(dms, ref):
+    if not dms or len(dms) != 3: return None
+    try:
+        degrees = dms[0][0] / dms[0][1] if dms[0][1] != 0 else 0
+        minutes = dms[1][0] / dms[1][1] if dms[1][1] != 0 else 0
+        seconds = dms[2][0] / dms[2][1] if dms[2][1] != 0 else 0
+        val = degrees + (minutes / 60.0) + (seconds / 3600.0)
+        if ref in [b'S', b'W', 'S', 'W']:
+            val = -val
+        return val
+    except:
+        return None
 
 def get_dominant_color(img_path):
     """Extrait la couleur dominante d'une image en format Hex"""
@@ -378,15 +471,25 @@ def sync_portfolio():
         folder_date = None
 
         # On prépare le bloc HTML qui ira dans {{< gallery >}}
-        inner_gallery_html = ""
+        images_metadata = []
 
         # --- 1. AJOUT DES VIDÉOS SI ELLES EXISTENT ---
+        video_html_snippets = []
         if folder_clean in VIDEOS:
             for v_url in VIDEOS[folder_clean]:
-                inner_gallery_html += f'  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="{v_url}" type="video/mp4"></video>\n'
+                video_html_snippets.append(f'  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="{v_url}" type="video/mp4"></video>\n')
 
-        # --- 2. TRAITEMENT ET AJOUT DES IMAGES ---
+        # --- 2. ANALYSE DU STYLE DE LA GALERIE (Basé sur la 1ère image) ---
         images = [f for f in os.listdir(source_folder_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'webp'))]
+        dom_color = ""
+        mood_tags = []
+        if images:
+            first_img_name = sorted(images)[0]
+            first_img_full = os.path.join(source_folder_path, first_img_name)
+            # Temporaire pour extraction couleur
+            dom_color = get_dominant_color(first_img_full)
+            mood_tags = get_mood_tags(display_title, DESCRIPTIONS.get(folder_clean, {}), dom_color)
+
         for i, img_name in enumerate(sorted(images)):
             img_num = i + 1
             img_clean = f"{folder_clean}_{img_num:03d}.webp"
@@ -406,7 +509,6 @@ def sync_portfolio():
                 folder_date = date_info
 
             # SEO optimized alt text
-            alt_text = f"Photographie de {display_title} par Romain Charretteur - Prise de vue {img_num}"
             gps_attr = f' data-gps="{gps_info}"' if gps_info else ""
             
             try:
@@ -424,17 +526,44 @@ def sync_portfolio():
                     img.save(target_path, "WEBP", quality=QUALITY, method=6)
                     print(f"    ↳ [{img_num}/{len(images)}] {img_clean} optimisée.")
                 else:
-                    # On évite d'ouvrir l'image si elle existe déjà pour gagner du temps
-                    # Mais on a besoin des dimensions pour le HTML de Hugo
-                    try:
-                        with Image.open(target_path) as img_fast:
-                            width, height = img_fast.size
-                    except:
-                        # Fallback si le fichier est corrompu
-                        os.remove(target_path)
-                        continue
+                    # On ouvre l'image existante pour extraire le LQIP et les dimensions
+                    img = Image.open(target_path)
+                    width, height = img.size
                 
-                inner_gallery_html += f'  <img src="/gallery/{folder_clean}/{img_clean}" alt="{alt_text}" title="{exif_info}"{gps_attr} width="{width}" height="{height}" loading="lazy" decoding="async" />\n'
+                # --- LQIP (Low-Quality Image Placeholder) ---
+                try:
+                    lqip_img = img.copy()
+                    lqip_img.thumbnail((20, 20), Image.Resampling.LANCZOS)
+                    # Use JPEG for tiny placeholders to save even more bytes in Base64
+                    buffered = io.BytesIO()
+                    lqip_img.save(buffered, format="JPEG", quality=30)
+                    img_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
+                    lqip_style = f'background-image: url(data:image/jpeg;base64,{img_base64}); background-size: cover;'
+                except Exception as e:
+                    print(f"Error generating LQIP for {img_clean}: {e}")
+                    lqip_style = ""
+
+                # --- COLOR MOOD ---
+                color_mood = "unique"
+                if mood_tags:
+                    if "warm" in mood_tags: color_mood = "warm"
+                    elif "cold" in mood_tags: color_mood = "cold"
+                    elif "lush" in mood_tags: color_mood = "lush"
+                    elif "bright" in mood_tags: color_mood = "bright"
+                    elif "dark" in mood_tags: color_mood = "dark"
+
+                # Stocke les infos de l'image pour la génération multilingue
+                images_metadata.append({
+                    "src": f"/gallery/{folder_clean}/{img_clean}",
+                    "title": exif_info,
+                    "gps": gps_attr,
+                    "width": width,
+                    "height": height,
+                    "tags": mood_tags,
+                    "color_mood": color_mood,
+                    "lqip_style": lqip_style
+                })
+                
                 total_images_count += 1
                 
             except Exception as e:
@@ -444,10 +573,6 @@ def sync_portfolio():
             first_img_renamed = f"{folder_clean}_001.webp"
             first_img_path = os.path.join(hugo_assets_path, first_img_renamed)
             shutil.copy(first_img_path, os.path.join(hugo_content_path, "feature.webp"))
-            
-            # Analyse de la couleur dominante et des moods
-            dom_color = get_dominant_color(first_img_path)
-            mood_tags = get_mood_tags(display_title, DESCRIPTIONS.get(folder_clean, {}), dom_color)
         else:
             dom_color = ""
             mood_tags = []
@@ -479,6 +604,20 @@ def sync_portfolio():
             filename = config["file"]
             meta_desc = f"{config['desc_prefix']} {display_title}. Un carnet de voyage visuel par Romain Charretteur."
             gallery_desc = gallery_desc_map.get(lang, "")
+            
+            # --- GÉNÉRATION DU HTML SPÉCIFIQUE À LA LANGUE (POUR ALT SEO) ---
+            lang_gallery_html = "".join(video_html_snippets)
+            for img_data in images_metadata:
+                alt_seo = generate_smart_alt(lang, display_title, img_data['tags'], img_data['color_mood'])
+                lang_gallery_html += f'    <img src="{img_data["src"]}" \n'
+                lang_gallery_html += f'         alt="{alt_seo}" \n'
+                lang_gallery_html += f'         title="{img_data["title"]}" \n'
+                lang_gallery_html += f'         {img_data["gps"]} \n'
+                lang_gallery_html += f'         width="{img_data["width"]}" height="{img_data["height"]}" \n'
+                lang_gallery_html += f'         loading="lazy" decoding="async" \n'
+                lang_gallery_html += f'         data-lqip="true" \n'
+                lang_gallery_html += f'         style="{img_data["lqip_style"]}" \n'
+                lang_gallery_html += f'         onload="this.classList.add(\'loaded\')" />\n'
 
             with open(os.path.join(hugo_content_path, filename), "w") as f:
                 f.write('---\n')
@@ -491,7 +630,7 @@ def sync_portfolio():
                 if gallery_desc:
                     f.write(f'<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">\n{gallery_desc}\n</div>\n\n')
                 
-                f.write(f'{{{{< gallery >}}}}\n{inner_gallery_html}{{{{< /gallery >}}}}')
+                f.write(f'{{{{< gallery >}}}}\n{lang_gallery_html}{{{{< /gallery >}}}}')
         
         
         # Ajout à la liste des points pour la carte

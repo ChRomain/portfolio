@@ -739,3 +739,53 @@ nav a[href$="/map/"]:hover,
 .search-result-item a:hover {
     background: rgba(120, 120, 120, 0.05) !important;
 }
+
+/* --- 16. APPLE-GRADE UX BUNDLE --- */
+
+/* Native View Transitions (No-flash navigation) */
+@view-transition {
+    navigation: auto;
+}
+
+/* Reading Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #4f46e5; /* Primary indigo pulse */
+    z-index: 10000001; /* Above header */
+    transition: width 0.1s ease-out;
+}
+
+.dark #scroll-progress {
+    background: #818cf8;
+}
+
+/* Focus Mode: Header Hiding */
+#main-header {
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, border-color 0.4s ease;
+}
+
+#main-header.header--hidden {
+    transform: translateY(-100%);
+}
+
+/* LQIP: Lightning Speed Transitions (Nettoyé) */
+img[data-lqip="true"] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block; /* Élimine l'espace sous l'image */
+    width: 100%;
+    height: auto;
+    filter: blur(15px);
+    transition: filter 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: filter;
+}
+
+img[data-lqip="true"].loaded {
+    filter: blur(0);
+}

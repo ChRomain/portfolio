@@ -24,7 +24,7 @@
     <meta name="description" content="Découvrez mes plus beaux clichés et récits de voyage à Washington. Un carnet de voyage visuel par Romain Charretteur.">
   
   
-    <meta name="keywords" content="urban,ocean,vintage,neige,">
+    <meta name="keywords" content="neige,vintage,urban,ocean,">
   
   
   
@@ -43,10 +43,10 @@
   <meta property="og:locale" content="fr">
   <meta property="og:type" content="article">
     <meta property="article:section" content="gallery">
+    <meta property="article:tag" content="Neige">
+    <meta property="article:tag" content="Vintage">
     <meta property="article:tag" content="Urban">
     <meta property="article:tag" content="Ocean">
-    <meta property="article:tag" content="Vintage">
-    <meta property="article:tag" content="Neige">
     <meta property="og:image" content="http://localhost:1313/gallery/washington/feature.webp">
 
   
@@ -100,8 +100,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.3c1c73ebcdd3d52b366dd8ec8d2209deb6aa80ac8024a30f72223eca8b6c130068630453804aec9be06adac33e1bf41d3e25f7dd45575371858603e0acec078d.css"
-    integrity="sha512-PBxz683T1Ss2bdjsjSIJ3raqgKyAJKMPciI&#43;yotsEwBoYwRTgErsm&#43;Bq2sM&#43;G/QdPiX33UVXU3GFhgPgrOwHjQ==">
+    href="/css/main.bundle.min.1003e9088415c5aff423dbea1c58a4242ee54da0fc7fa26de58d18dc2a8b5e8ba3c776e64527d4a8a6d4bfcbc85b90c9e22b63fc76d65f58f9de9323972c530a.css"
+    integrity="sha512-EAPpCIQVxa/0I9vqHFikJC7lTaD8f6Jt5Y0Y3CqLXoujx3bmRSfUqKbUv8vIW5DJ4itj/HbWX1j53pMjlyxTCg==">
 
   
   
@@ -240,7 +240,7 @@
     
     
     
-    "keywords": ["urban","ocean","vintage","neige"],
+    "keywords": ["neige","vintage","urban","ocean"],
     
     "mainEntityOfPage": "true",
     "wordCount": "37"
@@ -286,6 +286,19 @@
     gtag('js', new Date());
 
     gtag('config', 'G-9R0TKHM8NV');
+</script>
+
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#4f46e5">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Error', err));
+        });
+    }
 </script>
 
 
@@ -870,6 +883,37 @@
     </div>
 </div>
 </header>
+<div id="scroll-progress"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const progress = document.getElementById('scroll-progress');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            
+            if (scrollHeight > 0) {
+                const scrolled = (currentScroll / scrollHeight) * 100;
+                progress.style.width = scrolled + '%';
+            }
+            
+            
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                
+                header.classList.add('header--hidden');
+            } else {
+                
+                header.classList.remove('header--hidden');
+            }
+            
+            lastScroll = currentScroll;
+        }, { passive: true });
+    });
+</script>
 
 <div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">
@@ -1280,7 +1324,7 @@
 
 <script>
 (function() {
-    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["ocean","vintage"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["urban","vintage","dark","neige"],"url":"/gallery/paris/"},{"color":"#886743","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["sunset","vintage","urban"],"url":"/gallery/naples/"},{"color":"#846237","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["urban","vintage"],"url":"/gallery/rome/"},{"color":"#56512b","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["ocean","nature","vintage"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["ocean","neige","vintage","sunset","urban"],"url":"/gallery/suede/"},{"color":"#7b8576","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["ocean","nature","vintage"],"url":"/gallery/indonesie/"},{"color":"#463d26","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["urban","ocean","vintage","neige"],"url":"/gallery/washington/"},{"color":"#3e4728","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["urban","ocean","vintage"],"url":"/gallery/philadelphie/"},{"color":"#6c5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["urban","ocean","vintage"],"url":"/gallery/boston/"},{"color":"#4f5041","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1edeb","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["ocean","bright","vintage","sunset","urban","nature"],"url":"/gallery/quebec/"},{"color":"#584d3f","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#cfd0d0","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["ocean","bright","nature","neige"],"url":"/gallery/canada/"},{"color":"#221f1e","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["urban","ocean","vintage","dark"],"url":"/gallery/niagara_falls/"},{"color":"#4b522d","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313128","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["ocean","vintage","dark"],"url":"/gallery/cape_cod/"},{"color":"#2f3538","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["sunset","ocean","urban"],"url":"/gallery/new_york/"},{"color":"#426534","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["ocean","nature"],"url":"/gallery/vermont/"},{"color":"#506273","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["ocean","nature","vintage"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["urban","vintage","dark"],"url":"/gallery/guatemala/"},{"color":"#8c7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","neige","vintage","sunset","nature"],"url":"/gallery/new_hampshire/"},{"color":"#692018","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["ocean","nature","vintage"],"url":"/gallery/finistere/"},{"color":"#8babd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["sunset","ocean","vintage","urban"],"url":"/gallery/bordeaux/"},{"color":"#816c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["urban","ocean","vintage"],"url":"/gallery/lyon/"},{"color":"#75a1c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["ocean","neige","sunset","cold","urban","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f4","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["urban","ocean","bright"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["ocean","nature","vintage"],"url":"/gallery/everglades/"}];
+    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["vintage","ocean"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["neige","vintage","urban","dark"],"url":"/gallery/paris/"},{"color":"#886643","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["vintage","urban","sunset"],"url":"/gallery/naples/"},{"color":"#533d21","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["vintage","urban"],"url":"/gallery/rome/"},{"color":"#9ac6de","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["vintage","nature","ocean"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["urban","ocean","vintage","sunset","neige"],"url":"/gallery/suede/"},{"color":"#5f6144","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["vintage","nature","ocean"],"url":"/gallery/indonesie/"},{"color":"#463c25","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["neige","vintage","urban","ocean"],"url":"/gallery/washington/"},{"color":"#3e4726","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["vintage","urban","ocean"],"url":"/gallery/philadelphie/"},{"color":"#6b5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["vintage","urban","ocean"],"url":"/gallery/boston/"},{"color":"#a5adb1","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1eeec","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["urban","ocean","vintage","nature","sunset","bright"],"url":"/gallery/quebec/"},{"color":"#594d40","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#d1d2d2","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["neige","bright","nature","ocean"],"url":"/gallery/canada/"},{"color":"#9ba7b6","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["vintage","urban","ocean"],"url":"/gallery/niagara_falls/"},{"color":"#626e39","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313028","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["vintage","dark","ocean"],"url":"/gallery/cape_cod/"},{"color":"#2f3537","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["urban","sunset","ocean"],"url":"/gallery/new_york/"},{"color":"#426533","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["nature","ocean"],"url":"/gallery/vermont/"},{"color":"#506274","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["vintage","nature","ocean"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["vintage","urban","dark"],"url":"/gallery/guatemala/"},{"color":"#8d7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","vintage","nature","sunset","neige"],"url":"/gallery/new_hampshire/"},{"color":"#030100","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["vintage","dark","nature","ocean"],"url":"/gallery/finistere/"},{"color":"#8cacd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["vintage","urban","sunset","ocean"],"url":"/gallery/bordeaux/"},{"color":"#826c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["vintage","urban","ocean"],"url":"/gallery/lyon/"},{"color":"#77a2c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["urban","cold","ocean","sunset","neige","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f5","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["bright","urban","ocean"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["vintage","nature","ocean"],"url":"/gallery/everglades/"}];
     const rawURL = window.location.pathname;
     
     console.log("WeatherWidget: Init for URL:", rawURL);
@@ -1464,12 +1508,60 @@
   
   
   
-  <img src="/gallery/washington/washington_001.webp" alt="Photographie de Washington par Romain Charretteur - Prise de vue 1" title="iPhone 15 | f/1.6 | 1/6400s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/washington/washington_002.webp" alt="Photographie de Washington par Romain Charretteur - Prise de vue 2" title="iPhone 15 | f/1.6 | 1/5000s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/washington/washington_003.webp" alt="Photographie de Washington par Romain Charretteur - Prise de vue 3" title="iPhone 15 | f/1.6 | 1/6700s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/washington/washington_004.webp" alt="Photographie de Washington par Romain Charretteur - Prise de vue 4" title="iPhone 15 | f/1.6 | 1/20s | ISO 400" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/washington/washington_005.webp" alt="Photographie de Washington par Romain Charretteur - Prise de vue 5" title="iPhone 15 | f/1.6 | 1/5600s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/washington/washington_006.webp" alt="Photographie de Washington par Romain Charretteur - Prise de vue 6" title="iPhone 15 | f/1.6 | 1/60s | ISO 160" width="1600" height="2133" loading="lazy" decoding="async" />
+    <img src="/gallery/washington/washington_001.webp" 
+         alt="Exploration visuelle de Washington, révélant une esthétique glaciale." 
+         title="iPhone 15 | f/1.6 | 1/6400s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB8ijkyMAPQmql1DHw0ZGPrTIy8ituMeWOeneo50IXaWUj2FTzoXKRK5HSkdyepooqSj//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/washington/washington_002.webp" 
+         alt="Atmosphère enneigée à Washington, une photographie artistique." 
+         title="iPhone 15 | f/1.6 | 1/5000s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCYZFsRIwA+6oPYnj+tMjtphCEcN8hwpx2qtLaX0zbpWY4O4fIeD6/oKYIL+JzIs77yMZKk1X1iKlzIxdK8eVssW2pXDj5thx7UW+DcmXaA+SSRnnNFFcnc6Uf/2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/washington/washington_003.webp" 
+         alt="Exploration visuelle de Washington, révélant une esthétique hivernale." 
+         title="iPhone 15 | f/1.6 | 1/6700s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCE26so/excehpQtpETumU/8Cx/KrDWEzp5gKoOo288etUTE4cxzRBXHO5VyGqvasz9ijQhlk8vYrlVHYVB9okdG3HkcZoorA3P/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/washington/washington_004.webp" 
+         alt="Atmosphère enneigée à Washington, une photographie artistique." 
+         title="iPhone 15 | f/1.6 | 1/20s | ISO 400" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDOtrQSSbWIHBIz3qN4XjYjHKnB9K0XeNhGYAyunUjtR5sIibzVZpGOc1nd2KsNRO+4kn1A/wAKGToQ5BHoAP6UUVJR/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/washington/washington_005.webp" 
+         alt="Une vue enneigée de Washington. artistique" 
+         title="iPhone 15 | f/1.6 | 1/5600s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCtDZqV8ycSKnT5V5q25solXfDEVA+VtwyfrVaeSOTq7Sc4OM1FIsC5Co4B54b+lbSqtmShYorIw71KsrGiismWf//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/washington/washington_006.webp" 
+         alt="Exploration visuelle de Washington, révélant une esthétique enneigée." 
+         title="iPhone 15 | f/1.6 | 1/60s | ISO 160" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDKiXcy/Lhh1yaJo1XOCOTTmmjcHapz2YgVGz5X5sA+uM0gI1YquRTWdm6miimB/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
 
 </div>
 

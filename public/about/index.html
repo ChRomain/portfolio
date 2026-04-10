@@ -93,8 +93,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.3c1c73ebcdd3d52b366dd8ec8d2209deb6aa80ac8024a30f72223eca8b6c130068630453804aec9be06adac33e1bf41d3e25f7dd45575371858603e0acec078d.css"
-    integrity="sha512-PBxz683T1Ss2bdjsjSIJ3raqgKyAJKMPciI&#43;yotsEwBoYwRTgErsm&#43;Bq2sM&#43;G/QdPiX33UVXU3GFhgPgrOwHjQ==">
+    href="/css/main.bundle.min.1003e9088415c5aff423dbea1c58a4242ee54da0fc7fa26de58d18dc2a8b5e8ba3c776e64527d4a8a6d4bfcbc85b90c9e22b63fc76d65f58f9de9323972c530a.css"
+    integrity="sha512-EAPpCIQVxa/0I9vqHFikJC7lTaD8f6Jt5Y0Y3CqLXoujx3bmRSfUqKbUv8vIW5DJ4itj/HbWX1j53pMjlyxTCg==">
 
   
   
@@ -243,6 +243,19 @@
     gtag('js', new Date());
 
     gtag('config', 'G-9R0TKHM8NV');
+</script>
+
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#4f46e5">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Error', err));
+        });
+    }
 </script>
 
 
@@ -809,6 +822,37 @@
     </div>
 </div>
 </header>
+<div id="scroll-progress"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const progress = document.getElementById('scroll-progress');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            
+            if (scrollHeight > 0) {
+                const scrolled = (currentScroll / scrollHeight) * 100;
+                progress.style.width = scrolled + '%';
+            }
+            
+            
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                
+                header.classList.add('header--hidden');
+            } else {
+                
+                header.classList.remove('header--hidden');
+            }
+            
+            lastScroll = currentScroll;
+        }, { passive: true });
+    });
+</script>
 
 <div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">

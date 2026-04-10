@@ -10,8 +10,8 @@
         "date": "2019-09-02",
         "color": "#96755a",
         "tags": [
-            "ocean",
-            "vintage"
+            "vintage",
+            "ocean"
         ]
     },
     {
@@ -25,10 +25,10 @@
         "date": "2019-12-29",
         "color": "#0f1718",
         "tags": [
-            "urban",
+            "neige",
             "vintage",
-            "dark",
-            "neige"
+            "urban",
+            "dark"
         ]
     },
     {
@@ -40,11 +40,11 @@
         "url": "/gallery/naples/",
         "country": "Italie",
         "date": "2020-02-22",
-        "color": "#886743",
+        "color": "#886643",
         "tags": [
-            "sunset",
             "vintage",
-            "urban"
+            "urban",
+            "sunset"
         ]
     },
     {
@@ -56,10 +56,10 @@
         "url": "/gallery/rome/",
         "country": "Italie",
         "date": "2021-11-21",
-        "color": "#846237",
+        "color": "#533d21",
         "tags": [
-            "urban",
-            "vintage"
+            "vintage",
+            "urban"
         ]
     },
     {
@@ -71,11 +71,11 @@
         "url": "/gallery/corse/",
         "country": "France",
         "date": "2022-06-03",
-        "color": "#56512b",
+        "color": "#9ac6de",
         "tags": [
-            "ocean",
+            "vintage",
             "nature",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -89,11 +89,11 @@
         "date": "2022-12-06",
         "color": "#b0a6a0",
         "tags": [
+            "urban",
             "ocean",
-            "neige",
             "vintage",
             "sunset",
-            "urban"
+            "neige"
         ]
     },
     {
@@ -105,11 +105,11 @@
         "url": "/gallery/indonesie/",
         "country": "Indon\u00e9sie",
         "date": "2024-05-03",
-        "color": "#7b8576",
+        "color": "#5f6144",
         "tags": [
-            "ocean",
+            "vintage",
             "nature",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -121,12 +121,12 @@
         "url": "/gallery/washington/",
         "country": "USA",
         "date": "2024-08-17",
-        "color": "#463d26",
+        "color": "#463c25",
         "tags": [
-            "urban",
-            "ocean",
+            "neige",
             "vintage",
-            "neige"
+            "urban",
+            "ocean"
         ]
     },
     {
@@ -138,11 +138,11 @@
         "url": "/gallery/philadelphie/",
         "country": "USA",
         "date": "2024-08-20",
-        "color": "#3e4728",
+        "color": "#3e4726",
         "tags": [
+            "vintage",
             "urban",
-            "ocean",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -154,11 +154,11 @@
         "url": "/gallery/boston/",
         "country": "USA",
         "date": "2024-09-02",
-        "color": "#6c5a53",
+        "color": "#6b5a53",
         "tags": [
+            "vintage",
             "urban",
-            "ocean",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -170,7 +170,7 @@
         "url": "/gallery/montreal/",
         "country": "Canada",
         "date": "2024-10-20",
-        "color": "#4f5041",
+        "color": "#a5adb1",
         "tags": [
             "urban",
             "ocean"
@@ -185,14 +185,14 @@
         "url": "/gallery/quebec/",
         "country": "Canada",
         "date": "2024-12-07",
-        "color": "#f1edeb",
+        "color": "#f1eeec",
         "tags": [
-            "ocean",
-            "bright",
-            "vintage",
-            "sunset",
             "urban",
-            "nature"
+            "ocean",
+            "vintage",
+            "nature",
+            "sunset",
+            "bright"
         ]
     },
     {
@@ -204,7 +204,7 @@
         "url": "/gallery/toronto/",
         "country": "Canada",
         "date": "2025-01-03",
-        "color": "#584d3f",
+        "color": "#594d40",
         "tags": [
             "urban",
             "nature"
@@ -219,12 +219,12 @@
         "url": "/gallery/canada/",
         "country": "Canada",
         "date": "2025-02-15",
-        "color": "#cfd0d0",
+        "color": "#d1d2d2",
         "tags": [
-            "ocean",
+            "neige",
             "bright",
             "nature",
-            "neige"
+            "ocean"
         ]
     },
     {
@@ -236,12 +236,11 @@
         "url": "/gallery/niagara_falls/",
         "country": "Canada",
         "date": "2025-04-20",
-        "color": "#221f1e",
+        "color": "#9ba7b6",
         "tags": [
-            "urban",
-            "ocean",
             "vintage",
-            "dark"
+            "urban",
+            "ocean"
         ]
     },
     {
@@ -253,7 +252,7 @@
         "url": "/gallery/ottawa/",
         "country": "Canada",
         "date": "2025-05-11",
-        "color": "#4b522d",
+        "color": "#626e39",
         "tags": [
             "urban"
         ]
@@ -267,11 +266,11 @@
         "url": "/gallery/cape_cod/",
         "country": "USA",
         "date": "2025-05-17",
-        "color": "#313128",
+        "color": "#313028",
         "tags": [
-            "ocean",
             "vintage",
-            "dark"
+            "dark",
+            "ocean"
         ]
     },
     {
@@ -283,11 +282,11 @@
         "url": "/gallery/new_york/",
         "country": "USA",
         "date": "2025-06-20",
-        "color": "#2f3538",
+        "color": "#2f3537",
         "tags": [
+            "urban",
             "sunset",
-            "ocean",
-            "urban"
+            "ocean"
         ]
     },
     {
@@ -299,10 +298,10 @@
         "url": "/gallery/vermont/",
         "country": "USA",
         "date": "2025-07-19",
-        "color": "#426534",
+        "color": "#426533",
         "tags": [
-            "ocean",
-            "nature"
+            "nature",
+            "ocean"
         ]
     },
     {
@@ -314,11 +313,11 @@
         "url": "/gallery/maine/",
         "country": "USA",
         "date": "2025-08-01",
-        "color": "#506273",
+        "color": "#506274",
         "tags": [
-            "ocean",
+            "vintage",
             "nature",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -332,8 +331,8 @@
         "date": "2025-09-04",
         "color": "#15242d",
         "tags": [
-            "urban",
             "vintage",
+            "urban",
             "dark"
         ]
     },
@@ -346,13 +345,13 @@
         "url": "/gallery/new_hampshire/",
         "country": "USA",
         "date": "2025-09-30",
-        "color": "#8c7e6d",
+        "color": "#8d7e6d",
         "tags": [
             "ocean",
-            "neige",
             "vintage",
+            "nature",
             "sunset",
-            "nature"
+            "neige"
         ]
     },
     {
@@ -364,11 +363,12 @@
         "url": "/gallery/finistere/",
         "country": "France",
         "date": "2025-12-16",
-        "color": "#692018",
+        "color": "#030100",
         "tags": [
-            "ocean",
+            "vintage",
+            "dark",
             "nature",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -380,12 +380,12 @@
         "url": "/gallery/bordeaux/",
         "country": "France",
         "date": "2026-01-02",
-        "color": "#8babd7",
+        "color": "#8cacd7",
         "tags": [
-            "sunset",
-            "ocean",
             "vintage",
-            "urban"
+            "urban",
+            "sunset",
+            "ocean"
         ]
     },
     {
@@ -397,11 +397,11 @@
         "url": "/gallery/lyon/",
         "country": "France",
         "date": "2026-01-08",
-        "color": "#816c69",
+        "color": "#826c69",
         "tags": [
+            "vintage",
             "urban",
-            "ocean",
-            "vintage"
+            "ocean"
         ]
     },
     {
@@ -413,13 +413,13 @@
         "url": "/gallery/miami/",
         "country": "USA",
         "date": "2026-04-02",
-        "color": "#75a1c0",
+        "color": "#77a2c0",
         "tags": [
-            "ocean",
-            "neige",
-            "sunset",
-            "cold",
             "urban",
+            "cold",
+            "ocean",
+            "sunset",
+            "neige",
             "lush"
         ]
     },
@@ -432,11 +432,11 @@
         "url": "/gallery/keys/",
         "country": "USA",
         "date": "2026-04-03",
-        "color": "#cfe5f4",
+        "color": "#cfe5f5",
         "tags": [
+            "bright",
             "urban",
-            "ocean",
-            "bright"
+            "ocean"
         ]
     },
     {
@@ -450,9 +450,9 @@
         "date": "2026-04-04",
         "color": "#43464c",
         "tags": [
-            "ocean",
+            "vintage",
             "nature",
-            "vintage"
+            "ocean"
         ]
     }
 ]

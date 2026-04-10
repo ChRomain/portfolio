@@ -14,6 +14,19 @@
     gtag('config', 'G-9R0TKHM8NV');
 </script>
 
+<!-- PWA Support -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#4f46e5">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Error', err));
+        });
+    }
+</script>
+
 <!-- Custom Selection Colors (Forced) -->
 <style>
     *::selection {

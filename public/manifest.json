@@ -1,0 +1,28 @@
+{
+  "name": "Romain Charretteur Portfolio",
+  "short_name": "ChRomain",
+  "description": "Portfolio immersif de Romain Charretteur - Photographe voyageur.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/globe-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/globe-icon.png",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/globe-icon.png",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

@@ -119,6 +119,37 @@
     </div>
 </div>
 </header>
+<div id="scroll-progress"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const progress = document.getElementById('scroll-progress');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            // 1. Progress Bar Update
+            if (scrollHeight > 0) {
+                const scrolled = (currentScroll / scrollHeight) * 100;
+                progress.style.width = scrolled + '%';
+            }
+            
+            // 2. Focus Mode (Header Hiding)
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                // Scrolling down - Hide
+                header.classList.add('header--hidden');
+            } else {
+                // Scrolling up - Show
+                header.classList.remove('header--hidden');
+            }
+            
+            lastScroll = currentScroll;
+        }, { passive: true });
+    });
+</script>
 
 <div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">

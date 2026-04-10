@@ -98,8 +98,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.3c1c73ebcdd3d52b366dd8ec8d2209deb6aa80ac8024a30f72223eca8b6c130068630453804aec9be06adac33e1bf41d3e25f7dd45575371858603e0acec078d.css"
-    integrity="sha512-PBxz683T1Ss2bdjsjSIJ3raqgKyAJKMPciI&#43;yotsEwBoYwRTgErsm&#43;Bq2sM&#43;G/QdPiX33UVXU3GFhgPgrOwHjQ==">
+    href="/css/main.bundle.min.1003e9088415c5aff423dbea1c58a4242ee54da0fc7fa26de58d18dc2a8b5e8ba3c776e64527d4a8a6d4bfcbc85b90c9e22b63fc76d65f58f9de9323972c530a.css"
+    integrity="sha512-EAPpCIQVxa/0I9vqHFikJC7lTaD8f6Jt5Y0Y3CqLXoujx3bmRSfUqKbUv8vIW5DJ4itj/HbWX1j53pMjlyxTCg==">
 
   
   
@@ -284,6 +284,19 @@
     gtag('js', new Date());
 
     gtag('config', 'G-9R0TKHM8NV');
+</script>
+
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#4f46e5">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Error', err));
+        });
+    }
 </script>
 
 
@@ -868,6 +881,37 @@
     </div>
 </div>
 </header>
+<div id="scroll-progress"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const progress = document.getElementById('scroll-progress');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            
+            if (scrollHeight > 0) {
+                const scrolled = (currentScroll / scrollHeight) * 100;
+                progress.style.width = scrolled + '%';
+            }
+            
+            
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                
+                header.classList.add('header--hidden');
+            } else {
+                
+                header.classList.remove('header--hidden');
+            }
+            
+            lastScroll = currentScroll;
+        }, { passive: true });
+    });
+</script>
 
 <div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
     <div class="flex justify-between items-center mb-8">
@@ -1278,7 +1322,7 @@
 
 <script>
 (function() {
-    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["ocean","vintage"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["urban","vintage","dark","neige"],"url":"/gallery/paris/"},{"color":"#886743","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["sunset","vintage","urban"],"url":"/gallery/naples/"},{"color":"#846237","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["urban","vintage"],"url":"/gallery/rome/"},{"color":"#56512b","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["ocean","nature","vintage"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["ocean","neige","vintage","sunset","urban"],"url":"/gallery/suede/"},{"color":"#7b8576","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["ocean","nature","vintage"],"url":"/gallery/indonesie/"},{"color":"#463d26","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["urban","ocean","vintage","neige"],"url":"/gallery/washington/"},{"color":"#3e4728","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["urban","ocean","vintage"],"url":"/gallery/philadelphie/"},{"color":"#6c5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["urban","ocean","vintage"],"url":"/gallery/boston/"},{"color":"#4f5041","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1edeb","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["ocean","bright","vintage","sunset","urban","nature"],"url":"/gallery/quebec/"},{"color":"#584d3f","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#cfd0d0","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["ocean","bright","nature","neige"],"url":"/gallery/canada/"},{"color":"#221f1e","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["urban","ocean","vintage","dark"],"url":"/gallery/niagara_falls/"},{"color":"#4b522d","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313128","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["ocean","vintage","dark"],"url":"/gallery/cape_cod/"},{"color":"#2f3538","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["sunset","ocean","urban"],"url":"/gallery/new_york/"},{"color":"#426534","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["ocean","nature"],"url":"/gallery/vermont/"},{"color":"#506273","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["ocean","nature","vintage"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["urban","vintage","dark"],"url":"/gallery/guatemala/"},{"color":"#8c7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","neige","vintage","sunset","nature"],"url":"/gallery/new_hampshire/"},{"color":"#692018","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["ocean","nature","vintage"],"url":"/gallery/finistere/"},{"color":"#8babd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["sunset","ocean","vintage","urban"],"url":"/gallery/bordeaux/"},{"color":"#816c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["urban","ocean","vintage"],"url":"/gallery/lyon/"},{"color":"#75a1c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["ocean","neige","sunset","cold","urban","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f4","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["urban","ocean","bright"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["ocean","nature","vintage"],"url":"/gallery/everglades/"}];
+    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["vintage","ocean"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["neige","vintage","urban","dark"],"url":"/gallery/paris/"},{"color":"#886643","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["vintage","urban","sunset"],"url":"/gallery/naples/"},{"color":"#533d21","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["vintage","urban"],"url":"/gallery/rome/"},{"color":"#9ac6de","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["vintage","nature","ocean"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["urban","ocean","vintage","sunset","neige"],"url":"/gallery/suede/"},{"color":"#5f6144","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["vintage","nature","ocean"],"url":"/gallery/indonesie/"},{"color":"#463c25","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["neige","vintage","urban","ocean"],"url":"/gallery/washington/"},{"color":"#3e4726","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["vintage","urban","ocean"],"url":"/gallery/philadelphie/"},{"color":"#6b5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["vintage","urban","ocean"],"url":"/gallery/boston/"},{"color":"#a5adb1","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1eeec","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["urban","ocean","vintage","nature","sunset","bright"],"url":"/gallery/quebec/"},{"color":"#594d40","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#d1d2d2","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["neige","bright","nature","ocean"],"url":"/gallery/canada/"},{"color":"#9ba7b6","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["vintage","urban","ocean"],"url":"/gallery/niagara_falls/"},{"color":"#626e39","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313028","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["vintage","dark","ocean"],"url":"/gallery/cape_cod/"},{"color":"#2f3537","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["urban","sunset","ocean"],"url":"/gallery/new_york/"},{"color":"#426533","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["nature","ocean"],"url":"/gallery/vermont/"},{"color":"#506274","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["vintage","nature","ocean"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["vintage","urban","dark"],"url":"/gallery/guatemala/"},{"color":"#8d7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","vintage","nature","sunset","neige"],"url":"/gallery/new_hampshire/"},{"color":"#030100","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["vintage","dark","nature","ocean"],"url":"/gallery/finistere/"},{"color":"#8cacd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["vintage","urban","sunset","ocean"],"url":"/gallery/bordeaux/"},{"color":"#826c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["vintage","urban","ocean"],"url":"/gallery/lyon/"},{"color":"#77a2c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["urban","cold","ocean","sunset","neige","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f5","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["bright","urban","ocean"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["vintage","nature","ocean"],"url":"/gallery/everglades/"}];
     const rawURL = window.location.pathname;
     
     console.log("WeatherWidget: Init for URL:", rawURL);
@@ -1464,54 +1508,438 @@
   
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-07%2000-04-23.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-09%2021-46-58.mov" type="video/mp4"></video>
-  <img src="/gallery/montreal/montreal_001.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 1" title="iPhone 15 | f/1.6 | 1/800s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_002.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 2" title="" width="1178" height="2066" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_003.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 3" title="" width="1178" height="2037" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_004.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 4" title="" width="1178" height="2060" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_005.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 5" title="" width="1178" height="2074" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_006.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 6" title="" width="1178" height="2059" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_007.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 7" title="" width="1178" height="2080" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_008.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 8" title="" width="1178" height="2036" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_009.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 9" title="" width="1178" height="2050" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_010.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 10" title="" width="1178" height="2045" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_011.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 11" title="" width="1178" height="2064" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_012.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 12" title="" width="1178" height="2076" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_013.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 13" title="" width="1178" height="2060" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_014.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 14" title="iPhone 15 | f/1.6 | 1/150s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_015.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 15" title="iPhone 15 | f/1.6 | 1/950s | ISO 32" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_016.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 16" title="iPhone 15 | f/1.6 | 1/1150s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_017.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 17" title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_018.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 18" title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_019.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 19" title="ILCE-6700 | f/4.0 | 1/60s | ISO 250" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_020.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 20" title="ILCE-6700 | f/3.2 | 1/160s | ISO 1600" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_021.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 21" title="ILCE-7M3 | f/5.6 | 1/160s | ISO 50" width="1600" height="1066" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_022.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 22" title="Canon EOS Rebel T100 | f/3.5 | 1/125s | ISO 3200" width="1600" height="1066" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_023.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 23" title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 3200" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_024.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 24" title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 2500" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_025.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 25" title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 320" width="1600" height="1066" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_026.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 26" title="Canon EOS Rebel T100 | f/5.6 | 1/250s | ISO 1000" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_027.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 27" title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 3200" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_028.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 28" title="iPhone 15 | f/1.6 | 1/2s | ISO 2000" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_029.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 29" title="iPhone 15 | f/1.6 | 1/400s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_030.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 30" title="Canon EOS Rebel T100 | f/6.3 | 1/40s | ISO 6400" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_031.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 31" title="iPhone 15 | f/1.6 | 1/2200s | ISO 50" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_032.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 32" title="iPhone 15 | f/1.6 | 1/60s | ISO 500" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_033.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 33" title="iPhone 15 | f/1.6 | 1/9s | ISO 1250" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_034.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 34" title="iPhone 15 | f/2.4 | 1/950s | ISO 25" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_035.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 35" title="iPhone 16 Pro Max | f/2.8 | 1/60s | ISO 160" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_036.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 36" title="iPhone 15 | f/1.6 | 1/120s | ISO 40" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_037.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 37" title="iPhone 15 | f/1.6 | 1/60s | ISO 320" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_038.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 38" title="iPhone 15 | f/1.6 | 1/9s | ISO 640" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_039.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 39" title="FC3682 | f/1.7 | 1/4000s | ISO 100" width="1600" height="2844" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_040.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 40" title="Canon EOS Rebel T100 | f/5.0 | 1/60s | ISO 400" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_041.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 41" title="Canon EOS Rebel T100 | f/5.6 | 1/500s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_042.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 42" title="Canon EOS Rebel T100 | f/5.6 | 1/320s | ISO 100" width="1600" height="2400" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_043.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 43" title="" width="1179" height="671" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_044.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 44" title="iPhone 15 | f/1.6 | 1/60s | ISO 500" data-gps="44.59162,-75.68429" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_045.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 45" title="FC3682 | f/1.7 | 1/8s | ISO 800" data-gps="45.52042,-73.53301" width="1600" height="2844" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_046.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 46" title="iPhone 15 | f/1.6 | 1/2s | ISO 1250" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_047.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 47" title="iPhone 15 | f/1.6 | 1/2s | ISO 1250" width="1600" height="2133" loading="lazy" decoding="async" />
-  <img src="/gallery/montreal/montreal_048.webp" alt="Photographie de Montreal par Romain Charretteur - Prise de vue 48" title="iPhone 15 | f/1.6 | 1/30s | ISO 640" width="1600" height="2133" loading="lazy" decoding="async" />
+    <img src="/gallery/montreal/montreal_001.webp" 
+         alt="La atmósfera urbana de Montreal, una toma artistique." 
+         title="iPhone 15 | f/1.6 | 1/800s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCyI0Qrknk9xS2jKBL8xOWyMelZ8N028hmLsvIA7VIGMMSOo3EIFIIPrRzti5UirKgEhOSSeM+lSISMYY8dKKKBn//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_002.webp" 
+         alt="Exploración visual de Montreal, con una estética vibrante." 
+         title="" 
+          
+         width="1178" height="2066" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDVKcVCpDjcO9UNNmOEQOwAjyRnvmrZQ54Jx9TWidyZRs7GNpZIvCu442d/rWxk0UUobF1PiP/Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_003.webp" 
+         alt="Exploración visual de Montreal, con una estética urbana." 
+         title="" 
+          
+         width="1178" height="2037" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDIezdV3IUkX1U1FsAxk9fStK2ihYEThS2Oq8VFLFaFvkaYADGOKLjdiJXIORT87+TjNFFID//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_004.webp" 
+         alt="Exploración visual de Montreal, con una estética urbana." 
+         title="" 
+          
+         width="1178" height="2060" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDCRQcgcnsBT/JXuwz9avRwrHE+IwSB94nkVEyKTnyVb39a1jqhGgFHlPx0pqwxMoJjH4UUU6OzKZ//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_005.webp" 
+         alt="La atmósfera moderna de Montreal, una toma artistique." 
+         title="" 
+          
+         width="1178" height="2074" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBgCRRRptXpgk0GyjPJKgnnoaUW3m5cSbRwOeT260x7JGcn7Yv/AH0KkZSS4kEeM1HuJ5OKKKZJ/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_006.webp" 
+         alt="La atmósfera moderna de Montreal, una toma artistique." 
+         title="" 
+          
+         width="1178" height="2059" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBWvQbYpCsiscfvCKqs65+aecnvg1ATuIMRZVXruNSF1Y5Kckc4NKw72IdgjKsuc9cmnF5GJJlfJ96KKYj/2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_007.webp" 
+         alt="Exploración visual de Montreal, con una estética moderna." 
+         title="" 
+          
+         width="1178" height="2080" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCiFj82MMuSQB+tLJ5XmNtG0Z4FOFzbEjcFOBUDTJuPzCpKZZhgjaME5z9TULxKGI5/OiigR//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_008.webp" 
+         alt="Una vista vibrante de Montreal. artistique" 
+         title="" 
+          
+         width="1178" height="2036" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDNW134x35zTHtipwTUsZDA4YflTXA3ctWunVBcrxsVHHFDMSaKKgGf/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_009.webp" 
+         alt="La atmósfera urbana de Montreal, una toma artistique." 
+         title="" 
+          
+         width="1178" height="2050" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCEsDzt6U3irEscQtQu3EnUtmqsbZQZBJrVSTZm0XpOLWPoclgcj0qsqKq4A/WiisLmp//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_010.webp" 
+         alt="La atmósfera urbana de Montreal, una toma artistique." 
+         title="" 
+          
+         width="1178" height="2045" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCqloHjLYPHPWozbhTgDPvirkDokQY4UPnk/U1Wmv0WQiPBX1xS5nsh26spCaQIgDHg5HNRuxZiTyaKKYj/2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_011.webp" 
+         alt="Exploración visual de Montreal, con una estética arquitectónica." 
+         title="" 
+          
+         width="1178" height="2064" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCwZbAqT5bE+oFV2ltdxxE2KpIszJu3gZ9TVd9wY5V8+xp80kZ8kH0FDFc4PXmk6cAmiirA/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_012.webp" 
+         alt="Capturando la esencia moderna de Montreal. Foto de Romain Charretteur." 
+         title="" 
+          
+         width="1178" height="2076" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCC3sHZR8vWpTpUmeEqhHqNwFwshOPag6ndZ/1tU5tkKCKxOIlPt+VVmOGIoopFH//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_013.webp" 
+         alt="Exploración visual de Montreal, con una estética arquitectónica." 
+         title="" 
+          
+         width="1178" height="2060" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCSK1h7yCri29ptGZVrn4IYZIctI6v2wwqsXdSRgnHfNOUpvUiMYLZEdLRRUDP/2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_014.webp" 
+         alt="Una vista moderna de Montreal. artistique" 
+         title="iPhone 15 | f/1.6 | 1/150s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCG5K/Z4E5yGZiPTpUTyGCDYHCAndjvUzX0U9uqmI7h1O6q0sp2lUVUyeo6/nSHa5YhsIip+eT86bNZRg/fkOevNFFAj//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_015.webp" 
+         alt="Exploración visual de Montreal, con una estética arquitectónica." 
+         title="iPhone 15 | f/1.6 | 1/950s | ISO 32" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDQufNhtJCr4ORzjnGauKPkGRn3FZ17Mk48mF9wX5mx+lW4LpEZoZGClT8uecjtQBzV3fTxGPYVG5Mk46mpY7uWTS2nLYkD7dw44oooA//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_016.webp" 
+         alt="Exploración visual de Montreal, con una estética urbana." 
+         title="iPhone 15 | f/1.6 | 1/1150s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDOUgoHByvqKSSI9arWE5hky3zIeqetWHvUTKqu5P4QTyvtmgCjHxUhweoFFFAH/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_017.webp" 
+         alt="Exploración visual de Montreal, con una estética moderna." 
+         title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCfUGaKzUxsEJYAnv8AhWNJPNuz50nPqakWZmgMOTtJB5yTmoJSd3Az+FIC9DNJ9tWIMQiDcAO5x3rPviTdMemeTiiigD//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_018.webp" 
+         alt="Una vista arquitectónica de Montreal. artistique" 
+         title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCtHNNvyJnGD65pl5PKzhJpDlemVwaSFxsJO4HtgVXdzIdzlieecUgNiG3jMQYgk4x1NVmtwvyrI6gE8A0UUDP/2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_019.webp" 
+         alt="Capturando la esencia vibrante de Montreal. Foto de Romain Charretteur." 
+         title="ILCE-6700 | f/4.0 | 1/60s | ISO 250" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBYrWLyAGYfN0Oeagvo4xIu0jGKRZY3iX/WDZ0IPfvUV1cxqwHlv0yNx5pXKsiusjhEAYgcnio2ZnwXJY9MmiigD//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_020.webp" 
+         alt="La atmósfera arquitectónica de Montreal, una toma artistique." 
+         title="ILCE-6700 | f/3.2 | 1/160s | ISO 1600" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCf+07VHkR2OVO0sqkhvqKsRIk482J18pgNoJIxWLcxvcSM2yJSTw3IP41Oj3Vii/ZyjrIMsCOAfb/PakNobGMJkE1BcscgA4xnpRRWcdzSWx//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_021.webp" 
+         alt="Capturando la esencia arquitectónica de Montreal. Foto de Romain Charretteur." 
+         title="ILCE-7M3 | f/5.6 | 1/160s | ISO 50" 
+          
+         width="1600" height="1066" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCtBLAOAhYY6k4zVhp4SoxD8pwTlxWAsrjOG6jFTC6nRBhx+Kir5psy9nEuu8QP31H40Vmm4lJyX/QUUc0h+zif/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_022.webp" 
+         alt="La atmósfera urbana de Montreal, una toma artistique." 
+         title="Canon EOS Rebel T100 | f/3.5 | 1/125s | ISO 3200" 
+          
+         width="1600" height="1066" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwChZ6hLbw7A+4D7qsOn41FlZChzknrmqqnFKXP0pWAkbaSc0VDuPrRVCP/Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_023.webp" 
+         alt="Una vista moderna de Montreal. artistique" 
+         title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 3200" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCjZQBiqNjk1PqQcXRWNiAABxVaKYrIrBQenBPerSMu3Ln5iecmsatS2iOqhSW8jJBK4x2qRHLKCQKKKJExP//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_024.webp" 
+         alt="Capturando la esencia moderna de Montreal. Foto de Romain Charretteur." 
+         title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 2500" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDMs4oAoeRDIxHQ9B71bkMRwzrtB6cVWhbbCpOWUjoD0P0pL2UtP3C4G3ihSlshOMXuQxjdbyEk8D86bNIylcHqM0UU4g0f/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_025.webp" 
+         alt="Una vista moderna de Montreal. artistique" 
+         title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 320" 
+          
+         width="1600" height="1066" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCoM395wArn5jt7Y4A/HirnkxRzNK13GjwttCsMkgHv+dY9pdS283nRn5x3NDOSzZ6k7iT3NDBG6NTtTkSMQw44AOffNFc4SRRS1C5//9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_026.webp" 
+         alt="La atmósfera vibrante de Montreal, una toma artistique." 
+         title="Canon EOS Rebel T100 | f/5.6 | 1/250s | ISO 1000" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBkexFwF3t354FQysA3MbD6c1XtrsRQhMZY9s0w35KjK5bmtfaHP7ErLyMY696jUZJz2oorBHSz/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_027.webp" 
+         alt="Capturando la esencia urbana de Montreal. Foto de Romain Charretteur." 
+         title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 3200" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCK88ueBFQA7eTjvWTJGFchTxnsKtwS7oguePb/ADzVa6bbKV/mKyUpOTubcsVBWII3bJ+Y9KYxJOScmiitTE//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_028.webp" 
+         alt="La atmósfera vibrante de Montreal, una toma artistique." 
+         title="iPhone 15 | f/1.6 | 1/2s | ISO 2000" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCedU2M2cbuRk+v/wCqs+e6VEjVIw5XOcn3qrbzFD8/IxwSaSSQHJ96gtEJ4Wo9xxRRVEn/2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_029.webp" 
+         alt="Una vista vibrante de Montreal. artistique" 
+         title="iPhone 15 | f/1.6 | 1/400s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB+iHDurDLYwM96h1J2uJTGDgKxJ4xjtj3qK0uTGyTAhSOqk54pk0xwDuDEkkk8UdB9SKwfdMFKrjBpl9IftD8DrmiikB//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_030.webp" 
+         alt="Exploración visual de Montreal, con una estética vibrante." 
+         title="Canon EOS Rebel T100 | f/6.3 | 1/40s | ISO 6400" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDCghibmWbywR2XJqLamSCxwDwQOtOilEecxq/+9UZPJpdSnayEooopkn//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_031.webp" 
+         alt="Una vista urbana de Montreal. artistique" 
+         title="iPhone 15 | f/1.6 | 1/2200s | ISO 50" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB/2+2n2iQZ9W6AUxntWRmLKozgA96r2SRk7sDbnv1NR3ahMlDjnp2FMnQrxuVXg0juzHk0UUxH/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_032.webp" 
+         alt="Una vista urbana de Montreal. artistique" 
+         title="iPhone 15 | f/1.6 | 1/60s | ISO 500" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDAEbkZ29s1ZtYgqeZnlhjHpWmICqhWYAYxkmoTB12qyjtu7/hWEp3TOyhBRqJk0iLKCjjIBp8IDsc9l/rRRWM/hY4bo//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_033.webp" 
+         alt="Exploración visual de Montreal, con una estética moderna." 
+         title="iPhone 15 | f/1.6 | 1/9s | ISO 1250" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDFt7aOeFwCRMvIHZhVcoRVgN5DB8LkMCOafIVuJWaOPaueM9abklqJRk3YpiRlcMDyKcbmYgjecE5OKKKmyZSbSP/Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_034.webp" 
+         alt="La atmósfera urbana de Montreal, una toma artistique." 
+         title="iPhone 15 | f/2.4 | 1/950s | ISO 25" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDO8pIosyKS/wDCB/npT0JmR8oRGuOf8/Wp4og/zyxs5xgDdgcetMuJUiZ0jQJuCkDPAPei9w5bIzQ7LjBoZi53MST6miigR//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_035.webp" 
+         alt="Una vista moderna de Montreal. artistique" 
+         title="iPhone 16 Pro Max | f/2.8 | 1/60s | ISO 160" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDO08LyWiVgwwDzwfWtlSjqfKRFbAPzjp9frWLbA7WEWNxHc9qsYlhyVfJYAElRmsm9SraBYQoZORnirF1Eq7WGeTjrRRQ9y47H/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_036.webp" 
+         alt="Capturando la esencia moderna de Montreal. Foto de Romain Charretteur." 
+         title="iPhone 15 | f/1.6 | 1/120s | ISO 40" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCozOc5Uf7+c1YFzMsQ2IjqDjIQc1WkvmOCYk2Houcmmhlmy2WRs42qMAVKjITnEqTnEqDtxwadcMPthCqqDaOF6UUVb3Jh8J//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_037.webp" 
+         alt="Exploración visual de Montreal, con una estética arquitectónica." 
+         title="iPhone 15 | f/1.6 | 1/60s | ISO 320" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDNhi43H1x9OKaweSE5OdpzT4JQsKKOTkn9KXzCqjgZI5B+tNsmMerK0RORSMxJz3oopMpH/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_038.webp" 
+         alt="Exploración visual de Montreal, con una estética urbana." 
+         title="iPhone 15 | f/1.6 | 1/9s | ISO 640" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDKigUruc8GieFUwR0NOa9IVI4127epB5NDXbXEYifbkHOTxmqMtdyiCc5ooopGh//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_039.webp" 
+         alt="La atmósfera vibrante de Montreal, una toma artistique." 
+         title="FC3682 | f/1.7 | 1/4000s | ISO 100" 
+          
+         width="1600" height="2844" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCS0u9kbyNG7LngcfLxR/boHAtyR9f/AK1NtIpLeQF0URyKOO2f8moLnTFE7YnYDjjHTipHZleOWRLeRVkfZj7hOR+tXIIVuYUmlyXYcn6cUUVL2KW5/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_040.webp" 
+         alt="Una vista moderna de Montreal. artistique" 
+         title="Canon EOS Rebel T100 | f/5.0 | 1/60s | ISO 400" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCklsFG+T5UPPoaSQoNoC/KB8uc5/SpFVr53YzpCi8LvzzS29uPMkWR0kxjBXOO9Si5eSMwSyDo7D8amtJHBf5jzjvRRVEH/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_041.webp" 
+         alt="Exploración visual de Montreal, con una estética moderna." 
+         title="Canon EOS Rebel T100 | f/5.6 | 1/500s | ISO 100" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDQZlQZY4FY+rLGro0Slt+SccjNPkvWliAlAVlPpjP4U+0uUTzCdpDHIyK0c+bQzUbalS7X5GyzHB4yfamWzZU5ANFFYG3U/9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_042.webp" 
+         alt="La atmósfera vibrante de Montreal, una toma artistique." 
+         title="Canon EOS Rebel T100 | f/5.6 | 1/320s | ISO 100" 
+          
+         width="1600" height="2400" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDOgjY4OB93aDkCrRSJcByV/wB3mqqSgs0ecjAVSOD71q6ZBGyOzjIyAueelJ2aNJRjF+ZiW55HsMj6mtuxYizTB6kk/nRRS6Cn8R//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_043.webp" 
+         alt="La atmósfera vibrante de Montreal, una toma artistique." 
+         title="" 
+          
+         width="1179" height="671" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAALABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCn0UjzH57Z6mo9oAGFY/jir04BdzgZCntUWB5YOOcUN6hbQqsjE8Rt+GKKmUnn60U7hY//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_044.webp" 
+         alt="Capturando la esencia vibrante de Montreal. Foto de Romain Charretteur." 
+         title="iPhone 15 | f/1.6 | 1/60s | ISO 500" 
+          data-gps="44.59162,-75.68429" 
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCt90AFSw9R2pFVZCQTt29sc0kkirGwbJfHOO3NSWzCV1CYD7c8nrWpRlbiExTo5HT5kYqw6EUUVKA//9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_045.webp" 
+         alt="Capturando la esencia vibrante de Montreal. Foto de Romain Charretteur." 
+         title="FC3682 | f/1.7 | 1/8s | ISO 800" 
+          data-gps="45.52042,-73.53301" 
+         width="1600" height="2844" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAAsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDNMKqAMjJqNgisRmnrdhEMZh+Y989KhMqkktkHvgVIxX5jfPXccH0qqXYnJOaKKUSpH//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_046.webp" 
+         alt="Capturando la esencia arquitectónica de Montreal. Foto de Romain Charretteur." 
+         title="iPhone 15 | f/1.6 | 1/2s | ISO 1250" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCjHAjICe44HeklgRUyOcdRUcNwpAVhkjvSTTjaVAHXtVXAqHoD60lFFIR//9k=); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_047.webp" 
+         alt="La atmósfera urbana de Montreal, una toma artistique." 
+         title="iPhone 15 | f/1.6 | 1/2s | ISO 1250" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCp5uVCFSFxhVHHFBmyCgUsncH+lV4593XnA4yaa8208Ht2p3Hcq7jRk0UUhH//2Q==); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
+    <img src="/gallery/montreal/montreal_048.webp" 
+         alt="Capturando la esencia vibrante de Montreal. Foto de Romain Charretteur." 
+         title="iPhone 15 | f/1.6 | 1/30s | ISO 640" 
+          
+         width="1600" height="2133" 
+         loading="lazy" decoding="async" 
+         data-lqip="true" 
+         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDn3Z1cgCnwktuJHTsKlaSMqVyQT1IHNNaWLbzuz6jgms+mxp1K5ywySaOmD1+tFFWQf//Z); background-size: cover;" 
+         onload="this.classList.add('loaded')" />
 
 </div>
 
