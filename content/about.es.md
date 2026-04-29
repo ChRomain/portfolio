@@ -1,5 +1,6 @@
 ---
-title: "Sobre mí"
+title: "Sobre Romain Charretteur"
+description: "Conoce a Romain Charretteur, desarrollador de software y fotógrafo de viajes radicado en Montreal, explorando el mundo a través de su lente."
 layout: "simple"
 showReadingTime: false
 showDate: false

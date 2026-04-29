@@ -24,6 +24,8 @@
     <meta name="description" content="Portafolio de fotografía de viaje de Romain Charretteur. Relatos visuales inmersivos y aventuras por todo el mundo.">
   
   
+    <meta name="keywords" content="Romain Charretteur,Photographe,Voyage,Photography,Montreal,Brest,">
+  
   
   
   <link rel="canonical" href="http://localhost:1313/es/404.html">
@@ -306,8 +308,24 @@
 
 
 <style>
+     
+    body {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #121212;  
+    }
+    body.page-loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    body.page-exit {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
     *::selection {
-        background-color: #f97316 !important;  
+        background-color: #f97316 !important;
         color: #ffffff !important;
     }
     *::-moz-selection {
@@ -323,6 +341,42 @@
         color: #ffffff !important;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        setTimeout(() => {
+            document.body.classList.add('page-loaded');
+        }, 50);
+
+        
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                const isInternal = href && 
+                                 (href.startsWith('/') || href.startsWith(window.location.origin)) && 
+                                 !href.includes('#') &&
+                                 !link.hasAttribute('target');
+
+                if (isInternal) {
+                    e.preventDefault();
+                    document.body.classList.add('page-exit');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+
+    
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('page-exit');
+            document.body.classList.add('page-loaded');
+        }
+    });
+</script>
 
   
 

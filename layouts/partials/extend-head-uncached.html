@@ -45,7 +45,12 @@
 
 {{/* Preload de la première image hero sur la page d'accueil uniquement (améliore le LCP) */}}
 {{ if .IsHome }}
-  {{ $heroImages := resources.Match "img/hero/*" }}
+  {{ $heroImages := slice }}
+  {{ range (resources.Match "img/hero/*") }}
+    {{ if eq .MediaType.MainType "image" }}
+      {{ $heroImages = $heroImages | append . }}
+    {{ end }}
+  {{ end }}
   {{ with index $heroImages 0 }}
     {{ $desktop := .Resize "1440x webp q65" }}
     {{ $mobile  := .Resize "768x webp q65" }}
@@ -58,8 +63,24 @@
 {{ end }}
 
 <style>
+    /* Page Transitions */
+    body {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #121212; /* Assure un fond sombre pendant la transition */
+    }
+    body.page-loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    body.page-exit {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
     *::selection {
-        background-color: #f97316 !important; /* Orange Test */
+        background-color: #f97316 !important;
         color: #ffffff !important;
     }
     *::-moz-selection {
@@ -75,3 +96,39 @@
         color: #ffffff !important;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Déclenche l'entrée de la page
+        setTimeout(() => {
+            document.body.classList.add('page-loaded');
+        }, 50);
+
+        // Intercepte les clics pour la transition de sortie
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                const isInternal = href && 
+                                 (href.startsWith('/') || href.startsWith(window.location.origin)) && 
+                                 !href.includes('#') &&
+                                 !link.hasAttribute('target');
+
+                if (isInternal) {
+                    e.preventDefault();
+                    document.body.classList.add('page-exit');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+
+    // Gestion du bouton "Précédent" du navigateur
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('page-exit');
+            document.body.classList.add('page-loaded');
+        }
+    });
+</script>

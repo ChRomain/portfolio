@@ -1,5 +1,6 @@
 ---
-title: "About"
+title: "About Romain Charretteur"
+description: "Learn more about Romain Charretteur, a software developer and travel photographer based in Montreal, exploring the world through his lens."
 layout: "simple"
 showReadingTime: false
 showDate: false

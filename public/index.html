@@ -25,6 +25,8 @@
     <meta name="description" content="Travel photography portfolio of Romain Charretteur. Immersive visual stories and adventures from around the world.">
   
   
+    <meta name="keywords" content="Romain Charretteur,Photographe,Voyage,Photography,Montreal,Brest,">
+  
   
   
   <link rel="canonical" href="http://localhost:1313/">
@@ -202,7 +204,7 @@
     "description": "Travel photography portfolio of Romain Charretteur. Immersive visual stories and adventures from around the world.",
     "inLanguage": "en",
     "url": "http://localhost:1313/",
-    
+    "keywords": ["Romain Charretteur","Photographe","Voyage","Photography","Montreal","Brest"],
     "publisher" : {
       "@type": "Person",
       "name": ""
@@ -218,11 +220,14 @@
   "@type": "Person",
   "name": "Romain Charretteur",
   "url": "http:\/\/localhost:1313\/",
-  "jobTitle": "Photographer",
+  "jobTitle": "Software Developer & Photographer",
+  "gender": "Male",
+  "nationality": "French",
+  "description": "Travel photography portfolio of Romain Charretteur. Immersive visual stories and adventures from around the world.",
   "sameAs": [
     "https://www.instagram.com/romain.charretteur"
   ],
-  "description": "Travel photography portfolio of Romain Charretteur. Immersive visual stories and adventures from around the world."
+  "knowsAbout": ["Photography", "Travel Photography", "Software Development", "Web Development"]
 }
 </script>
 
@@ -328,6 +333,47 @@
   
   
     
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
     
     <link rel="preload" as="image"
           href="/img/hero/2019-09-02%2013-06-26_hu_e838ddda51c8cf25.webp"
@@ -338,8 +384,24 @@
 
 
 <style>
+     
+    body {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #121212;  
+    }
+    body.page-loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    body.page-exit {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
     *::selection {
-        background-color: #f97316 !important;  
+        background-color: #f97316 !important;
         color: #ffffff !important;
     }
     *::-moz-selection {
@@ -355,6 +417,42 @@
         color: #ffffff !important;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        setTimeout(() => {
+            document.body.classList.add('page-loaded');
+        }, 50);
+
+        
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                const isInternal = href && 
+                                 (href.startsWith('/') || href.startsWith(window.location.origin)) && 
+                                 !href.includes('#') &&
+                                 !link.hasAttribute('target');
+
+                if (isInternal) {
+                    e.preventDefault();
+                    document.body.classList.add('page-exit');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+
+    
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('page-exit');
+            document.body.classList.add('page-loaded');
+        }
+    });
+</script>
 
   
 
@@ -1289,6 +1387,47 @@
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
         
         
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+        
         
         
         
@@ -1332,17 +1471,6 @@
             class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
             <img src="/img/hero/2026-04-03%2011-07-45_hu_12b322e64edc1079.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2026-04-05%2021-30-32_hu_31d0a69c4d369382.webp" width="1440" height="960"
                 alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
         </div>
         
@@ -1431,11 +1559,6 @@
     
     <div id="hero-indicators" class="absolute flex space-x-3 backdrop-blur-md p-2 hover:bg-black/40 transition-colors" 
          style="bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 50; background: rgba(0,0,0,0.3); border-radius: 50px;">
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
         
         <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
              style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
@@ -2357,6 +2480,24 @@
         const cards = document.querySelectorAll('.gallery-card');
         cards.forEach((card) => {
             revealObserver.observe(card);
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -15; 
+                const rotateY = ((x - centerX) / centerX) * 15;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
         });
         
         const initMiniMap = () => {
@@ -2515,9 +2656,10 @@
     }
 
     .gallery-card.visible:hover {
-        transform: scale(1.05);
+         
         border-color: #6366f1 !important;
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        z-index: 10;
     }
 
     .card-bg {

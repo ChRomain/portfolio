@@ -1,15 +1,18 @@
-{{ if .IsHome }}
+{{ if or .IsHome (eq .Section "about") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Romain Charretteur",
   "url": "{{ site.BaseURL }}",
-  "jobTitle": "Photographer",
+  "jobTitle": "Software Developer & Photographer",
+  "gender": "Male",
+  "nationality": "French",
+  "description": "{{ .Site.Params.description }}",
   "sameAs": [
     "https://www.instagram.com/romain.charretteur"
   ],
-  "description": "{{ .Site.Params.description }}"
+  "knowsAbout": ["Photography", "Travel Photography", "Software Development", "Web Development"]
 }
 </script>
 {{ end }}

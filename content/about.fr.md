@@ -1,5 +1,6 @@
 ---
-title: "À Propos"
+title: "À Propos de Romain Charretteur"
+description: "Découvrez Romain Charretteur, développeur logiciel et photographe de voyage basé à Montréal, explorant le monde à travers son objectif."
 layout: "simple"
 showReadingTime: false
 showDate: false

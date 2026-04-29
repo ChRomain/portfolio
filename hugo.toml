@@ -24,6 +24,7 @@ title = "Romain Charretteur | Photographie de Voyage"
   
   # SEO & Social
   description = "Portfolio de photographie de voyage de Romain Charretteur. Découvrez des récits visuels immersifs à travers l'Europe, l'Amérique et l'Asie."
+  keywords = ["Romain Charretteur", "Photographe", "Voyage", "Photography", "Montreal", "Brest"]
   
   [params.twitter]
     card = "summary_large_image"

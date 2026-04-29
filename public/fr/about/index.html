@@ -15,14 +15,16 @@
 
   
   
-    <title>À Propos | Romain Charretteur | Photographie de Voyage</title>
-    <meta name="title" content="À Propos | Romain Charretteur | Photographie de Voyage">
+    <title>À Propos de Romain Charretteur | Romain Charretteur | Photographie de Voyage</title>
+    <meta name="title" content="À Propos de Romain Charretteur | Romain Charretteur | Photographie de Voyage">
   
 
   
   
-    <meta name="description" content="Portfolio de photographie de voyage de Romain Charretteur. Récits visuels immersifs et aventures à travers le monde.">
+    <meta name="description" content="Découvrez Romain Charretteur, développeur logiciel et photographe de voyage basé à Montréal, explorant le monde à travers son objectif.">
   
+  
+    <meta name="keywords" content="Romain Charretteur,Photographe,Voyage,Photography,Montreal,Brest,">
   
   
   
@@ -36,17 +38,15 @@
   
   <meta property="og:url" content="http://localhost:1313/fr/about/">
   <meta property="og:site_name" content="Romain Charretteur | Photographie de Voyage">
-  <meta property="og:title" content="À Propos">
-  <meta property="og:description" content="      Né en 1995 à Brest (France), je suis un développeur logiciel vivant actuellement à Montréal.
-      J&#39;ai commencé la photographie comme passe-temps après mon installation au Canada. J&#39;utilise ce site pour partager mes clichés de voyages à travers l&#39;Europe et l&#39;Amérique du Nord, en me concentrant sur l&#39;architecture urbaine et les paysages naturels.">
+  <meta property="og:title" content="À Propos de Romain Charretteur">
+  <meta property="og:description" content="Découvrez Romain Charretteur, développeur logiciel et photographe de voyage basé à Montréal, explorant le monde à travers son objectif.">
   <meta property="og:locale" content="fr">
   <meta property="og:type" content="article">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="À Propos">
-  <meta name="twitter:description" content="      Né en 1995 à Brest (France), je suis un développeur logiciel vivant actuellement à Montréal.
-      J&#39;ai commencé la photographie comme passe-temps après mon installation au Canada. J&#39;utilise ce site pour partager mes clichés de voyages à travers l&#39;Europe et l&#39;Amérique du Nord, en me concentrant sur l&#39;architecture urbaine et les paysages naturels.">
+  <meta name="twitter:title" content="À Propos de Romain Charretteur">
+  <meta name="twitter:description" content="Découvrez Romain Charretteur, développeur logiciel et photographe de voyage basé à Montréal, explorant le monde à travers son objectif.">
 
   
   
@@ -196,9 +196,9 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Voyage",
-    "name": "À Propos",
-    "headline": "À Propos",
-    
+    "name": "À Propos de Romain Charretteur",
+    "headline": "À Propos de Romain Charretteur",
+    "description": "Découvrez Romain Charretteur, développeur logiciel et photographe de voyage basé à Montréal, explorant le monde à travers son objectif.",
     "inLanguage": "fr",
     "url" : "http://localhost:1313/fr/about/",
     "author" : {
@@ -308,8 +308,24 @@
 
 
 <style>
+     
+    body {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #121212;  
+    }
+    body.page-loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    body.page-exit {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
     *::selection {
-        background-color: #f97316 !important;  
+        background-color: #f97316 !important;
         color: #ffffff !important;
     }
     *::-moz-selection {
@@ -325,6 +341,42 @@
         color: #ffffff !important;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        setTimeout(() => {
+            document.body.classList.add('page-loaded');
+        }, 50);
+
+        
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                const isInternal = href && 
+                                 (href.startsWith('/') || href.startsWith(window.location.origin)) && 
+                                 !href.includes('#') &&
+                                 !link.hasAttribute('target');
+
+                if (isInternal) {
+                    e.preventDefault();
+                    document.body.classList.add('page-exit');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+        });
+    });
+
+    
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('page-exit');
+            document.body.classList.add('page-loaded');
+        }
+    });
+</script>
 
   
 
@@ -1250,7 +1302,7 @@
     <header>
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        À Propos
+        À Propos de Romain Charretteur
       </h1>
     </header>
     <section class="max-w-full mt-6 prose dark:prose-invert">

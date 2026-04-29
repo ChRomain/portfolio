@@ -10,7 +10,12 @@
 <div class="hero-carousel-container relative w-full overflow-hidden bg-neutral-900"
     style="height: 100vh; min-height: 500px; z-index: 1;">
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
-        {{ $heroImages := resources.Match "img/hero/*" }}
+        {{ $heroImages := slice }}
+        {{ range (resources.Match "img/hero/*") }}
+            {{ if eq .MediaType.MainType "image" }}
+                {{ $heroImages = $heroImages | append . }}
+            {{ end }}
+        {{ end }}
         {{ range $index, $img := $heroImages }}
         {{ if eq $index 0 }}
         {{/* Première image (LCP) : srcset responsive pour charger une version plus légère sur mobile */}}
@@ -341,6 +346,24 @@
         const cards = document.querySelectorAll('.gallery-card');
         cards.forEach((card) => {
             revealObserver.observe(card);
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -15; // Sensation de profondeur plus marquée
+                const rotateY = ((x - centerX) / centerX) * 15;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
         });
         // --- Homepage Mini-Map Logic ---
         const initMiniMap = () => {
@@ -499,9 +522,10 @@
     }
 
     .gallery-card.visible:hover {
-        transform: scale(1.05);
+        /* Le transform est maintenant géré par le JS pour le Tilt */
         border-color: #6366f1 !important;
-        transition: transform 0.2s ease, border-color 0.2s ease;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        z-index: 10;
     }
 
     .card-bg {
