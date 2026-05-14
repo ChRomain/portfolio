@@ -97,8 +97,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.cf96064124e89cebdb2da7f604975943bf5d3cc5c8b356615e6e154c106a524f0ccc0c55a51e88dd94c50183fe3db1a00fdef707a9c737deec760f136b823813.css"
-    integrity="sha512-z5YGQSTonOvbLaf2BJdZQ79dPMXIs1ZhXm4VTBBqUk8MzAxVpR6I3ZTFAYP&#43;PbGgD973B6nHN97sdg8Ta4I4Ew==">
+    href="/css/main.bundle.min.084661871d788109052f6a094b8e8a27ca97308b42482bb96a839b53b57d7b613c8fe91c5be193e4b45a9149a835345cb99007b1274a38effb8e1cfd098368a9.css"
+    integrity="sha512-CEZhhx14gQkFL2oJS46KJ8qXMItCSCu5aoObU7V9e2E8j&#43;kcW&#43;GT5LRakUmoNTRcuZAHsSdKOO/7jhz9CYNoqQ==">
 
   
   
@@ -492,29 +492,20 @@
     </div>
     
     
-      <div id="scroll-progress-container"
-     style="position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 2147483647; pointer-events: none;">
-    <div id="scroll-progress-bar"
-         style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); transition: width 0.1s ease-out;">
-    </div>
-</div>
-
-
-<header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
+      <header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
     <div class="glass-nav container flex items-center justify-between mx-auto px-6 h-16 relative pointer-events-auto transition-all duration-500">
 
     <div class="flex items-center">
         <a href="/fr/" aria-label="Retour à l&#39;accueil"
-           class="flex items-center text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral">
+           class="flex items-center text-lg md:text-xl font-serif font-bold text-neutral-900 dark:text-neutral-100">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="mr-2 site-logo-icon">
+                 class="mr-3 site-logo-icon">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                 <path d="M2 12h20" />
             </svg>
-            <span class="truncate">Romain Charretteur</span>
-            <span class="hidden sm:inline text-neutral-500 dark:text-neutral-400 font-medium ml-2 border-l border-neutral-300 dark:border-neutral-700 pl-2">Photographie de Voyage</span>
+            <span class="tracking-tight">RC.</span>
         </a>
     </div>
 
@@ -523,7 +514,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/fr/map/" aria-label="Accéder à la section Carte"
-                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Carte
                     
                 </a>
@@ -533,7 +524,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/fr/videos/" aria-label="Accéder à la section Vidéos"
-                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Vidéos
                     
                 </a>
@@ -543,72 +534,70 @@
             
             <li class="relative group flex items-center">
                 <a href="/fr/#" aria-label="Accéder à la section Amériques"
-                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Amériques
-                    <span class="ml-3 text-[10px] opacity-50">▼</span>
+                    <span class="ml-2 text-[8px] opacity-40">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/#" aria-label="Accéder à la section Amérique du Nord"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Amérique du Nord</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/#" aria-label="Accéder à la section Canada"
-                                   class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Canada</span>
-                                    <span class="ml-4 text-[10px]">▶</span>
+                                    <span class="ml-6 text-[8px]">▶</span>
                                 </a>
-
                                 
-                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                                <ul class="sub-menu-level-4 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/montreal/" aria-label="Accéder à la section Montréal"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Montréal
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/ottawa/" aria-label="Accéder à la section Ottawa"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Ottawa
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/quebec/" aria-label="Accéder à la section Québec"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Québec
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/toronto/" aria-label="Accéder à la section Toronto"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Toronto
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/canada/" aria-label="Accéder à la section Autres"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Autres
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/niagara_falls/" aria-label="Accéder à la section Chutes du Niagara"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Chutes du Niagara
                                         </a>
                                     </li>
@@ -619,87 +608,86 @@
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/#" aria-label="Accéder à la section États-Unis"
-                                   class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>États-Unis</span>
-                                    <span class="ml-4 text-[10px]">▶</span>
+                                    <span class="ml-6 text-[8px]">▶</span>
                                 </a>
-
                                 
-                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                                <ul class="sub-menu-level-4 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/boston/" aria-label="Accéder à la section Boston"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Boston
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/cape_cod/" aria-label="Accéder à la section Cape Cod"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Cape Cod
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/maine/" aria-label="Accéder à la section Maine"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Maine
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/new_hampshire/" aria-label="Accéder à la section New Hampshire"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             New Hampshire
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/new_york/" aria-label="Accéder à la section New York"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             New York
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/philadelphie/" aria-label="Accéder à la section Philadelphie"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Philadelphie
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/vermont/" aria-label="Accéder à la section Vermont"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Vermont
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/washington/" aria-label="Accéder à la section Washington"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Washington
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/everglades/" aria-label="Accéder à la section Everglades"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Everglades
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/keys/" aria-label="Accéder à la section Keys"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Keys
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/fr/gallery/miami/" aria-label="Accéder à la section Miami"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Miami
                                         </a>
                                     </li>
@@ -714,21 +702,19 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/#" aria-label="Accéder à la section Amérique Centrale"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Amérique Centrale</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/guatemala/" aria-label="Accéder à la section Guatemala"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Guatemala</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
@@ -742,21 +728,20 @@
             
             <li class="relative group flex items-center">
                 <a href="/fr/#" aria-label="Accéder à la section Asie"
-                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Asie
-                    <span class="ml-3 text-[10px] opacity-50">▼</span>
+                    <span class="ml-2 text-[8px] opacity-40">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/gallery/indonesie/" aria-label="Accéder à la section Indonésie"
-                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Indonésie</span>
                             
                         </a>
-
                         
                     </li>
                     
@@ -766,71 +751,65 @@
             
             <li class="relative group flex items-center">
                 <a href="/fr/#" aria-label="Accéder à la section Europe"
-                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Europe
-                    <span class="ml-3 text-[10px] opacity-50">▼</span>
+                    <span class="ml-2 text-[8px] opacity-40">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/#" aria-label="Accéder à la section France"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>France</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/bordeaux/" aria-label="Accéder à la section Bordeaux"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Bordeaux</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/corse/" aria-label="Accéder à la section Corse"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Corse</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/finistere/" aria-label="Accéder à la section Finistère"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Finistère</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/lyon/" aria-label="Accéder à la section Lyon"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Lyon</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/paris/" aria-label="Accéder à la section Paris"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Paris</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
@@ -840,31 +819,28 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/#" aria-label="Accéder à la section Italie"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Italie</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/naples/" aria-label="Accéder à la section Naples"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Naples</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/fr/gallery/rome/" aria-label="Accéder à la section Rome"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Rome</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
@@ -874,21 +850,19 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/gallery/montenegro/" aria-label="Accéder à la section Monténégro"
-                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Monténégro</span>
                             
                         </a>
-
                         
                     </li>
                     
                     <li class="relative group/sub list-none">
                         <a href="/fr/gallery/suede/" aria-label="Accéder à la section Suède"
-                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Suède</span>
                             
                         </a>
-
                         
                     </li>
                     
@@ -898,7 +872,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/fr/about/" aria-label="Accéder à la section À Propos"
-                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     À Propos
                     
                 </a>
@@ -908,403 +882,49 @@
             
         </ul>
 
-        <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
+        <div class="flex items-center border-l border-neutral-200 dark:border-neutral-800 h-4 ml-4 pl-4 space-x-1">
             
-            <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Menu de langue">🇫🇷</button>
-                <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
+            <div class="relative flex items-center">
+                <button onclick="toggleLangMenu(event)" class="text-sm px-2 py-2 focus:outline-none cursor-pointer grayscale hover:grayscale-0 transition-all" aria-label="Menu de langue">🇫🇷</button>
+                <div id="lang-dropdown" class="hidden absolute top-full right-0 flex-col bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-800 p-1 min-w-[60px] mt-2">
                     
                     
-                    <a href="http://localhost:1313/" aria-label="Passer à la langue English" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇺🇸</a>
+                    <a href="http://localhost:1313/" aria-label="Passer à la langue English" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm text-center rounded-lg">🇺🇸</a>
                     
                     
                     
                     
                     
-                    <a href="http://localhost:1313/es/" aria-label="Passer à la langue Español" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇪🇸</a>
+                    <a href="http://localhost:1313/es/" aria-label="Passer à la langue Español" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm text-center rounded-lg">🇪🇸</a>
                     
                     
                 </div>
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none" aria-label="Mode sombre">
-                <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white focus:outline-none transition-colors" aria-label="Mode sombre">
+                <svg id="sun-icon" class="hidden dark:block" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg id="moon-icon" class="block dark:hidden" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
 
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="Voir le profil Instagram" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-pink-500">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
+            <button id="search-button-global" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white focus:outline-none transition-colors" aria-label="Search">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
         </div>
     </nav>
 
-    <div class="flex items-center space-x-1">
-        <button id="search-button-global" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none transition-colors" aria-label="Recherche Magique" title="Rechercher (Cmd+K)">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <div class="flex items-center md:hidden">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Ouvrir le menu mobile">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
-
-        <div class="flex items-center md:hidden">
-            <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Ouvrir le menu mobile">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
     </div>
 </div>
 </header>
 <div id="scroll-progress"></div>
-
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const header = document.getElementById('main-header');
-        const progress = document.getElementById('scroll-progress');
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            
-            
-            if (scrollHeight > 0) {
-                const scrolled = (currentScroll / scrollHeight) * 100;
-                progress.style.width = scrolled + '%';
-            }
-            
-            
-            if (currentScroll > lastScroll && currentScroll > 150) {
-                
-                header.classList.add('header--hidden');
-            } else {
-                
-                header.classList.remove('header--hidden');
-            }
-            
-            lastScroll = currentScroll;
-        }, { passive: true });
-    });
-</script>
-
-<div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
-    <div class="flex justify-between items-center mb-8">
-        <a href="/fr/" class="text-lg font-bold dark:text-white">
-            <span>Romain Charretteur</span>
-        </a>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Fermer le menu mobile">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-    </div>
-
-    <nav class="flex-grow">
-        <ul class="flex flex-col space-y-6 list-none p-0">
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/fr/map/" aria-label="Accéder à la section Carte" class="text-2xl font-semibold dark:text-white">Carte</a>
-                    
-                </div>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/fr/videos/" aria-label="Accéder à la section Vidéos" class="text-2xl font-semibold dark:text-white">Vidéos</a>
-                    
-                </div>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/fr/#" aria-label="Accéder à la section Amériques" class="text-2xl font-semibold dark:text-white">Amériques</a>
-                    
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                    
-                </div>
-                
-                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/#" aria-label="Accéder à la section Amérique du Nord" class="text-lg text-neutral-600 dark:text-neutral-400">Amérique du Nord</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/#" aria-label="Accéder à la section Canada" class="text-base text-neutral-500">Canada</a>
-                                    
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                                    
-                                </div>
-                                
-                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                                    
-                                    <li><a href="/fr/gallery/montreal/" aria-label="Accéder à la section Montréal" class="text-sm text-neutral-400 py-1 block">Montréal</a></li>
-                                    
-                                    <li><a href="/fr/gallery/ottawa/" aria-label="Accéder à la section Ottawa" class="text-sm text-neutral-400 py-1 block">Ottawa</a></li>
-                                    
-                                    <li><a href="/fr/gallery/quebec/" aria-label="Accéder à la section Québec" class="text-sm text-neutral-400 py-1 block">Québec</a></li>
-                                    
-                                    <li><a href="/fr/gallery/toronto/" aria-label="Accéder à la section Toronto" class="text-sm text-neutral-400 py-1 block">Toronto</a></li>
-                                    
-                                    <li><a href="/fr/gallery/canada/" aria-label="Accéder à la section Autres" class="text-sm text-neutral-400 py-1 block">Autres</a></li>
-                                    
-                                    <li><a href="/fr/gallery/niagara_falls/" aria-label="Accéder à la section Chutes du Niagara" class="text-sm text-neutral-400 py-1 block">Chutes du Niagara</a></li>
-                                    
-                                </ul>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/#" aria-label="Accéder à la section États-Unis" class="text-base text-neutral-500">États-Unis</a>
-                                    
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                                    
-                                </div>
-                                
-                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                                    
-                                    <li><a href="/fr/gallery/boston/" aria-label="Accéder à la section Boston" class="text-sm text-neutral-400 py-1 block">Boston</a></li>
-                                    
-                                    <li><a href="/fr/gallery/cape_cod/" aria-label="Accéder à la section Cape Cod" class="text-sm text-neutral-400 py-1 block">Cape Cod</a></li>
-                                    
-                                    <li><a href="/fr/gallery/maine/" aria-label="Accéder à la section Maine" class="text-sm text-neutral-400 py-1 block">Maine</a></li>
-                                    
-                                    <li><a href="/fr/gallery/new_hampshire/" aria-label="Accéder à la section New Hampshire" class="text-sm text-neutral-400 py-1 block">New Hampshire</a></li>
-                                    
-                                    <li><a href="/fr/gallery/new_york/" aria-label="Accéder à la section New York" class="text-sm text-neutral-400 py-1 block">New York</a></li>
-                                    
-                                    <li><a href="/fr/gallery/philadelphie/" aria-label="Accéder à la section Philadelphie" class="text-sm text-neutral-400 py-1 block">Philadelphie</a></li>
-                                    
-                                    <li><a href="/fr/gallery/vermont/" aria-label="Accéder à la section Vermont" class="text-sm text-neutral-400 py-1 block">Vermont</a></li>
-                                    
-                                    <li><a href="/fr/gallery/washington/" aria-label="Accéder à la section Washington" class="text-sm text-neutral-400 py-1 block">Washington</a></li>
-                                    
-                                    <li><a href="/fr/gallery/everglades/" aria-label="Accéder à la section Everglades" class="text-sm text-neutral-400 py-1 block">Everglades</a></li>
-                                    
-                                    <li><a href="/fr/gallery/keys/" aria-label="Accéder à la section Keys" class="text-sm text-neutral-400 py-1 block">Keys</a></li>
-                                    
-                                    <li><a href="/fr/gallery/miami/" aria-label="Accéder à la section Miami" class="text-sm text-neutral-400 py-1 block">Miami</a></li>
-                                    
-                                </ul>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/#" aria-label="Accéder à la section Amérique Centrale" class="text-lg text-neutral-600 dark:text-neutral-400">Amérique Centrale</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/guatemala/" aria-label="Accéder à la section Guatemala" class="text-base text-neutral-500">Guatemala</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/fr/#" aria-label="Accéder à la section Asie" class="text-2xl font-semibold dark:text-white">Asie</a>
-                    
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                    
-                </div>
-                
-                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/gallery/indonesie/" aria-label="Accéder à la section Indonésie" class="text-lg text-neutral-600 dark:text-neutral-400">Indonésie</a>
-                            
-                        </div>
-                        
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/fr/#" aria-label="Accéder à la section Europe" class="text-2xl font-semibold dark:text-white">Europe</a>
-                    
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                    
-                </div>
-                
-                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/#" aria-label="Accéder à la section France" class="text-lg text-neutral-600 dark:text-neutral-400">France</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/bordeaux/" aria-label="Accéder à la section Bordeaux" class="text-base text-neutral-500">Bordeaux</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/corse/" aria-label="Accéder à la section Corse" class="text-base text-neutral-500">Corse</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/finistere/" aria-label="Accéder à la section Finistère" class="text-base text-neutral-500">Finistère</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/lyon/" aria-label="Accéder à la section Lyon" class="text-base text-neutral-500">Lyon</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/paris/" aria-label="Accéder à la section Paris" class="text-base text-neutral-500">Paris</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/#" aria-label="Accéder à la section Italie" class="text-lg text-neutral-600 dark:text-neutral-400">Italie</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Basculer le sous-menu">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/naples/" aria-label="Accéder à la section Naples" class="text-base text-neutral-500">Naples</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/fr/gallery/rome/" aria-label="Accéder à la section Rome" class="text-base text-neutral-500">Rome</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/gallery/montenegro/" aria-label="Accéder à la section Monténégro" class="text-lg text-neutral-600 dark:text-neutral-400">Monténégro</a>
-                            
-                        </div>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/fr/gallery/suede/" aria-label="Accéder à la section Suède" class="text-lg text-neutral-600 dark:text-neutral-400">Suède</a>
-                            
-                        </div>
-                        
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/fr/about/" aria-label="Accéder à la section À Propos" class="text-2xl font-semibold dark:text-white">À Propos</a>
-                    
-                </div>
-                
-            </li>
-            
-        </ul>
-    </nav>
-
-    <div class="mt-auto pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div class="flex items-center justify-between">
-            <div class="flex space-x-4">
-                
-                <a href="http://localhost:1313/" aria-label="Passer à la langue English" class="text-3xl">🇺🇸</a>
-                
-                <a href="http://localhost:1313/fr/" aria-label="Passer à la langue Français" class="text-3xl">🇫🇷</a>
-                
-                <a href="http://localhost:1313/es/" aria-label="Passer à la langue Español" class="text-3xl">🇪🇸</a>
-                
-            </div>
-            <div class="flex items-center space-x-4">
-                <button id="search-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-primary-600 dark:text-primary-400" aria-label="Recherche">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Mode sombre">
-                    <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-                    <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </button>
-                <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="Voir le profil Instagram" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-pink-600 dark:text-pink-500">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script>
     (function () {
@@ -1313,7 +933,6 @@
             localStorage.setItem('appearance', isDark ? 'dark' : 'light');
         };
         document.getElementById('theme-button')?.addEventListener('click', toggleTheme);
-        document.getElementById('theme-button-mobile')?.addEventListener('click', toggleTheme);
 
         window.toggleLangMenu = function (e) {
             e.stopPropagation();
@@ -1332,42 +951,33 @@
             }
         });
 
-        const progressBar = document.getElementById('scroll-progress-bar');
-        const mainHeader = document.getElementById('main-header');
-        const glassNav = document.querySelector('.glass-nav');
+        const progress = document.getElementById('scroll-progress');
+        const header = document.getElementById('main-header');
+        let lastScroll = 0;
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            if (progressBar) {
-                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                progressBar.style.width = scrollPercent + '%';
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            if (scrollHeight > 0) {
+                const scrolled = (scrollY / scrollHeight) * 100;
+                if (progress) progress.style.width = scrolled + '%';
             }
 
+            if (scrollY > lastScroll && scrollY > 150) {
+                header.classList.add('-translate-y-full');
+            } else {
+                header.classList.remove('-translate-y-full');
+            }
             
             if (scrollY > 20) {
-                mainHeader?.classList.add('nav-scrolled');
-                glassNav?.classList.add('glass-scrolled');
+                header.classList.add('nav-scrolled');
             } else {
-                mainHeader?.classList.remove('nav-scrolled');
-                glassNav?.classList.remove('glass-scrolled');
+                header.classList.remove('nav-scrolled');
             }
-        });
-
-        const mobileBtn = document.getElementById('mobile-menu-button');
-        const closeBtn = document.getElementById('close-mobile-menu');
-        const overlay = document.getElementById('mobile-menu-overlay');
-
-        mobileBtn?.addEventListener('click', () => {
-            overlay?.classList.remove('hidden');
-            overlay?.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeBtn?.addEventListener('click', () => {
-            overlay?.classList.add('hidden');
-            overlay?.classList.remove('flex');
-            document.body.style.overflow = '';
-        });
+            
+            lastScroll = scrollY;
+        }, { passive: true });
     })();
 </script>
     
@@ -1382,533 +992,104 @@
 <script defer src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
 
-<div class="hero-carousel-container relative w-full overflow-hidden bg-neutral-900"
-    style="height: 100vh; min-height: 500px; z-index: 1;">
-    <div id="hero-carousel" class="flex w-full h-full relative z-0">
-        
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-            
-                
-            
-        
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 active opacity-100">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img srcset="/img/hero/2019-09-02%2013-06-26_hu_6dcf9d1e4919671f.webp 768w, /img/hero/2019-09-02%2013-06-26_hu_e838ddda51c8cf25.webp 1440w"
-                sizes="(max-width: 768px) 768px, 1440px" src="/img/hero/2019-09-02%2013-06-26_hu_e838ddda51c8cf25.webp" width="1440"
-                height="1080" alt="Hero Image" class="w-full h-full object-cover" fetchpriority="high"
-                decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2022-06-06%2013-22-20_hu_d10887e7714719fd.webp" width="1440" height="1080"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2024-05-11%2002-10-18_hu_7840e1424724faad.webp" width="1440" height="1080"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/2026-04-03%2011-07-45_hu_12b322e64edc1079.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/canada00001_hu_1b0fbdb5b773f2f1.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/guatemala00020_hu_e0f615d1e06da7f9.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/guatemala00038_hu_18a45615d7025b1.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/montreal00002_hu_9c9153aa19615cc0.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/montreal00003_hu_1760959c550f90a1.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-        
-        
-        
-        <div
-            class="carousel-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <img src="/img/hero/toronto00006_hu_58b55c9b2f45b01b.webp" width="1440" height="960"
-                alt="Hero Image" class="w-full h-full object-cover" loading="lazy" decoding="async">
-        </div>
-        
-        
-
-    </div>
-
-    <div id="hero-content" class="absolute inset-0 z-20 flex items-center justify-center px-6 pointer-events-none">
-        <div
-            class="bg-black/55 backdrop-blur-md px-12 md:px-24 py-6 md:py-10 rounded-[35px] shadow-2xl flex flex-col items-center text-center max-w-[90vw]">
-            <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-4 drop-shadow-lg tracking-tighter">
-                Un voyage en images
-            </h1>
-            <p class="text-lg md:text-2xl text-white/90 drop-shadow-md font-medium leading-relaxed">
-                Saisir le monde à travers mon objectif
-            </p>
-        </div>
-    </div>
-
+<div class="hero-minimal relative w-full overflow-hidden bg-neutral-950" style="height: 100vh;">
     
-    <div id="hero-indicators" class="absolute flex space-x-3 backdrop-blur-md p-2 hover:bg-black/40 transition-colors" 
-         style="bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 50; background: rgba(0,0,0,0.3); border-radius: 50px;">
+    
         
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+    
+    
+        
+        
+        <div class="absolute inset-0 z-0">
+            <img src="/img/hero/2019-09-02%2013-06-26_hu_e0c8e14282604f4b.webp" alt="Hero Background" class="w-full h-full object-cover opacity-60" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-950"></div>
         </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
-        </div>
-        
+    
+
+    <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
+        <h1 class="hero-title text-5xl md:text-8xl font-serif text-white mb-6 tracking-tight opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+            Un voyage en images
+        </h1>
+        <p class="hero-subtitle text-lg md:text-xl text-neutral-300 max-w-2xl font-light tracking-wide opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
+            Saisir le monde à travers mon objectif
+        </p>
     </div>
 
-    <div id="hero-scroll-btn" class="absolute bottom-24 left-1/2 -translate-x-1/2 z-[40] cursor-pointer"
-        style="pointer-events: auto !important;"
-        onclick="document.getElementById('travel-dashboard').scrollIntoView({ behavior: 'smooth' })">
-        <div
-            class="bg-white/20 backdrop-blur-lg p-5 rounded-full border-2 border-white/50 hover:bg-white/40 hover:border-white transition-all shadow-[0_0_30px_rgba(0,0,0,0.5)] animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-            </svg>
-        </div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+        <svg class="w-6 h-6 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
     </div>
 </div>
 
 
-
-
-
+<div class="container mx-auto px-6 py-24">
+    
     
 
     
-
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-
-
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-
-<section id="travel-dashboard" class="relative z-30 container mx-auto px-4 py-4 mt-20">
-    <div class="dashboard-glass shadow-md py-6 md:py-8 px-8 md:px-12 flex flex-nowrap justify-between items-center gap-1 md:gap-4 overflow-hidden">
-        
-        
-        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
-            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
-                <span class="count-up" data-target="8">0</span>
-            </div>
-            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
-                Pays
-            </span>
+    <section class="mb-32">
+        <div class="flex items-baseline justify-between mb-12 border-b border-neutral-200 dark:border-neutral-800 pb-4">
+            <h2 class="text-3xl font-serif tracking-tight text-neutral-900 dark:text-neutral-100">Les Géants Urbains</h2>
+            <span class="text-xs uppercase tracking-widest text-neutral-500 font-medium">Explore Cities</span>
         </div>
-
-        
-        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
-            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
-                <span class="count-up" data-target="28">0</span>
-            </div>
-            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
-                Villes
-            </span>
-        </div>
-
-        
-        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
-            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
-                <span class="count-up" data-target="452">0</span>
-                <span class="text-sm md:text-lg ml-0.5 text-primary-500 font-normal">+</span>
-            </div>
-            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
-                Photos
-            </span>
-        </div>
-
-        
-        <div class="stat-item flex flex-col items-center group cursor-default flex-1 min-w-0">
-            <div class="text-lg sm:text-xl md:text-3xl font-semibold text-neutral-800 dark:text-white tracking-tighter flex items-baseline leading-none">
-                <span class="count-up" data-target="30">0</span>
-            </div>
-            <span class="text-[7px] md:text-[8px] font-medium uppercase tracking-[0.5em] md:tracking-[0.8em] text-neutral-400 dark:text-white/10 mt-2 group-hover:text-primary-500 transition-colors whitespace-nowrap">
-                Vidéos
-            </span>
-        </div>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/boston/" aria-label="Voir la galerie Boston" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/boston/feature_hu_4bf1f4001f5f6392.webp" alt="Boston" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
     </div>
-</section>
-
-
-<div id="articles-section" style="width: 100%; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-
     
-
-    
-    <div class="category-block mb-20">
-        <div class="flex flex-col items-center mb-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
-                Les Géants Urbains
-            </h2>
-            <div class="w-16 h-1.5 bg-primary-500 rounded-full"></div>
-        </div>
-        <div
-            style="display: flex !important; flex-wrap: wrap !important; gap: 15px !important; justify-content: center !important;">
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/boston/" aria-label="Voir la galerie Boston" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/boston/feature_hu_547e2024761b2d3b.webp');"></div>
-    
-    <span class="card-title">Boston</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/miami/" aria-label="Voir la galerie Miami" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/miami/feature_hu_617a23d8ab188b3a.webp');"></div>
-    
-    <span class="card-title">Miami</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/new_york/" aria-label="Voir la galerie New York" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/new_york/feature_hu_2c0580c0e2c100fb.webp');"></div>
-    
-    <span class="card-title">New York</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/philadelphie/" aria-label="Voir la galerie Philadelphie" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/philadelphie/feature_hu_b0dbfaa57887a426.webp');"></div>
-    
-    <span class="card-title">Philadelphie</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/toronto/" aria-label="Voir la galerie Toronto" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/toronto/feature_hu_8530f8487a01808a.webp');"></div>
-    
-    <span class="card-title">Toronto</span>
-</a>
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/washington/" aria-label="Voir la galerie Washington" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/washington/feature_hu_ba154fc7e4d2c641.webp');"></div>
-    
-    <span class="card-title">Washington</span>
-</a>
-            
-            
-        </div>
+    <div class="card-content">
+        <h3 class="card-title">Boston</h3>
     </div>
-
-    
-    <div class="category-block mb-20">
-        <div class="flex flex-col items-center mb-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
-                Patrimoine Européen
-            </h2>
-            <div class="w-16 h-1.5 bg-primary-500 rounded-full"></div>
-        </div>
-        <div
-            style="display: flex !important; flex-wrap: wrap !important; gap: 15px !important; justify-content: center !important;">
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/bordeaux/" aria-label="Voir la galerie Bordeaux" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/bordeaux/feature_hu_e25791d82592aa48.webp');"></div>
-    
-    <span class="card-title">Bordeaux</span>
 </a>
             
             
@@ -1932,289 +1113,19 @@
             
             
             
-<a href="http://localhost:1313/fr/gallery/lyon/" aria-label="Voir la galerie Lyon" class="gallery-card">
+            
+            
+<a href="http://localhost:1313/fr/gallery/miami/" aria-label="Voir la galerie Miami" class="gallery-card group">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/lyon/feature_hu_d829761c5fce7df8.webp');"></div>
-    
-    <span class="card-title">Lyon</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/montenegro/" aria-label="Voir la galerie Montenegro" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/montenegro/feature_hu_569aa2a8d2810dde.webp');"></div>
-    
-    <span class="card-title">Montenegro</span>
-</a>
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/naples/" aria-label="Voir la galerie Naples" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/naples/feature_hu_ed9464f0b4075133.webp');"></div>
-    
-    <span class="card-title">Naples</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/paris/" aria-label="Voir la galerie Paris" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/paris/feature_hu_ebe57c9659db8f0.webp');"></div>
-    
-    <span class="card-title">Paris</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/rome/" aria-label="Voir la galerie Rome" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/rome/feature_hu_2a8933624f77b765.webp');"></div>
-    
-    <span class="card-title">Rome</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </div>
+    <div class="card-image-wrapper">
+        <img src="/gallery/miami/feature_hu_fa12b17c480e425e.webp" alt="Miami" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
     </div>
-
     
-    <div class="category-block mb-20">
-        <div class="flex flex-col items-center mb-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
-                Côtes &amp; Nature
-            </h2>
-            <div class="w-16 h-1.5 bg-primary-500 rounded-full"></div>
-        </div>
-        <div
-            style="display: flex !important; flex-wrap: wrap !important; gap: 15px !important; justify-content: center !important;">
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/cape_cod/" aria-label="Voir la galerie Cape Cod" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/cape_cod/feature_hu_a27c0e2f28dd67c2.webp');"></div>
-    
-    <span class="card-title">Cape Cod</span>
-</a>
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/corse/" aria-label="Voir la galerie Corse" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/corse/feature_hu_253d3060c0070ad8.webp');"></div>
-    
-    <span class="card-title">Corse</span>
-</a>
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/everglades/" aria-label="Voir la galerie Everglades" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/everglades/feature_hu_768ddba842da9228.webp');"></div>
-    
-    <span class="card-title">Everglades</span>
-</a>
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/finistere/" aria-label="Voir la galerie Finistere" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/finistere/feature_hu_725772056df6fc4d.webp');"></div>
-    
-    <span class="card-title">Finistere</span>
-</a>
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/guatemala/" aria-label="Voir la galerie Guatemala" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/guatemala/feature_hu_4ba127a7590f1b96.webp');"></div>
-    
-    <span class="card-title">Guatemala</span>
-</a>
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/indonesie/" aria-label="Voir la galerie Indonesie" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/indonesie/feature_hu_7073dd8a7114ea7a.webp');"></div>
-    
-    <span class="card-title">Indonesie</span>
-</a>
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/keys/" aria-label="Voir la galerie Keys" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/keys/feature_hu_e84f8e64b3a79fab.webp');"></div>
-    
-    <span class="card-title">Keys</span>
-</a>
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/maine/" aria-label="Voir la galerie Maine" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/maine/feature_hu_cd440736dc18760b.webp');"></div>
-    
-    <span class="card-title">Maine</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/new_hampshire/" aria-label="Voir la galerie New Hampshire" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/new_hampshire/feature_hu_c89f6e4e5f510970.webp');"></div>
-    
-    <span class="card-title">New Hampshire</span>
-</a>
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/niagara_falls/" aria-label="Voir la galerie Niagara Falls" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/niagara_falls/feature_hu_e301bb557993fcee.webp');"></div>
-    
-    <span class="card-title">Niagara Falls</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/suede/" aria-label="Voir la galerie Suede" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/suede/feature_hu_a0c6233c594fa084.webp');"></div>
-    
-    <span class="card-title">Suede</span>
-</a>
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/vermont/" aria-label="Voir la galerie Vermont" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/vermont/feature_hu_a2a0ef3ae0ef3af0.webp');"></div>
-    
-    <span class="card-title">Vermont</span>
-</a>
-            
-            
-            
-            
-        </div>
+    <div class="card-content">
+        <h3 class="card-title">Miami</h3>
     </div>
-
-    
-    <div class="category-block mb-20">
-        <div class="flex flex-col items-center mb-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
-                Récits Canadiens
-            </h2>
-            <div class="w-16 h-1.5 bg-primary-500 rounded-full"></div>
-        </div>
-        <div
-            style="display: flex !important; flex-wrap: wrap !important; gap: 15px !important; justify-content: center !important;">
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/canada/" aria-label="Voir la galerie Canada" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/canada/feature_hu_e71635835245607b.webp');"></div>
-    
-    <span class="card-title">Canada</span>
 </a>
             
             
@@ -2228,277 +1139,617 @@
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/montreal/" aria-label="Voir la galerie Montreal" class="gallery-card">
+<a href="http://localhost:1313/fr/gallery/new_york/" aria-label="Voir la galerie New York" class="gallery-card group">
     
     
-    <div class="card-bg" style="background-image: url('/gallery/montreal/feature_hu_960631a5fe18bd37.webp');"></div>
-    
-    <span class="card-title">Montreal</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/ottawa/" aria-label="Voir la galerie Ottawa" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/ottawa/feature_hu_46aa62ad7da5a59.webp');"></div>
-    
-    <span class="card-title">Ottawa</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-<a href="http://localhost:1313/fr/gallery/quebec/" aria-label="Voir la galerie Quebec" class="gallery-card">
-    
-    
-    <div class="card-bg" style="background-image: url('/gallery/quebec/feature_hu_8066f2ac5bc917ef.webp');"></div>
-    
-    <span class="card-title">Quebec</span>
-</a>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </div>
+    <div class="card-image-wrapper">
+        <img src="/gallery/new_york/feature_hu_d0f98e2d0d7b0ef4.webp" alt="New York" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
     </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">New York</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/philadelphie/" aria-label="Voir la galerie Philadelphie" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/philadelphie/feature_hu_7ac0f3fd78bf51bc.webp" alt="Philadelphie" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Philadelphie</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/toronto/" aria-label="Voir la galerie Toronto" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/toronto/feature_hu_76dcf9ee4ba3daf5.webp" alt="Toronto" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Toronto</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/washington/" aria-label="Voir la galerie Washington" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/washington/feature_hu_8a7b4b0e6de186a0.webp" alt="Washington" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Washington</h3>
+    </div>
+</a>
+            
+            
+        </div>
+    </section>
 
     
-    <section id="homepage-map-section" class="relative w-full overflow-hidden bg-neutral-900 border-y border-white/5" style="height: 500px;">
+    
+    <section class="mb-32">
+        <div class="flex items-baseline justify-between mb-12 border-b border-neutral-200 dark:border-neutral-800 pb-4">
+            <h2 class="text-3xl font-serif tracking-tight text-neutral-900 dark:text-neutral-100">Patrimoine Européen</h2>
+            <span class="text-xs uppercase tracking-widest text-neutral-500 font-medium">Old World</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/bordeaux/" aria-label="Voir la galerie Bordeaux" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/bordeaux/feature_hu_ca51d10005433eba.webp" alt="Bordeaux" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Bordeaux</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/lyon/" aria-label="Voir la galerie Lyon" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/lyon/feature_hu_9ef8026c813113e2.webp" alt="Lyon" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Lyon</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/montenegro/" aria-label="Voir la galerie Montenegro" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/montenegro/feature_hu_a898a430b3261d76.webp" alt="Montenegro" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Montenegro</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/naples/" aria-label="Voir la galerie Naples" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/naples/feature_hu_30b16dbfd60414a7.webp" alt="Naples" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Naples</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/paris/" aria-label="Voir la galerie Paris" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/paris/feature_hu_6f64364d8e28d243.webp" alt="Paris" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Paris</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/rome/" aria-label="Voir la galerie Rome" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/rome/feature_hu_be85ad0d4bb2e8fe.webp" alt="Rome" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Rome</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </section>
+
+    
+    
+    <section class="mb-32">
+        <div class="flex items-baseline justify-between mb-12 border-b border-neutral-200 dark:border-neutral-800 pb-4">
+            <h2 class="text-3xl font-serif tracking-tight text-neutral-900 dark:text-neutral-100">Côtes &amp; Nature</h2>
+            <span class="text-xs uppercase tracking-widest text-neutral-500 font-medium">Into the Wild</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/cape_cod/" aria-label="Voir la galerie Cape Cod" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/cape_cod/feature_hu_bd8d1f3738467d67.webp" alt="Cape Cod" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Cape Cod</h3>
+    </div>
+</a>
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/corse/" aria-label="Voir la galerie Corse" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/corse/feature_hu_5c58af1d1d9b1d9e.webp" alt="Corse" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Corse</h3>
+    </div>
+</a>
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/everglades/" aria-label="Voir la galerie Everglades" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/everglades/feature_hu_925ce9d90c6c2e97.webp" alt="Everglades" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Everglades</h3>
+    </div>
+</a>
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/finistere/" aria-label="Voir la galerie Finistere" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/finistere/feature_hu_13839e8dbb68ae74.webp" alt="Finistere" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Finistere</h3>
+    </div>
+</a>
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/guatemala/" aria-label="Voir la galerie Guatemala" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/guatemala/feature_hu_2cb2de224ad3eb37.webp" alt="Guatemala" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Guatemala</h3>
+    </div>
+</a>
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/indonesie/" aria-label="Voir la galerie Indonesie" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/indonesie/feature_hu_af66a0b57b7c2012.webp" alt="Indonesie" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Indonesie</h3>
+    </div>
+</a>
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/keys/" aria-label="Voir la galerie Keys" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/keys/feature_hu_f77c856f2d187237.webp" alt="Keys" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Keys</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/maine/" aria-label="Voir la galerie Maine" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/maine/feature_hu_8464179e3a4b99f5.webp" alt="Maine" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Maine</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/new_hampshire/" aria-label="Voir la galerie New Hampshire" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/new_hampshire/feature_hu_4f75932c3b18018.webp" alt="New Hampshire" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">New Hampshire</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/niagara_falls/" aria-label="Voir la galerie Niagara Falls" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/niagara_falls/feature_hu_64cd8adc3a537074.webp" alt="Niagara Falls" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Niagara Falls</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/suede/" aria-label="Voir la galerie Suede" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/suede/feature_hu_3e323e675cc527d7.webp" alt="Suede" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Suede</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/vermont/" aria-label="Voir la galerie Vermont" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/vermont/feature_hu_60c71bf82475e0dd.webp" alt="Vermont" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Vermont</h3>
+    </div>
+</a>
+            
+            
+            
+            
+        </div>
+    </section>
+
+    
+    
+    <section class="mb-32">
+        <div class="flex items-baseline justify-between mb-12 border-b border-neutral-200 dark:border-neutral-800 pb-4">
+            <h2 class="text-3xl font-serif tracking-tight text-neutral-900 dark:text-neutral-100">Récits Canadiens</h2>
+            <span class="text-xs uppercase tracking-widest text-neutral-500 font-medium">North Star</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/canada/" aria-label="Voir la galerie Canada" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/canada/feature_hu_ea647c6224e51b1b.webp" alt="Canada" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Canada</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/montreal/" aria-label="Voir la galerie Montreal" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/montreal/feature_hu_c6dffc5d79862692.webp" alt="Montreal" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Montreal</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/ottawa/" aria-label="Voir la galerie Ottawa" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/ottawa/feature_hu_1c8fd7362d5e1dcd.webp" alt="Ottawa" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Ottawa</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+<a href="http://localhost:1313/fr/gallery/quebec/" aria-label="Voir la galerie Quebec" class="gallery-card group">
+    
+    
+    <div class="card-image-wrapper">
+        <img src="/gallery/quebec/feature_hu_705a53618b750df1.webp" alt="Quebec" class="card-image" loading="lazy">
+        <div class="card-overlay"></div>
+    </div>
+    
+    <div class="card-content">
+        <h3 class="card-title">Quebec</h3>
+    </div>
+</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </section>
+
+    
+    <section class="relative w-full rounded-3xl overflow-hidden bg-neutral-900 mb-32" style="height: 500px;">
         <div id="mini-map" class="w-full h-full"></div>
-    </section>
-
-    
-    
-    <section id="instagram-feed-section" class="mt-20">
-        <div class="insta-grid">
-            
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
-                <img src="/gallery/new_york/feature.webp" alt="Instagram Post" loading="lazy">
-                <div class="insta-overlay">
-                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <div class="insta-stats">
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 142</span>
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 12</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
-                <img src="/gallery/paris/feature.webp" alt="Instagram Post" loading="lazy">
-                <div class="insta-overlay">
-                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <div class="insta-stats">
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 256</span>
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 18</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
-                <img src="/gallery/montenegro/feature.webp" alt="Instagram Post" loading="lazy">
-                <div class="insta-overlay">
-                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <div class="insta-stats">
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 189</span>
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 9</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
-                <img src="/gallery/guatemala/feature.webp" alt="Instagram Post" loading="lazy">
-                <div class="insta-overlay">
-                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <div class="insta-stats">
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 210</span>
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 15</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
-                <img src="/gallery/niagara_falls/feature.webp" alt="Instagram Post" loading="lazy">
-                <div class="insta-overlay">
-                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <div class="insta-stats">
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 167</span>
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 7</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" class="insta-tile group">
-                <img src="/gallery/corse/feature.webp" alt="Instagram Post" loading="lazy">
-                <div class="insta-overlay">
-                    <svg class="mb-3" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-1.277.057-2.148.258-2.911.555-.788.306-1.457.715-2.122 1.381-.666.665-1.075 1.334-1.381 2.122-.297.763-.498 1.634-.555 2.911-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.057 1.277.258 2.148.555 2.911.306.788.715 1.457 1.381 2.122.665.666 1.334 1.075 2.122 1.381.763.297 1.634.498 2.911.555 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c1.277-.057 2.148-.258 2.911-.555.788-.306 1.457-.715 2.122-1.381.666-.665 1.075-1.334 1.381-2.122.297-.763.498-1.634.555-2.911.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.057-1.277-.258-2.148-.555-2.911-.306-.788-.715-1.457-1.381-2.122-.665-.666-1.334-1.075-2.122-1.381-.763-.297-1.634-.498-2.911-.555-1.281-.059-1.689-.073-4.948-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <div class="insta-stats">
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg> 302</span>
-                        <span><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"/></svg> 24</span>
-                    </div>
-                </div>
-            </a>
-            
+        <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+            <div class="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full border border-white/20">
+                <span class="text-white font-serif italic text-xl">Explore the World</span>
+            </div>
         </div>
     </section>
-    
+
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         
-        const carouselContainer = document.getElementById('hero-carousel');
-        const heroContent = document.getElementById('hero-content');
-        const heroIndicators = document.getElementById('hero-indicators');
-        const heroScrollBtn = document.getElementById('hero-scroll-btn');
+        setTimeout(() => {
+            document.querySelector('.hero-title').classList.remove('opacity-0', 'translate-y-10');
+            document.querySelector('.hero-subtitle').classList.remove('opacity-0', 'translate-y-10');
+        }, 300);
 
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            if (scrollY < 0) return;
-
-            if (carouselContainer) {
-                carouselContainer.style.transform = `translate3d(0, ${scrollY * 0.4}px, 0)`;
-            }
-            
-            const opacity = Math.max(0, 1 - scrollY / 350);
-            
-            if (heroContent) {
-                heroContent.style.opacity = opacity;
-                heroContent.style.transform = `translate3d(0, ${scrollY * -0.2}px, 0)`;
-            }
-            if (heroIndicators) {
-                heroIndicators.style.opacity = opacity;
-                 
-                heroIndicators.style.transform = `translateX(-50%) translate3d(0, ${scrollY * -0.2}px, 0)`;
-            }
-            if (heroScrollBtn) {
-                heroScrollBtn.style.opacity = opacity;
-                heroScrollBtn.style.transform = `translateX(-50%) translate3d(0, ${scrollY * -0.2}px, 0)`;
-            }
-        }, { passive: true });
-
-        
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
-        const progressBars = document.querySelectorAll('.progress-bar');
-        
-        let currentSlide = 0;
-        const slideCount = slides.length;
-        const intervalTime = 8000;
-        let slideTimer;
-        
-        const showSlide = (n) => {
-            if(slideCount === 0) return;
-            slides[currentSlide].classList.remove('active', 'opacity-100');
-            slides[currentSlide].classList.add('opacity-0');
-            
-            currentSlide = (n + slideCount) % slideCount;
-            
-            slides[currentSlide].classList.add('active', 'opacity-100');
-            slides[currentSlide].classList.remove('opacity-0');
-            
-            startProgress();
-            
-            clearInterval(slideTimer);
-            slideTimer = setInterval(() => showSlide(currentSlide + 1), intervalTime);
-        };
-        
-        const startProgress = () => {
-            progressBars.forEach((p) => {
-                p.style.transition = 'none';
-                p.style.width = '0%';
-            });
-            
-            if(progressBars.length > 0) {
-                
-                void progressBars[currentSlide].offsetWidth; 
-                progressBars[currentSlide].style.transition = `width ${intervalTime}ms linear`;
-                progressBars[currentSlide].style.width = '100%';
-            }
-        };
-        
-        dots.forEach((dot, idx) => {
-            dot.addEventListener('click', () => {
-                showSlide(idx);
-            });
-        });
-        
-        if (slideCount > 0) {
-            startProgress();
-            slideTimer = setInterval(() => showSlide(currentSlide + 1), intervalTime);
-        }
-
-        
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        const cards = document.querySelectorAll('.gallery-card');
-        cards.forEach((card) => {
-            revealObserver.observe(card);
-
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = ((y - centerY) / centerY) * -15; 
-                const rotateY = ((x - centerX) / centerX) * 15;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
-            });
-        });
         
         const initMiniMap = () => {
             if (typeof L === 'undefined' || typeof L.markerClusterGroup === 'undefined') {
@@ -2516,33 +1767,15 @@
                 attributionControl: false
             });
 
-            
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-                opacity: 0.5
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                opacity: 0.6
             }).addTo(map);
-
-            
-            const geoJsonLayer = L.geoJSON(null, {
-                style: {
-                    fillColor: "#353535",
-                    weight: 0.8,
-                    color: "#555",
-                    fillOpacity: 1
-                }
-            }).addTo(map);
-
-            fetch('https://cdn.jsdelivr.net/gh/datasets/geo-boundaries-world-110m@master/countries.geojson')
-                .then(r => r.json())
-                .then(data => {
-                    geoJsonLayer.addData(data);
-                    geoJsonLayer.bringToBack();
-                });
 
             const clusterGroup = L.markerClusterGroup({
                 showCoverageOnHover: false,
-                maxClusterRadius: 45,
+                maxClusterRadius: 50,
                 iconCreateFunction: (cluster) => L.divIcon({
-                    html: `<div class="mini-map-cluster"><span>${cluster.getChildCount()}</span></div>`,
+                    html: `<div class="mini-map-cluster-new"><span>${cluster.getChildCount()}</span></div>`,
                     className: '',
                     iconSize: [30, 30]
                 })
@@ -2551,140 +1784,43 @@
             locations.forEach(loc => {
                 const marker = L.marker(loc.coords, {
                     icon: L.divIcon({
-                        html: `<div class="home-photo-marker" style="background-image: url('${loc.url}feature.webp');"></div>`,
+                        html: `<div class="home-marker-minimal"></div>`,
                         className: '',
-                        iconSize: [32, 32]
+                        iconSize: [12, 12]
                     })
                 });
-
-                const tooltipContent = `
-                    <div class="mini-map-tooltip">
-                        <img src="${loc.url}feature.webp" style="width: 100%; height: 60px; object-fit: cover; border-radius: 4px;">
-                        <span style="color: #ffffff !important; font-weight: 900 !important; font-size: 0.85rem !important;">${loc.name}</span>
-                    </div>
-                `;
-
-                marker.bindTooltip(tooltipContent, {
-                    direction: 'top',
-                    offset: [0, -10],
-                    className: 'mini-map-tooltip-container'
-                });
-
                 marker.on('click', () => { window.location.href = loc.url; });
                 clusterGroup.addLayer(marker);
             });
 
             map.addLayer(clusterGroup);
-            
-            
-            setTimeout(() => {
-                map.flyTo([30, -30], 3, { duration: 3, easeLinearity: 0.1 });
-            }, 500);
         };
 
         initMiniMap();
-
-        
-        const animateCountUp = (el) => {
-            const target = parseInt(el.getAttribute('data-target'));
-            const duration = 2000; 
-            const start = 0;
-            const startTime = performance.now();
-
-            const update = (currentTime) => {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                
-                
-                const easeOutExpo = (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-                const currentCount = Math.floor(easeOutExpo(progress) * (target - start) + start);
-                
-                el.innerText = currentCount;
-
-                if (progress < 1) {
-                    requestAnimationFrame(update);
-                } else {
-                    el.innerText = target;
-                }
-            };
-
-            requestAnimationFrame(update);
-        };
-
-        const dashboardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.count-up').forEach(c => animateCountUp(c));
-                    dashboardObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const dashboard = document.getElementById('travel-dashboard');
-        if (dashboard) dashboardObserver.observe(dashboard);
     });
 </script>
 
 <style>
-    .gallery-card {
-        display: flex !important;
+    .hero-minimal {
+        background-attachment: fixed;
+    }
+    .mini-map-cluster-new {
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+        border-radius: 50%;
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: 250px !important;
-        height: 60px !important;
-        border-radius: 12px;
-        border: 1px solid #3f3f46;
-        position: relative;
-        overflow: hidden;
-        background-color: #1e1f20;
-        color: white;
-        text-decoration: none;
         font-weight: bold;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-        
-         
-        opacity: 0;
-        transform: translateY(40px) scale(0.95) perspective(1000px) rotateX(-10deg);
-        transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-        will-change: opacity, transform;
+        font-size: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
-
-    .gallery-card.visible {
-        opacity: 1;
-        transform: translateY(0) scale(1) perspective(1000px) rotateX(0deg);
-    }
-
-    .gallery-card.visible:hover {
-         
-        border-color: #6366f1 !important;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        z-index: 10;
-    }
-
-    .card-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.5);
-        z-index: 1;
-        transition: filter 0.2s ease;
-    }
-
-    .gallery-card:hover .card-bg {
-        filter: brightness(0.7) !important;
-    }
-
-    .card-title {
-        position: relative;
-        z-index: 2;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-        text-align: center;
-        padding: 0 10px;
+    .home-marker-minimal {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255,255,255,0.8);
     }
 </style>
 

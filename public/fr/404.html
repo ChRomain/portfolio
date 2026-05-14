@@ -93,8 +93,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.cf96064124e89cebdb2da7f604975943bf5d3cc5c8b356615e6e154c106a524f0ccc0c55a51e88dd94c50183fe3db1a00fdef707a9c737deec760f136b823813.css"
-    integrity="sha512-z5YGQSTonOvbLaf2BJdZQ79dPMXIs1ZhXm4VTBBqUk8MzAxVpR6I3ZTFAYP&#43;PbGgD973B6nHN97sdg8Ta4I4Ew==">
+    href="/css/main.bundle.min.6e044e8006dad61b306149da78da54bd38c4ca6186709555751f4d3e52a76a541329054e2a1cd17df854773dd4893f078af1728abee1d073330062399f7f1f22.css"
+    integrity="sha512-bgROgAba1hswYUnaeNpUvTjEymGGcJVVdR9NPlKnalQTKQVOKhzRffhUdz3UiT8HivFyir7h0HMzAGI5n38fIg==">
 
   
   
@@ -313,7 +313,6 @@
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: #121212;  
     }
     body.page-loaded {
         opacity: 1;
@@ -852,9 +851,25 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none" aria-label="Mode sombre">
-                <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <button id="appearance-switcher"
+                class="theme-toggle-btn p-2 rounded-full text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
+                title="Toggle Theme">
+                <svg id="sun-icon" class="hidden dark:block" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg id="moon-icon" class="block dark:hidden" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
             </button>
 
             <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="Voir le profil Instagram" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-pink-500">
@@ -1218,7 +1233,8 @@
                 <button id="search-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-primary-600 dark:text-primary-400" aria-label="Recherche">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 </button>
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Mode sombre">
+                <button id="appearance-switcher-mobile"
+                    class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-xl text-neutral-600 dark:text-neutral-300" aria-label="Mode sombre">
                     <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
                     <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
@@ -1232,12 +1248,8 @@
 
 <script>
     (function () {
-        const toggleTheme = () => {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('appearance', isDark ? 'dark' : 'light');
-        };
-        document.getElementById('theme-button')?.addEventListener('click', toggleTheme);
-        document.getElementById('theme-button-mobile')?.addEventListener('click', toggleTheme);
+        
+        
 
         window.toggleLangMenu = function (e) {
             e.stopPropagation();

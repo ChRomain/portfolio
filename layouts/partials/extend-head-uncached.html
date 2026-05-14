@@ -54,6 +54,7 @@
   {{ with index $heroImages 0 }}
     {{ $desktop := .Resize "1440x webp q65" }}
     {{ $mobile  := .Resize "768x webp q65" }}
+
     <link rel="preload" as="image"
           href="{{ $desktop.RelPermalink }}"
           imagesrcset="{{ $mobile.RelPermalink }} 768w, {{ $desktop.RelPermalink }} 1440w"
@@ -68,7 +69,6 @@
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: #121212; /* Assure un fond sombre pendant la transition */
     }
     body.page-loaded {
         opacity: 1;

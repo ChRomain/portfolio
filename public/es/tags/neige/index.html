@@ -93,8 +93,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.cf96064124e89cebdb2da7f604975943bf5d3cc5c8b356615e6e154c106a524f0ccc0c55a51e88dd94c50183fe3db1a00fdef707a9c737deec760f136b823813.css"
-    integrity="sha512-z5YGQSTonOvbLaf2BJdZQ79dPMXIs1ZhXm4VTBBqUk8MzAxVpR6I3ZTFAYP&#43;PbGgD973B6nHN97sdg8Ta4I4Ew==">
+    href="/css/main.bundle.min.084661871d788109052f6a094b8e8a27ca97308b42482bb96a839b53b57d7b613c8fe91c5be193e4b45a9149a835345cb99007b1274a38effb8e1cfd098368a9.css"
+    integrity="sha512-CEZhhx14gQkFL2oJS46KJ8qXMItCSCu5aoObU7V9e2E8j&#43;kcW&#43;GT5LRakUmoNTRcuZAHsSdKOO/7jhz9CYNoqQ==">
 
   
   
@@ -416,29 +416,20 @@
     </div>
     
     
-      <div id="scroll-progress-container"
-     style="position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 2147483647; pointer-events: none;">
-    <div id="scroll-progress-bar"
-         style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); transition: width 0.1s ease-out;">
-    </div>
-</div>
-
-
-<header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
+      <header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
     <div class="glass-nav container flex items-center justify-between mx-auto px-6 h-16 relative pointer-events-auto transition-all duration-500">
 
     <div class="flex items-center">
         <a href="/es/" aria-label="Ir a la página de inicio"
-           class="flex items-center text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral">
+           class="flex items-center text-lg md:text-xl font-serif font-bold text-neutral-900 dark:text-neutral-100">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="mr-2 site-logo-icon">
+                 class="mr-3 site-logo-icon">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                 <path d="M2 12h20" />
             </svg>
-            <span class="truncate">Romain Charretteur</span>
-            <span class="hidden sm:inline text-neutral-500 dark:text-neutral-400 font-medium ml-2 border-l border-neutral-300 dark:border-neutral-700 pl-2">Photographie de Voyage</span>
+            <span class="tracking-tight">RC.</span>
         </a>
     </div>
 
@@ -447,7 +438,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/es/map/" aria-label="Ir a la sección Mapa"
-                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Mapa
                     
                 </a>
@@ -457,7 +448,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/es/videos/" aria-label="Ir a la sección Videos"
-                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Videos
                     
                 </a>
@@ -467,72 +458,70 @@
             
             <li class="relative group flex items-center">
                 <a href="/es/#" aria-label="Ir a la sección Américas"
-                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Américas
-                    <span class="ml-3 text-[10px] opacity-50">▼</span>
+                    <span class="ml-2 text-[8px] opacity-40">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/#" aria-label="Ir a la sección América del Norte"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>América del Norte</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/#" aria-label="Ir a la sección Canadá"
-                                   class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Canadá</span>
-                                    <span class="ml-4 text-[10px]">▶</span>
+                                    <span class="ml-6 text-[8px]">▶</span>
                                 </a>
-
                                 
-                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                                <ul class="sub-menu-level-4 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/montreal/" aria-label="Ir a la sección Montreal"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Montreal
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/ottawa/" aria-label="Ir a la sección Ottawa"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Ottawa
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/quebec/" aria-label="Ir a la sección Quebec"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Quebec
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/toronto/" aria-label="Ir a la sección Toronto"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Toronto
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/canada/" aria-label="Ir a la sección Otros"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Otros
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/niagara_falls/" aria-label="Ir a la sección Cataratas del Niágara"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Cataratas del Niágara
                                         </a>
                                     </li>
@@ -543,87 +532,86 @@
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/#" aria-label="Ir a la sección EE. UU."
-                                   class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>EE. UU.</span>
-                                    <span class="ml-4 text-[10px]">▶</span>
+                                    <span class="ml-6 text-[8px]">▶</span>
                                 </a>
-
                                 
-                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                                <ul class="sub-menu-level-4 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/boston/" aria-label="Ir a la sección Boston"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Boston
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/cape_cod/" aria-label="Ir a la sección Cape Cod"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Cape Cod
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/maine/" aria-label="Ir a la sección Maine"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Maine
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/new_hampshire/" aria-label="Ir a la sección New Hampshire"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             New Hampshire
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/new_york/" aria-label="Ir a la sección Nueva York"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Nueva York
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/philadelphie/" aria-label="Ir a la sección Filadelfia"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Filadelfia
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/vermont/" aria-label="Ir a la sección Vermont"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Vermont
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/washington/" aria-label="Ir a la sección Washington"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Washington
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/everglades/" aria-label="Ir a la sección Everglades"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Everglades
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/keys/" aria-label="Ir a la sección Keys"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Keys
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/es/gallery/miami/" aria-label="Ir a la sección Miami"
-                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
                                             Miami
                                         </a>
                                     </li>
@@ -638,21 +626,19 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/#" aria-label="Ir a la sección América Central"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>América Central</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/guatemala/" aria-label="Ir a la sección Guatemala"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Guatemala</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
@@ -666,21 +652,20 @@
             
             <li class="relative group flex items-center">
                 <a href="/es/#" aria-label="Ir a la sección Asia"
-                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Asia
-                    <span class="ml-3 text-[10px] opacity-50">▼</span>
+                    <span class="ml-2 text-[8px] opacity-40">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/gallery/indon%C3%A9sie/" aria-label="Ir a la sección Indonesia"
-                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Indonesia</span>
                             
                         </a>
-
                         
                     </li>
                     
@@ -690,71 +675,65 @@
             
             <li class="relative group flex items-center">
                 <a href="/es/#" aria-label="Ir a la sección Europa"
-                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Europa
-                    <span class="ml-3 text-[10px] opacity-50">▼</span>
+                    <span class="ml-2 text-[8px] opacity-40">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/#" aria-label="Ir a la sección Francia"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Francia</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/bordeaux/" aria-label="Ir a la sección Bordeaux"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Bordeaux</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/corse/" aria-label="Ir a la sección Corse"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Corse</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/finistere/" aria-label="Ir a la sección Finistere"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Finistere</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/lyon/" aria-label="Ir a la sección Lyon"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Lyon</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/paris/" aria-label="Ir a la sección París"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>París</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
@@ -764,31 +743,28 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/#" aria-label="Ir a la sección Italia"
-                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Italia</span>
-                            <span class="ml-4 text-[10px]">▶</span>
+                            <span class="ml-6 text-[8px]">▶</span>
                         </a>
-
                         
-                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/naples/" aria-label="Ir a la sección Nápoles"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Nápoles</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/es/gallery/rome/" aria-label="Ir a la sección Roma"
-                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                                     <span>Roma</span>
                                     
                                 </a>
-
                                 
                             </li>
                             
@@ -798,21 +774,19 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/gallery/montenegro/" aria-label="Ir a la sección Montenegro"
-                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Montenegro</span>
                             
                         </a>
-
                         
                     </li>
                     
                     <li class="relative group/sub list-none">
                         <a href="/es/gallery/suede/" aria-label="Ir a la sección Suecia"
-                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
                             <span>Suecia</span>
                             
                         </a>
-
                         
                     </li>
                     
@@ -822,7 +796,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/es/about/" aria-label="Ir a la sección Sobre mí"
-                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
+                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
                     Sobre mí
                     
                 </a>
@@ -832,18 +806,18 @@
             
         </ul>
 
-        <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
+        <div class="flex items-center border-l border-neutral-200 dark:border-neutral-800 h-4 ml-4 pl-4 space-x-1">
             
-            <div class="relative flex items-center h-16">
-                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Menú de idioma">🇪🇸</button>
-                <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
+            <div class="relative flex items-center">
+                <button onclick="toggleLangMenu(event)" class="text-sm px-2 py-2 focus:outline-none cursor-pointer grayscale hover:grayscale-0 transition-all" aria-label="Menú de idioma">🇪🇸</button>
+                <div id="lang-dropdown" class="hidden absolute top-full right-0 flex-col bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-800 p-1 min-w-[60px] mt-2">
                     
                     
-                    <a href="http://localhost:1313/tags/neige/" aria-label="Cambiar al idioma English" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇺🇸</a>
+                    <a href="http://localhost:1313/tags/neige/" aria-label="Cambiar al idioma English" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm text-center rounded-lg">🇺🇸</a>
                     
                     
                     
-                    <a href="http://localhost:1313/fr/tags/neige/" aria-label="Cambiar al idioma Français" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇫🇷</a>
+                    <a href="http://localhost:1313/fr/tags/neige/" aria-label="Cambiar al idioma Français" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm text-center rounded-lg">🇫🇷</a>
                     
                     
                     
@@ -852,383 +826,29 @@
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none" aria-label="Modo oscuro">
-                <svg id="sun-icon" class="hidden dark:block" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg id="moon-icon" class="block dark:hidden" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <button id="theme-button" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white focus:outline-none transition-colors" aria-label="Modo oscuro">
+                <svg id="sun-icon" class="hidden dark:block" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg id="moon-icon" class="block dark:hidden" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
 
-            <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="Ver perfil de Instagram" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-pink-500">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
+            <button id="search-button-global" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white focus:outline-none transition-colors" aria-label="Search">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
         </div>
     </nav>
 
-    <div class="flex items-center space-x-1">
-        <button id="search-button-global" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none transition-colors" aria-label="Recherche Magique" title="Rechercher (Cmd+K)">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <div class="flex items-center md:hidden">
+        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Abrir menú móvil">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
         </button>
-
-        <div class="flex items-center md:hidden">
-            <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Abrir menú móvil">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
     </div>
 </div>
 </header>
 <div id="scroll-progress"></div>
-
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const header = document.getElementById('main-header');
-        const progress = document.getElementById('scroll-progress');
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            
-            
-            if (scrollHeight > 0) {
-                const scrolled = (currentScroll / scrollHeight) * 100;
-                progress.style.width = scrolled + '%';
-            }
-            
-            
-            if (currentScroll > lastScroll && currentScroll > 150) {
-                
-                header.classList.add('header--hidden');
-            } else {
-                
-                header.classList.remove('header--hidden');
-            }
-            
-            lastScroll = currentScroll;
-        }, { passive: true });
-    });
-</script>
-
-<div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
-    <div class="flex justify-between items-center mb-8">
-        <a href="/es/" class="text-lg font-bold dark:text-white">
-            <span>Romain Charretteur</span>
-        </a>
-        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Cerrar menú móvil">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-    </div>
-
-    <nav class="flex-grow">
-        <ul class="flex flex-col space-y-6 list-none p-0">
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/es/map/" aria-label="Ir a la sección Mapa" class="text-2xl font-semibold dark:text-white">Mapa</a>
-                    
-                </div>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/es/videos/" aria-label="Ir a la sección Videos" class="text-2xl font-semibold dark:text-white">Videos</a>
-                    
-                </div>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/es/#" aria-label="Ir a la sección Américas" class="text-2xl font-semibold dark:text-white">Américas</a>
-                    
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                    
-                </div>
-                
-                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/#" aria-label="Ir a la sección América del Norte" class="text-lg text-neutral-600 dark:text-neutral-400">América del Norte</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/#" aria-label="Ir a la sección Canadá" class="text-base text-neutral-500">Canadá</a>
-                                    
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                                    
-                                </div>
-                                
-                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                                    
-                                    <li><a href="/es/gallery/montreal/" aria-label="Ir a la sección Montreal" class="text-sm text-neutral-400 py-1 block">Montreal</a></li>
-                                    
-                                    <li><a href="/es/gallery/ottawa/" aria-label="Ir a la sección Ottawa" class="text-sm text-neutral-400 py-1 block">Ottawa</a></li>
-                                    
-                                    <li><a href="/es/gallery/quebec/" aria-label="Ir a la sección Quebec" class="text-sm text-neutral-400 py-1 block">Quebec</a></li>
-                                    
-                                    <li><a href="/es/gallery/toronto/" aria-label="Ir a la sección Toronto" class="text-sm text-neutral-400 py-1 block">Toronto</a></li>
-                                    
-                                    <li><a href="/es/gallery/canada/" aria-label="Ir a la sección Otros" class="text-sm text-neutral-400 py-1 block">Otros</a></li>
-                                    
-                                    <li><a href="/es/gallery/niagara_falls/" aria-label="Ir a la sección Cataratas del Niágara" class="text-sm text-neutral-400 py-1 block">Cataratas del Niágara</a></li>
-                                    
-                                </ul>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/#" aria-label="Ir a la sección EE. UU." class="text-base text-neutral-500">EE. UU.</a>
-                                    
-                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                                    
-                                </div>
-                                
-                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                                    
-                                    <li><a href="/es/gallery/boston/" aria-label="Ir a la sección Boston" class="text-sm text-neutral-400 py-1 block">Boston</a></li>
-                                    
-                                    <li><a href="/es/gallery/cape_cod/" aria-label="Ir a la sección Cape Cod" class="text-sm text-neutral-400 py-1 block">Cape Cod</a></li>
-                                    
-                                    <li><a href="/es/gallery/maine/" aria-label="Ir a la sección Maine" class="text-sm text-neutral-400 py-1 block">Maine</a></li>
-                                    
-                                    <li><a href="/es/gallery/new_hampshire/" aria-label="Ir a la sección New Hampshire" class="text-sm text-neutral-400 py-1 block">New Hampshire</a></li>
-                                    
-                                    <li><a href="/es/gallery/new_york/" aria-label="Ir a la sección Nueva York" class="text-sm text-neutral-400 py-1 block">Nueva York</a></li>
-                                    
-                                    <li><a href="/es/gallery/philadelphie/" aria-label="Ir a la sección Filadelfia" class="text-sm text-neutral-400 py-1 block">Filadelfia</a></li>
-                                    
-                                    <li><a href="/es/gallery/vermont/" aria-label="Ir a la sección Vermont" class="text-sm text-neutral-400 py-1 block">Vermont</a></li>
-                                    
-                                    <li><a href="/es/gallery/washington/" aria-label="Ir a la sección Washington" class="text-sm text-neutral-400 py-1 block">Washington</a></li>
-                                    
-                                    <li><a href="/es/gallery/everglades/" aria-label="Ir a la sección Everglades" class="text-sm text-neutral-400 py-1 block">Everglades</a></li>
-                                    
-                                    <li><a href="/es/gallery/keys/" aria-label="Ir a la sección Keys" class="text-sm text-neutral-400 py-1 block">Keys</a></li>
-                                    
-                                    <li><a href="/es/gallery/miami/" aria-label="Ir a la sección Miami" class="text-sm text-neutral-400 py-1 block">Miami</a></li>
-                                    
-                                </ul>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/#" aria-label="Ir a la sección América Central" class="text-lg text-neutral-600 dark:text-neutral-400">América Central</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/guatemala/" aria-label="Ir a la sección Guatemala" class="text-base text-neutral-500">Guatemala</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/es/#" aria-label="Ir a la sección Asia" class="text-2xl font-semibold dark:text-white">Asia</a>
-                    
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                    
-                </div>
-                
-                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/gallery/indon%C3%A9sie/" aria-label="Ir a la sección Indonesia" class="text-lg text-neutral-600 dark:text-neutral-400">Indonesia</a>
-                            
-                        </div>
-                        
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/es/#" aria-label="Ir a la sección Europa" class="text-2xl font-semibold dark:text-white">Europa</a>
-                    
-                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                    
-                </div>
-                
-                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/#" aria-label="Ir a la sección Francia" class="text-lg text-neutral-600 dark:text-neutral-400">Francia</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/bordeaux/" aria-label="Ir a la sección Bordeaux" class="text-base text-neutral-500">Bordeaux</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/corse/" aria-label="Ir a la sección Corse" class="text-base text-neutral-500">Corse</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/finistere/" aria-label="Ir a la sección Finistere" class="text-base text-neutral-500">Finistere</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/lyon/" aria-label="Ir a la sección Lyon" class="text-base text-neutral-500">Lyon</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/paris/" aria-label="Ir a la sección París" class="text-base text-neutral-500">París</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/#" aria-label="Ir a la sección Italia" class="text-lg text-neutral-600 dark:text-neutral-400">Italia</a>
-                            
-                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Alternar submenú">▼</button>
-                            
-                        </div>
-                        
-                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/naples/" aria-label="Ir a la sección Nápoles" class="text-base text-neutral-500">Nápoles</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                            <li>
-                                <div class="flex justify-between items-center">
-                                    <a href="/es/gallery/rome/" aria-label="Ir a la sección Roma" class="text-base text-neutral-500">Roma</a>
-                                    
-                                </div>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/gallery/montenegro/" aria-label="Ir a la sección Montenegro" class="text-lg text-neutral-600 dark:text-neutral-400">Montenegro</a>
-                            
-                        </div>
-                        
-                    </li>
-                    
-                    <li>
-                        <div class="flex justify-between items-center">
-                            <a href="/es/gallery/suede/" aria-label="Ir a la sección Suecia" class="text-lg text-neutral-600 dark:text-neutral-400">Suecia</a>
-                            
-                        </div>
-                        
-                    </li>
-                    
-                </ul>
-                
-            </li>
-            
-            <li>
-                <div class="flex justify-between items-center">
-                    <a href="/es/about/" aria-label="Ir a la sección Sobre mí" class="text-2xl font-semibold dark:text-white">Sobre mí</a>
-                    
-                </div>
-                
-            </li>
-            
-        </ul>
-    </nav>
-
-    <div class="mt-auto pt-8 border-t border-neutral-200 dark:border-neutral-800">
-        <div class="flex items-center justify-between">
-            <div class="flex space-x-4">
-                
-                <a href="http://localhost:1313/tags/neige/" aria-label="Cambiar al idioma English" class="text-3xl">🇺🇸</a>
-                
-                <a href="http://localhost:1313/fr/tags/neige/" aria-label="Cambiar al idioma Français" class="text-3xl">🇫🇷</a>
-                
-                <a href="http://localhost:1313/es/tags/neige/" aria-label="Cambiar al idioma Español" class="text-3xl">🇪🇸</a>
-                
-            </div>
-            <div class="flex items-center space-x-4">
-                <button id="search-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-primary-600 dark:text-primary-400" aria-label="Recherche">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </button>
-                <button id="theme-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-neutral-600 dark:text-neutral-300" aria-label="Modo oscuro">
-                    <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
-                    <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </button>
-                <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="Ver perfil de Instagram" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-pink-600 dark:text-pink-500">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script>
     (function () {
@@ -1237,7 +857,6 @@
             localStorage.setItem('appearance', isDark ? 'dark' : 'light');
         };
         document.getElementById('theme-button')?.addEventListener('click', toggleTheme);
-        document.getElementById('theme-button-mobile')?.addEventListener('click', toggleTheme);
 
         window.toggleLangMenu = function (e) {
             e.stopPropagation();
@@ -1256,42 +875,33 @@
             }
         });
 
-        const progressBar = document.getElementById('scroll-progress-bar');
-        const mainHeader = document.getElementById('main-header');
-        const glassNav = document.querySelector('.glass-nav');
+        const progress = document.getElementById('scroll-progress');
+        const header = document.getElementById('main-header');
+        let lastScroll = 0;
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            if (progressBar) {
-                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                progressBar.style.width = scrollPercent + '%';
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            if (scrollHeight > 0) {
+                const scrolled = (scrollY / scrollHeight) * 100;
+                if (progress) progress.style.width = scrolled + '%';
             }
 
+            if (scrollY > lastScroll && scrollY > 150) {
+                header.classList.add('-translate-y-full');
+            } else {
+                header.classList.remove('-translate-y-full');
+            }
             
             if (scrollY > 20) {
-                mainHeader?.classList.add('nav-scrolled');
-                glassNav?.classList.add('glass-scrolled');
+                header.classList.add('nav-scrolled');
             } else {
-                mainHeader?.classList.remove('nav-scrolled');
-                glassNav?.classList.remove('glass-scrolled');
+                header.classList.remove('nav-scrolled');
             }
-        });
-
-        const mobileBtn = document.getElementById('mobile-menu-button');
-        const closeBtn = document.getElementById('close-mobile-menu');
-        const overlay = document.getElementById('mobile-menu-overlay');
-
-        mobileBtn?.addEventListener('click', () => {
-            overlay?.classList.remove('hidden');
-            overlay?.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        });
-
-        closeBtn?.addEventListener('click', () => {
-            overlay?.classList.add('hidden');
-            overlay?.classList.remove('flex');
-            document.body.style.overflow = '';
-        });
+            
+            lastScroll = scrollY;
+        }, { passive: true });
     })();
 </script>
     

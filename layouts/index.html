@@ -7,7 +7,7 @@
 <script defer src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
 
-<div class="hero-carousel-container relative w-full overflow-hidden bg-neutral-900"
+<div class="hero-carousel-container relative w-full overflow-hidden bg-white dark:bg-neutral-900"
     style="height: 100vh; min-height: 500px; z-index: 1;">
     <div id="hero-carousel" class="flex w-full h-full relative z-0">
         {{ $heroImages := slice }}
@@ -220,7 +220,7 @@
     </div>
 
     <!-- Section Mini-Map Gateway (Full Width) -->
-    <section id="homepage-map-section" class="relative w-full overflow-hidden bg-neutral-900 border-y border-white/5" style="height: 500px;">
+    <section id="homepage-map-section" class="relative w-full overflow-hidden bg-white dark:bg-neutral-900 border-y border-neutral-200 dark:border-white/5" style="height: 500px;">
         <div id="mini-map" class="w-full h-full"></div>
     </section>
 
@@ -499,11 +499,11 @@
         width: 250px !important;
         height: 60px !important;
         border-radius: 12px;
-        border: 1px solid #3f3f46;
+        border: 1px solid #e5e7eb; /* Light border */
         position: relative;
         overflow: hidden;
-        background-color: #1e1f20;
-        color: white;
+        background-color: #ffffff; /* Light background */
+        color: #1f2937; /* Dark text for light mode */
         text-decoration: none;
         font-weight: bold;
         font-size: 0.95rem;
@@ -514,6 +514,12 @@
         transform: translateY(40px) scale(0.95) perspective(1000px) rotateX(-10deg);
         transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
         will-change: opacity, transform;
+    }
+
+    .dark .gallery-card {
+        border-color: #3f3f46;
+        background-color: #1e1f20;
+        color: white;
     }
 
     .gallery-card.visible {
