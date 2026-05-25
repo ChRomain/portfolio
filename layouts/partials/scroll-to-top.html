@@ -1,0 +1,52 @@
+{{ $isRTL := .Site.Params.rtl | default false }}
+{{ $coffeeIsRight := and (eq (lower site.Params.buymeacoffee.globalWidgetPosition) "right") .Site.Params.buymeacoffee.globalWidget }}
+{{ if not $coffeeIsRight }}
+  {{ $coffeeIsRight = false }}
+{{ end }}
+
+{{ $needAvoidCoffee := ne $coffeeIsRight $isRTL }}
+{{ $toTopYOffset := cond $needAvoidCoffee "bottom-24" "bottom-6" }}
+
+
+<div
+  id="scroll-to-top"
+  class="fixed {{ $toTopYOffset }} end-6 z-50 opacity-0 duration-200"
+  style="position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 999999 !important;">
+  <div class="relative h-14 w-14">
+    <!-- Barre de progression circulaire -->
+    <svg width="56" height="56" class="absolute top-1/2 left-1/2 pointer-events-none" style="transform: translate(-50%, -50%) rotate(-90deg);">
+      <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" fill="transparent" class="text-neutral-300 dark:text-neutral-700 opacity-50" />
+      <circle id="scroll-progress-circle" cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2.5" fill="transparent" stroke-dasharray="163.36" stroke-dashoffset="163.36" stroke-linecap="round" class="text-primary-600 dark:text-primary-400" style="transition: stroke-dashoffset 0.1s ease-out;" />
+    </svg>
+
+    <a
+      href="#the-top"
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl text-neutral-700 hover:text-primary-600 shadow-md dark:bg-neutral-800 dark:text-neutral dark:hover:text-primary-400 pb-0.5"
+      aria-label="{{ i18n "nav.scroll_to_top_title" }}"
+      title="{{ i18n "nav.scroll_to_top_title" }}">
+      &uarr;
+    </a>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const circle = document.getElementById('scroll-progress-circle');
+      if (circle) {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = Math.max(
+          document.body.scrollHeight, document.documentElement.scrollHeight,
+          document.body.offsetHeight, document.documentElement.offsetHeight,
+          document.body.clientHeight, document.documentElement.clientHeight
+        ) - window.innerHeight;
+        
+        if (docHeight > 0) {
+          const scrollPercent = scrollTop / docHeight;
+          const circumference = 163.36; // 2 * pi * 26
+          // Empêche la valeur d'être négative ou supérieure à la circonférence
+          const offset = Math.max(0, circumference - (scrollPercent * circumference));
+          circle.style.strokeDashoffset = offset;
+        }
+      }
+    });
+  </script>
+</div>

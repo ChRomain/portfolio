@@ -42,8 +42,13 @@
             {{ range $city, $urls := .Site.Data.videos.videos }}
                 {{ $cat := index $.Site.Data.videos.categories $city | default "other" }}
                 {{ range $vurl := $urls }}
+                {{ $filename := path.Base $vurl }}
+                {{ $decoded := replace $filename "%20" " " }}
+                {{ $basename := replaceRE "\\.[^.]+$" "" $decoded }}
+                {{ $safeName := replace $basename " " "_" }}
+                {{ $posterPath := printf "/posters/%s.webp" $safeName }}
                 <div class="video-item reveal-item" data-category="{{ $cat }}">
-                    <video autoplay loop muted playsinline preload="metadata" class="video-element" loading="lazy">
+                    <video poster="{{ $posterPath }}" loop muted playsinline preload="metadata" class="video-element" loading="lazy">
                         <source src="{{ $vurl }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>

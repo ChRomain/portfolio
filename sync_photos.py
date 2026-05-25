@@ -211,6 +211,11 @@ DESCRIPTIONS = {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Venture into the mysterious 'River of Grass'. From the ancient sawsedge marshes to the hidden alligator trails beneath the cypress canopy, witness a unique wilderness where water and sky merge in a silent, primordial dance.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Aventurez-vous dans la mystérieuse \"Rivière d'Herbe\". Des anciens marais de scirpe aux sentiers cachés des alligators sous la canopée des cyprès, témoignez d'une nature sauvage unique où l'eau et le ciel se fondent dans une danse silencieuse et primordiale.",
         "es": "&nbsp;&nbsp;&nbsp;&nbsp;Aventúrate en el misterioso \"Río de Hierba\". Desde las antiguas marismas de juncos hasta los senderos ocultos de los caimanes bajo el dosel de los cipreses, presencia una naturaleza salvaje única donde el agua y el cielo se funden en una danza silenciosa y primordial."
+    },
+    "chicago": {
+        "en": "&nbsp;&nbsp;&nbsp;&nbsp;Discover the monumental architecture and unique atmosphere of Chicago. From the silver reflections of Cloud Gate in Millennium Park to the dizzying skyscrapers lining the river, immerse yourself in the energy of the Windy City.",
+        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Découvrez l'architecture monumentale et l'atmosphère unique de Chicago. Des reflets argentés du Cloud Gate au Millenium Park jusqu'aux gratte-ciel vertigineux bordant la rivière, plongez dans l'effervescence de la Windy City.",
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Descubre la arquitectura monumental y el ambiente único de Chicago. Desde los reflejos plateados del Cloud Gate en el Millennium Park hasta los vertiginosos rascacielos que bordean el río, sumérgete en la energía de la Ciudad de los Vientos."
     }
 }
 
@@ -220,7 +225,7 @@ FOLDER_TO_COUNTRY = {
     "rome": "Italie", "naples": "Italie",
     "suede": "Suède",
     "montenegro": "Monténégro",
-    "new_york": "USA", "washington": "USA", "boston": "USA", "philadelphie": "USA", "cape_cod": "USA", "maine": "USA", "vermont": "USA", "new_hampshire": "USA", "miami": "USA", "keys": "USA", "everglades": "USA",
+    "new_york": "USA", "washington": "USA", "boston": "USA", "philadelphie": "USA", "cape_cod": "USA", "maine": "USA", "vermont": "USA", "new_hampshire": "USA", "miami": "USA", "keys": "USA", "everglades": "USA", "chicago": "USA",
     "montreal": "Canada", "quebec": "Canada", "ottawa": "Canada", "toronto": "Canada", "niagara_falls": "Canada", "canada": "Canada",
     "guatemala": "Guatemala",
     "indonesie": "Indonésie"
@@ -310,7 +315,7 @@ DEFAULT_GPS = {
     "rome": [41.9028, 12.4964], "naples": [40.8518, 14.2681],
     "suede": [59.3293, 18.0686],
     "montenegro": [42.7087, 19.3744],
-    "new_york": [40.7128, -74.0060], "washington": [38.9072, -77.0369], "boston": [42.3601, -71.0589], "philadelphie": [39.9526, -75.1652], "cape_cod": [41.6688, -70.2962], "maine": [45.2538, -69.4455], "vermont": [44.5588, -72.5778], "new_hampshire": [43.1939, -71.5724], "miami": [25.7617, -80.1918], "keys": [24.5551, -81.7800], "everglades": [25.2866, -80.8987],
+    "new_york": [40.7128, -74.0060], "washington": [38.9072, -77.0369], "boston": [42.3601, -71.0589], "philadelphie": [39.9526, -75.1652], "cape_cod": [41.6688, -70.2962], "maine": [45.2538, -69.4455], "vermont": [44.5588, -72.5778], "new_hampshire": [43.1939, -71.5724], "miami": [25.7617, -80.1918], "keys": [24.5551, -81.7800], "everglades": [25.2866, -80.8987], "chicago": [41.8781, -87.6298],
     "montreal": [45.5017, -73.5673], "quebec": [46.8139, -71.2080], "ottawa": [45.4215, -75.6972], "toronto": [43.6532, -79.3832], "niagara_falls": [43.0896, -79.0849], "canada": [45.5017, -73.5673],
     "guatemala": [15.7835, -90.2308],
     "indonesie": [-8.4095, 115.1889]

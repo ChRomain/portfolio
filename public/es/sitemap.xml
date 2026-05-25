@@ -75,6 +75,24 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/es/gallery/chicago/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/gallery/chicago/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/gallery/chicago/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/gallery/chicago/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/es/gallery/corse/</loc>
     <xhtml:link
       rel="alternate"

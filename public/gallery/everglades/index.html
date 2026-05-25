@@ -24,7 +24,7 @@
     <meta name="description" content="Explore my immersive photography portfolio from Everglades. Un carnet de voyage visuel par Romain Charretteur.">
   
   
-    <meta name="keywords" content="vintage,nature,ocean,">
+    <meta name="keywords" content="nature,ocean,vintage,">
   
   
   
@@ -43,9 +43,9 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="gallery">
-    <meta property="article:tag" content="Vintage">
     <meta property="article:tag" content="Nature">
     <meta property="article:tag" content="Ocean">
+    <meta property="article:tag" content="Vintage">
     <meta property="og:image" content="http://localhost:1313/gallery/everglades/feature.webp">
 
   
@@ -99,8 +99,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.084661871d788109052f6a094b8e8a27ca97308b42482bb96a839b53b57d7b613c8fe91c5be193e4b45a9149a835345cb99007b1274a38effb8e1cfd098368a9.css"
-    integrity="sha512-CEZhhx14gQkFL2oJS46KJ8qXMItCSCu5aoObU7V9e2E8j&#43;kcW&#43;GT5LRakUmoNTRcuZAHsSdKOO/7jhz9CYNoqQ==">
+    href="/css/main.bundle.min.cc51e015e453316079607d10477b0e4f3c202c622643dbf0129b05e36059144af4c2be816057aa68e20018fd9995e57a86bd41064ea420a57453fadd14350dfa.css"
+    integrity="sha512-zFHgFeRTMWB5YH0QR3sOTzwgLGImQ9vwEpsF42BZFEr0wr6BYFeqaOIAGP2ZleV6hr1BBk6kIKV0U/rdFDUN&#43;g==">
 
   
   
@@ -239,7 +239,7 @@
     
     
     
-    "keywords": ["vintage","nature","ocean"],
+    "keywords": ["nature","ocean","vintage"],
     
     "mainEntityOfPage": "true",
     "wordCount": "35"
@@ -373,7 +373,6 @@
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: #121212;  
     }
     body.page-loaded {
         opacity: 1;
@@ -476,20 +475,29 @@
     </div>
     
     
-      <header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
+      <div id="scroll-progress-container"
+     style="position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 2147483647; pointer-events: none;">
+    <div id="scroll-progress-bar"
+         style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); transition: width 0.1s ease-out;">
+    </div>
+</div>
+
+
+<header id="main-header" class="fixed top-0 left-0 w-full z-[999999] px-4 py-4 md:px-10 pointer-events-none transition-all duration-500">
     <div class="glass-nav container flex items-center justify-between mx-auto px-6 h-16 relative pointer-events-auto transition-all duration-500">
 
     <div class="flex items-center">
         <a href="/" aria-label="Go to homepage"
-           class="flex items-center text-lg md:text-xl font-serif font-bold text-neutral-900 dark:text-neutral-100">
+           class="flex items-center text-lg md:text-xl font-bold text-neutral-800 dark:text-neutral">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 class="mr-3 site-logo-icon">
+                 class="mr-2 site-logo-icon">
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                 <path d="M2 12h20" />
             </svg>
-            <span class="tracking-tight">RC.</span>
+            <span class="truncate">Romain Charretteur</span>
+            <span class="hidden sm:inline text-neutral-500 dark:text-neutral-400 font-medium ml-2 border-l border-neutral-300 dark:border-neutral-700 pl-2">Photographie de Voyage</span>
         </a>
     </div>
 
@@ -498,7 +506,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/map/" aria-label="Go to section Map"
-                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
+                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     Map
                     
                 </a>
@@ -508,7 +516,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/videos/" aria-label="Go to section Videos"
-                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
+                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     Videos
                     
                 </a>
@@ -518,71 +526,97 @@
             
             <li class="relative group flex items-center">
                 <a href="/#" aria-label="Go to section Americas"
-                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
+                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     Americas
-                    <span class="ml-2 text-[8px] opacity-40">▼</span>
+                    <span class="ml-3 text-[10px] opacity-50">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                    
+                    <li class="relative group/sub list-none">
+                        <a href="/#" aria-label="Go to section Central America"
+                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                            <span>Central America</span>
+                            <span class="ml-4 text-[10px]">▶</span>
+                        </a>
+
+                        
+                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
+                            
+                            <li class="relative group/subsub list-none">
+                                <a href="/gallery/guatemala/" aria-label="Go to section Guatemala"
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
+                                    <span>Guatemala</span>
+                                    
+                                </a>
+
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
                     
                     <li class="relative group/sub list-none">
                         <a href="/#" aria-label="Go to section North America"
-                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>North America</span>
-                            <span class="ml-6 text-[8px]">▶</span>
+                            <span class="ml-4 text-[10px]">▶</span>
                         </a>
+
                         
-                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
+                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/#" aria-label="Go to section Canada"
-                                   class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Canada</span>
-                                    <span class="ml-6 text-[8px]">▶</span>
+                                    <span class="ml-4 text-[10px]">▶</span>
                                 </a>
+
                                 
-                                <ul class="sub-menu-level-4 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
+                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                                     
                                     <li class="list-none">
                                         <a href="/gallery/montreal/" aria-label="Go to section Montreal"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Montreal
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
+                                        <a href="/gallery/niagara_falls/" aria-label="Go to section Niagara Falls"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            Niagara Falls
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-none">
                                         <a href="/gallery/ottawa/" aria-label="Go to section Ottawa"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Ottawa
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/gallery/quebec/" aria-label="Go to section Quebec"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Quebec
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/gallery/toronto/" aria-label="Go to section Toronto"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Toronto
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/gallery/canada/" aria-label="Go to section Others"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Others
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="list-none">
-                                        <a href="/gallery/niagara_falls/" aria-label="Go to section Niagara Falls"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            Niagara Falls
                                         </a>
                                     </li>
                                     
@@ -592,113 +626,99 @@
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/#" aria-label="Go to section USA"
-                                   class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>USA</span>
-                                    <span class="ml-6 text-[8px]">▶</span>
+                                    <span class="ml-4 text-[10px]">▶</span>
                                 </a>
+
                                 
-                                <ul class="sub-menu-level-4 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
+                                <ul class="sub-menu-level-4 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                                     
                                     <li class="list-none">
                                         <a href="/gallery/boston/" aria-label="Go to section Boston"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Boston
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/gallery/cape_cod/" aria-label="Go to section Cape Cod"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Cape Cod
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
-                                        <a href="/gallery/maine/" aria-label="Go to section Maine"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            Maine
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="list-none">
-                                        <a href="/gallery/new_hampshire/" aria-label="Go to section New Hampshire"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            New Hampshire
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="list-none">
-                                        <a href="/gallery/new_york/" aria-label="Go to section New York"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            New York
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="list-none">
-                                        <a href="/gallery/philadelphie/" aria-label="Go to section Philadelphia"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            Philadelphia
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="list-none">
-                                        <a href="/gallery/vermont/" aria-label="Go to section Vermont"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            Vermont
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="list-none">
-                                        <a href="/gallery/washington/" aria-label="Go to section Washington"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
-                                            Washington
+                                        <a href="/gallery/chicago/" aria-label="Go to section Chicago"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            Chicago
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/gallery/everglades/" aria-label="Go to section Everglades"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Everglades
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
                                         <a href="/gallery/keys/" aria-label="Go to section Keys"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Keys
                                         </a>
                                     </li>
                                     
                                     <li class="list-none">
+                                        <a href="/gallery/maine/" aria-label="Go to section Maine"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            Maine
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-none">
                                         <a href="/gallery/miami/" aria-label="Go to section Miami"
-                                           class="block px-6 py-2 text-xs font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-white whitespace-nowrap transition-colors">
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
                                             Miami
                                         </a>
                                     </li>
                                     
-                                </ul>
-                                
-                            </li>
-                            
-                        </ul>
-                        
-                    </li>
-                    
-                    <li class="relative group/sub list-none">
-                        <a href="/#" aria-label="Go to section Central America"
-                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
-                            <span>Central America</span>
-                            <span class="ml-6 text-[8px]">▶</span>
-                        </a>
-                        
-                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
-                            
-                            <li class="relative group/subsub list-none">
-                                <a href="/gallery/guatemala/" aria-label="Go to section Guatemala"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
-                                    <span>Guatemala</span>
+                                    <li class="list-none">
+                                        <a href="/gallery/new_hampshire/" aria-label="Go to section New Hampshire"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            New Hampshire
+                                        </a>
+                                    </li>
                                     
-                                </a>
+                                    <li class="list-none">
+                                        <a href="/gallery/new_york/" aria-label="Go to section New York"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            New York
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-none">
+                                        <a href="/gallery/philadelphie/" aria-label="Go to section Philadelphia"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            Philadelphia
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-none">
+                                        <a href="/gallery/vermont/" aria-label="Go to section Vermont"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            Vermont
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-none">
+                                        <a href="/gallery/washington/" aria-label="Go to section Washington"
+                                           class="block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 whitespace-nowrap">
+                                            Washington
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
                                 
                             </li>
                             
@@ -712,20 +732,21 @@
             
             <li class="relative group flex items-center">
                 <a href="/#" aria-label="Go to section Asia"
-                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
+                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     Asia
-                    <span class="ml-2 text-[8px] opacity-40">▼</span>
+                    <span class="ml-3 text-[10px] opacity-50">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                     
                     <li class="relative group/sub list-none">
                         <a href="/gallery/indonesie/" aria-label="Go to section Indonesia"
-                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>Indonesia</span>
                             
                         </a>
+
                         
                     </li>
                     
@@ -735,65 +756,71 @@
             
             <li class="relative group flex items-center">
                 <a href="/#" aria-label="Go to section Europe"
-                   class="non-clickable text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
+                   class="non-clickable text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     Europe
-                    <span class="ml-2 text-[8px] opacity-40">▼</span>
+                    <span class="ml-3 text-[10px] opacity-50">▼</span>
                 </a>
 
                 
-                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800">
+                <ul class="sub-menu-level-2 absolute left-0 top-full shadow-xl z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                     
                     <li class="relative group/sub list-none">
                         <a href="/#" aria-label="Go to section France"
-                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>France</span>
-                            <span class="ml-6 text-[8px]">▶</span>
+                            <span class="ml-4 text-[10px]">▶</span>
                         </a>
+
                         
-                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
+                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/bordeaux/" aria-label="Go to section Bordeaux"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Bordeaux</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/corse/" aria-label="Go to section Corsica"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Corsica</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/finistere/" aria-label="Go to section Finistere"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Finistere</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/lyon/" aria-label="Go to section Lyon"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Lyon</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/paris/" aria-label="Go to section Paris"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Paris</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
@@ -803,28 +830,31 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/#" aria-label="Go to section Italy"
-                           class="non-clickable block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                           class="non-clickable block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>Italy</span>
-                            <span class="ml-6 text-[8px]">▶</span>
+                            <span class="ml-4 text-[10px]">▶</span>
                         </a>
+
                         
-                        <ul class="sub-menu-level-3 absolute left-full top-0 shadow-2xl z-50 rounded-xl py-2 list-none m-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 ml-1">
+                        <ul class="sub-menu-level-3 absolute z-50 rounded-md py-2 list-none m-0 bg-white dark:bg-[#1a1b1c]">
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/naples/" aria-label="Go to section Naples"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Naples</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
                             <li class="relative group/subsub list-none">
                                 <a href="/gallery/rome/" aria-label="Go to section Rome"
-                                   class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                                   class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                                     <span>Rome</span>
                                     
                                 </a>
+
                                 
                             </li>
                             
@@ -834,19 +864,21 @@
                     
                     <li class="relative group/sub list-none">
                         <a href="/gallery/montenegro/" aria-label="Go to section Montenegro"
-                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>Montenegro</span>
                             
                         </a>
+
                         
                     </li>
                     
                     <li class="relative group/sub list-none">
                         <a href="/gallery/suede/" aria-label="Go to section Sweden"
-                           class=" block px-6 py-2 text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-white flex items-center justify-between whitespace-nowrap transition-colors">
+                           class=" block px-6 py-2 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-700 dark:hover:text-primary-400 flex items-center justify-between whitespace-nowrap">
                             <span>Sweden</span>
                             
                         </a>
+
                         
                     </li>
                     
@@ -856,7 +888,7 @@
             
             <li class="relative group flex items-center">
                 <a href="/about/" aria-label="Go to section About"
-                   class=" text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white py-4 px-4 flex items-center transition-colors">
+                   class=" text-base font-medium text-neutral-800 dark:text-neutral-200 hover:text-primary-700 dark:hover:text-primary-400 py-4 px-3 flex items-center transition-colors">
                     About
                     
                 </a>
@@ -866,57 +898,427 @@
             
         </ul>
 
-        <div class="flex items-center border-l border-neutral-200 dark:border-neutral-800 h-4 ml-4 pl-4 space-x-1">
+        <div class="instagram-container flex items-center border-l border-neutral-300 dark:border-neutral-700 h-6 ml-4 pl-4 space-x-2">
             
-            <div class="relative flex items-center">
-                <button onclick="toggleLangMenu(event)" class="text-sm px-2 py-2 focus:outline-none cursor-pointer grayscale hover:grayscale-0 transition-all" aria-label="Language menu">🇺🇸</button>
-                <div id="lang-dropdown" class="hidden absolute top-full right-0 flex-col bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-800 p-1 min-w-[60px] mt-2">
+            <div class="relative flex items-center h-16">
+                <button onclick="toggleLangMenu(event)" class="text-2xl px-2 py-2 focus:outline-none cursor-pointer" aria-label="Language menu">🇺🇸</button>
+                <div id="lang-dropdown" class="hidden flex-col bg-white dark:bg-neutral-800 rounded-b-md shadow-2xl border border-neutral-200 dark:border-neutral-700 p-1 min-w-[60px]">
                     
                     
                     
                     
-                    <a href="http://localhost:1313/fr/gallery/everglades/" aria-label="Switch to language Français" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm text-center rounded-lg">🇫🇷</a>
+                    <a href="http://localhost:1313/fr/gallery/everglades/" aria-label="Switch to language Français" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇫🇷</a>
                     
                     
                     
-                    <a href="http://localhost:1313/es/gallery/everglades/" aria-label="Switch to language Español" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-800 text-sm text-center rounded-lg">🇪🇸</a>
+                    <a href="http://localhost:1313/es/gallery/everglades/" aria-label="Switch to language Español" class="block px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-700 text-2xl text-center rounded">🇪🇸</a>
                     
                     
                 </div>
             </div>
             
 
-            <button id="theme-button" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white focus:outline-none transition-colors" aria-label="Toggle dark mode">
-                <svg id="sun-icon" class="hidden dark:block" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                <svg id="moon-icon" class="block dark:hidden" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <button id="appearance-switcher"
+                class="theme-toggle-btn p-2 rounded-full text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
+                title="Toggle Theme">
+                <svg id="sun-icon" class="hidden dark:block" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg id="moon-icon" class="block dark:hidden" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
             </button>
 
-            <button id="search-button-global" class="p-2 text-neutral-400 hover:text-neutral-900 dark:hover:text-white focus:outline-none transition-colors" aria-label="Search">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
+            <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="View Instagram profile" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-pink-500">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
         </div>
     </nav>
 
-    <div class="flex items-center md:hidden">
-        <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Open mobile menu">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+    <div class="flex items-center space-x-1">
+        <button id="search-button-global" class="p-2 text-neutral-600 dark:text-neutral-400 hover:text-primary-700 dark:hover:text-primary-400 focus:outline-none transition-colors" aria-label="Recherche Magique" title="Rechercher (Cmd+K)">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
+
+        <div class="flex items-center md:hidden">
+            <button id="mobile-menu-button" class="text-neutral-800 dark:text-neutral hover:text-primary-700 dark:hover:text-primary-400 p-2" aria-label="Open mobile menu">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
     </div>
 </div>
 </header>
 <div id="scroll-progress"></div>
 
 <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const progress = document.getElementById('scroll-progress');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            
+            if (scrollHeight > 0) {
+                const scrolled = (currentScroll / scrollHeight) * 100;
+                progress.style.width = scrolled + '%';
+            }
+            
+            
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                
+                header.classList.add('header--hidden');
+            } else {
+                
+                header.classList.remove('header--hidden');
+            }
+            
+            lastScroll = currentScroll;
+        }, { passive: true });
+    });
+</script>
+
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[100000] hidden flex-col p-6 overflow-y-auto glass-overlay transition-all duration-300">
+    <div class="flex justify-between items-center mb-8">
+        <a href="/" class="text-lg font-bold dark:text-white">
+            <span>Romain Charretteur</span>
+        </a>
+        <button id="close-mobile-menu" class="p-2 text-neutral-800 dark:text-neutral-200" aria-label="Close mobile menu">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+
+    <nav class="flex-grow">
+        <ul class="flex flex-col space-y-6 list-none p-0">
+            
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="/map/" aria-label="Go to section Map" class="text-2xl font-semibold dark:text-white">Map</a>
+                    
+                </div>
+                
+            </li>
+            
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="/videos/" aria-label="Go to section Videos" class="text-2xl font-semibold dark:text-white">Videos</a>
+                    
+                </div>
+                
+            </li>
+            
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="/#" aria-label="Go to section Americas" class="text-2xl font-semibold dark:text-white">Americas</a>
+                    
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                    
+                </div>
+                
+                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/#" aria-label="Go to section Central America" class="text-lg text-neutral-600 dark:text-neutral-400">Central America</a>
+                            
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                            
+                        </div>
+                        
+                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/guatemala/" aria-label="Go to section Guatemala" class="text-base text-neutral-500">Guatemala</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/#" aria-label="Go to section North America" class="text-lg text-neutral-600 dark:text-neutral-400">North America</a>
+                            
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                            
+                        </div>
+                        
+                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/#" aria-label="Go to section Canada" class="text-base text-neutral-500">Canada</a>
+                                    
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                                    
+                                </div>
+                                
+                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                                    
+                                    <li><a href="/gallery/montreal/" aria-label="Go to section Montreal" class="text-sm text-neutral-400 py-1 block">Montreal</a></li>
+                                    
+                                    <li><a href="/gallery/niagara_falls/" aria-label="Go to section Niagara Falls" class="text-sm text-neutral-400 py-1 block">Niagara Falls</a></li>
+                                    
+                                    <li><a href="/gallery/ottawa/" aria-label="Go to section Ottawa" class="text-sm text-neutral-400 py-1 block">Ottawa</a></li>
+                                    
+                                    <li><a href="/gallery/quebec/" aria-label="Go to section Quebec" class="text-sm text-neutral-400 py-1 block">Quebec</a></li>
+                                    
+                                    <li><a href="/gallery/toronto/" aria-label="Go to section Toronto" class="text-sm text-neutral-400 py-1 block">Toronto</a></li>
+                                    
+                                    <li><a href="/gallery/canada/" aria-label="Go to section Others" class="text-sm text-neutral-400 py-1 block">Others</a></li>
+                                    
+                                </ul>
+                                
+                            </li>
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/#" aria-label="Go to section USA" class="text-base text-neutral-500">USA</a>
+                                    
+                                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-1 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                                    
+                                </div>
+                                
+                                <ul class="hidden mt-1 pl-3 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                                    
+                                    <li><a href="/gallery/boston/" aria-label="Go to section Boston" class="text-sm text-neutral-400 py-1 block">Boston</a></li>
+                                    
+                                    <li><a href="/gallery/cape_cod/" aria-label="Go to section Cape Cod" class="text-sm text-neutral-400 py-1 block">Cape Cod</a></li>
+                                    
+                                    <li><a href="/gallery/chicago/" aria-label="Go to section Chicago" class="text-sm text-neutral-400 py-1 block">Chicago</a></li>
+                                    
+                                    <li><a href="/gallery/everglades/" aria-label="Go to section Everglades" class="text-sm text-neutral-400 py-1 block">Everglades</a></li>
+                                    
+                                    <li><a href="/gallery/keys/" aria-label="Go to section Keys" class="text-sm text-neutral-400 py-1 block">Keys</a></li>
+                                    
+                                    <li><a href="/gallery/maine/" aria-label="Go to section Maine" class="text-sm text-neutral-400 py-1 block">Maine</a></li>
+                                    
+                                    <li><a href="/gallery/miami/" aria-label="Go to section Miami" class="text-sm text-neutral-400 py-1 block">Miami</a></li>
+                                    
+                                    <li><a href="/gallery/new_hampshire/" aria-label="Go to section New Hampshire" class="text-sm text-neutral-400 py-1 block">New Hampshire</a></li>
+                                    
+                                    <li><a href="/gallery/new_york/" aria-label="Go to section New York" class="text-sm text-neutral-400 py-1 block">New York</a></li>
+                                    
+                                    <li><a href="/gallery/philadelphie/" aria-label="Go to section Philadelphia" class="text-sm text-neutral-400 py-1 block">Philadelphia</a></li>
+                                    
+                                    <li><a href="/gallery/vermont/" aria-label="Go to section Vermont" class="text-sm text-neutral-400 py-1 block">Vermont</a></li>
+                                    
+                                    <li><a href="/gallery/washington/" aria-label="Go to section Washington" class="text-sm text-neutral-400 py-1 block">Washington</a></li>
+                                    
+                                </ul>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="/#" aria-label="Go to section Asia" class="text-2xl font-semibold dark:text-white">Asia</a>
+                    
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                    
+                </div>
+                
+                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/gallery/indonesie/" aria-label="Go to section Indonesia" class="text-lg text-neutral-600 dark:text-neutral-400">Indonesia</a>
+                            
+                        </div>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="/#" aria-label="Go to section Europe" class="text-2xl font-semibold dark:text-white">Europe</a>
+                    
+                    <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                    
+                </div>
+                
+                <ul class="hidden mt-4 pl-4 space-y-4 border-l border-neutral-200 dark:border-neutral-700 list-none">
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/#" aria-label="Go to section France" class="text-lg text-neutral-600 dark:text-neutral-400">France</a>
+                            
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                            
+                        </div>
+                        
+                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/bordeaux/" aria-label="Go to section Bordeaux" class="text-base text-neutral-500">Bordeaux</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/corse/" aria-label="Go to section Corsica" class="text-base text-neutral-500">Corsica</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/finistere/" aria-label="Go to section Finistere" class="text-base text-neutral-500">Finistere</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/lyon/" aria-label="Go to section Lyon" class="text-base text-neutral-500">Lyon</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/paris/" aria-label="Go to section Paris" class="text-base text-neutral-500">Paris</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/#" aria-label="Go to section Italy" class="text-lg text-neutral-600 dark:text-neutral-400">Italy</a>
+                            
+                            <button onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')" class="p-2 text-neutral-400" aria-label="Toggle submenu">▼</button>
+                            
+                        </div>
+                        
+                        <ul class="hidden mt-2 pl-4 space-y-2 border-l border-neutral-100 dark:border-neutral-800 list-none">
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/naples/" aria-label="Go to section Naples" class="text-base text-neutral-500">Naples</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                            <li>
+                                <div class="flex justify-between items-center">
+                                    <a href="/gallery/rome/" aria-label="Go to section Rome" class="text-base text-neutral-500">Rome</a>
+                                    
+                                </div>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/gallery/montenegro/" aria-label="Go to section Montenegro" class="text-lg text-neutral-600 dark:text-neutral-400">Montenegro</a>
+                            
+                        </div>
+                        
+                    </li>
+                    
+                    <li>
+                        <div class="flex justify-between items-center">
+                            <a href="/gallery/suede/" aria-label="Go to section Sweden" class="text-lg text-neutral-600 dark:text-neutral-400">Sweden</a>
+                            
+                        </div>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                <div class="flex justify-between items-center">
+                    <a href="/about/" aria-label="Go to section About" class="text-2xl font-semibold dark:text-white">About</a>
+                    
+                </div>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <div class="mt-auto pt-8 border-t border-neutral-200 dark:border-neutral-800">
+        <div class="flex items-center justify-between">
+            <div class="flex space-x-4">
+                
+                <a href="http://localhost:1313/gallery/everglades/" aria-label="Switch to language English" class="text-3xl">🇺🇸</a>
+                
+                <a href="http://localhost:1313/fr/gallery/everglades/" aria-label="Switch to language Français" class="text-3xl">🇫🇷</a>
+                
+                <a href="http://localhost:1313/es/gallery/everglades/" aria-label="Switch to language Español" class="text-3xl">🇪🇸</a>
+                
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="search-button-mobile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-primary-600 dark:text-primary-400" aria-label="Recherche">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button id="appearance-switcher-mobile"
+                    class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-xl text-neutral-600 dark:text-neutral-300" aria-label="Toggle dark mode">
+                    <svg class="sun-icon hidden dark:block" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+                    <svg class="moon-icon block dark:hidden" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://www.instagram.com/romain.charretteur" target="_blank" aria-label="View Instagram profile" class="p-3 bg-neutral-100 dark:bg-neutral-800 rounded-full text-pink-600 dark:text-pink-500">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
     (function () {
-        const toggleTheme = () => {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('appearance', isDark ? 'dark' : 'light');
-        };
-        document.getElementById('theme-button')?.addEventListener('click', toggleTheme);
+        
+        
 
         window.toggleLangMenu = function (e) {
             e.stopPropagation();
@@ -935,33 +1337,42 @@
             }
         });
 
-        const progress = document.getElementById('scroll-progress');
-        const header = document.getElementById('main-header');
-        let lastScroll = 0;
+        const progressBar = document.getElementById('scroll-progress-bar');
+        const mainHeader = document.getElementById('main-header');
+        const glassNav = document.querySelector('.glass-nav');
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            
-            if (scrollHeight > 0) {
-                const scrolled = (scrollY / scrollHeight) * 100;
-                if (progress) progress.style.width = scrolled + '%';
+            if (progressBar) {
+                const scrollPercent = (scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrollPercent + '%';
             }
 
-            if (scrollY > lastScroll && scrollY > 150) {
-                header.classList.add('-translate-y-full');
-            } else {
-                header.classList.remove('-translate-y-full');
-            }
             
             if (scrollY > 20) {
-                header.classList.add('nav-scrolled');
+                mainHeader?.classList.add('nav-scrolled');
+                glassNav?.classList.add('glass-scrolled');
             } else {
-                header.classList.remove('nav-scrolled');
+                mainHeader?.classList.remove('nav-scrolled');
+                glassNav?.classList.remove('glass-scrolled');
             }
-            
-            lastScroll = scrollY;
-        }, { passive: true });
+        });
+
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+
+        mobileBtn?.addEventListener('click', () => {
+            overlay?.classList.remove('hidden');
+            overlay?.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeBtn?.addEventListener('click', () => {
+            overlay?.classList.add('hidden');
+            overlay?.classList.remove('flex');
+            document.body.style.overflow = '';
+        });
     })();
 </script>
     
@@ -993,7 +1404,7 @@
 
 <script>
 (function() {
-    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["vintage","ocean"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["neige","vintage","urban","dark"],"url":"/gallery/paris/"},{"color":"#886643","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["vintage","urban","sunset"],"url":"/gallery/naples/"},{"color":"#533d21","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["vintage","urban"],"url":"/gallery/rome/"},{"color":"#9ac6de","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["vintage","nature","ocean"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["urban","ocean","vintage","sunset","neige"],"url":"/gallery/suede/"},{"color":"#5f6144","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["vintage","nature","ocean"],"url":"/gallery/indonesie/"},{"color":"#463c25","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["neige","vintage","urban","ocean"],"url":"/gallery/washington/"},{"color":"#3e4726","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["vintage","urban","ocean"],"url":"/gallery/philadelphie/"},{"color":"#6b5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["vintage","urban","ocean"],"url":"/gallery/boston/"},{"color":"#a5adb1","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1eeec","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["urban","ocean","vintage","nature","sunset","bright"],"url":"/gallery/quebec/"},{"color":"#594d40","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["urban","nature"],"url":"/gallery/toronto/"},{"color":"#d1d2d2","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["neige","bright","nature","ocean"],"url":"/gallery/canada/"},{"color":"#9ba7b6","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["vintage","urban","ocean"],"url":"/gallery/niagara_falls/"},{"color":"#626e39","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313028","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["vintage","dark","ocean"],"url":"/gallery/cape_cod/"},{"color":"#2f3537","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["urban","sunset","ocean"],"url":"/gallery/new_york/"},{"color":"#426533","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["nature","ocean"],"url":"/gallery/vermont/"},{"color":"#506274","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["vintage","nature","ocean"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["vintage","urban","dark"],"url":"/gallery/guatemala/"},{"color":"#8d7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["ocean","vintage","nature","sunset","neige"],"url":"/gallery/new_hampshire/"},{"color":"#030100","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["vintage","dark","nature","ocean"],"url":"/gallery/finistere/"},{"color":"#8cacd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["vintage","urban","sunset","ocean"],"url":"/gallery/bordeaux/"},{"color":"#826c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["vintage","urban","ocean"],"url":"/gallery/lyon/"},{"color":"#77a2c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["urban","cold","ocean","sunset","neige","lush"],"url":"/gallery/miami/"},{"color":"#cfe5f5","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["bright","urban","ocean"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["vintage","nature","ocean"],"url":"/gallery/everglades/"}];
+    const locations = [{"color":"#96755a","coords":[42.7087,19.3744],"country":"Monténégro","date":"2019-09-02","name":"Montenegro","tags":["ocean","vintage"],"url":"/gallery/montenegro/"},{"color":"#0f1718","coords":[48.8566,2.3522],"country":"France","date":"2019-12-29","name":"Paris","tags":["dark","urban","neige","vintage"],"url":"/gallery/paris/"},{"color":"#886643","coords":[40.8518,14.2681],"country":"Italie","date":"2020-02-22","name":"Naples","tags":["sunset","urban","vintage"],"url":"/gallery/naples/"},{"color":"#533d21","coords":[41.9028,12.4964],"country":"Italie","date":"2021-11-21","name":"Rome","tags":["urban","vintage"],"url":"/gallery/rome/"},{"color":"#9ac6de","coords":[41.83853,9.30907],"country":"France","date":"2022-06-03","name":"Corse","tags":["nature","ocean","vintage"],"url":"/gallery/corse/"},{"color":"#b0a6a0","coords":[59.3293,18.0686],"country":"Suède","date":"2022-12-06","name":"Suede","tags":["sunset","urban","neige","ocean","vintage"],"url":"/gallery/suede/"},{"color":"#5f6144","coords":[-8.4095,115.1889],"country":"Indonésie","date":"2024-05-03","name":"Indonesie","tags":["nature","ocean","vintage"],"url":"/gallery/indonesie/"},{"color":"#463c25","coords":[38.9072,-77.0369],"country":"USA","date":"2024-08-17","name":"Washington","tags":["ocean","urban","neige","vintage"],"url":"/gallery/washington/"},{"color":"#3e4726","coords":[39.9526,-75.1652],"country":"USA","date":"2024-08-20","name":"Philadelphie","tags":["urban","ocean","vintage"],"url":"/gallery/philadelphie/"},{"color":"#6b5a53","coords":[42.36554,-71.05316],"country":"USA","date":"2024-09-02","name":"Boston","tags":["urban","ocean","vintage"],"url":"/gallery/boston/"},{"color":"#a5adb1","coords":[44.59162,-75.68429],"country":"Canada","date":"2024-10-20","name":"Montreal","tags":["urban","ocean"],"url":"/gallery/montreal/"},{"color":"#f1eeec","coords":[46.8139,-71.208],"country":"Canada","date":"2024-12-07","name":"Quebec","tags":["sunset","nature","bright","urban","ocean","vintage"],"url":"/gallery/quebec/"},{"color":"#594d40","coords":[43.6532,-79.3832],"country":"Canada","date":"2025-01-03","name":"Toronto","tags":["nature","urban"],"url":"/gallery/toronto/"},{"color":"#d1d2d2","coords":[45.5017,-73.5673],"country":"Canada","date":"2025-02-15","name":"Canada","tags":["bright","nature","ocean","neige"],"url":"/gallery/canada/"},{"color":"#9ba7b6","coords":[43.0896,-79.0849],"country":"Canada","date":"2025-04-20","name":"Niagara Falls","tags":["urban","ocean","vintage"],"url":"/gallery/niagara_falls/"},{"color":"#626e39","coords":[45.4215,-75.6972],"country":"Canada","date":"2025-05-11","name":"Ottawa","tags":["urban"],"url":"/gallery/ottawa/"},{"color":"#313028","coords":[41.6688,-70.2962],"country":"USA","date":"2025-05-17","name":"Cape Cod","tags":["dark","ocean","vintage"],"url":"/gallery/cape_cod/"},{"color":"#2f3537","coords":[40.7128,-74.006],"country":"USA","date":"2025-06-20","name":"New York","tags":["sunset","urban","ocean"],"url":"/gallery/new_york/"},{"color":"#426533","coords":[44.72085,-72.03098],"country":"USA","date":"2025-07-19","name":"Vermont","tags":["nature","ocean"],"url":"/gallery/vermont/"},{"color":"#506274","coords":[43.30587,-70.56435],"country":"USA","date":"2025-08-01","name":"Maine","tags":["nature","ocean","vintage"],"url":"/gallery/maine/"},{"color":"#15242d","coords":[14.73768,-91.16121],"country":"Guatemala","date":"2025-09-04","name":"Guatemala","tags":["dark","urban","vintage"],"url":"/gallery/guatemala/"},{"color":"#8d7e6d","coords":[43.1939,-71.5724],"country":"USA","date":"2025-09-30","name":"New Hampshire","tags":["sunset","nature","neige","ocean","vintage"],"url":"/gallery/new_hampshire/"},{"color":"#030100","coords":[48.45056,-4.24887],"country":"France","date":"2025-12-16","name":"Finistere","tags":["dark","nature","ocean","vintage"],"url":"/gallery/finistere/"},{"color":"#8cacd7","coords":[44.86324,-0.5512],"country":"France","date":"2026-01-02","name":"Bordeaux","tags":["sunset","urban","ocean","vintage"],"url":"/gallery/bordeaux/"},{"color":"#826c69","coords":[45.76219,4.82211],"country":"France","date":"2026-01-08","name":"Lyon","tags":["urban","ocean","vintage"],"url":"/gallery/lyon/"},{"color":"#77a2c0","coords":[25.7617,-80.1918],"country":"USA","date":"2026-04-02","name":"Miami","tags":["cold","sunset","urban","neige","lush","ocean"],"url":"/gallery/miami/"},{"color":"#cfe5f5","coords":[24.5551,-81.78],"country":"USA","date":"2026-04-03","name":"Keys","tags":["bright","urban","ocean"],"url":"/gallery/keys/"},{"color":"#43464c","coords":[25.2866,-80.8987],"country":"USA","date":"2026-04-04","name":"Everglades","tags":["nature","ocean","vintage"],"url":"/gallery/everglades/"},{"color":"#a09a96","coords":[41.8781,-87.6298],"country":"USA","date":"2026-05-24","name":"Chicago","tags":["urban"],"url":"/gallery/chicago/"}];
     const rawURL = window.location.pathname;
     
     console.log("WeatherWidget: Init for URL:", rawURL);
@@ -1183,7 +1594,7 @@
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-12.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-59.mov" type="video/mp4"></video>
     <img src="/gallery/everglades/everglades_001.webp" 
-         alt="Visual exploration of Everglades, featuring a timeless aesthetic." 
+         alt="Visual exploration of Everglades, featuring a organic aesthetic." 
          title="ILCE-6700 | f/5.6 | 1/1000s | ISO 125" 
           
          width="1600" height="2400" 
@@ -1192,7 +1603,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBFYY60jAH3qr53G1TzTxJgcNVCsVlOBTXYjFFFID//2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_002.webp" 
-         alt="Capturing the retro essence of Everglades. Photo by Romain Charretteur." 
+         alt="Visual exploration of Everglades, featuring a natural aesthetic." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1201,7 +1612,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCk96zNliTxxSC9dRxmq7ywbAPLZWA6jjNRoc7tp4zxmoUVYBMZcA96ux20e3vzzRRVMEf/2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_003.webp" 
-         alt="A timeless view of Everglades. artistique" 
+         alt="Visual exploration of Everglades, featuring a green aesthetic." 
          title="ILCE-6700 | f/5.0 | 1/250s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1210,7 +1621,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDHht8xjjkmq88eyQjtWxA8QjRVOSc5JrMu2B2EdcEHJzUjZHFIwGASKjlcs+T1ooqgP//Z); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_004.webp" 
-         alt="Visual exploration of Everglades, featuring a timeless aesthetic." 
+         alt="A organic view of Everglades. artistique" 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1219,7 +1630,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCvpEiRXOWcKp5JPTFS3eoBpiYi2364H4VV063852RhhWXG89jUE6GKRkKk4OMjoanUCzaSvGp2ngdqhupneXLY/Kiir6E9T//Z); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_005.webp" 
-         alt="A timeless view of Everglades. artistique" 
+         alt="Visual exploration of Everglades, featuring a natural aesthetic." 
          title="ILCE-6700 | f/5.6 | 1/1000s | ISO 500" 
           
          width="1600" height="2400" 
@@ -1228,7 +1639,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDPdGJ+TLbjwSKai5X5wevarxgNuvEgJxjAbnmkjQhecewPGKwuFrD5Uwm4ndg4AIGKAp/hZl9cHrRRSA//2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_006.webp" 
-         alt="The retro atmosphere of Everglades, a artistique shot." 
+         alt="The natural atmosphere of Everglades, a artistique shot." 
          title="ILCE-6700 | f/5.6 | 1/1000s | ISO 640" 
           
          width="1600" height="2400" 
@@ -1237,7 +1648,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCkIY1QGQk56gsMj8KR7ZVAIBOeQAMYFB3vbkIqN3Yng4qOWRn28t06Z6VjZiJIjtL4HQMPqMVARnuaKK1S1E9j/9k=); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_007.webp" 
-         alt="A retro view of Everglades. artistique" 
+         alt="The organic atmosphere of Everglades, a artistique shot." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1246,7 +1657,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCW3unEIEtw5f27VBcJKz7lupef9qsz7RyOaf8Aaye9VpsKxRyacDRRUlH/2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_008.webp" 
-         alt="Visual exploration of Everglades, featuring a nostalgic aesthetic." 
+         alt="The green atmosphere of Everglades, a artistique shot." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1255,7 +1666,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCws0nlDAjDe5NUbi5vxJgsn/ARVeO6I6t0oku8kc0BYzAxoJJoopDP/9k=); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_009.webp" 
-         alt="A retro view of Everglades. artistique" 
+         alt="A organic view of Everglades. artistique" 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1264,7 +1675,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC+9+wXMUSFvQuP8Koy6zdRthraPP0zVBbrBOWNNa6DH1qt+pNjPBNOyaKKks//2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_010.webp" 
-         alt="The retro atmosphere of Everglades, a artistique shot." 
+         alt="The natural atmosphere of Everglades, a artistique shot." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
          width="1600" height="1066" 
@@ -1273,7 +1684,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAANABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwAjurdIwhhUgjHOTUc8Vm6EiNVPqOKyhIQfxp5uXGQKNACW3UOdrHB96KhMrE0U7ID/2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_011.webp" 
-         alt="Capturing the nostalgic essence of Everglades. Photo by Romain Charretteur." 
+         alt="Capturing the wild essence of Everglades. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1282,7 +1693,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCUSAjFNIBPaqgf5gdx+meDUol4q7isU1Jp5NFFSUf/2Q==); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_012.webp" 
-         alt="The retro atmosphere of Everglades, a artistique shot." 
+         alt="The organic atmosphere of Everglades, a artistique shot." 
          title="ILCE-6700 | f/5.6 | 1/250s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1291,7 +1702,7 @@
          style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBtyybS6kBQORUO6TYrLEHB9at6jHGp2gjkdhVNE+XGTgdMVi7LcZJdfLJwTyMnNRqSOKKKHuM//9k=); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/everglades/everglades_013.webp" 
-         alt="A timeless view of Everglades. artistique" 
+         alt="Capturing the natural essence of Everglades. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
          width="1600" height="2400" 
@@ -1831,28 +2242,6 @@
     </footer>
   </article>
 
-        
-
-
-  
-
-
-
-
-
-
-<div
-  id="scroll-to-top"
-  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
-  <a
-    href="#the-top"
-    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-    aria-label="Scroll to top"
-    title="Scroll to top">
-    &uarr;
-  </a>
-</div>
-
       </main><footer class="pt-0 pb-2 mt-0 print:hidden">
     <div class="flex items-center justify-center gap-4 text-sm text-neutral-700 dark:text-neutral-300 font-medium">
         <span>Romain Charretteur</span>
@@ -2119,6 +2508,78 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     </div>
+    
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 opacity-0 duration-200"
+  style="position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 999999 !important;">
+  <div class="relative h-14 w-14">
+    
+    <svg width="56" height="56" class="absolute top-1/2 left-1/2 pointer-events-none" style="transform: translate(-50%, -50%) rotate(-90deg);">
+      <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2" fill="transparent" class="text-neutral-300 dark:text-neutral-700 opacity-50" />
+      <circle id="scroll-progress-circle" cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2.5" fill="transparent" stroke-dasharray="163.36" stroke-dashoffset="163.36" stroke-linecap="round" class="text-primary-600 dark:text-primary-400" style="transition: stroke-dashoffset 0.1s ease-out;" />
+    </svg>
+
+    <a
+      href="#the-top"
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-white text-xl text-neutral-700 hover:text-primary-600 shadow-md dark:bg-neutral-800 dark:text-neutral dark:hover:text-primary-400 pb-0.5"
+      aria-label="Scroll to top"
+      title="Scroll to top">
+      &uarr;
+    </a>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const circle = document.getElementById('scroll-progress-circle');
+      if (circle) {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = Math.max(
+          document.body.scrollHeight, document.documentElement.scrollHeight,
+          document.body.offsetHeight, document.documentElement.offsetHeight,
+          document.body.clientHeight, document.documentElement.clientHeight
+        ) - window.innerHeight;
+        
+        if (docHeight > 0) {
+          const scrollPercent = scrollTop / docHeight;
+          const circumference = 163.36; 
+          
+          const offset = Math.max(0, circumference - (scrollPercent * circumference));
+          circle.style.strokeDashoffset = offset;
+        }
+      }
+    });
+  </script>
+</div>
+
+    
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const videoObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.play().catch(e => console.log("Autoplay prevented:", e));
+            } else {
+              entry.target.pause();
+            }
+          });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll("video").forEach(video => {
+          videoObserver.observe(video);
+        });
+      });
+    </script>
   </body>
   
 </html>

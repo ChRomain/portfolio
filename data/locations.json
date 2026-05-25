@@ -10,8 +10,8 @@
         "date": "2019-09-02",
         "color": "#96755a",
         "tags": [
-            "vintage",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -25,10 +25,10 @@
         "date": "2019-12-29",
         "color": "#0f1718",
         "tags": [
-            "neige",
-            "vintage",
+            "dark",
             "urban",
-            "dark"
+            "neige",
+            "vintage"
         ]
     },
     {
@@ -42,9 +42,9 @@
         "date": "2020-02-22",
         "color": "#886643",
         "tags": [
-            "vintage",
+            "sunset",
             "urban",
-            "sunset"
+            "vintage"
         ]
     },
     {
@@ -58,8 +58,8 @@
         "date": "2021-11-21",
         "color": "#533d21",
         "tags": [
-            "vintage",
-            "urban"
+            "urban",
+            "vintage"
         ]
     },
     {
@@ -73,9 +73,9 @@
         "date": "2022-06-03",
         "color": "#9ac6de",
         "tags": [
-            "vintage",
             "nature",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -89,11 +89,11 @@
         "date": "2022-12-06",
         "color": "#b0a6a0",
         "tags": [
-            "urban",
-            "ocean",
-            "vintage",
             "sunset",
-            "neige"
+            "urban",
+            "neige",
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -107,9 +107,9 @@
         "date": "2024-05-03",
         "color": "#5f6144",
         "tags": [
-            "vintage",
             "nature",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -123,10 +123,10 @@
         "date": "2024-08-17",
         "color": "#463c25",
         "tags": [
-            "neige",
-            "vintage",
+            "ocean",
             "urban",
-            "ocean"
+            "neige",
+            "vintage"
         ]
     },
     {
@@ -140,9 +140,9 @@
         "date": "2024-08-20",
         "color": "#3e4726",
         "tags": [
-            "vintage",
             "urban",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -156,9 +156,9 @@
         "date": "2024-09-02",
         "color": "#6b5a53",
         "tags": [
-            "vintage",
             "urban",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -187,12 +187,12 @@
         "date": "2024-12-07",
         "color": "#f1eeec",
         "tags": [
+            "sunset",
+            "nature",
+            "bright",
             "urban",
             "ocean",
-            "vintage",
-            "nature",
-            "sunset",
-            "bright"
+            "vintage"
         ]
     },
     {
@@ -206,8 +206,8 @@
         "date": "2025-01-03",
         "color": "#594d40",
         "tags": [
-            "urban",
-            "nature"
+            "nature",
+            "urban"
         ]
     },
     {
@@ -221,10 +221,10 @@
         "date": "2025-02-15",
         "color": "#d1d2d2",
         "tags": [
-            "neige",
             "bright",
             "nature",
-            "ocean"
+            "ocean",
+            "neige"
         ]
     },
     {
@@ -238,9 +238,9 @@
         "date": "2025-04-20",
         "color": "#9ba7b6",
         "tags": [
-            "vintage",
             "urban",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -268,9 +268,9 @@
         "date": "2025-05-17",
         "color": "#313028",
         "tags": [
-            "vintage",
             "dark",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -284,8 +284,8 @@
         "date": "2025-06-20",
         "color": "#2f3537",
         "tags": [
-            "urban",
             "sunset",
+            "urban",
             "ocean"
         ]
     },
@@ -315,9 +315,9 @@
         "date": "2025-08-01",
         "color": "#506274",
         "tags": [
-            "vintage",
             "nature",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -331,9 +331,9 @@
         "date": "2025-09-04",
         "color": "#15242d",
         "tags": [
-            "vintage",
+            "dark",
             "urban",
-            "dark"
+            "vintage"
         ]
     },
     {
@@ -347,11 +347,11 @@
         "date": "2025-09-30",
         "color": "#8d7e6d",
         "tags": [
-            "ocean",
-            "vintage",
-            "nature",
             "sunset",
-            "neige"
+            "nature",
+            "neige",
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -365,10 +365,10 @@
         "date": "2025-12-16",
         "color": "#030100",
         "tags": [
-            "vintage",
             "dark",
             "nature",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -382,10 +382,10 @@
         "date": "2026-01-02",
         "color": "#8cacd7",
         "tags": [
-            "vintage",
-            "urban",
             "sunset",
-            "ocean"
+            "urban",
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -399,9 +399,9 @@
         "date": "2026-01-08",
         "color": "#826c69",
         "tags": [
-            "vintage",
             "urban",
-            "ocean"
+            "ocean",
+            "vintage"
         ]
     },
     {
@@ -415,12 +415,12 @@
         "date": "2026-04-02",
         "color": "#77a2c0",
         "tags": [
-            "urban",
             "cold",
-            "ocean",
             "sunset",
+            "urban",
             "neige",
-            "lush"
+            "lush",
+            "ocean"
         ]
     },
     {
@@ -450,9 +450,23 @@
         "date": "2026-04-04",
         "color": "#43464c",
         "tags": [
-            "vintage",
             "nature",
-            "ocean"
+            "ocean",
+            "vintage"
+        ]
+    },
+    {
+        "name": "Chicago",
+        "coords": [
+            41.8781,
+            -87.6298
+        ],
+        "url": "/gallery/chicago/",
+        "country": "USA",
+        "date": "2026-05-24",
+        "color": "#a09a96",
+        "tags": [
+            "urban"
         ]
     }
 ]

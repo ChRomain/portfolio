@@ -1090,3 +1090,20 @@ img[data-lqip="true"].loaded {
     color: black;
 }
 
+
+/* Fix for scroll to top button positioning */
+#scroll-to-top {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    z-index: 9999999 !important;
+}
+
+/* Force body and html to not create containing blocks for fixed elements */
+html, body {
+    transform: none !important;
+    filter: none !important;
+    perspective: none !important;
+    contain: none !important;
+    will-change: auto !important;
+}
