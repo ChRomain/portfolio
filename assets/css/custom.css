@@ -807,6 +807,14 @@ img[data-lqip="true"].loaded {
     background: #0f0f0f;
 }
 
+@media (max-width: 768px) {
+    #homepage-map-section {
+        height: 280px !important;
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+    }
+}
+
 .mini-map-cluster {
     width: 30px;
     height: 30px;

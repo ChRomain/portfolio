@@ -372,11 +372,12 @@
                 return;
             }
 
+            const isMobile = window.innerWidth < 768;
             const locations = {{ site.Data.locations | default slice | jsonify | safeJS }};
             const map = L.map('mini-map', {
-                center: [20, -20],
-                zoom: 2.5,
-                minZoom: 2,
+                center: isMobile ? [20, 0] : [20, -20],
+                zoom: isMobile ? 1.2 : 2.5,
+                minZoom: 1,
                 scrollWheelZoom: false,
                 zoomControl: false,
                 attributionControl: false
@@ -444,7 +445,8 @@
             
             // Fly to initial view
             setTimeout(() => {
-                map.flyTo([30, -30], 3, { duration: 3, easeLinearity: 0.1 });
+                const isMobile = window.innerWidth < 768;
+                map.flyTo(isMobile ? [20, 0] : [30, -30], isMobile ? 1.5 : 3, { duration: 3, easeLinearity: 0.1 });
             }, 500);
         };
 
