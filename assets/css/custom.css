@@ -502,7 +502,7 @@ nav a[href$="/map/"]:hover,
 }
 
 #mobile-menu-overlay {
-    z-index: 100000 !important;
+    z-index: 9999998 !important;
 }
 
 .glass-overlay {
