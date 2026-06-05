@@ -52,6 +52,20 @@
                         <source src="{{ $vurl }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <!-- Custom controls overlay -->
+                    <div class="video-controls">
+                        <button class="video-play-btn" aria-label="Play/Pause">
+                            <svg class="play-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="pause-icon hidden" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                    </div>
+                    <button class="video-mute-btn" aria-label="Mute/Unmute">
+                        <svg class="mute-off-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                        <svg class="mute-on-icon hidden" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/></svg>
+                    </button>
+                    <div class="video-progress-container">
+                        <div class="video-progress-bar"></div>
+                    </div>
                 </div>
                 {{ end }}
             {{ end }}
@@ -205,6 +219,90 @@
             item.classList.add('reveal-item');
             revealObserver.observe(item);
 
+            const video = item.querySelector('.video-element');
+            const playBtn = item.querySelector('.video-play-btn');
+            const muteBtn = item.querySelector('.video-mute-btn');
+            const progressBar = item.querySelector('.video-progress-bar');
+            const progressContainer = item.querySelector('.video-progress-container');
+
+            const playIcon = playBtn.querySelector('.play-icon');
+            const pauseIcon = playBtn.querySelector('.pause-icon');
+            const muteOffIcon = muteBtn.querySelector('.mute-off-icon');
+            const muteOnIcon = muteBtn.querySelector('.mute-on-icon');
+
+            // Play / Pause event
+            const togglePlay = (e) => {
+                e.stopPropagation();
+                if (video.paused) {
+                    // Pause all other videos
+                    document.querySelectorAll('.video-element').forEach(v => {
+                        if (v !== video && !v.paused) {
+                            v.pause();
+                            const pBtn = v.closest('.video-item').querySelector('.video-play-btn');
+                            pBtn.querySelector('.play-icon').classList.remove('hidden');
+                            pBtn.querySelector('.pause-icon').classList.add('hidden');
+                        }
+                    });
+                    video.play().then(() => {
+                        playIcon.classList.add('hidden');
+                        pauseIcon.classList.remove('hidden');
+                    }).catch(() => {});
+                } else {
+                    video.pause();
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                }
+            };
+            
+            // Hover play/pause behavior for smooth interactive preview
+            item.addEventListener('mouseenter', () => {
+                if (video.paused) {
+                    video.play().then(() => {
+                        playIcon.classList.add('hidden');
+                        pauseIcon.classList.remove('hidden');
+                    }).catch(() => {});
+                }
+            });
+
+            item.addEventListener('mouseleave', () => {
+                video.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            });
+
+            playBtn.addEventListener('click', togglePlay);
+            item.addEventListener('click', togglePlay);
+
+            // Timeupdate to update progress bar
+            video.addEventListener('timeupdate', () => {
+                if (video.duration) {
+                    const percentage = (video.currentTime / video.duration) * 100;
+                    progressBar.style.width = `${percentage}%`;
+                }
+            });
+
+            // Click on progress bar to seek
+            progressContainer.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const rect = progressContainer.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                video.currentTime = pos * video.duration;
+            });
+
+            // Mute / Unmute
+            muteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                video.muted = !video.muted;
+                if (video.muted) {
+                    muteOffIcon.classList.add('hidden');
+                    muteOnIcon.classList.remove('hidden');
+                } else {
+                    muteOffIcon.classList.remove('hidden');
+                    muteOnIcon.classList.add('hidden');
+                }
+            });
+
+            // 3D tilt with glare position
             item.addEventListener('mousemove', (e) => {
                 const rect = item.getBoundingClientRect();
                 const x = e.clientX - rect.left;

@@ -99,6 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach((card) => {
         revealObserver.observe(card);
 
+        // Dynamically create glare element
+        let glare = card.querySelector('.card-glare');
+        if (!glare) {
+            glare = document.createElement('div');
+            glare.className = 'card-glare';
+            card.appendChild(glare);
+        }
+
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -111,10 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const rotateY = ((x - centerX) / centerX) * 15;
             
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+            
+            const percentageX = (x / rect.width) * 100;
+            const percentageY = (y / rect.height) * 100;
+            glare.style.background = `radial-gradient(circle at ${percentageX}% ${percentageY}%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 80%)`;
+            glare.style.opacity = '1';
         });
 
         card.addEventListener('mouseleave', () => {
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            glare.style.opacity = '0';
         });
     });
 
