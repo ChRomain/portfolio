@@ -1115,3 +1115,12 @@ html, body {
     contain: none !important;
     will-change: auto !important;
 }
+
+/* Force hero scroll button border to always remain white */
+.hero-scroll-btn-circle {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+.hero-scroll-btn-circle:hover {
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+
