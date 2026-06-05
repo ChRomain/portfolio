@@ -1124,3 +1124,70 @@ html, body {
     border-color: rgba(255, 255, 255, 1) !important;
 }
 
+/* Homepage gallery card styling */
+.gallery-card {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 250px !important;
+    height: 60px !important;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb; /* Light border */
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff; /* Light background */
+    color: #ffffff; /* White text for visibility */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    
+    /* 3D Reveal Base State */
+    opacity: 0;
+    transform: translateY(40px) scale(0.95) perspective(1000px) rotateX(-10deg);
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.dark .gallery-card {
+    border-color: #3f3f46;
+    background-color: #1e1f20;
+    color: white;
+}
+
+.gallery-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1) perspective(1000px) rotateX(0deg);
+}
+
+.gallery-card.visible:hover {
+    /* Le transform est maintenant géré par le JS pour le Tilt */
+    border-color: #6366f1 !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: 1;
+    transition: filter 0.2s ease;
+}
+
+.gallery-card:hover .card-bg {
+    filter: brightness(0.7) !important;
+}
+
+.card-title {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 0 10px;
+}
