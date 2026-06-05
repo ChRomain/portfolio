@@ -197,6 +197,8 @@
                         item.classList.remove('visible');
                     }
                 });
+                // Update active list of items for lightbox
+                updateActiveLightboxItems();
             });
         });
 
@@ -212,6 +214,132 @@
         const revealObserver = new IntersectionObserver(revealCallback, {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
+        });
+
+        // === 1. Injecter le Lightbox si absent ===
+        if (!document.getElementById('custom-lightbox')) {
+          const lightboxEl = document.createElement('div');
+          lightboxEl.id = 'custom-lightbox';
+          lightboxEl.innerHTML = `
+            <div class="lightbox-nav-top">
+              <a id="lightbox-download" href="" download aria-label="Download Video" style="display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.7); text-decoration: none;">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              </a>
+              <button id="lightbox-fullscreen" aria-label="Toggle Fullscreen">
+                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+              </button>
+            </div>
+            <button id="lightbox-prev" class="lightbox-nav" aria-label="Previous Video">❮</button>
+            <div class="lightbox-content">
+              <video src="" controls autoplay loop style="max-width: 100%; max-height: 80vh; box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); object-fit: contain; outline: none;"></video>
+            </div>
+            <button id="lightbox-next" class="lightbox-nav" aria-label="Next Video">❯</button>
+            
+            <div class="lightbox-footer">
+              <div id="lightbox-counter"></div>
+            </div>
+          `;
+          document.body.appendChild(lightboxEl);
+
+          // Fermeture au clic sur le fond (mais pas sur la vidéo ou boutons)
+          lightboxEl.addEventListener('click', (e) => {
+            if (e.target.id === 'custom-lightbox' || e.target.classList.contains('lightbox-content')) {
+              closeLightbox();
+            }
+          });
+
+          // Fermeture avec Echap & navigation clavier
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+          });
+        }
+
+        const lightbox = document.getElementById('custom-lightbox');
+        const lightboxVideo = lightbox.querySelector('video');
+        const counterEl = document.getElementById('lightbox-counter');
+        const prevBtn = document.getElementById('lightbox-prev');
+        const nextBtn = document.getElementById('lightbox-next');
+        const fullscreenBtn = document.getElementById('lightbox-fullscreen');
+        const downloadBtn = document.getElementById('lightbox-download');
+
+        let activeItems = Array.from(document.querySelectorAll('.video-item'));
+        let currentIndex = 0;
+
+        function updateActiveLightboxItems() {
+            activeItems = Array.from(document.querySelectorAll('.video-item')).filter(item => item.style.display !== 'none');
+        }
+
+        function openLightbox(index) {
+          currentIndex = index;
+          updateLightbox();
+          lightbox.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; 
+          document.getElementById('main-header').style.opacity = '0';
+          document.getElementById('main-header').style.pointerEvents = 'none';
+        }
+
+        function closeLightbox() {
+          lightboxVideo.pause();
+          lightboxVideo.src = "";
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          }
+          lightbox.style.display = 'none';
+          document.body.style.overflow = '';
+          document.getElementById('main-header').style.opacity = '1';
+          document.getElementById('main-header').style.pointerEvents = 'auto';
+        }
+
+        function updateLightbox() {
+          const currentItem = activeItems[currentIndex];
+          const srcVideo = currentItem.querySelector('.video-element source').src;
+          
+          lightboxVideo.src = srcVideo;
+          lightboxVideo.load();
+          lightboxVideo.play().catch(() => {});
+
+          // Update download link
+          downloadBtn.href = srcVideo;
+          const fileName = srcVideo.substring(srcVideo.lastIndexOf('/') + 1);
+          downloadBtn.setAttribute('download', fileName);
+
+          // Update Counter
+          counterEl.textContent = `${currentIndex + 1} / ${activeItems.length}`;
+        }
+
+        function showNext() {
+          if (activeItems.length === 0) return;
+          currentIndex = (currentIndex + 1) % activeItems.length;
+          updateLightbox();
+        }
+
+        function showPrev() {
+          if (activeItems.length === 0) return;
+          currentIndex = (currentIndex - 1 + activeItems.length) % activeItems.length;
+          updateLightbox();
+        }
+
+        fullscreenBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (!document.fullscreenElement) {
+            lightbox.requestFullscreen().catch(err => {
+              console.error(`Error fullscreen: ${err.message}`);
+            });
+          } else {
+            document.exitFullscreen();
+          }
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showNext();
+        });
+
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showPrev();
         });
 
         const items = document.querySelectorAll('.video-item');
@@ -230,27 +358,19 @@
             const muteOffIcon = muteBtn.querySelector('.mute-off-icon');
             const muteOnIcon = muteBtn.querySelector('.mute-on-icon');
 
-            // Play / Pause event
+            // Play / Pause event -> opens in Lightbox!
             const togglePlay = (e) => {
                 e.stopPropagation();
-                if (video.paused) {
-                    // Pause all other videos
-                    document.querySelectorAll('.video-element').forEach(v => {
-                        if (v !== video && !v.paused) {
-                            v.pause();
-                            const pBtn = v.closest('.video-item').querySelector('.video-play-btn');
-                            pBtn.querySelector('.play-icon').classList.remove('hidden');
-                            pBtn.querySelector('.pause-icon').classList.add('hidden');
-                        }
-                    });
-                    video.play().then(() => {
-                        playIcon.classList.add('hidden');
-                        pauseIcon.classList.remove('hidden');
-                    }).catch(() => {});
-                } else {
-                    video.pause();
-                    playIcon.classList.remove('hidden');
-                    pauseIcon.classList.add('hidden');
+                // Pause inline preview
+                video.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+                
+                // Get current index in active list
+                updateActiveLightboxItems();
+                const index = activeItems.indexOf(item);
+                if (index !== -1) {
+                    openLightbox(index);
                 }
             };
             

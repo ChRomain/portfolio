@@ -294,7 +294,8 @@ header nav li {
     align-items: center;
 }
 
-#custom-lightbox img {
+#custom-lightbox img,
+#custom-lightbox video {
     max-width: 100%;
     max-height: 80vh;
     /* Leave room for footer */
