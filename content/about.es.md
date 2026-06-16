@@ -28,8 +28,8 @@ showComments: false
 <h3 style="margin-bottom: 1rem; font-size: 1.3rem; letter-spacing: 1px;">Equipo</h3>
 <ul style="list-style: none; padding: 0; line-height: 1.8; font-size: 0.95rem;">
 <li><strong>Cámara:</strong> Sony Alpha 6700 + Sigma 18-50mm f/2.8</li>
-<li><strong>Dron:</strong> DJI Mini 3</li>
-<li><strong>Móvil:</strong> iPhone 15</li>
+<li><strong>Dron:</strong> DJI Mini 5 Pro</li>
+<li><strong>Móvil:</strong> iPhone 17</li>
 </ul>
 </div>
 

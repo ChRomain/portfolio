@@ -3,615 +3,615 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://rctravel.pages.dev/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/about/"
+      href="http://localhost:1313/fr/about/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/about/"
+      href="http://localhost:1313/es/about/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/about/"
+      href="http://localhost:1313/about/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/bordeaux/</loc>
+    <loc>http://localhost:1313/gallery/bordeaux/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/bordeaux/"
+      href="http://localhost:1313/fr/gallery/bordeaux/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/bordeaux/"
+      href="http://localhost:1313/es/gallery/bordeaux/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/bordeaux/"
+      href="http://localhost:1313/gallery/bordeaux/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/boston/</loc>
+    <loc>http://localhost:1313/gallery/boston/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/boston/"
+      href="http://localhost:1313/fr/gallery/boston/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/boston/"
+      href="http://localhost:1313/es/gallery/boston/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/boston/"
+      href="http://localhost:1313/gallery/boston/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/canada/</loc>
+    <loc>http://localhost:1313/gallery/canada/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/canada/"
+      href="http://localhost:1313/fr/gallery/canada/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/canada/"
+      href="http://localhost:1313/es/gallery/canada/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/canada/"
+      href="http://localhost:1313/gallery/canada/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/cape_cod/</loc>
+    <loc>http://localhost:1313/gallery/cape_cod/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/cape_cod/"
+      href="http://localhost:1313/fr/gallery/cape_cod/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/cape_cod/"
+      href="http://localhost:1313/es/gallery/cape_cod/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/cape_cod/"
+      href="http://localhost:1313/gallery/cape_cod/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/chicago/</loc>
+    <loc>http://localhost:1313/gallery/chicago/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/chicago/"
+      href="http://localhost:1313/fr/gallery/chicago/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/chicago/"
+      href="http://localhost:1313/es/gallery/chicago/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/chicago/"
+      href="http://localhost:1313/gallery/chicago/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/corse/</loc>
+    <loc>http://localhost:1313/gallery/corse/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/corse/"
+      href="http://localhost:1313/fr/gallery/corse/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/corse/"
+      href="http://localhost:1313/es/gallery/corse/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/corse/"
+      href="http://localhost:1313/gallery/corse/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/everglades/</loc>
+    <loc>http://localhost:1313/gallery/everglades/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/everglades/"
+      href="http://localhost:1313/fr/gallery/everglades/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/everglades/"
+      href="http://localhost:1313/es/gallery/everglades/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/everglades/"
+      href="http://localhost:1313/gallery/everglades/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/finistere/</loc>
+    <loc>http://localhost:1313/gallery/finistere/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/finistere/"
+      href="http://localhost:1313/fr/gallery/finistere/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/finistere/"
+      href="http://localhost:1313/es/gallery/finistere/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/finistere/"
+      href="http://localhost:1313/gallery/finistere/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/</loc>
+    <loc>http://localhost:1313/gallery/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/"
+      href="http://localhost:1313/fr/gallery/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/"
+      href="http://localhost:1313/es/gallery/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/"
+      href="http://localhost:1313/gallery/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/guatemala/</loc>
+    <loc>http://localhost:1313/gallery/guatemala/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/guatemala/"
+      href="http://localhost:1313/fr/gallery/guatemala/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/guatemala/"
+      href="http://localhost:1313/es/gallery/guatemala/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/guatemala/"
+      href="http://localhost:1313/gallery/guatemala/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/indonesie/</loc>
+    <loc>http://localhost:1313/gallery/indonesie/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/indonesie/"
+      href="http://localhost:1313/fr/gallery/indonesie/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/indonesie/"
+      href="http://localhost:1313/es/gallery/indonesie/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/indonesie/"
+      href="http://localhost:1313/gallery/indonesie/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/keys/</loc>
+    <loc>http://localhost:1313/gallery/keys/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/keys/"
+      href="http://localhost:1313/fr/gallery/keys/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/keys/"
+      href="http://localhost:1313/es/gallery/keys/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/keys/"
+      href="http://localhost:1313/gallery/keys/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/lyon/</loc>
+    <loc>http://localhost:1313/gallery/lyon/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/lyon/"
+      href="http://localhost:1313/fr/gallery/lyon/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/lyon/"
+      href="http://localhost:1313/es/gallery/lyon/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/lyon/"
+      href="http://localhost:1313/gallery/lyon/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/maine/</loc>
+    <loc>http://localhost:1313/gallery/maine/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/maine/"
+      href="http://localhost:1313/fr/gallery/maine/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/maine/"
+      href="http://localhost:1313/es/gallery/maine/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/maine/"
+      href="http://localhost:1313/gallery/maine/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/map/</loc>
+    <loc>http://localhost:1313/map/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/map/"
+      href="http://localhost:1313/fr/map/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/map/"
+      href="http://localhost:1313/es/map/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/map/"
+      href="http://localhost:1313/map/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/miami/</loc>
+    <loc>http://localhost:1313/gallery/miami/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/miami/"
+      href="http://localhost:1313/fr/gallery/miami/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/miami/"
+      href="http://localhost:1313/es/gallery/miami/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/miami/"
+      href="http://localhost:1313/gallery/miami/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/montenegro/</loc>
+    <loc>http://localhost:1313/gallery/montenegro/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/montenegro/"
+      href="http://localhost:1313/fr/gallery/montenegro/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/montenegro/"
+      href="http://localhost:1313/es/gallery/montenegro/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/montenegro/"
+      href="http://localhost:1313/gallery/montenegro/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/montreal/</loc>
+    <loc>http://localhost:1313/gallery/montreal/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/montreal/"
+      href="http://localhost:1313/fr/gallery/montreal/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/montreal/"
+      href="http://localhost:1313/es/gallery/montreal/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/montreal/"
+      href="http://localhost:1313/gallery/montreal/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/naples/</loc>
+    <loc>http://localhost:1313/gallery/naples/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/naples/"
+      href="http://localhost:1313/fr/gallery/naples/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/naples/"
+      href="http://localhost:1313/es/gallery/naples/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/naples/"
+      href="http://localhost:1313/gallery/naples/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/new_hampshire/</loc>
+    <loc>http://localhost:1313/gallery/new_hampshire/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/new_hampshire/"
+      href="http://localhost:1313/fr/gallery/new_hampshire/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/new_hampshire/"
+      href="http://localhost:1313/es/gallery/new_hampshire/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/new_hampshire/"
+      href="http://localhost:1313/gallery/new_hampshire/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/new_york/</loc>
+    <loc>http://localhost:1313/gallery/new_york/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/new_york/"
+      href="http://localhost:1313/fr/gallery/new_york/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/new_york/"
+      href="http://localhost:1313/es/gallery/new_york/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/new_york/"
+      href="http://localhost:1313/gallery/new_york/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/niagara_falls/</loc>
+    <loc>http://localhost:1313/gallery/niagara_falls/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/niagara_falls/"
+      href="http://localhost:1313/fr/gallery/niagara_falls/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/niagara_falls/"
+      href="http://localhost:1313/es/gallery/niagara_falls/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/niagara_falls/"
+      href="http://localhost:1313/gallery/niagara_falls/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/ottawa/</loc>
+    <loc>http://localhost:1313/gallery/ottawa/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/ottawa/"
+      href="http://localhost:1313/fr/gallery/ottawa/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/ottawa/"
+      href="http://localhost:1313/es/gallery/ottawa/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/ottawa/"
+      href="http://localhost:1313/gallery/ottawa/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/paris/</loc>
+    <loc>http://localhost:1313/gallery/paris/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/paris/"
+      href="http://localhost:1313/fr/gallery/paris/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/paris/"
+      href="http://localhost:1313/es/gallery/paris/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/paris/"
+      href="http://localhost:1313/gallery/paris/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/philadelphie/</loc>
+    <loc>http://localhost:1313/gallery/philadelphie/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/philadelphie/"
+      href="http://localhost:1313/fr/gallery/philadelphie/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/philadelphie/"
+      href="http://localhost:1313/es/gallery/philadelphie/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/philadelphie/"
+      href="http://localhost:1313/gallery/philadelphie/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/quebec/</loc>
+    <loc>http://localhost:1313/gallery/quebec/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/quebec/"
+      href="http://localhost:1313/fr/gallery/quebec/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/quebec/"
+      href="http://localhost:1313/es/gallery/quebec/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/quebec/"
+      href="http://localhost:1313/gallery/quebec/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/rome/</loc>
+    <loc>http://localhost:1313/gallery/rome/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/rome/"
+      href="http://localhost:1313/fr/gallery/rome/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/rome/"
+      href="http://localhost:1313/es/gallery/rome/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/rome/"
+      href="http://localhost:1313/gallery/rome/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/suede/</loc>
+    <loc>http://localhost:1313/gallery/suede/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/suede/"
+      href="http://localhost:1313/fr/gallery/suede/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/suede/"
+      href="http://localhost:1313/es/gallery/suede/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/suede/"
+      href="http://localhost:1313/gallery/suede/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/toronto/</loc>
+    <loc>http://localhost:1313/gallery/toronto/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/toronto/"
+      href="http://localhost:1313/fr/gallery/toronto/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/toronto/"
+      href="http://localhost:1313/es/gallery/toronto/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/toronto/"
+      href="http://localhost:1313/gallery/toronto/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/</loc>
+    <loc>http://localhost:1313/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/"
+      href="http://localhost:1313/fr/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/"
+      href="http://localhost:1313/es/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/"
+      href="http://localhost:1313/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/vermont/</loc>
+    <loc>http://localhost:1313/gallery/vermont/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/vermont/"
+      href="http://localhost:1313/fr/gallery/vermont/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/vermont/"
+      href="http://localhost:1313/es/gallery/vermont/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/vermont/"
+      href="http://localhost:1313/gallery/vermont/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/videos/</loc>
+    <loc>http://localhost:1313/videos/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/videos/"
+      href="http://localhost:1313/fr/videos/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/videos/"
+      href="http://localhost:1313/es/videos/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/videos/"
+      href="http://localhost:1313/videos/"
     />
   </url>
   <url>
-    <loc>https://rctravel.pages.dev/gallery/washington/</loc>
+    <loc>http://localhost:1313/gallery/washington/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://rctravel.pages.dev/fr/gallery/washington/"
+      href="http://localhost:1313/fr/gallery/washington/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="https://rctravel.pages.dev/es/gallery/washington/"
+      href="http://localhost:1313/es/gallery/washington/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://rctravel.pages.dev/gallery/washington/"
+      href="http://localhost:1313/gallery/washington/"
     />
   </url>
 </urlset>

@@ -1,8 +1,9 @@
-const CACHE_NAME = 'chromain-portfolio-v1';
+const CACHE_NAME = 'chromain-portfolio-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/manifest.json',
-  '/globe-icon.png'
+  '/favicon.png',
+  '/favicon-192.png'
 ];
 
 // Installation du Service Worker
