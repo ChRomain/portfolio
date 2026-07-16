@@ -6,10 +6,7 @@
     <div class="h-4 w-px bg-neutral-300 dark:bg-neutral-700"></div>
     <div id="local-clock" class="text-neutral-600 dark:text-neutral-400 font-mono">--:--</div>
 
-    <!-- Animated Tooltip -->
-    <div id="weather-tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-4 py-2 bg-neutral-900/90 dark:bg-neutral-800/95 backdrop-blur-md text-white text-[11px] rounded-xl shadow-2xl opacity-0 scale-95 pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 whitespace-nowrap z-50 border border-white/10">
-        ...
-    </div>
+
 </div>
 
 <script>
@@ -61,7 +58,7 @@
     };
 
     const t = translations[currentLang] || translations.en;
-    document.getElementById('weather-tooltip').textContent = t.loading;
+
 
     // Normalize URL
     let searchURL = rawURL;
@@ -119,11 +116,7 @@
                 
                 document.getElementById('weather-icon-container').innerHTML = icon;
 
-                // Tooltip Content Builder
-                const tooltipMsg = t.weather
-                    .replace('{city}', loc.name)
-                    .replace('{desc}', conditionText.toLowerCase()) + ` | ${t.feelsLike} : ${temp}°C`;
-                document.getElementById('weather-tooltip').textContent = tooltipMsg;
+
 
                 const updateTime = () => {
                     const now = new Date();

@@ -23,7 +23,8 @@
         <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
           {{ .Title | emojify }}
         </h1>
-        <div class="mb-1">
+        <div class="mb-1 flex items-center gap-2">
+          {{ partial "flag-badge.html" . }}
           {{ partial "weather-widget.html" . }}
         </div>
       </div>

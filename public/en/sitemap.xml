@@ -453,6 +453,24 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/gallery/peru/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/fr/gallery/peru/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/es/gallery/peru/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/gallery/peru/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/gallery/philadelphie/</loc>
     <xhtml:link
       rel="alternate"

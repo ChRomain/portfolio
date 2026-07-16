@@ -218,8 +218,10 @@
       lightboxImg.src = currentImg.src;
       lightboxImg.alt = currentImg.alt;
 
-      // Mettre à jour Counter
-      counterEl.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+      // Mettre à jour Counter (en respectant les images filtrées/visibles)
+      const visibleImages = galleryImages.filter(img => img.offsetParent !== null);
+      const visibleIndex = visibleImages.indexOf(currentImg);
+      counterEl.textContent = `${visibleIndex + 1} / ${visibleImages.length}`;
 
       // Mettre à jour Caption & EXIF
       const captionText = currentImg.getAttribute('title') || currentImg.getAttribute('alt') || '';
@@ -293,13 +295,23 @@
 
     function showNext() {
       if (galleryImages.length === 0) return;
-      currentIndex = (currentIndex + 1) % galleryImages.length; // Boucle au début
+      let nextIndex = currentIndex;
+      do {
+        nextIndex = (nextIndex + 1) % galleryImages.length;
+      } while (nextIndex !== currentIndex && galleryImages[nextIndex].offsetParent === null);
+      
+      currentIndex = nextIndex;
       updateLightbox();
     }
 
     function showPrev() {
       if (galleryImages.length === 0) return;
-      currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; // Boucle à la fin
+      let prevIndex = currentIndex;
+      do {
+        prevIndex = (prevIndex - 1 + galleryImages.length) % galleryImages.length;
+      } while (prevIndex !== currentIndex && galleryImages[prevIndex].offsetParent === null);
+      
+      currentIndex = prevIndex;
       updateLightbox();
     }
 

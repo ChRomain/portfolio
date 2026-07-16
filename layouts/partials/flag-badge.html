@@ -1,0 +1,16 @@
+{{ $code := .Params.country_code }}
+{{ if $code }}
+{{ $codeLower := lower $code }}
+<div class="flag-badge-wrapper" title="{{ $code }}">
+  <div class="flag-badge">
+    <img
+      src="https://flagcdn.com/{{ $codeLower }}.svg"
+      alt="Flag of {{ $code }}"
+      class="flag-badge-img"
+      loading="lazy"
+      width="40"
+      height="40"
+    />
+  </div>
+</div>
+{{ end }}

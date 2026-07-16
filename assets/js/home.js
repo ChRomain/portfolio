@@ -32,51 +32,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Carousel Logic ---
     const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const progressBars = document.querySelectorAll('.progress-bar');
-    
+    const progressBar = document.getElementById('hero-progress-bar');
+    const counter = document.getElementById('hero-counter');
+    const btnPrev = document.getElementById('hero-prev');
+    const btnNext = document.getElementById('hero-next');
+
     let currentSlide = 0;
     const slideCount = slides.length;
     const intervalTime = 8000;
     let slideTimer;
-    
+    let progressInterval;
+
+    const updateCounter = () => {
+        if (counter) counter.textContent = `${currentSlide + 1} / ${slideCount}`;
+    };
+
+    const startProgress = () => {
+        if (!progressBar) return;
+        // Reset
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '0%';
+        void progressBar.offsetWidth; // force reflow
+        progressBar.style.transition = `width ${intervalTime}ms linear`;
+        progressBar.style.width = '100%';
+    };
+
     const showSlide = (n) => {
-        if(slideCount === 0) return;
+        if (slideCount === 0) return;
         slides[currentSlide].classList.remove('active', 'opacity-100');
         slides[currentSlide].classList.add('opacity-0');
-        
+
         currentSlide = (n + slideCount) % slideCount;
-        
+
         slides[currentSlide].classList.add('active', 'opacity-100');
         slides[currentSlide].classList.remove('opacity-0');
-        
+
+        updateCounter();
         startProgress();
-        
+
         clearInterval(slideTimer);
         slideTimer = setInterval(() => showSlide(currentSlide + 1), intervalTime);
     };
-    
-    const startProgress = () => {
-        progressBars.forEach((p) => {
-            p.style.transition = 'none';
-            p.style.width = '0%';
-        });
-        
-        if(progressBars.length > 0) {
-            // Force reflow pour relancer l'animation
-            void progressBars[currentSlide].offsetWidth; 
-            progressBars[currentSlide].style.transition = `width ${intervalTime}ms linear`;
-            progressBars[currentSlide].style.width = '100%';
-        }
-    };
-    
-    dots.forEach((dot, idx) => {
-        dot.addEventListener('click', () => {
-            showSlide(idx);
-        });
-    });
-    
+
+    if (btnPrev) btnPrev.addEventListener('click', () => showSlide(currentSlide - 1));
+    if (btnNext) btnNext.addEventListener('click', () => showSlide(currentSlide + 1));
+
     if (slideCount > 0) {
+        updateCounter();
         startProgress();
         slideTimer = setInterval(() => showSlide(currentSlide + 1), intervalTime);
     }

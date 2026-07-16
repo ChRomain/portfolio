@@ -98,6 +98,17 @@ defaultContentLanguage = "en"
       parent = "menu_americas"
       url = "#"
       weight = 10
+    [[languages.en.menu.main]]
+      name = "South America"
+      identifier = "menu_am_sud"
+      parent = "menu_americas"
+      url = "#"
+      weight = 15
+    [[languages.en.menu.main]]
+      name = "Peru"
+      parent = "menu_am_sud"
+      url = "/gallery/peru/"
+      weight = 10
 
     [[languages.en.menu.main]]
       name = "Asia"
@@ -330,6 +341,17 @@ defaultContentLanguage = "en"
       parent = "menu_americas"
       url = "#"
       weight = 10
+    [[languages.fr.menu.main]]
+      name = "Amérique du Sud"
+      identifier = "menu_am_sud"
+      parent = "menu_americas"
+      url = "#"
+      weight = 15
+    [[languages.fr.menu.main]]
+      name = "Pérou"
+      parent = "menu_am_sud"
+      url = "/fr/gallery/peru/"
+      weight = 10
 
     [[languages.fr.menu.main]]
       name = "Asie"
@@ -561,6 +583,17 @@ defaultContentLanguage = "en"
       identifier = "menu_am_central"
       parent = "menu_americas"
       url = "#"
+      weight = 10
+    [[languages.es.menu.main]]
+      name = "América del Sur"
+      identifier = "menu_am_sud"
+      parent = "menu_americas"
+      url = "#"
+      weight = 15
+    [[languages.es.menu.main]]
+      name = "Perú"
+      parent = "menu_am_sud"
+      url = "/es/gallery/peru/"
       weight = 10
 
     [[languages.es.menu.main]]

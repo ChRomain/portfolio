@@ -55,15 +55,35 @@
         </div>
     </div>
 
-    <!-- Indicateurs de progression -->
-    <div id="hero-indicators" class="absolute flex space-x-3 backdrop-blur-md p-2 hover:bg-black/40 transition-colors" 
-         style="bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 50; background: rgba(0,0,0,0.3); border-radius: 50px;">
-        {{ range $index, $img := $heroImages }}
-        <div class="carousel-dot cursor-pointer overflow-hidden transition-all shadow-inner" 
-             style="pointer-events: auto !important; width: 60px; height: 6px; background: rgba(255,255,255,0.3); border-radius: 10px;">
-            <div class="progress-bar" style="width: 0%; height: 100%; background: #ffffff; box-shadow: 0 0 10px rgba(255,255,255,0.8);"></div>
+    <!-- Indicateur de progression global -->
+    <div id="hero-indicators"
+         style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 50;
+                display: flex; align-items: center; gap: 12px;
+                background: rgba(0,0,0,0.35); backdrop-filter: blur(10px);
+                border-radius: 50px; padding: 8px 18px;">
+        <!-- Compteur X / N -->
+        <span id="hero-counter"
+              style="color: rgba(255,255,255,0.9); font-size: 0.8rem; font-weight: 600;
+                     letter-spacing: 0.05em; white-space: nowrap; min-width: 40px; text-align: center;">
+            1 / {{ len $heroImages }}
+        </span>
+        <!-- Barre de progression unique -->
+        <div style="width: 140px; height: 4px; background: rgba(255,255,255,0.25); border-radius: 10px; overflow: hidden;">
+            <div id="hero-progress-bar"
+                 style="width: 0%; height: 100%; background: #ffffff;
+                        box-shadow: 0 0 8px rgba(255,255,255,0.7); border-radius: 10px;
+                        transition: none;">
+            </div>
         </div>
-        {{ end }}
+        <!-- Boutons prev / next -->
+        <button id="hero-prev" aria-label="Image précédente"
+                style="background: none; border: none; cursor: pointer; padding: 2px 4px; color: rgba(255,255,255,0.7); line-height: 1; pointer-events: auto !important;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button id="hero-next" aria-label="Image suivante"
+                style="background: none; border: none; cursor: pointer; padding: 2px 4px; color: rgba(255,255,255,0.7); line-height: 1; pointer-events: auto !important;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
     </div>
 
     <div id="hero-scroll-btn" class="absolute bottom-24 left-1/2 -translate-x-1/2 z-[40] cursor-pointer"
@@ -183,7 +203,7 @@
     </div>
 
     {{ $wildFolders := slice "cape_cod" "maine" "new_hampshire" "vermont" "corse" "finistere" "suede" "indonesie"
-    "guatemala" "niagara_falls" "keys" "everglades" }}
+    "niagara_falls" "keys" "everglades" }}
     <div class="category-block mb-20">
         <div class="flex flex-col items-center mb-8 text-center">
             <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
@@ -219,7 +239,25 @@
         </div>
     </div>
 
-    <!-- Section Mini-Map Gateway (Full Width) -->
+    {{ $latamFolders := slice "peru" "guatemala" }}
+    <div class="category-block mb-20">
+        <div class="flex flex-col items-center mb-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
+                {{ T "cat_latam" }}
+            </h2>
+            <div class="w-16 h-1.5 bg-primary-500 rounded-full"></div>
+        </div>
+        <div
+            style="display: flex !important; flex-wrap: wrap !important; gap: 15px !important; justify-content: center !important;">
+            {{ range $allGalleries }}
+            {{ if in $latamFolders (path.Base .File.Dir) }}
+            {{ partial "gallery-card.html" . }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+
+
     <section id="homepage-map-section" class="relative w-full overflow-hidden bg-white dark:bg-neutral-900 border-y border-neutral-200 dark:border-white/5" style="height: 500px;">
         <div id="mini-map" class="w-full h-full" data-locations="{{ site.Data.locations | default slice | jsonify }}"></div>
     </section>

@@ -216,6 +216,11 @@ DESCRIPTIONS = {
         "en": "&nbsp;&nbsp;&nbsp;&nbsp;Discover the monumental architecture and unique atmosphere of Chicago. From the silver reflections of Cloud Gate in Millennium Park to the dizzying skyscrapers lining the river, immerse yourself in the energy of the Windy City.",
         "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Découvrez l'architecture monumentale et l'atmosphère unique de Chicago. Des reflets argentés du Cloud Gate au Millenium Park jusqu'aux gratte-ciel vertigineux bordant la rivière, plongez dans l'effervescence de la Windy City.",
         "es": "&nbsp;&nbsp;&nbsp;&nbsp;Descubre la arquitectura monumental y el ambiente único de Chicago. Desde los reflejos plateados del Cloud Gate en el Millennium Park hasta los vertiginosos rascacielos que bordean el río, sumérgete en la energía de la Ciudad de los Vientos."
+    },
+    "peru": {
+        "en": "&nbsp;&nbsp;&nbsp;&nbsp;From the Pacific cliffs of Lima to the ancient secrets of the Sacred Valley, through the high-altitude oasis of Huacachina and the colored peaks of Rainbow Mountain, embark on an immersive journey across the land of the Incas.",
+        "fr": "&nbsp;&nbsp;&nbsp;&nbsp;Des falaises pacifiques de Lima aux secrets millénaires de la Vallée Sacrée, en passant par l'oasis d'altitude de la Huacachina et les crêtes colorées de la Rainbow Mountain, embarquez pour un voyage immersif à travers la terre des Incas.",
+        "es": "&nbsp;&nbsp;&nbsp;&nbsp;Desde los acantilados del Pacífico en Lima hasta los secretos milenarios del Valle Sagrado, pasando por el oasis de altura de la Huacachina y las cumbres coloridas de la Montaña de Colores, embárcate en un viaje inmersivo por la tierra de los Incas."
     }
 }
 
@@ -228,7 +233,8 @@ FOLDER_TO_COUNTRY = {
     "new_york": "USA", "washington": "USA", "boston": "USA", "philadelphie": "USA", "cape_cod": "USA", "maine": "USA", "vermont": "USA", "new_hampshire": "USA", "miami": "USA", "keys": "USA", "everglades": "USA", "chicago": "USA",
     "montreal": "Canada", "quebec": "Canada", "ottawa": "Canada", "toronto": "Canada", "niagara_falls": "Canada", "canada": "Canada",
     "guatemala": "Guatemala",
-    "indonesie": "Indonésie"
+    "indonesie": "Indonésie",
+    "peru": "Pérou"
 }
 
 # --- DICTIONNAIRES SEO POUR L'IA SÉMANTIQUE ---
@@ -318,7 +324,23 @@ DEFAULT_GPS = {
     "new_york": [40.7128, -74.0060], "washington": [38.9072, -77.0369], "boston": [42.3601, -71.0589], "philadelphie": [39.9526, -75.1652], "cape_cod": [41.6688, -70.2962], "maine": [45.2538, -69.4455], "vermont": [44.5588, -72.5778], "new_hampshire": [43.1939, -71.5724], "miami": [25.7617, -80.1918], "keys": [24.5551, -81.7800], "everglades": [25.2866, -80.8987], "chicago": [41.8781, -87.6298],
     "montreal": [45.5017, -73.5673], "quebec": [46.8139, -71.2080], "ottawa": [45.4215, -75.6972], "toronto": [43.6532, -79.3832], "niagara_falls": [43.0896, -79.0849], "canada": [45.5017, -73.5673],
     "guatemala": [15.7835, -90.2308],
-    "indonesie": [-8.4095, 115.1889]
+    "indonesie": [-8.4095, 115.1889],
+    "peru": [-12.04637, -77.04279]
+}
+
+# --- COORDONNÉES DES DESTINATIONS DU PÉROU ---
+PERU_COORDS = {
+    "lima": [-12.04637, -77.04279],
+    "paracas": [-13.7144, -76.2505],
+    "huacachina": [-14.0875, -75.7633],
+    "nazca": [-14.8307, -74.9386],
+    "arequipa": [-16.4090, -71.5375],
+    "colca_canyon": [-15.6092, -71.8874],
+    "sacred_valley": [-13.3278, -72.0734],
+    "salineras_de_maras": [-13.3045, -72.1554],
+    "rainbow_mountain": [-13.8633, -71.3028],
+    "aguas_calientes": [-13.1551, -72.5249],
+    "machu_picchu": [-13.1631, -72.5450]
 }
 
 def clean_name(name):
@@ -465,6 +487,211 @@ def sync_portfolio():
         
         folder_clean = clean_name(folder)
         display_title = folder.replace('_', ' ').title()
+        
+        # --- CAS SPÉCIAL DU PÉROU (Toutes les destinations dans une seule page) ---
+        if folder_clean == "peru":
+            peru_subfolders = [
+                d for d in os.listdir(source_folder_path)
+                if os.path.isdir(os.path.join(source_folder_path, d))
+            ]
+            
+            peru_route_order = [
+                "lima", "paracas", "huacachina", "nazca", "arequipa", "colca_canyon",
+                "sacred_valley", "salineras_de_maras", "rainbow_mountain", "aguas_calientes", "machu_picchu"
+            ]
+            
+            subfolder_map = {clean_name(sf): sf for sf in peru_subfolders}
+            ordered_clean_subs = [x for x in peru_route_order if x in subfolder_map]
+            for sf_clean in subfolder_map:
+                if sf_clean not in ordered_clean_subs:
+                    ordered_clean_subs.append(sf_clean)
+                    
+            peru_images_metadata = []
+            peru_itinerary_data = []
+            
+            hugo_assets_path = os.path.join(ASSETS_DIR, "peru")
+            hugo_content_path = os.path.join(CONTENT_DIR, "peru")
+            os.makedirs(hugo_assets_path, exist_ok=True)
+            os.makedirs(hugo_content_path, exist_ok=True)
+            
+            peru_dom_color = ""
+            peru_mood_tags = set()
+            first_image_overall = None
+            
+            for sf_clean in ordered_clean_subs:
+                sf_original = subfolder_map[sf_clean]
+                sub_source_path = os.path.join(source_folder_path, sf_original)
+                
+                sf_gps = PERU_COORDS.get(sf_clean)
+                sf_date = None
+                
+                sf_images = [f for f in os.listdir(sub_source_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'webp'))]
+                sf_images.sort()
+                
+                sf_count = 0
+                sf_cover = None
+                
+                for idx, img_name in enumerate(sf_images):
+                    img_num = idx + 1
+                    img_clean = f"peru_{sf_clean}_{img_num:03d}.webp"
+                    target_path = os.path.join(hugo_assets_path, img_clean)
+                    full_source_path = os.path.join(sub_source_path, img_name)
+                    
+                    exif_info, gps_info, date_info = get_exif_data(full_source_path)
+                    
+                    if gps_info and not sf_gps:
+                        try:
+                            lat_s, lng_s = gps_info.split(',')
+                            sf_gps = [float(lat_s), float(lng_s)]
+                        except: pass
+                    
+                    if date_info and not sf_date:
+                        sf_date = date_info
+                        
+                    gps_attr = f' data-gps="{gps_info}"' if gps_info else ""
+                    
+                    img_dom_color = get_dominant_color(full_source_path)
+                    img_mood_tags = get_mood_tags(sf_original.replace('_', ' ').title(), {}, img_dom_color)
+                    
+                    peru_mood_tags.update(img_mood_tags)
+                    if not peru_dom_color:
+                        peru_dom_color = img_dom_color
+                    
+                    try:
+                        if not os.path.exists(target_path):
+                            img = Image.open(full_source_path)
+                            img = ImageOps.exif_transpose(img)
+                            width, height = img.size
+                            
+                            if img.width > MAX_WIDTH:
+                                ratio = MAX_WIDTH / float(img.width)
+                                new_height = int(float(img.height) * float(ratio))
+                                img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
+                                width, height = MAX_WIDTH, new_height 
+                                
+                            img.save(target_path, "WEBP", quality=QUALITY, method=6)
+                            print(f"    ↳ [{img_num}/{len(sf_images)}] {sf_clean}/{img_clean} optimisée.")
+                        else:
+                            img = Image.open(target_path)
+                            width, height = img.size
+                            
+                        try:
+                            lqip_img = img.copy()
+                            lqip_img.thumbnail((20, 20), Image.Resampling.LANCZOS)
+                            buffered = io.BytesIO()
+                            lqip_img.save(buffered, format="JPEG", quality=30)
+                            img_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
+                            lqip_style = f'background-image: url(data:image/jpeg;base64,{img_base64}); background-size: cover;'
+                        except Exception as e:
+                            print(f"Error generating LQIP for {img_clean}: {e}")
+                            lqip_style = ""
+                            
+                        color_mood = "unique"
+                        if "warm" in img_mood_tags: color_mood = "warm"
+                        elif "cold" in img_mood_tags: color_mood = "cold"
+                        elif "lush" in img_mood_tags: color_mood = "lush"
+                        elif "bright" in img_mood_tags: color_mood = "bright"
+                        elif "dark" in img_mood_tags: color_mood = "dark"
+                        
+                        img_src = f"/gallery/peru/{img_clean}"
+                        if not first_image_overall:
+                            first_image_overall = img_src
+                        if not sf_cover:
+                            sf_cover = img_src
+                            
+                        peru_images_metadata.append({
+                            "src": img_src,
+                            "title": exif_info,
+                            "gps": gps_attr,
+                            "width": width,
+                            "height": height,
+                            "tags": img_mood_tags,
+                            "color_mood": color_mood,
+                            "lqip_style": lqip_style,
+                            "destination": sf_clean
+                        })
+                        
+                        total_images_count += 1
+                        sf_count += 1
+                    except Exception as e:
+                        print(f"❌ Erreur sur {img_name} ({sf_clean}): {e}")
+                
+                if not sf_date:
+                    date_map = {
+                        "lima": "2026-06-20", "paracas": "2026-06-22", "huacachina": "2026-06-23",
+                        "nazca": "2026-06-24", "arequipa": "2026-06-25", "colca_canyon": "2026-06-27",
+                        "sacred_valley": "2026-06-29", "salineras_de_maras": "2026-06-29",
+                        "rainbow_mountain": "2026-06-30", "aguas_calientes": "2026-07-02", "machu_picchu": "2026-07-03"
+                    }
+                    sf_date = date_map.get(sf_clean, "2026-07-01")
+                    
+                if not sf_gps:
+                    sf_gps = PERU_COORDS.get(sf_clean, [-12.04637, -77.04279])
+                    
+                peru_itinerary_data.append({
+                    "id": sf_clean,
+                    "name": sf_original.replace('_', ' ').title(),
+                    "coords": sf_gps,
+                    "date": sf_date,
+                    "cover": sf_cover or "",
+                    "count": sf_count
+                })
+            
+            if first_image_overall:
+                shutil.copy(os.path.join("./static", first_image_overall.lstrip("/")), os.path.join(hugo_content_path, "feature.webp"))
+            
+            languages = {
+                "en": {"file": "index.md", "title": "Peru", "desc_prefix": "Explore my immersive photography portfolio from Peru."},
+                "fr": {"file": "index.fr.md", "title": "Pérou", "desc_prefix": "Découvrez mes plus beaux clichés et récits de voyage au Pérou."},
+                "es": {"file": "index.es.md", "title": "Perú", "desc_prefix": "Explore mi portafolio fotográfico inmersivo de Perú."}
+            }
+            
+            gallery_desc_map = DESCRIPTIONS.get("peru", {})
+            
+            for lang, config in languages.items():
+                filename = config["file"]
+                meta_desc = f"{config['desc_prefix']} Un carnet de voyage visuel par Romain Charretteur."
+                gallery_desc = gallery_desc_map.get(lang, "")
+                
+                lang_gallery_html = ""
+                for img_data in peru_images_metadata:
+                    alt_seo = generate_smart_alt(lang, "Peru", img_data['tags'], img_data['color_mood'])
+                    lang_gallery_html += f'    <img src="{img_data["src"]}" \n'
+                    lang_gallery_html += f'         alt="{alt_seo}" \n'
+                    lang_gallery_html += f'         title="{img_data["title"]}" \n'
+                    lang_gallery_html += f'         {img_data["gps"]} \n'
+                    lang_gallery_html += f'         data-destination="{img_data["destination"]}" \n'
+                    lang_gallery_html += f'         width="{img_data["width"]}" height="{img_data["height"]}" \n'
+                    lang_gallery_html += f'         loading="lazy" decoding="async" \n'
+                    lang_gallery_html += f'         data-lqip="true" \n'
+                    lang_gallery_html += f'         style="{img_data["lqip_style"]}" \n'
+                    lang_gallery_html += f'         onload="this.classList.add(\'loaded\')" />\n'
+                
+                with open(os.path.join(hugo_content_path, filename), "w") as f:
+                    f.write('---\n')
+                    f.write(f'title: "{config["title"]}"\n')
+                    f.write(f'description: "{meta_desc}"\n')
+                    f.write(f'layout: "peru"\n')
+                    f.write(f'dominant_color: "{peru_dom_color}"\n')
+                    f.write(f'tags: {json.dumps(list(peru_mood_tags))}\n')
+                    f.write(f'itinerary: {json.dumps(peru_itinerary_data)}\n')
+                    f.write(f'intro_text: {json.dumps(gallery_desc)}\n')
+                    f.write('---\n\n')
+                    f.write(f'{{{{< gallery >}}}}\n{lang_gallery_html}{{{{< /gallery >}}}}')
+            
+            peru_gps = PERU_COORDS.get("lima", [-12.04637, -77.04279])
+            all_locations.append({
+                "name": display_title,
+                "coords": peru_gps,
+                "url": "/gallery/peru/",
+                "country": "Pérou",
+                "date": "2026-06-20",
+                "color": peru_dom_color,
+                "tags": list(peru_mood_tags)
+            })
+            
+            print(f"✅ Pérou : {len(peru_images_metadata)} photos synchronisées sur l'ensemble des destinations.")
+            continue
         
         hugo_content_path = os.path.join(CONTENT_DIR, folder_clean)
         hugo_assets_path = os.path.join(ASSETS_DIR, folder_clean)
