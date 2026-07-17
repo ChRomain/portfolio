@@ -68,6 +68,10 @@ VIDEOS = {
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-13-27.mov",
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-12.mov",
         "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-59.mov"
+    ],
+    "machu_picchu": [
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-07-16%2022-42-17.mp4",
+        "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-07-16%2022-43-50.mp4"
     ]
 }
 

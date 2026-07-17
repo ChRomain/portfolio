@@ -112,6 +112,10 @@
             "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-06-29%2012-32-58.mp4",
             "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-06-29%2012-33-40.mp4",
             "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-06-29%2012-34-18.mov"
+        ],
+        "machu_picchu": [
+            "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-07-16%2022-42-17.mp4",
+            "https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-07-16%2022-43-50.mp4"
         ]
     },
     "categories": {
@@ -135,6 +139,7 @@
         "paracas": "peru",
         "rainbow_mountain": "peru",
         "sacred_valley": "peru",
-        "salineras_de_maras": "peru"
+        "salineras_de_maras": "peru",
+        "machu_picchu": "peru"
     }
 }
