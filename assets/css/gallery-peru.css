@@ -182,7 +182,7 @@
 
 /* Spacing at bottom of map */
 .peru-map-section {
-  margin-bottom: 120px !important;
+  margin-bottom: 0;
 }
 
 /* Glass Buttons (fullscreen & satellite) */

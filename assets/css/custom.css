@@ -1357,6 +1357,7 @@ html, body {
 /* --- 19. TRAVEL ITINERARY --- */
 .itinerary-section {
     margin: 2rem 0 2.5rem;
+    text-align: left;
 }
 
 .itinerary-details {
