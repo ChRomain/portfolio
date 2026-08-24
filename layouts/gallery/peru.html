@@ -34,7 +34,68 @@
           </div>
         </div>
         <div class="max-w-2xl mx-auto px-4">
-          {{ partial "itinerary-block.html" . }}
+          <div class="itinerary-section not-prose">
+            <details class="itinerary-details" id="peru-itinerary-details">
+              <summary class="itinerary-summary">
+                <span class="itinerary-summary-icon">📍</span>
+                <span>Voir l'itinéraire</span>
+                <svg class="itinerary-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </summary>
+              <div class="itinerary-body">
+                {{ range .Params.itinerary_days }}
+                  <div class="itinerary-day">
+                    <h4 class="itinerary-day-label">{{ .label }}</h4>
+                    <ul class="itinerary-items">
+                      {{ range .items }}
+                        <li>{{ . }}</li>
+                      {{ end }}
+                    </ul>
+                  </div>
+                {{ end }}
+
+                <!-- Interactive Map & Cinematic Timeline (moved inside the itinerary section) -->
+                <div class="peru-map-section mt-6">
+                  <div class="map-container-wrapper relative w-full overflow-hidden rounded-2xl shadow-2xl border border-neutral-200 dark:border-neutral-800" style="height: 500px;">
+                    <div id="peru-map" style="width: 100%; height: 100%; background: #111;"></div>
+
+                    <!-- Bouton Plein Écran -->
+                    <button id="peru-fullscreen-toggle" class="peru-glass-button" style="top: 16px; right: 16px;" title="Plein écran">
+                      <svg id="peru-fs-expand-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                      <svg id="peru-fs-collapse-icon" class="peru-hidden" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
+                    </button>
+
+                    <!-- Bouton Vue Satellite -->
+                    <button id="peru-style-toggle" class="peru-glass-button" style="top: 68px; right: 16px;" title="Vue satellite">
+                      <svg id="peru-style-satellite-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                      <svg id="peru-style-dark-icon" class="peru-hidden" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+
+                    <!-- Cinematic Journey Timeline Controller (styled identical to the map section) -->
+                    <div id="journey-timeline" class="glass-timeline animate-fade-in">
+                      <button id="peru-play-pause" class="timeline-play-btn" title="Lancer le voyage">
+                        <svg id="peru-play-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        <svg id="peru-pause-icon" class="peru-hidden" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                      </button>
+
+                      <div id="timeline-track-wrapper">
+                        <div id="peru-timeline-track"></div>
+                      </div>
+
+                      <div id="peru-current-dest-date" class="timeline-date-display">...</div>
+                    </div>
+
+                    <!-- Floating Display for active destination name -->
+                    <div id="peru-hud" class="absolute top-4 left-4 p-4 rounded-xl z-[1000] shadow-lg bg-white/80 dark:bg-black/75 backdrop-blur border border-white/20 dark:border-white/10 flex flex-col pointer-events-none">
+                      <span id="peru-current-dest-name" class="text-lg font-black tracking-wide text-neutral-800 dark:text-neutral-100">Pérou</span>
+                      <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-500 mt-0.5" data-key="hud_sub">Itinéraire Déroulé</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
 
@@ -64,49 +125,6 @@
             {{ partial "peru-video-item.html" . }}
           {{ end }}
 
-        </div>
-      </div>
-
-      <!-- Itinerary Map Section at the Bottom -->
-      <div class="peru-map-section mt-20 mb-24 max-w-5xl mx-auto w-full px-4">
-        <h2 class="text-2xl font-bold mb-6 text-center text-neutral-800 dark:text-neutral-200 font-sans tracking-wide">
-          <span data-key="itinerary_title">Itinéraire du Voyage</span>
-        </h2>
-        
-        <div class="map-container-wrapper relative w-full overflow-hidden rounded-2xl shadow-2xl border border-neutral-200 dark:border-neutral-800" style="height: 500px;">
-          <div id="peru-map" style="width: 100%; height: 100%; background: #111;"></div>
-
-          <!-- Bouton Plein Écran -->
-          <button id="peru-fullscreen-toggle" class="peru-glass-button" style="top: 16px; right: 16px;" title="Plein écran">
-            <svg id="peru-fs-expand-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-            <svg id="peru-fs-collapse-icon" class="peru-hidden" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
-          </button>
-
-          <!-- Bouton Vue Satellite -->
-          <button id="peru-style-toggle" class="peru-glass-button" style="top: 68px; right: 16px;" title="Vue satellite">
-            <svg id="peru-style-satellite-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-            <svg id="peru-style-dark-icon" class="peru-hidden" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          </button>
-
-          <!-- Cinematic Journey Timeline Controller (styled identical to the map section) -->
-          <div id="journey-timeline" class="glass-timeline animate-fade-in">
-            <button id="peru-play-pause" class="timeline-play-btn" title="Lancer le voyage">
-              <svg id="peru-play-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              <svg id="peru-pause-icon" class="peru-hidden" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
-            </button>
-            
-            <div id="timeline-track-wrapper">
-              <div id="peru-timeline-track"></div>
-            </div>
-            
-            <div id="peru-current-dest-date" class="timeline-date-display">...</div>
-          </div>
-
-          <!-- Floating Display for active destination name -->
-          <div id="peru-hud" class="absolute top-4 left-4 p-4 rounded-xl z-[1000] shadow-lg bg-white/80 dark:bg-black/75 backdrop-blur border border-white/20 dark:border-white/10 flex flex-col pointer-events-none">
-            <span id="peru-current-dest-name" class="text-lg font-black tracking-wide text-neutral-800 dark:text-neutral-100">Pérou</span>
-            <span class="text-[10px] uppercase font-bold tracking-widest text-neutral-500 mt-0.5" data-key="hud_sub">Itinéraire Déroulé</span>
-          </div>
         </div>
       </div>
 

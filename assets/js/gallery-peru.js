@@ -254,6 +254,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
+  // The map now lives inside a collapsed <details> element, so it initializes
+  // with a zero-size container; fix its tile grid the first time it's opened.
+  const peruItineraryDetails = document.getElementById('peru-itinerary-details');
+  if (peruItineraryDetails) {
+    peruItineraryDetails.addEventListener('toggle', () => {
+      if (peruItineraryDetails.open) {
+        setTimeout(() => map.invalidateSize(), 50);
+      }
+    });
+  }
+
   // Draw itinerary dashed polyline
   const coordsList = itinerary.filter(item => item.coords).map(item => item.coords);
   const polyline = L.polyline(coordsList, {

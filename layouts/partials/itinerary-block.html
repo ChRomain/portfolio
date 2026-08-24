@@ -16,17 +16,10 @@
     {{ $itinMapJS = $itinMapJS | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
     <script defer src="{{ $itinMapJS.RelPermalink }}" integrity="{{ $itinMapJS.Data.Integrity }}"></script>
   {{ end }}
-  {{ $lang := .Language.Lang }}
-  {{ $heading := printf "%s Travel Itinerary" .Title }}
-  {{ if eq $lang "fr" }}
-    {{ $heading = printf "Itinéraire de voyage — %s" .Title }}
-  {{ else if eq $lang "es" }}
-    {{ $heading = printf "Itinerario de viaje — %s" .Title }}
-  {{ end }}
   <details class="itinerary-details">
     <summary class="itinerary-summary">
       <span class="itinerary-summary-icon">📍</span>
-      <span>{{ $heading }}</span>
+      <span>Voir l'itinéraire</span>
       <svg class="itinerary-chevron" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
