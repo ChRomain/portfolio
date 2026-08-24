@@ -1,0 +1,14 @@
+{{/*
+  Renders a single video card for the Peru gallery video grid.
+  Expects "." to be one entry of site.Data.peru_videos:
+    - destination: itinerary id used for data-destination / filtering (required)
+    - src: direct video URL (required)
+*/}}
+<div class="peru-video-item" data-destination="{{ .destination }}">
+  <video loop muted playsinline preload="metadata" class="peru-video-el">
+    <source src="{{ .src }}">
+  </video>
+  <div class="peru-video-controls"><button class="peru-play-btn" aria-label="Play"><svg class="peru-play-icon" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><svg class="peru-pause-icon" style="display:none" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></button></div>
+  <button class="peru-mute-btn" aria-label="Mute"><svg class="peru-mute-off" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"/></svg><svg class="peru-mute-on" style="display:none" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/></svg></button>
+  <div class="peru-vprog-wrap"><div class="peru-vprog-bar"></div></div>
+</div>

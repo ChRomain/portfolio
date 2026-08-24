@@ -116,6 +116,7 @@ main {
 .sub-menu-level-2 {
     top: 100% !important;
     left: 0 !important;
+    margin-top: 0 !important;
 }
 
 /* Positionnement NIVEAU 3 (À droite du niveau 2) */
@@ -219,27 +220,6 @@ header,
 nav,
 .instagram-container {
     overflow: visible !important;
-}
-
-/* Positionnement NIVEAU 2 (Sous les Continents) */
-.sub-menu-level-2 {
-    top: 100% !important;
-    left: 0 !important;
-    margin-top: 0 !important;
-}
-
-/* Positionnement NIVEAU 3 (À droite des Pays) */
-.sub-menu-level-3 {
-    left: 100% !important;
-    top: 0 !important;
-    margin-left: 1px !important;
-}
-
-/* Affichage au survol */
-.group:hover>.sub-menu-level-2,
-.group\/sub:hover>.sub-menu-level-3 {
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 /* Styles des liens et état actif */
@@ -721,15 +701,20 @@ nav a[href$="/map/"]:hover,
 }
 
 /* --- 15. SEARCH UI SOBER RECOVERY --- */
-#search-wrapper *, 
-#search-wrapper a, 
-#search-wrapper span, 
+#search-wrapper *,
+#search-wrapper a,
+#search-wrapper span,
 #search-wrapper div {
     text-decoration: none !important;
     text-decoration-line: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
-    outline: none !important;
+}
+
+#search-wrapper a:focus-visible,
+#search-wrapper button:focus-visible {
+    outline: 2px solid currentColor !important;
+    outline-offset: 2px;
 }
 
 .search-result-item a {
@@ -791,7 +776,7 @@ img[data-lqip="true"].loaded {
     filter: blur(0);
 }
 
-/* --- Homepage Gateway Map --- */
+/* --- 20. HOMEPAGE GATEWAY MAP --- */
 .hero-carousel-container,
 #homepage-map-section {
     width: 100vw !important;
@@ -882,7 +867,7 @@ img[data-lqip="true"].loaded {
     -webkit-text-fill-color: #ffffff !important; /* Pour contourner certains thèmes */
 }
 
-/* --- Travel Dashboard --- */
+/* --- 21. TRAVEL DASHBOARD --- */
 #travel-dashboard {
     perspective: 1000px;
 }
@@ -947,16 +932,7 @@ img[data-lqip="true"].loaded {
     margin-bottom: 1.5rem !important;
 }
 
-.gallery-intro-text p:first-of-type::first-letter {
-    font-size: 3.5rem;
-    float: left;
-    margin-right: 0.75rem;
-    line-height: 1;
-    font-weight: 700;
-    color: #3b82f6; /* Accent color */
-}
-
-/* Mise à jour du sélecteur pour la lettrine (Drop Cap) */
+/* Lettrine (Drop Cap) */
 .gallery-intro-text .gallery-description::first-letter,
 .gallery-intro-text p:first-of-type::first-letter {
     font-family: 'Playfair Display', serif !important;
@@ -1332,7 +1308,7 @@ html, body {
     background: rgba(255, 255, 255, 0.35);
 }
 
-/* --- FLAG BADGE --- */
+/* --- 22. FLAG BADGE --- */
 .flag-badge-wrapper {
     display: inline-flex;
     align-items: center;
@@ -1376,4 +1352,122 @@ html, body {
     object-fit: cover;
     object-position: center;
     display: block;
+}
+
+/* --- 19. TRAVEL ITINERARY --- */
+.itinerary-section {
+    margin: 2rem 0 2.5rem;
+}
+
+.itinerary-details {
+    border-radius: 0.9rem;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.dark .itinerary-details {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.itinerary-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--tw-prose-headings, #171717);
+    list-style: none;
+    user-select: none;
+}
+
+.dark .itinerary-summary {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.itinerary-summary::-webkit-details-marker {
+    display: none;
+}
+
+.itinerary-summary-icon {
+    font-size: 1.05em;
+}
+
+.itinerary-chevron {
+    width: 1rem;
+    height: 1rem;
+    margin-left: auto;
+    transition: transform 0.25s ease;
+    opacity: 0.6;
+}
+
+.itinerary-details[open] .itinerary-chevron {
+    transform: rotate(180deg);
+}
+
+.itinerary-body {
+    padding: 0 1.25rem 1.25rem;
+    display: grid;
+    gap: 1.1rem;
+}
+
+.itinerary-map-wrapper {
+    margin-bottom: 1rem;
+}
+
+.itinerary-map {
+    width: 100%;
+    height: 320px;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .itinerary-map {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.itinerary-day-label {
+    margin: 0 0 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--tw-prose-headings, #171717);
+}
+
+.dark .itinerary-day-label {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.itinerary-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.3rem;
+}
+
+.itinerary-items li {
+    font-size: 0.92rem;
+    color: rgba(0, 0, 0, 0.65);
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.dark .itinerary-items li {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.itinerary-items li::before {
+    content: "";
+    position: absolute;
+    left: 0.15rem;
+    top: 0.55rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.5;
 }

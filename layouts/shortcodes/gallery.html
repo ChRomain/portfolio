@@ -5,9 +5,12 @@
 </div>
 
 {{ if (findRE "data-gps=" .Inner) }}
-<!-- Leaflet pour la mini-carte GPS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Leaflet pour la mini-carte GPS (chargement non bloquant) -->
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /></noscript>
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 {{ end }}
 
 <style>

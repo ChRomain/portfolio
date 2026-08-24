@@ -1,0 +1,370 @@
+/* Reset filter buttons style to prevent outlines or bottom lines */
+.filter-btn {
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: none !important;
+}
+
+.dark .filter-btn {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Active filter styling */
+.filter-btn.active-filter {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35) !important;
+}
+
+/* Custom hidden class helper specific to Peru to avoid clashing with Tailwind */
+.peru-hidden {
+  display: none !important;
+}
+
+/* Filter hidden class - needs to beat .portfolio-grid-final > * { display: inline-block !important }
+   so we use a compound selector for higher specificity */
+.portfolio-grid-final > .peru-filter-hidden {
+  display: none !important;
+}
+
+/* Timeline styles matching map.html style specs */
+.glass-timeline {
+  position: absolute;
+  bottom: 25px;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: 460px;
+  max-width: 92vw;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  padding: 6px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.dark .glass-timeline {
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-play-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+.timeline-play-btn:hover {
+  transform: scale(1.1);
+  background: #2563eb;
+}
+
+#timeline-track-wrapper {
+  flex-grow: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#peru-timeline-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark #peru-timeline-track {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.timeline-bubble {
+  width: 10px;
+  height: 10px;
+  background: #94a3b8;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 2;
+}
+
+.dark .timeline-bubble {
+  background: #64748b;
+}
+
+.timeline-bubble:hover {
+  transform: scale(1.8);
+  background: #3b82f6;
+}
+
+.timeline-bubble.active {
+  width: 14px;
+  height: 14px;
+  background: #3b82f6;
+  box-shadow: 0 0 12px #3b82f6;
+  transform: scale(1.2);
+}
+
+.timeline-bubble.passed {
+  background: #3b82f6;
+  opacity: 0.7;
+}
+
+.timeline-date-display {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #334155;
+  min-width: 90px;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.dark .timeline-date-display {
+  color: #cbd5e1;
+}
+
+/* Map markers styling */
+.custom-peru-marker {
+  transition: transform 0.3s ease;
+}
+.peru-map-marker {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.peru-map-marker.empty-marker {
+  background: linear-gradient(135deg, #64748b, #475569);
+  border-color: #cbd5e1;
+}
+.peru-map-marker.empty-marker::after {
+  content: '📍';
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.peru-map-marker.active-marker {
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+  transform: scale(1.2);
+}
+
+/* Spacing at bottom of map */
+.peru-map-section {
+  margin-bottom: 120px !important;
+}
+
+/* Glass Buttons (fullscreen & satellite) */
+.peru-glass-button {
+  position: absolute;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .peru-glass-button {
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.peru-glass-button:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: scale(1.05);
+}
+
+/* Fullscreen states */
+.map-container-wrapper.peru-is-fullscreen,
+.map-container-wrapper.peru-is-pseudo-fullscreen {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0 !important;
+  background: #111;
+  z-index: 99999 !important;
+}
+
+/* Leaflet Zoom Controls Style (matching /map) */
+.peru-map-section .leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.peru-map-section .leaflet-control-zoom-in,
+.peru-map-section .leaflet-control-zoom-out {
+  background-color: rgba(38, 38, 38, 0.9) !important;
+  color: #3b82f6 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.peru-map-section .leaflet-control-zoom-in:hover,
+.peru-map-section .leaflet-control-zoom-out:hover {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+  color: #ec4899 !important;
+}
+
+.peru-map-section .leaflet-control-zoom-out {
+  border-radius: 0 0 8px 8px !important;
+}
+
+.peru-map-section .leaflet-control-zoom-in {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* Peru Video Items */
+.peru-video-grid {
+  column-count: 4;
+  column-gap: 16px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 1200px) { .peru-video-grid { column-count: 3; } }
+@media (max-width: 768px)  { .peru-video-grid { column-count: 2; column-gap: 12px; } }
+@media (max-width: 480px)  { .peru-video-grid { column-count: 1; } }
+
+.peru-video-item {
+  break-inside: avoid-column;
+  -webkit-column-break-inside: avoid;
+  display: inline-block !important;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 8px;
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.peru-video-item.peru-filter-hidden {
+  display: none !important;
+}
+
+.peru-video-item:hover {
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(59, 130, 246, 0.5) !important;
+}
+
+.peru-video-el {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 8px;
+}
+
+.peru-video-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.peru-video-item:hover .peru-video-controls { opacity: 1; }
+
+.peru-play-btn {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+.peru-play-btn:hover { background: rgba(59, 130, 246, 0.8); }
+
+.peru-mute-btn {
+  position: absolute;
+  bottom: 28px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.peru-video-item:hover .peru-mute-btn { opacity: 1; }
+
+.peru-vprog-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.peru-vprog-bar {
+  height: 100%;
+  width: 0%;
+  background: #3b82f6;
+  transition: width 0.5s linear;
+}

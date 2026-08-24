@@ -1,7 +1,8 @@
 ---
 title: "Bordeaux"
-description: "Explore my immersive photography portfolio from Bordeaux. Un carnet de voyage visuel par Romain Charretteur."
+description: "Contemplate a city where history and modernity find a perfect balance. From the golden stone of the Grosse Cloche to the futuristic curves of the Cité du…"
 layout: "gallery"
+images: ["/gallery/bordeaux/feature.webp"]
 dominant_color: "#8cacd7"
 tags: ["vintage", "ocean", "sunset", "urban"]
 ---
@@ -16,9 +17,9 @@ tags: ["vintage", "ocean", "sunset", "urban"]
          title="iPhone 15 | f/1.6 | 1/763s | ISO 32" 
           data-gps="44.86324,-0.55120" 
          width="1600" height="2133" 
-         loading="lazy" decoding="async" 
+         loading="eager" fetchpriority="high" decoding="async" 
          data-lqip="true" 
-         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCeY+WMKMse1V9Sfy7VATy/P4U65njW/BGduOao3spnm4JKqMDIrRzuQoj5cGTBVenXFRO5XBGOuOlFFQy0f//Z); background-size: cover;" 
+         style="background-image: url(/gallery/bordeaux/lqip/bordeaux_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/bordeaux/bordeaux_002.webp" 
          alt="Capturing the nostalgic essence of Bordeaux. Photo by Romain Charretteur." 
@@ -27,16 +28,16 @@ tags: ["vintage", "ocean", "sunset", "urban"]
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
-         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxaAN7/wCRUk9nDIPmUCqFrPtPerpuAUHc1BRhxyMEY56CnmZ9o57UUVRJ/9k=); background-size: cover;" 
+         style="background-image: url(/gallery/bordeaux/lqip/bordeaux_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/bordeaux/bordeaux_003.webp" 
-         alt="A historic view of Bordeaux. artistique" 
+         alt="A historic view of Bordeaux. artistic" 
          title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" 
           
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
-         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCFZ40AZ17cBkyD+tK92XjMaJwcHNVCk4PysABwM81JAjqzNK2RjrUSehSSuKzHrQq+buDE4x2NFFJ7DW5//9k=); background-size: cover;" 
+         style="background-image: url(/gallery/bordeaux/lqip/bordeaux_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/bordeaux/bordeaux_004.webp" 
          alt="Visual exploration of Bordeaux, featuring a retro aesthetic." 
@@ -45,15 +46,15 @@ tags: ["vintage", "ocean", "sunset", "urban"]
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
-         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCnGDHGyOpAbHvio5EJiZBnGcn1qxFLGwbcwB9DRdPGIDjqCMnGahMpoakaGcMVGSc1M6KyzcAdOB9aKKGI/9k=); background-size: cover;" 
+         style="background-image: url(/gallery/bordeaux/lqip/bordeaux_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
     <img src="/gallery/bordeaux/bordeaux_005.webp" 
-         alt="A historic view of Bordeaux. artistique" 
+         alt="A historic view of Bordeaux. artistic" 
          title="iPhone 15 | f/1.6 | 1/25s | ISO 500" 
           data-gps="44.83522,-0.57141" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
-         style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABsSFBcUERsXFhceHBsgKEIrKCUlKFE6PTBCYFVlZF9VXVtqeJmBanGQc1tdhbWGkJ6jq62rZ4C8ybqmx5moq6T/2wBDARweHigjKE4rK06kbl1upKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT/wAARCAAUAA8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCKQ4AOBz71E8jAkAAfWnzTK8jKAuFPamIjSsBuwBwTVuu5RJVJJhZY8qZsDIxg1PJhDJtGOFP40UVyPc2P/9k=); background-size: cover;" 
+         style="background-image: url(/gallery/bordeaux/lqip/bordeaux_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
 {{< /gallery >}}

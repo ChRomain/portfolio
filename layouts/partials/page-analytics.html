@@ -1,0 +1,23 @@
+{{/*
+  Shared page analytics/likes tracking script.
+  Loads the theme's js/page.js (views + likes counters) with the same
+  data-oid / data-oid-likes wiring used across single pages and gallery
+  templates (e.g. layouts/gallery/single.html, layouts/gallery/peru.html).
+  Expects "." to be the current Page context.
+*/}}
+{{ $translations := .AllTranslations }}
+{{ with .File }}
+  {{ $path := .Path }}
+  {{ range $translations }}
+    {{ $lang := print "." .Lang ".md" }}
+    {{ $path = replace $path $lang ".md" }}
+  {{ end }}
+  {{ $jsPage := resources.Get "js/page.js" }}
+  {{ $jsPage = $jsPage | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+  <script
+    type="text/javascript"
+    src="{{ $jsPage.RelPermalink }}"
+    integrity="{{ $jsPage.Data.Integrity }}"
+    data-oid="views_{{ $path }}"
+    data-oid-likes="likes_{{ $path }}"></script>
+{{ end }}
