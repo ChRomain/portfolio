@@ -30,7 +30,7 @@
           <h4 class="itinerary-day-label">{{ .label }}</h4>
           <ul class="itinerary-items">
             {{ range .items }}
-              <li>{{ . }}</li>
+              <li>{{ . | safeHTML }}</li>
             {{ end }}
           </ul>
         </div>

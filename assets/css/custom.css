@@ -1478,3 +1478,14 @@ html, body {
     background: currentColor;
     opacity: 0.5;
 }
+
+.itinerary-section .itinerary-items li a {
+    color: #3b82f6;
+    text-decoration: underline;
+    text-decoration-color: rgba(59, 130, 246, 0.35);
+    text-underline-offset: 2px;
+}
+
+.itinerary-section .itinerary-items li a:hover {
+    text-decoration-color: currentColor;
+}

@@ -14,10 +14,10 @@ itinerary_days:
   - label: "Día 2 — Los Cayos y los Everglades"
     coords: [24.5551, -81.7800]
     items:
-      - "Ruta hacia los Cayos"
+      - "Ruta hacia los <a href=\"/es/gallery/keys/\">Cayos</a>"
       - "Southernmost Point"
       - "Lobster roll en el Seaside Cafe"
-      - "Parque Nacional de los Everglades"
+      - "<a href=\"/es/gallery/everglades/\">Parque Nacional de los Everglades</a>"
       - "Paseo en aerodeslizador por la reserva"
       - "Mallory Square"
   - label: "Día 3 — Key Biscayne y la Pequeña Habana"

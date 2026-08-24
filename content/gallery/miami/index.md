@@ -14,10 +14,10 @@ itinerary_days:
   - label: "Jour 2 — Les Keys & Everglades"
     coords: [24.5551, -81.7800]
     items:
-      - "Route vers les Keys"
+      - "Route vers les <a href=\"/gallery/keys/\">Keys</a>"
       - "Southernmost Point"
       - "Lobster roll au Seaside Cafe"
-      - "Everglades National Park"
+      - "<a href=\"/gallery/everglades/\">Everglades National Park</a>"
       - "Tour en hydroglisseur dans la réserve"
       - "Mallory Square"
   - label: "Jour 3 — Key Biscayne & Little Havana"
