@@ -27,11 +27,19 @@ itinerary_days:
       - "Little Havana : visite du quartier"
       - "Domino Park"
       - "Cafés cubains à cigares"
-      - "Balade en bateau de nuit pour voir les maisons de millionnaires"
-  - label: "Jour 4 — Wynwood"
-    coords: [25.8010, -80.1990]
+      - "Miami Millionaire Sightseeing Cruise"
+  - label: "Jour 4 — Downtown Miami & Wynwood"
+    coords: [25.7743, -80.1937]
     items:
       - "Wynwood Walls"
+      - "Miami Financial District"
+      - "Downtown Miami"
+      - "Art Deco District"
+      - "Zoo de Miami"
+      - "Biscayne"
+      - "Bayfront Park"
+      - "Brickell Key Park"
+      - "Miami Design District"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
