@@ -2,20 +2,6 @@
 {{ if $days }}
 {{ $stops := where $days "coords" "!=" nil }}
 <div class="itinerary-section not-prose">
-  {{ if ge (len $stops) 2 }}
-    <div class="itinerary-map-wrapper">
-      <div id="itinerary-map" class="itinerary-map"></div>
-    </div>
-    <script>window.ITINERARY_MAP_DATA = {{ $stops | jsonify | safeJS }};</script>
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /></noscript>
-    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    {{ $itinMapJS := resources.Get "js/itinerary-map.js" }}
-    {{ $itinMapJS = $itinMapJS | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
-    <script defer src="{{ $itinMapJS.RelPermalink }}" integrity="{{ $itinMapJS.Data.Integrity }}"></script>
-  {{ end }}
   <details class="itinerary-details">
     <summary class="itinerary-summary">
       <span class="itinerary-summary-icon">📍</span>
@@ -34,6 +20,32 @@
             {{ end }}
           </ul>
         </div>
+      {{ end }}
+
+      {{ if ge (len $stops) 2 }}
+        <div class="itinerary-map-wrapper">
+          <div class="itinerary-map-container">
+            <div id="itinerary-map" class="itinerary-map"></div>
+            <div class="itinerary-timeline">
+              <button class="itinerary-play-btn" type="button" title="Lancer le parcours" aria-label="Lancer le parcours">
+                <svg class="itinerary-play-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <svg class="itinerary-pause-icon itinerary-hidden" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+              </button>
+              <div class="itinerary-timeline-track-wrapper">
+                <div class="itinerary-timeline-track"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>window.ITINERARY_MAP_DATA = {{ $stops | jsonify | safeJS }};</script>
+        <link rel="preconnect" href="https://unpkg.com">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+              media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /></noscript>
+        <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        {{ $itinMapJS := resources.Get "js/itinerary-map.js" }}
+        {{ $itinMapJS = $itinMapJS | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+        <script defer src="{{ $itinMapJS.RelPermalink }}" integrity="{{ $itinMapJS.Data.Integrity }}"></script>
       {{ end }}
     </div>
   </details>
