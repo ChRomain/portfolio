@@ -5,11 +5,40 @@ layout: "gallery"
 images: ["/gallery/miami/feature.webp"]
 dominant_color: "#77a2c0"
 tags: ["sunset", "lush", "urban", "ocean", "cold", "neige"]
+itinerary_days:
+  - label: "Día 1 — Miami / South Beach"
+    coords: [25.7825, -80.1340]
+    items:
+      - "South Beach: paseo por la playa con las casetas de los socorristas"
+      - "Paseo por Ocean Drive"
+  - label: "Día 2 — Los Cayos y los Everglades"
+    coords: [24.5551, -81.7800]
+    items:
+      - "Ruta hacia los Cayos"
+      - "Southernmost Point"
+      - "Lobster roll en el Seaside Cafe"
+      - "Parque Nacional de los Everglades"
+      - "Paseo en aerodeslizador por la reserva"
+      - "Mallory Square"
+  - label: "Día 3 — Key Biscayne y la Pequeña Habana"
+    coords: [25.7658, -80.2075]
+    items:
+      - "Playa de Key Biscayne"
+      - "La Pequeña Habana: recorrido por el barrio"
+      - "Domino Park"
+      - "Cafés cubanos de puros"
+      - "Paseo en barco nocturno para ver las casas de los millonarios"
+  - label: "Día 4 — Wynwood"
+    coords: [25.8010, -80.1990]
+    items:
+      - "Wynwood Walls"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Sumérgete en la energía eléctrica de la "Vice City". Desde las fachadas Art Deco en tonos pastel de Ocean Drive hasta las costas bañadas por el sol de South Beach, descubre un mundo donde el glamour tropical se encuentra con un vibrante pulso multicultural.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-07-17.mov" type="video/mp4"></video>

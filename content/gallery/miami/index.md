@@ -5,11 +5,40 @@ layout: "gallery"
 images: ["/gallery/miami/feature.webp"]
 dominant_color: "#77a2c0"
 tags: ["sunset", "lush", "urban", "ocean", "cold", "neige"]
+itinerary_days:
+  - label: "Jour 1 — Miami / South Beach"
+    coords: [25.7825, -80.1340]
+    items:
+      - "South Beach : balade sur la plage avec les cabanes des sauveteurs"
+      - "Balade sur Ocean Drive"
+  - label: "Jour 2 — Les Keys & Everglades"
+    coords: [24.5551, -81.7800]
+    items:
+      - "Route vers les Keys"
+      - "Southernmost Point"
+      - "Lobster roll au Seaside Cafe"
+      - "Everglades National Park"
+      - "Tour en hydroglisseur dans la réserve"
+      - "Mallory Square"
+  - label: "Jour 3 — Key Biscayne & Little Havana"
+    coords: [25.7658, -80.2075]
+    items:
+      - "Plage de Key Biscayne"
+      - "Little Havana : visite du quartier"
+      - "Domino Park"
+      - "Cafés cubains à cigares"
+      - "Balade en bateau de nuit pour voir les maisons de millionnaires"
+  - label: "Jour 4 — Wynwood"
+    coords: [25.8010, -80.1990]
+    items:
+      - "Wynwood Walls"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Dive into the electric energy of the Vice City. From the pastel-hued Art Deco facades of Ocean Drive to the sun-soaked shores of South Beach, experience a world where tropical glamour meets a vibrant, multicultural pulse.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-07-17.mov" type="video/mp4"></video>
