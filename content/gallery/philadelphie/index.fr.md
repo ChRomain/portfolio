@@ -5,11 +5,24 @@ layout: "gallery"
 images: ["/gallery/philadelphie/feature.webp"]
 dominant_color: "#3e4726"
 tags: ["vintage", "ocean", "urban"]
+itinerary_days:
+  - label: "Bons plans à Philadelphie"
+    items:
+      - "Quince Street"
+      - "Philadelphia City Hall"
+      - "Philadelphia's Magic Gardens"
+      - "Reading Terminal Market"
+      - "Rocky Steps"
+      - "SkyHigh Restaurant"
+      - "Eastern State Penitentiary"
+      - "Franklin Square Beer Garden"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Plongez-vous dans une mosaïque urbaine vibrante où l'histoire rencontre une créativité audacieuse. Des chefs-d'œuvre de verre complexes des Magic Gardens aux travées bleues imposantes du pont Ben Franklin, découvrez l'âme colorée et l'esprit résilient de la ville de l'amour fraternel.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/philadelphie/philadelphie_001.webp" 

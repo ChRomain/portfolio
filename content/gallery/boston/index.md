@@ -5,11 +5,27 @@ layout: "gallery"
 images: ["/gallery/boston/feature.webp"]
 dominant_color: "#6b5a53"
 tags: ["vintage", "ocean", "urban"]
+itinerary_days:
+  - label: "Bons plans à Boston"
+    items:
+      - "The First Church of Christ"
+      - "North End"
+      - "Bunker Hill Monument"
+      - "Prudential Center"
+      - "Massachusetts State House"
+      - "Harvard University"
+      - "Freedom Trail"
+      - "Salem"
+      - "Harbor Walk"
+      - "Match de baseball au Fenway Park"
+      - "Sesuit Harbor Café"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Trace the footsteps of history along the cobblestone paths of Beacon Hill. From the grandeur of Quincy Market to the historic docks of the harbor, encounter a city where the spirit of American independence lives on through every brick and monument.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/boston/boston_001.webp" 

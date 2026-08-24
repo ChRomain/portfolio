@@ -5,11 +5,23 @@ layout: "gallery"
 images: ["/gallery/washington/feature.webp"]
 dominant_color: "#463c25"
 tags: ["vintage", "ocean", "neige", "urban"]
+itinerary_days:
+  - label: "Bons plans à Washington"
+    items:
+      - "The White House"
+      - "Washington Monument"
+      - "Great Falls Park"
+      - "Gordon Ramsay Hell's Kitchen"
+      - "The Wharf"
+      - "Smithsonian National Air and Space Museum"
+      - "Capitole"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Walk through the heart of American history. From the neoclassical grandeur of the White House and the Capitol at night to the red towers of the Smithsonian, witness a city where every corner tells a story of power and heritage.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/washington/washington_001.webp" 

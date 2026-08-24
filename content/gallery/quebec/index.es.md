@@ -5,11 +5,26 @@ layout: "gallery"
 images: ["/gallery/quebec/feature.webp"]
 dominant_color: "#f1eeec"
 tags: ["vintage", "sunset", "bright", "urban", "ocean", "nature"]
+itinerary_days:
+  - label: "Lugares recomendados en Quebec"
+    items:
+      - "Mirador de Lévis"
+      - "Cascada Montmorency"
+      - "Vieux-Québec"
+      - "Château Frontenac"
+      - "Terraza Dufferin"
+      - "Petit-Champlain"
+      - "Place Royale"
+      - "Vieux-Port"
+      - "Cascada Sainte-Anne"
+      - "Parque nacional de la Jacques-Cartier"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Entra en un cuento de hadas viviente donde las calles empedradas se encuentran con la majestuosa silueta del Château Frontenac. Desde las murallas cubiertas de escarcha hasta el cálido resplandor de Petit Champlain por la noche, presencia el alma romántica de la ciudad fortificada más antigua de América del Norte.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-14%2000-31-25.mov" type="video/mp4"></video>

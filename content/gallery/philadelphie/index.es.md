@@ -5,11 +5,24 @@ layout: "gallery"
 images: ["/gallery/philadelphie/feature.webp"]
 dominant_color: "#3e4726"
 tags: ["vintage", "ocean", "urban"]
+itinerary_days:
+  - label: "Lugares recomendados en Filadelfia"
+    items:
+      - "Quince Street"
+      - "Philadelphia City Hall"
+      - "Philadelphia's Magic Gardens"
+      - "Reading Terminal Market"
+      - "Rocky Steps"
+      - "SkyHigh Restaurant"
+      - "Eastern State Penitentiary"
+      - "Franklin Square Beer Garden"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Sumérgete en un vibrante mosaico urbano donde la historia se encuentra con la creatividad audaz. Desde las intrincadas obras maestras de vidrio de los Jardines Mágico de Filadelfia hasta los imponentes tramos azules del Puente Ben Franklin, descubre el alma colorida y el espíritu resistente de la Ciudad del Amor Fraternal.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/philadelphie/philadelphie_001.webp" 

@@ -5,11 +5,27 @@ layout: "gallery"
 images: ["/gallery/boston/feature.webp"]
 dominant_color: "#6b5a53"
 tags: ["vintage", "ocean", "urban"]
+itinerary_days:
+  - label: "Lugares recomendados en Boston"
+    items:
+      - "The First Church of Christ"
+      - "North End"
+      - "Bunker Hill Monument"
+      - "Prudential Center"
+      - "Massachusetts State House"
+      - "Harvard University"
+      - "Freedom Trail"
+      - "Salem"
+      - "Harbor Walk"
+      - "Partido de béisbol en Fenway Park"
+      - "Sesuit Harbor Café"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Sigue los pasos de la historia a lo largo de los caminos empedrados de Beacon Hill. Desde la grandeur del Quincy Market hasta los muelles históricos del puerto, encuentra una ciudad donde el espíritu de la independencia estadounidense perdura a través de cada ladrillo y monumento.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/boston/boston_001.webp" 

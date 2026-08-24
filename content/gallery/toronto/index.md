@@ -5,11 +5,24 @@ layout: "gallery"
 images: ["/gallery/toronto/feature.webp"]
 dominant_color: "#594d40"
 tags: ["nature", "urban"]
+itinerary_days:
+  - label: "Bons plans à Toronto"
+    items:
+      - "Downtown Toronto"
+      - "Match NBA (Raptors)"
+      - "CN Tower"
+      - "Distillery District"
+      - "Ripley's Aquarium"
+      - "Spadina - Chinatown"
+      - "Graffiti Alley"
+      - "1000 Islands"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Rising above the shores of Lake Ontario, experience the vibrant pulse of Canada's largest metropolis. From the dizzying heights of the CN Tower to the bustling streets of downtown, witness a city where soaring glass towers meet a rich, multicultural heart.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/toronto/toronto_001.webp" 

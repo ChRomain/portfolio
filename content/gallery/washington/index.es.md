@@ -5,11 +5,23 @@ layout: "gallery"
 images: ["/gallery/washington/feature.webp"]
 dominant_color: "#463c25"
 tags: ["vintage", "ocean", "neige", "urban"]
+itinerary_days:
+  - label: "Lugares recomendados en Washington"
+    items:
+      - "The White House"
+      - "Washington Monument"
+      - "Great Falls Park"
+      - "Gordon Ramsay Hell's Kitchen"
+      - "The Wharf"
+      - "Smithsonian National Air and Space Museum"
+      - "Capitolio"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Camina por el corazón de la historia estadounidense. Desde la grandeza neoclásica de la Casa Blanca y el Capitolio por la noche hasta las torres rojas del Smithsonian, presencia una ciudad donde cada rincón cuenta una historia de poder y herencia.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/washington/washington_001.webp" 

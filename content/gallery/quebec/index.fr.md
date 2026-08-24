@@ -5,11 +5,26 @@ layout: "gallery"
 images: ["/gallery/quebec/feature.webp"]
 dominant_color: "#f1eeec"
 tags: ["vintage", "sunset", "bright", "urban", "ocean", "nature"]
+itinerary_days:
+  - label: "Bons plans à Québec"
+    items:
+      - "Point de vue à Lévis"
+      - "Chute Montmorency"
+      - "Vieux-Québec"
+      - "Château Frontenac"
+      - "Terrasse Dufferin"
+      - "Petit Champlain"
+      - "Place Royale"
+      - "Vieux-Port"
+      - "Chute Sainte-Anne"
+      - "Parc national de la Jacques-Cartier"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Entrez dans un conte de fées vivant où les rues pavées rencontrent la silhouette majestueuse du Château Frontenac. Des remparts couverts de givre à la lueur chaude du Petit Champlain la nuit, témoignez de l'âme romantique de la plus vieille ville fortifiée d'Amérique du Nord.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-14%2000-31-25.mov" type="video/mp4"></video>

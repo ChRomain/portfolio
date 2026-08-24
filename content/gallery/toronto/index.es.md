@@ -5,11 +5,24 @@ layout: "gallery"
 images: ["/gallery/toronto/feature.webp"]
 dominant_color: "#594d40"
 tags: ["nature", "urban"]
+itinerary_days:
+  - label: "Lugares recomendados en Toronto"
+    items:
+      - "Downtown Toronto"
+      - "Partido de la NBA (Raptors)"
+      - "CN Tower"
+      - "Distillery District"
+      - "Ripley's Aquarium"
+      - "Spadina - Chinatown"
+      - "Graffiti Alley"
+      - "1000 Islands"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Elevándose sobre las orillas del lago Ontario, experimenta el pulso vibrante de la metrópolis más grande de Canadá. Desde las alturas vertiginosas de la Torre CN hasta las calles bulliciosas del centro, presencia una ciudad donde las torres de vidrio se encuentran con un corazón rico y multicultural.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/toronto/toronto_001.webp" 

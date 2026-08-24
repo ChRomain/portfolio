@@ -5,11 +5,24 @@ layout: "gallery"
 images: ["/gallery/toronto/feature.webp"]
 dominant_color: "#594d40"
 tags: ["nature", "urban"]
+itinerary_days:
+  - label: "Bons plans à Toronto"
+    items:
+      - "Downtown Toronto"
+      - "Match NBA (Raptors)"
+      - "CN Tower"
+      - "Distillery District"
+      - "Ripley's Aquarium"
+      - "Spadina - Chinatown"
+      - "Graffiti Alley"
+      - "1000 Islands"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;S'élevant au-dessus des rives du lac Ontario, découvrez le pouls vibrant de la plus grande métropole du Canada. Des hauteurs vertigineuses de la Tour CN aux rues animées du centre-ville, témoignez d'une ville où les tours de verre vertigineuses rencontrent un cœur riche et multiculturel.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/toronto/toronto_001.webp" 
