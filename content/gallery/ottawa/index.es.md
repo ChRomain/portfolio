@@ -5,11 +5,26 @@ layout: "gallery"
 images: ["/gallery/ottawa/feature.webp"]
 dominant_color: "#626e39"
 tags: ["urban"]
+itinerary_days:
+  - label: "Lugares recomendados en Ottawa"
+    items:
+      - "Parc Oméga"
+      - "Noche en el albergue Saintlo, en la antigua cárcel de Ottawa"
+      - "Ottawa Sign"
+      - "Ottawa Spider"
+      - "Parliament Hill"
+      - "Patinaje sobre hielo en el Canal Rideau"
+      - "Visita al Parlamento de Ottawa"
+      - "Excursión en trineo de perros bajo la nieve"
+      - "Festival de los Tulipanes"
+      - "Pink Lake"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Presencia una capital en plena floración. Desde los vibrantes campos interminables del Festival Canadiense de los Tulipanes hasta los pintorescos senderos a lo largo del Canal Rideau, explora una ciudad donde la paleta brillante de la naturaleza complementa perfectamente la pierre historique de la Colline du Parlement.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/ottawa/ottawa_001.webp" 

@@ -5,11 +5,55 @@ layout: "gallery"
 images: ["/gallery/new_york/feature.webp"]
 dominant_color: "#2f3537"
 tags: ["ocean", "sunset", "urban"]
+itinerary_days:
+  - label: "Lugares recomendados en Nueva York"
+    items:
+      - "Times Square"
+      - "M&M's World"
+      - "Empire State Building"
+      - "Grand Central Terminal"
+      - "New York Public Library"
+      - "Nintendo World"
+      - "Nike House of Innovation"
+      - "9/11 Memorial"
+      - "One World Trade Center"
+      - "Charging Bull (Wall Street)"
+      - "National September 11 Memorial &amp; Museum"
+      - "Little Island"
+      - "The High Line"
+      - "Espectáculo de Aladdin en Broadway"
+      - "The Vessel"
+      - "Little Italy"
+      - "Chinatown"
+      - "Top of the Rock"
+      - "Central Park"
+      - "Estatua de la Libertad"
+      - "Ellis Island"
+      - "Roosevelt Island"
+      - "Restaurante Benihana"
+      - "St Patrick's Cathedral"
+      - "Brooklyn"
+      - "The Bushwick Collective (murales)"
+      - "Summit One Vanderbilt"
+      - "Coney Island"
+      - "Pier 1"
+      - "Field of Light at Freedom Plaza"
+      - "Brooklyn Bridge"
+      - "Williamsburg Bridge"
+      - "Barrio de DUMBO (Brooklyn)"
+      - "The Edge (Hudson Yards)"
+      - "Rockefeller Center"
+      - "Misa del domingo en Bethel Gospel Assembly"
+      - "Wizard World"
+      - "The Oculus"
+      - "Hudson Yards"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Experimenta el pulso inquieto de la metrópolis más icónica del mundo. Desde el neón brillante de Times Square y la majestuosidad industrial del Puente de Brooklyn hasta los caminos tranquilos y bañados por el sol de Central Park, presencia una ciudad de escalas infinitas y ambiciones eléctricas.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-06%2023-47-51.mp4" type="video/mp4"></video>

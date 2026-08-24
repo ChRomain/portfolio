@@ -5,11 +5,26 @@ layout: "gallery"
 images: ["/gallery/ottawa/feature.webp"]
 dominant_color: "#626e39"
 tags: ["urban"]
+itinerary_days:
+  - label: "Bons plans à Ottawa"
+    items:
+      - "Parc Oméga"
+      - "Nuit à l'auberge Saintlo, dans l'ancienne prison d'Ottawa"
+      - "Ottawa Sign"
+      - "Ottawa Spider"
+      - "Parliament Hill"
+      - "Patin à glace sur le canal Rideau"
+      - "Visite du Parlement d'Ottawa"
+      - "Escapade en chien de traîneau sous la neige"
+      - "Fête des tulipes"
+      - "Pink Lake"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Témoignez d'une capitale en pleine floraison. Des champs infinis et vibrants du Festival canadien des tulipes aux sentiers pittoresques le long du canal Rideau, explorez une ville où la palette lumineuse de la nature complète parfaitement la pierre historique de la Colline du Parlement.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/ottawa/ottawa_001.webp" 
