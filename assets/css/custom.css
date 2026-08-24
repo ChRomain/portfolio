@@ -1441,30 +1441,36 @@ html, body {
     color: rgba(255, 255, 255, 0.88);
 }
 
-.itinerary-items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.itinerary-section .itinerary-items {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
     display: grid;
     gap: 0.3rem;
 }
 
-.itinerary-items li {
+.itinerary-section .itinerary-items li {
     font-size: 0.92rem;
     color: rgba(0, 0, 0, 0.65);
-    padding-left: 1.1rem;
+    margin: 0 !important;
+    padding: 0 0 0 1.25rem !important;
+    list-style: none !important;
     position: relative;
 }
 
-.dark .itinerary-items li {
+.itinerary-section .itinerary-items li::marker {
+    content: "";
+}
+
+.dark .itinerary-section .itinerary-items li {
     color: rgba(255, 255, 255, 0.65);
 }
 
-.itinerary-items li::before {
+.itinerary-section .itinerary-items li::before {
     content: "";
     position: absolute;
-    left: 0.15rem;
-    top: 0.55rem;
+    left: 0.35rem;
+    top: 0.6rem;
     width: 0.3rem;
     height: 0.3rem;
     border-radius: 50%;
