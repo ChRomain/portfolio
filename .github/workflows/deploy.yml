@@ -26,11 +26,20 @@ jobs:
           extended: true
       # Le traitement d'images (redimensionnement des hero) est le poste le plus lourd
       # du build. Sans ce cache, il est refait intégralement à chaque push.
+      #
+      # continue-on-error : ce cache est une optimisation. Une version précédente
+      # utilisait hashFiles('assets/**'), ce qui obligeait le runner à hacher les
+      # 208 Mo d'images hero, et son échec bloquait tout le déploiement — GitHub
+      # Pages est resté figé sur un build obsolète. Un cache raté doit coûter du
+      # temps de build, jamais une mise en ligne.
       - name: Cache Hugo resources
         uses: actions/cache@v4
+        continue-on-error: true
         with:
           path: resources/_gen
-          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('assets/**', 'content/**/*.webp') }}
+          # Clé sans hachage : on repart toujours du dernier cache disponible et on
+          # en écrit un nouveau à chaque commit.
+          key: ${{ runner.os }}-hugo-resources-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-hugo-resources-
       - name: Build
