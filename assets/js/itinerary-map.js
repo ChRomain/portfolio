@@ -61,16 +61,69 @@ document.addEventListener('DOMContentLoaded', function () {
   var stepIndex = 0;
   var STEP_DELAY = 2200;
 
+  var hud = document.getElementById('itinerary-hud');
+  var dayEls = Array.prototype.slice.call(document.querySelectorAll('.itinerary-day'));
+
   function setProgress(index) {
     var pct = ((index + 1) / stops.length) * 100;
     progressBar.style.width = pct + '%';
   }
 
+  // Surligne le jour correspondant dans la liste et le ramène dans la vue, pour que
+  // le texte de l'itinéraire suive le déplacement sur la carte.
+  function highlightDay(dayIndex, scroll) {
+    dayEls.forEach(function (el) {
+      el.classList.toggle('is-active', Number(el.dataset.dayIndex) === dayIndex);
+    });
+    if (!scroll) return;
+    var target = dayEls.filter(function (el) {
+      return Number(el.dataset.dayIndex) === dayIndex;
+    })[0];
+    if (!target) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+  }
+
+  function clearHighlight() {
+    dayEls.forEach(function (el) { el.classList.remove('is-active'); });
+    if (hud) hud.classList.add('itinerary-hidden');
+  }
+
+  function setActiveMarker(index) {
+    markers.forEach(function (m, i) {
+      m.setStyle({
+        radius: i === index ? 11 : 8,
+        fillColor: i === index ? '#3b82f6' : '#ffffff',
+        color: i === index ? '#ffffff' : '#3b82f6'
+      });
+    });
+  }
+
   function goToStep(index) {
+    var stop = stops[index];
     markers[index].openPopup();
     map.flyTo(latlngs[index], Math.max(map.getZoom(), 10), { duration: 1.2 });
     setProgress(index);
+    setActiveMarker(index);
+    if (hud) {
+      hud.textContent = stop.label;
+      hud.classList.remove('itinerary-hidden');
+    }
+    if (typeof stop.dayIndex === 'number') highlightDay(stop.dayIndex, true);
   }
+
+  // Cliquer un marqueur met en avant son jour, hors lecture automatique.
+  markers.forEach(function (m, i) {
+    m.on('click', function () {
+      var stop = stops[i];
+      setActiveMarker(i);
+      if (hud) {
+        hud.textContent = stop.label;
+        hud.classList.remove('itinerary-hidden');
+      }
+      if (typeof stop.dayIndex === 'number') highlightDay(stop.dayIndex, true);
+    });
+  });
 
   function stopAutoplay() {
     playing = false;
@@ -103,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
   playBtn.addEventListener('click', function () {
     if (playing) {
       stopAutoplay();
+      clearHighlight();
     } else {
       startAutoplay();
     }

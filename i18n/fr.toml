@@ -53,3 +53,11 @@ mood_lush = "Luxuriant"
 mood_cold = "Froid"
 mood_warm = "Chaud"
 mood_tropical = "Tropical"
+
+# Pages photo individuelles
+photo_back_to = "Retour à"
+photo_prev = "Photo précédente"
+photo_next = "Photo suivante"
+photo_details = "Détails"
+photo_location = "Lieu"
+photo_view_in_gallery = "Voir dans la galerie"

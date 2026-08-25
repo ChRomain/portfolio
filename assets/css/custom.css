@@ -1623,3 +1623,43 @@ html, body {
     .mood-chip { transition: none; }
     .mood-chip:hover { transform: none; }
 }
+
+/* --- 24. HUD ET JOUR ACTIF DE L'ITINÉRAIRE --- */
+.itinerary-hud {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 500;
+    max-width: calc(100% - 24px);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    color: #fff;
+    background: rgba(0, 0, 0, .62);
+    backdrop-filter: blur(8px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+}
+
+/* Jour mis en avant pendant la lecture du parcours ou au clic sur un marqueur */
+.itinerary-day {
+    border-left: 2px solid transparent;
+    padding-left: .85rem;
+    margin-left: -.85rem;
+    border-radius: 0 4px 4px 0;
+    transition: border-color .3s ease, background-color .3s ease;
+}
+.itinerary-day.is-active {
+    border-left-color: #3b82f6;
+    background: rgba(59, 130, 246, .07);
+}
+.dark .itinerary-day.is-active {
+    background: rgba(59, 130, 246, .13);
+}
+@media (prefers-reduced-motion: reduce) {
+    .itinerary-day { transition: none; }
+}

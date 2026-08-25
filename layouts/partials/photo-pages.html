@@ -1,0 +1,55 @@
+{{/*
+  Adaptateur de contenu : génère une page par photo à partir de data/photos.json.
+
+  Objectif : donner à chaque image un permalien réel (partageable, indexable,
+  avec sa propre balise og:image), ce que la lightbox seule ne permettait pas.
+  Le fichier de données est produit par scripts/build_photo_index.py.
+
+  Ce template est exécuté une fois par langue : site.Language.Lang sert à choisir
+  la bonne traduction sans dupliquer les données.
+*/}}
+{{ $ctx := . }}
+{{ $lang := site.Language.Lang }}
+{{ $photos := (index site.Data "photos").photos }}
+
+{{ range $i, $p := $photos }}
+  {{ $alt := or (index $p.alt $lang) (index $p.alt "en") }}
+  {{ $galleryTitle := or (index $p.galleryTitle $lang) (index $p.galleryTitle "en") }}
+
+  {{/* Voisins dans la même galerie, pour la navigation précédent/suivant */}}
+  {{ $prev := "" }}
+  {{ $next := "" }}
+  {{ if gt $i 0 }}
+    {{ $c := index $photos (sub $i 1) }}
+    {{ if eq $c.gallery $p.gallery }}{{ $prev = $c.slug }}{{ end }}
+  {{ end }}
+  {{ if lt $i (sub (len $photos) 1) }}
+    {{ $c := index $photos (add $i 1) }}
+    {{ if eq $c.gallery $p.gallery }}{{ $next = $c.slug }}{{ end }}
+  {{ end }}
+
+  {{ $ctx.AddPage (dict
+    "path"    $p.slug
+    "title"   (printf "%s — %s" $galleryTitle $p.slug)
+    "kind"    "page"
+    "layout"  "photo"
+    "params"  (dict
+      "photo_src"     $p.src
+      "photo_alt"     $alt
+      "photo_width"   $p.width
+      "photo_height"  $p.height
+      "photo_exif"    $p.exif
+      "photo_gps"     $p.gps
+      "photo_date"    $p.date
+      "photo_color"   $p.color
+      "photo_tone"    $p.tone
+      "gallery"       $p.gallery
+      "galleryTitle"  $galleryTitle
+      "country_code"  $p.country
+      "prevSlug"      $prev
+      "nextSlug"      $next
+      "images"        (slice $p.src)
+      "description"   $alt
+    )
+  ) }}
+{{ end }}

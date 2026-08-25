@@ -1,0 +1,127 @@
+{{ define "main" }}
+{{ $p := .Params }}
+{{ $galleryURL := printf "gallery/%s/" $p.gallery | relLangURL }}
+
+<article class="photo-page">
+  <nav class="photo-crumb">
+    <a href="{{ $galleryURL }}">← {{ i18n "photo_back_to" }} {{ $p.galleryTitle }}</a>
+  </nav>
+
+  <figure class="photo-figure">
+    <img src="{{ $p.photo_src }}"
+         alt="{{ $p.photo_alt }}"
+         width="{{ $p.photo_width }}" height="{{ $p.photo_height }}"
+         fetchpriority="high" decoding="async"
+         style="background-color: {{ $p.photo_color }}">
+    <figcaption>{{ $p.photo_alt }}</figcaption>
+  </figure>
+
+  {{/* Détails techniques : la chaîne EXIF est stockée "Boîtier | f/x | 1/ys | ISO z".
+       Même table de correspondance que la lightbox, pour ne pas afficher les codes
+       constructeur bruts. Les codes ambigus retombent sur la marque. */}}
+  {{ $cameras := dict
+      "ILCE-6700" "Sony α6700"
+      "ILCE-7M3"  "Sony α7 III"
+      "DMC-FZ300" "Panasonic Lumix FZ300"
+      "FC3682"    "Drone DJI"
+      "FC9313"    "Drone DJI"
+      "PCT-L29"   "Huawei" }}
+  {{ with $p.photo_exif }}
+  <section class="photo-meta">
+    <h2>{{ i18n "photo_details" }}</h2>
+    <ul class="photo-meta-list">
+      {{ range split . " | " }}
+        {{ $part := trim . " " }}
+        <li>{{ with index $cameras $part }}{{ . }}{{ else }}{{ $part }}{{ end }}</li>
+      {{ end }}
+      {{ with $p.photo_date }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ with $p.photo_gps }}
+  <section class="photo-meta">
+    <h2>{{ i18n "photo_location" }}</h2>
+    <p class="photo-coords">{{ . }}</p>
+    <a class="photo-map-link" rel="noopener noreferrer" target="_blank"
+       href="https://www.openstreetmap.org/?mlat={{ index (split . ",") 0 }}&mlon={{ index (split . ",") 1 }}#map=13/{{ index (split . ",") 0 }}/{{ index (split . ",") 1 }}">
+      OpenStreetMap ↗
+    </a>
+  </section>
+  {{ end }}
+
+  <nav class="photo-nav">
+    {{ if $p.prevSlug }}
+      <a href="{{ printf "photo/%s/" $p.prevSlug | relLangURL }}">← {{ i18n "photo_prev" }}</a>
+    {{ else }}<span></span>{{ end }}
+    <a href="{{ $galleryURL }}#photo={{ $p.photo_src | path.Base | replaceRE "\\.webp$" "" }}">
+      {{ i18n "photo_view_in_gallery" }}
+    </a>
+    {{ if $p.nextSlug }}
+      <a href="{{ printf "photo/%s/" $p.nextSlug | relLangURL }}">{{ i18n "photo_next" }} →</a>
+    {{ else }}<span></span>{{ end }}
+  </nav>
+</article>
+
+<style>
+  .photo-page { max-width: 62rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .photo-crumb { margin-bottom: 1rem; font-size: .9rem; }
+  .photo-crumb a { text-decoration: none; opacity: .75; }
+  .photo-crumb a:hover { opacity: 1; }
+  .photo-figure { margin: 0 0 2rem; }
+  .photo-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  .photo-figure figcaption {
+    margin-top: .7rem;
+    font-size: .9rem;
+    line-height: 1.5;
+    opacity: .7;
+  }
+  .photo-meta { margin-bottom: 1.75rem; }
+  .photo-meta h2 {
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    opacity: .5;
+    margin: 0 0 .6rem;
+  }
+  .photo-meta-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 0;
+    margin: 0;
+  }
+  .photo-meta-list li {
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-size: .82rem;
+    background: rgb(245 245 245);
+    border: 1px solid rgb(229 229 229);
+  }
+  .dark .photo-meta-list li {
+    background: rgb(38 38 38);
+    border-color: rgb(64 64 64);
+  }
+  .photo-coords { font-variant-numeric: tabular-nums; margin: 0 0 .35rem; font-size: .9rem; }
+  .photo-map-link { font-size: .85rem; }
+  .photo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgb(229 229 229);
+    font-size: .88rem;
+  }
+  .dark .photo-nav { border-top-color: rgb(64 64 64); }
+  .photo-nav a { text-decoration: none; }
+  .photo-nav a:hover { text-decoration: underline; }
+</style>
+{{ end }}

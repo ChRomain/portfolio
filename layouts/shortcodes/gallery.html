@@ -183,6 +183,9 @@
           <button id="lightbox-info-toggle" aria-label="{{ i18n "aria_show_image_info" }}">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
           </button>
+          <a id="lightbox-permalink" href="#" aria-label="{{ i18n "photo_view_in_gallery" }}" title="{{ i18n "photo_details" }}">
+            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+          </a>
           <button id="lightbox-fullscreen" aria-label="{{ i18n "aria_toggle_fullscreen" }}">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
           </button>
@@ -366,6 +369,15 @@
       const currentImg = galleryImages[currentIndex];
       lightboxImg.src = currentImg.src;
       lightboxImg.alt = currentImg.alt;
+
+      // Lien vers la page dédiée de la photo (permalien indexable).
+      // Hors du bloc EXIF plus bas : 28 photos ont un title vide et garderaient
+      // sinon le lien de la photo précédente.
+      const permalinkEl = document.getElementById('lightbox-permalink');
+      if (permalinkEl) {
+        const slug = photoSlug(currentImg);
+        permalinkEl.href = slug ? `{{ "photo/" | relLangURL }}${encodeURIComponent(slug)}/` : '#';
+      }
 
       // Mettre à jour Counter (en respectant les images filtrées/visibles)
       const visibleImages = galleryImages.filter(img => img.offsetParent !== null);

@@ -4,7 +4,11 @@
 {{ $pages = $pages | lang.Merge .Site.Pages }}
 {{ end }}
 {{- range $pages -}}
-  {{- if not .Params.excludeFromSearch -}}
+  {{/* Les 762 pages photo sont volontairement hors recherche : elles noieraient les
+       galeries. On les écarte par leur section plutôt que via excludeFromSearch, que
+       le template de sitemap du thème utilise aussi — les y laisser les rendrait
+       non indexables, ce qui est précisément l'inverse du but. */}}
+  {{- if and (not .Params.excludeFromSearch) (ne .Section "photo") -}}
     {{- $section := .Site.GetPage "section" .Section -}}
     {{- $item := (dict
       "title" (.Title | emojify | safeJS)

@@ -1,6 +1,14 @@
 {{ $days := .Params.itinerary_days }}
 {{ if $days }}
-{{ $stops := where $days "coords" "!=" nil }}
+{{/* On garde l'index du jour dans la liste complète : tous les jours n'ont pas de
+     coordonnées, donc la position dans $stops ne correspond pas à celle dans $days.
+     Le JS s'en sert pour surligner le bon jour pendant la lecture. */}}
+{{ $stops := slice }}
+{{ range $i, $d := $days }}
+  {{ if $d.coords }}
+    {{ $stops = $stops | append (dict "label" $d.label "coords" $d.coords "dayIndex" $i) }}
+  {{ end }}
+{{ end }}
 <div class="itinerary-section not-prose">
   <details class="itinerary-details">
     <summary class="itinerary-summary">
@@ -11,9 +19,9 @@
       </svg>
     </summary>
     <div class="itinerary-body">
-      {{ range $days }}
-        <div class="itinerary-day">
-          <h4 class="itinerary-day-label">{{ .label }}</h4>
+      {{ range $i, $d := $days }}
+        <div class="itinerary-day" data-day-index="{{ $i }}">
+          <h4 class="itinerary-day-label">{{ $d.label }}</h4>
           <ul class="itinerary-items">
             {{ range .items }}
               <li>{{ . | safeHTML }}</li>
@@ -26,6 +34,7 @@
         <div class="itinerary-map-wrapper">
           <div class="itinerary-map-container">
             <div id="itinerary-map" class="itinerary-map"></div>
+            <div class="itinerary-hud itinerary-hidden" id="itinerary-hud" aria-live="polite"></div>
             <div class="itinerary-timeline">
               <button class="itinerary-play-btn" type="button" title="Lancer le parcours" aria-label="Lancer le parcours">
                 <svg class="itinerary-play-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
