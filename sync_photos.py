@@ -73,6 +73,16 @@ VIDEOS = {
     ]
 }
 
+# --- CATÉGORIES VIDÉO (filtres de la page /videos/) ---
+# Alignées sur les groupes de layouts/index.html et sur les clés i18n cat_*.
+VIDEO_CATEGORIES = {
+    "new_york": "urban", "miami": "urban",
+    "finistere": "wild", "new_hampshire": "wild", "niagara_falls": "wild",
+    "keys": "wild", "everglades": "wild",
+    "montreal": "canada", "quebec": "canada", "canada": "canada",
+    "guatemala": "latam", "machu_picchu": "latam",
+}
+
 # --- DESCRIPTIONS DES DESTINATIONS (texte intro par langue) ---
 # Contenu éditorial externalisé dans data/destination_descriptions.json
 # pour ne pas mélanger texte et logique, et garder des diffs Git lisibles.
@@ -287,11 +297,18 @@ def get_exif_data(img_path):
         exif_dict = piexif.load(exif_raw)
         
         # 1. Extraction EXIF Classique
-        model = exif_dict.get('0th', {}).get(piexif.ImageIFD.Model, b"").decode().strip()
+        # NB : certains boîtiers (drones DJI notamment) complètent les chaînes EXIF avec
+        # des octets NUL. .strip() ne les retire pas, et ils finissaient écrits tels quels
+        # dans les attributs title= du markdown, ce qui rendait les fichiers binaires
+        # pour grep/diff. On les enlève explicitement.
+        def _clean(raw):
+            return raw.decode(errors="replace").replace("\x00", "").strip()
+
+        model = _clean(exif_dict.get('0th', {}).get(piexif.ImageIFD.Model, b""))
         f_stop = exif_dict.get('Exif', {}).get(piexif.ExifIFD.FNumber)
         iso = exif_dict.get('Exif', {}).get(piexif.ExifIFD.ISOSpeedRatings)
         shutter = exif_dict.get('Exif', {}).get(piexif.ExifIFD.ExposureTime)
-        date_raw = exif_dict.get('Exif', {}).get(piexif.ExifIFD.DateTimeOriginal, b"").decode().strip()
+        date_raw = _clean(exif_dict.get('Exif', {}).get(piexif.ExifIFD.DateTimeOriginal, b""))
         
         parts = []
         if model: parts.append(model)
@@ -838,6 +855,13 @@ def sync_portfolio():
     # --- 4. EXPORT DES LOCATIONS (MAP) ---
     with open("data/locations.json", "w") as f:
         json.dump(all_locations, f, indent=4)
+
+    # --- 5. EXPORT DES VIDÉOS (page /videos/ + compteur du dashboard) ---
+    # Les layouts lisent .Site.Data.videos.{videos,categories} ; sans ce fichier
+    # la page /videos/ est vide et le compteur du dashboard affiche 0.
+    with open("data/videos.json", "w", encoding="utf-8") as f:
+        json.dump({"videos": VIDEOS, "categories": VIDEO_CATEGORIES}, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     print(f"\n📊 Statistiques générées : {total_images_count} photos au total.")
     print(f"📍 Carte : {len(all_locations)} points générés dynamiquement.")

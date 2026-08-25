@@ -2,7 +2,22 @@
 {{ if .IsTranslated }}
     {{ range .AllTranslations }}
         <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+        {{ if eq .Language.Lang site.Home.Language.Lang }}
+            <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+        {{ end }}
     {{ end }}
+{{ end }}
+
+{{/* Les vidéos sont hébergées sur Cloudflare R2 et chargées en preload="metadata" :
+     sans preconnect, chaque page à vidéos paie DNS + TLS avant la première frame.
+     Conditionné aux pages qui en contiennent réellement. */}}
+{{ $hasVideos := or (eq .Layout "peru") (eq .Layout "video-grid") }}
+{{ if not $hasVideos }}
+  {{ with .RawContent }}{{ if findRE "r2\\.dev" . 1 }}{{ $hasVideos = true }}{{ end }}{{ end }}
+{{ end }}
+{{ if $hasVideos }}
+<link rel="preconnect" href="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev" crossorigin>
+<link rel="dns-prefetch" href="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev">
 {{ end }}
 
 <!-- SEO: Dynamic social sharing image -->
@@ -28,7 +43,7 @@
   ]
 }
 </script>
-{{ else if eq .Layout "gallery" }}
+{{ else if or (eq .Layout "gallery") (eq .Layout "peru") }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,7 +110,23 @@
         background-color: #f97316 !important;
         color: #ffffff !important;
     }
+
+    /* Respect de prefers-reduced-motion : ni fondu ni translation à la navigation. */
+    @media (prefers-reduced-motion: reduce) {
+        body, body.page-loaded, body.page-exit {
+            transition: none;
+            transform: none;
+        }
+    }
 </style>
+
+<noscript>
+    <style>
+        /* Sans JS, la classe .page-loaded n'est jamais ajoutée : le body resterait
+           à opacity 0, donc la page entièrement blanche. On la rend visible. */
+        body { opacity: 1 !important; transform: none !important; }
+    </style>
+</noscript>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -107,11 +138,21 @@
         // Intercepte les clics pour la transition de sortie
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', e => {
+                // Laisse le navigateur faire son travail sur les clics "ouvrir ailleurs" :
+                // cmd/ctrl+clic (nouvel onglet), shift+clic (nouvelle fenêtre), alt+clic
+                // (téléchargement) et tout clic non primaire. Sans ces gardes, le
+                // preventDefault() plus bas force la navigation dans l'onglet courant.
+                if (e.defaultPrevented || e.button !== 0 ||
+                    e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) {
+                    return;
+                }
+
                 const href = link.getAttribute('href');
-                const isInternal = href && 
-                                 (href.startsWith('/') || href.startsWith(window.location.origin)) && 
+                const isInternal = href &&
+                                 (href.startsWith('/') || href.startsWith(window.location.origin)) &&
                                  !href.includes('#') &&
-                                 !link.hasAttribute('target');
+                                 !link.hasAttribute('target') &&
+                                 !link.hasAttribute('download');
 
                 if (isInternal) {
                     e.preventDefault();
