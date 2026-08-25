@@ -20,10 +20,21 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          # Version épinglée et alignée sur netlify.toml : 'latest' rendait les builds
+          # non reproductibles et pouvait casser sans qu'aucun commit ne change.
+          hugo-version: '0.154.5'
           extended: true
+      # Le traitement d'images (redimensionnement des hero) est le poste le plus lourd
+      # du build. Sans ce cache, il est refait intégralement à chaque push.
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: resources/_gen
+          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('assets/**', 'content/**/*.webp') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-resources-
       - name: Build
-        run: hugo --minify
+        run: hugo --gc --minify
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

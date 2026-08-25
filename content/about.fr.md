@@ -12,7 +12,7 @@ showComments: false
 <div class="main-layout" style="display: flex; gap: 50px; align-items: center; min-height: 500px;">
 
 <div class="sidebar" style="flex: 0 0 300px;">
-<img src="/about.jpeg" alt="Romain Charretteur" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+<img src="/about.jpeg" alt="Romain Charretteur" width="1200" height="1800" decoding="async" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
 </div>
 
 <div class="content-area" style="flex: 1;">
@@ -34,9 +34,9 @@ showComments: false
 </div>
 
 <div class="gear-visual" style="flex: 1.5; position: relative; height: 200px; min-width: 250px;">
-<img src="/drone.png" class="gear-img img-drone" alt="Drone">
-<img src="/objectif.png" class="gear-img img-lens" alt="Objectif">
-<img src="/sony.png" class="gear-img img-camera" alt="Sony">
+<img src="/drone.png" class="gear-img img-drone" alt="Drone" width="942" height="556" loading="lazy" decoding="async">
+<img src="/objectif.png" class="gear-img img-lens" alt="Objectif" width="986" height="1494" loading="lazy" decoding="async">
+<img src="/sony.png" class="gear-img img-camera" alt="Sony" width="714" height="471" loading="lazy" decoding="async">
 </div>
 
 </div>
