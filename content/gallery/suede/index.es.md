@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/suede/feature.webp"]
 dominant_color: "#b0a6a0"
 tags: ["vintage", "sunset", "urban", "ocean", "neige"]
+country_code: "se"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -12,7 +13,8 @@ tags: ["vintage", "sunset", "urban", "ocean", "neige"]
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/suede/suede_001.webp" 
+    <img src="/gallery/suede/suede_001.webp"
+         data-color="#a2a09e" data-tone="neutre" 
          alt="La atmósfera retro de Suede, una toma artística." 
          title="iPhone 13 | f/1.6 | 1/1000s | ISO 50" 
           
@@ -21,7 +23,8 @@ tags: ["vintage", "sunset", "urban", "ocean", "neige"]
          data-lqip="true" 
          style="background-image: url(/gallery/suede/lqip/suede_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/suede/suede_002.webp" 
+    <img src="/gallery/suede/suede_002.webp"
+         data-color="#24221b" data-tone="or" 
          alt="Exploración visual de Suede, con una estética nostálgica." 
          title="iPhone 13 | f/1.6 | 1/50s | ISO 500" 
           
@@ -30,7 +33,8 @@ tags: ["vintage", "sunset", "urban", "ocean", "neige"]
          data-lqip="true" 
          style="background-image: url(/gallery/suede/lqip/suede_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/suede/suede_003.webp" 
+    <img src="/gallery/suede/suede_003.webp"
+         data-color="#4e3016" data-tone="or" 
          alt="Una vista retro de Suede. artística" 
          title="iPhone 13 | f/1.6 | 1/10s | ISO 640" 
           
@@ -39,7 +43,8 @@ tags: ["vintage", "sunset", "urban", "ocean", "neige"]
          data-lqip="true" 
          style="background-image: url(/gallery/suede/lqip/suede_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/suede/suede_004.webp" 
+    <img src="/gallery/suede/suede_004.webp"
+         data-color="#1b1108" data-tone="sombre" 
          alt="Una vista atemporal de Suede. artística" 
          title="iPhone 13 | f/1.6 | 1/10s | ISO 640" 
           
@@ -48,7 +53,8 @@ tags: ["vintage", "sunset", "urban", "ocean", "neige"]
          data-lqip="true" 
          style="background-image: url(/gallery/suede/lqip/suede_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/suede/suede_005.webp" 
+    <img src="/gallery/suede/suede_005.webp"
+         data-color="#141511" data-tone="sombre" 
          alt="Una vista histórica de Suede. artística" 
          title="iPhone 13 | f/2.4 | 1/60s | ISO 500" 
           

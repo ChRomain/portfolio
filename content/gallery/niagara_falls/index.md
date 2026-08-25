@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/niagara_falls/feature.webp"]
 dominant_color: "#9ba7b6"
 tags: ["vintage", "ocean", "urban"]
+country_code: "ca"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -14,7 +15,8 @@ tags: ["vintage", "ocean", "urban"]
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-08-24%2010-38-55.mp4" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-08-24%2013-22-45.mp4" type="video/mp4"></video>
-    <img src="/gallery/niagara_falls/niagara_falls_001.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_001.webp"
+         data-color="#231f19" data-tone="sombre" 
          alt="The retro atmosphere of Niagara Falls, an artistic shot." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/500s | ISO 100" 
           
@@ -23,7 +25,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_002.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_002.webp"
+         data-color="#629de3" data-tone="bleu" 
          alt="Capturing the nostalgic essence of Niagara Falls. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/11.0 | 1/500s | ISO 100" 
           
@@ -32,7 +35,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_003.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_003.webp"
+         data-color="#ccdef6" data-tone="bleu" 
          alt="Visual exploration of Niagara Falls, featuring a timeless aesthetic." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/250s | ISO 100" 
           
@@ -41,7 +45,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_004.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_004.webp"
+         data-color="#929e9a" data-tone="neutre" 
          alt="Capturing the historic essence of Niagara Falls. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/320s | ISO 100" 
           
@@ -50,7 +55,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_005.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_005.webp"
+         data-color="#5b6e6d" data-tone="bleu" 
          alt="Capturing the nostalgic essence of Niagara Falls. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/400s | ISO 100" 
           
@@ -59,7 +65,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_006.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_006.webp"
+         data-color="#272023" data-tone="rouge" 
          alt="A retro view of Niagara Falls. artistic" 
          title="iPhone 15 | f/1.6 | 1/15s | ISO 500" 
           
@@ -68,7 +75,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_007.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_007.webp"
+         data-color="#9da3a3" data-tone="neutre" 
          alt="Visual exploration of Niagara Falls, featuring a nostalgic aesthetic." 
          title="ILCE-6700 | f/5.0 | 1/1250s | ISO 100" 
           
@@ -77,7 +85,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_008.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_008.webp"
+         data-color="#5b6469" data-tone="neutre" 
          alt="Capturing the retro essence of Niagara Falls. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/5.0 | 1/1250s | ISO 100" 
           
@@ -86,7 +95,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_009.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_009.webp"
+         data-color="#1f1e1a" data-tone="sombre" 
          alt="The nostalgic atmosphere of Niagara Falls, an artistic shot." 
          title="iPhone 15 | f/1.6 | 1/40s | ISO 125" 
           
@@ -95,7 +105,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_010.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_010.webp"
+         data-color="#4d6c71" data-tone="bleu" 
          alt="Capturing the retro essence of Niagara Falls. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/400s | ISO 100" 
           
@@ -104,7 +115,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_011.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_011.webp"
+         data-color="#9a9e9b" data-tone="neutre" 
          alt="The retro atmosphere of Niagara Falls, an artistic shot." 
          title="Canon EOS Rebel T100 | f/8.0 | 1/640s | ISO 100" 
           
@@ -113,7 +125,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_012.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_012.webp"
+         data-color="#d2d9e6" data-tone="bleu" 
          alt="The retro atmosphere of Niagara Falls, an artistic shot." 
          title="Canon EOS Rebel T100 | f/11.0 | 1/320s | ISO 100" 
           
@@ -122,7 +135,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_013.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_013.webp"
+         data-color="#242627" data-tone="neutre" 
          alt="Visual exploration of Niagara Falls, featuring a retro aesthetic." 
          title="iPhone 15 | f/1.6 | 1/6000s | ISO 50" 
           
@@ -131,7 +145,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/niagara_falls/lqip/niagara_falls_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/niagara_falls/niagara_falls_014.webp" 
+    <img src="/gallery/niagara_falls/niagara_falls_014.webp"
+         data-color="#5e5b5a" data-tone="neutre" 
          alt="Capturing the nostalgic essence of Niagara Falls. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/8.0 | 1/250s | ISO 100" 
           

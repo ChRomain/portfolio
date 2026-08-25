@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/canada/feature.webp"]
 dominant_color: "#d1d2d2"
 tags: ["ocean", "neige", "bright", "nature"]
+country_code: "ca"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -14,7 +15,8 @@ tags: ["ocean", "neige", "bright", "nature"]
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-07-08%2023-38-40.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-02-11%2014-29-22.mov" type="video/mp4"></video>
-    <img src="/gallery/canada/canada_001.webp" 
+    <img src="/gallery/canada/canada_001.webp"
+         data-color="#262721" data-tone="or" 
          alt="La atmósfera azul de Canada, una toma luminosa." 
          title="Canon EOS Rebel T6 | f/8.0 | 1/500s | ISO 100" 
           
@@ -23,7 +25,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_002.webp" 
+    <img src="/gallery/canada/canada_002.webp"
+         data-color="#2d1716" data-tone="rouge" 
          alt="Una vista acuática de Canada. luminosa" 
          title="Canon EOS Rebel T100 | f/4.5 | 1/100s | ISO 100" 
           
@@ -32,7 +35,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_003.webp" 
+    <img src="/gallery/canada/canada_003.webp"
+         data-color="#969fa9" data-tone="bleu" 
          alt="Exploración visual de Canada, con una estética marítima." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/250s | ISO 100" 
           
@@ -41,7 +45,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_004.webp" 
+    <img src="/gallery/canada/canada_004.webp"
+         data-color="#5d5552" data-tone="neutre" 
          alt="Capturando la esencia acuática de Canada. Foto de Romain Charretteur." 
          title="Canon EOS Rebel T6 | f/7.1 | 1/500s | ISO 100" 
           
@@ -50,7 +55,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_005.webp" 
+    <img src="/gallery/canada/canada_005.webp"
+         data-color="#29201e" data-tone="rouge" 
          alt="La atmósfera costera de Canada, una toma luminosa." 
          title="Canon EOS Rebel T6 | f/6.3 | 1/320s | ISO 100" 
           
@@ -59,7 +65,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_006.webp" 
+    <img src="/gallery/canada/canada_006.webp"
+         data-color="#9aa29f" data-tone="neutre" 
          alt="Exploración visual de Canada, con una estética costera." 
          title="Canon EOS Rebel T6 | f/8.0 | 1/200s | ISO 100" 
           
@@ -68,7 +75,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_007.webp" 
+    <img src="/gallery/canada/canada_007.webp"
+         data-color="#9da0ab" data-tone="neutre" 
          alt="Exploración visual de Canada, con una estética marítima." 
          title="Canon EOS Rebel T6 | f/5.0 | 1/250s | ISO 125" 
           
@@ -77,7 +85,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_008.webp" 
+    <img src="/gallery/canada/canada_008.webp"
+         data-color="#5f5855" data-tone="neutre" 
          alt="La atmósfera costera de Canada, una toma luminosa." 
          title="Canon EOS Rebel T6 | f/7.1 | 1/400s | ISO 3200" 
           
@@ -86,7 +95,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_009.webp" 
+    <img src="/gallery/canada/canada_009.webp"
+         data-color="#555656" data-tone="neutre" 
          alt="Una vista acuática de Canada. luminosa" 
          title="DMC-FZ300 | f/7.1 | 1/80s | ISO 200" 
           
@@ -95,7 +105,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_010.webp" 
+    <img src="/gallery/canada/canada_010.webp"
+         data-color="#5c5e61" data-tone="neutre" 
          alt="Capturando la esencia azul de Canada. Foto de Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/320s | ISO 100" 
           
@@ -104,7 +115,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_011.webp" 
+    <img src="/gallery/canada/canada_011.webp"
+         data-color="#14586f" data-tone="bleu" 
          alt="Exploración visual de Canada, con una estética marítima." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/2000s | ISO 100" 
           
@@ -113,7 +125,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_012.webp" 
+    <img src="/gallery/canada/canada_012.webp"
+         data-color="#2f5454" data-tone="bleu" 
          alt="Exploración visual de Canada, con una estética azul." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/1600s | ISO 100" 
           
@@ -122,7 +135,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_013.webp" 
+    <img src="/gallery/canada/canada_013.webp"
+         data-color="#15252c" data-tone="bleu" 
          alt="Exploración visual de Canada, con una estética azul." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/2000s | ISO 100" 
           
@@ -131,7 +145,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_014.webp" 
+    <img src="/gallery/canada/canada_014.webp"
+         data-color="#9c9c9c" data-tone="neutre" 
          alt="Capturando la esencia marítima de Canada. Foto de Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/1600s | ISO 100" 
           
@@ -140,7 +155,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_015.webp" 
+    <img src="/gallery/canada/canada_015.webp"
+         data-color="#606857" data-tone="vert" 
          alt="Capturando la esencia marítima de Canada. Foto de Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/640s | ISO 100" 
           
@@ -149,7 +165,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_016.webp" 
+    <img src="/gallery/canada/canada_016.webp"
+         data-color="#2d4c20" data-tone="vert" 
          alt="Capturando la esencia acuática de Canada. Foto de Romain Charretteur." 
          title="FC3682 | f/1.7 | 1/2000s | ISO 100" 
           
@@ -158,7 +175,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_017.webp" 
+    <img src="/gallery/canada/canada_017.webp"
+         data-color="#222325" data-tone="neutre" 
          alt="Una vista acuática de Canada. luminosa" 
          title="FC3682 | f/1.7 | 1/1600s | ISO 100" 
           
@@ -167,7 +185,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_018.webp" 
+    <img src="/gallery/canada/canada_018.webp"
+         data-color="#274f2a" data-tone="vert" 
          alt="Exploración visual de Canada, con una estética azul." 
          title="FC3682 | f/1.7 | 1/1600s | ISO 100" 
           
@@ -176,7 +195,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_019.webp" 
+    <img src="/gallery/canada/canada_019.webp"
+         data-color="#0c5a58" data-tone="bleu" 
          alt="Una vista acuática de Canada. luminosa" 
          title="FC3682 | f/1.7 | 1/1000s | ISO 100" 
           
@@ -185,7 +205,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_020.webp" 
+    <img src="/gallery/canada/canada_020.webp"
+         data-color="#1a2821" data-tone="vert" 
          alt="Exploración visual de Canada, con una estética costera." 
          title="FC3682 | f/1.7 | 1/30s | ISO 100" 
           
@@ -194,7 +215,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_021.webp" 
+    <img src="/gallery/canada/canada_021.webp"
+         data-color="#5f645d" data-tone="neutre" 
          alt="Exploración visual de Canada, con una estética marítima." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -203,7 +225,8 @@ tags: ["ocean", "neige", "bright", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/canada/lqip/canada_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/canada/canada_022.webp" 
+    <img src="/gallery/canada/canada_022.webp"
+         data-color="#232710" data-tone="sombre" 
          alt="Una vista azul de Canada. luminosa" 
          title="ILCE-6700 | f/5.0 | 1/250s | ISO 100" 
           

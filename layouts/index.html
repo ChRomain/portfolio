@@ -269,6 +269,31 @@
     </div>
 
 
+    {{/* Navigation par ambiance : Hugo génère déjà /tags/<terme>/ à partir du
+         frontmatter des galeries, mais rien n'y menait. On expose les termes les
+         plus fournis, triés par nombre de galeries. */}}
+    {{ $terms := site.Taxonomies.tags }}
+    {{ if $terms }}
+    <div class="category-block mb-20">
+        <div class="flex flex-col items-center mb-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-neutral-800 dark:text-white tracking-tighter mb-4">
+                {{ T "browse_by_mood" }}
+            </h2>
+            <div class="w-16 h-1.5 bg-primary-500 rounded-full"></div>
+        </div>
+        <div class="mood-chip-row">
+            {{ range $terms.ByCount }}
+              {{ $key := .Page.Data.Term }}
+              {{ $label := T (printf "mood_%s" $key) }}
+              <a class="mood-chip" href="{{ .Page.RelPermalink }}">
+                <span class="mood-chip-label">{{ if $label }}{{ $label }}{{ else }}{{ .Page.Title }}{{ end }}</span>
+                <span class="mood-chip-count">{{ .Count }}</span>
+              </a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
     <section id="homepage-map-section" class="relative w-full overflow-hidden bg-white dark:bg-neutral-900 border-y border-neutral-200 dark:border-white/5" style="height: 500px;">
         <div id="mini-map" class="w-full h-full" data-locations="{{ site.Data.locations | default slice | jsonify }}"></div>
     </section>

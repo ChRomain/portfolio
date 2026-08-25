@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/cape_cod/feature.webp"]
 dominant_color: "#313028"
 tags: ["vintage", "ocean", "dark"]
+country_code: "us"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -12,7 +13,8 @@ tags: ["vintage", "ocean", "dark"]
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/cape_cod/cape_cod_001.webp" 
+    <img src="/gallery/cape_cod/cape_cod_001.webp"
+         data-color="#2e2f29" data-tone="neutre" 
          alt="A timeless view of Cape Cod. dark and mysterious" 
          title="Canon EOS Rebel T100 | f/6.3 | 1/200s | ISO 100" 
           
@@ -21,7 +23,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_002.webp" 
+    <img src="/gallery/cape_cod/cape_cod_002.webp"
+         data-color="#555b57" data-tone="neutre" 
          alt="A historic view of Cape Cod. dark and mysterious" 
          title="FC3682 | f/1.7 | 1/1250s | ISO 100" 
           
@@ -30,7 +33,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_003.webp" 
+    <img src="/gallery/cape_cod/cape_cod_003.webp"
+         data-color="#1e211f" data-tone="neutre" 
          alt="Capturing the retro essence of Cape Cod. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/11.0 | 1/500s | ISO 100" 
           
@@ -39,7 +43,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_004.webp" 
+    <img src="/gallery/cape_cod/cape_cod_004.webp"
+         data-color="#5a5c56" data-tone="neutre" 
          alt="Capturing the timeless essence of Cape Cod. Photo by Romain Charretteur." 
          title="iPhone 15 | f/1.6 | 1/3000s | ISO 50" 
           
@@ -48,7 +53,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_005.webp" 
+    <img src="/gallery/cape_cod/cape_cod_005.webp"
+         data-color="#262725" data-tone="neutre" 
          alt="A timeless view of Cape Cod. dark and mysterious" 
          title="Canon EOS Rebel T100 | f/7.1 | 1/200s | ISO 100" 
           
@@ -57,7 +63,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_006.webp" 
+    <img src="/gallery/cape_cod/cape_cod_006.webp"
+         data-color="#9db2cb" data-tone="bleu" 
          alt="Visual exploration of Cape Cod, featuring a nostalgic aesthetic." 
          title="Canon EOS Rebel T100 | f/8.0 | 1/320s | ISO 100" 
           
@@ -66,7 +73,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_007.webp" 
+    <img src="/gallery/cape_cod/cape_cod_007.webp"
+         data-color="#6a989e" data-tone="bleu" 
          alt="Visual exploration of Cape Cod, featuring a timeless aesthetic." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/320s | ISO 100" 
           
@@ -75,7 +83,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_008.webp" 
+    <img src="/gallery/cape_cod/cape_cod_008.webp"
+         data-color="#526369" data-tone="bleu" 
          alt="Capturing the historic essence of Cape Cod. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/320s | ISO 100" 
           
@@ -84,7 +93,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_009.webp" 
+    <img src="/gallery/cape_cod/cape_cod_009.webp"
+         data-color="#585f60" data-tone="neutre" 
          alt="A timeless view of Cape Cod. dark and mysterious" 
          title="Canon EOS Rebel T100 | f/10.0 | 1/250s | ISO 100" 
           
@@ -93,7 +103,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_010.webp" 
+    <img src="/gallery/cape_cod/cape_cod_010.webp"
+         data-color="#606b61" data-tone="neutre" 
          alt="A timeless view of Cape Cod. dark and mysterious" 
          title="FC3682 | f/1.7 | 1/2000s | ISO 100" 
           
@@ -102,7 +113,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_011.webp" 
+    <img src="/gallery/cape_cod/cape_cod_011.webp"
+         data-color="#2c3423" data-tone="vert" 
          alt="Visual exploration of Cape Cod, featuring a nostalgic aesthetic." 
          title="FC3682 | f/1.7 | 1/2500s | ISO 100" 
           
@@ -111,7 +123,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_012.webp" 
+    <img src="/gallery/cape_cod/cape_cod_012.webp"
+         data-color="#645e57" data-tone="neutre" 
          alt="Capturing the historic essence of Cape Cod. Photo by Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/10.0 | 1/320s | ISO 100" 
           
@@ -120,7 +133,8 @@ tags: ["vintage", "ocean", "dark"]
          data-lqip="true" 
          style="background-image: url(/gallery/cape_cod/lqip/cape_cod_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/cape_cod/cape_cod_013.webp" 
+    <img src="/gallery/cape_cod/cape_cod_013.webp"
+         data-color="#335d50" data-tone="vert" 
          alt="A retro view of Cape Cod. dark and mysterious" 
          title="FC3682 | f/1.7 | 1/2500s | ISO 100" 
           

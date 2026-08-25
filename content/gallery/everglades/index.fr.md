@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/everglades/feature.webp"]
 dominant_color: "#43464c"
 tags: ["vintage", "ocean", "nature"]
+country_code: "us"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -17,7 +18,8 @@ tags: ["vintage", "ocean", "nature"]
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-13-27.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-12.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2026-04-09%2000-14-59.mov" type="video/mp4"></video>
-    <img src="/gallery/everglades/everglades_001.webp" 
+    <img src="/gallery/everglades/everglades_001.webp"
+         data-color="#575864" data-tone="neutre" 
          alt="Une vue intemporelle de Everglades. artistique" 
          title="ILCE-6700 | f/5.6 | 1/1000s | ISO 125" 
           
@@ -26,7 +28,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_002.webp" 
+    <img src="/gallery/everglades/everglades_002.webp"
+         data-color="#252720" data-tone="vert" 
          alt="Une vue rétro de Everglades. artistique" 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
@@ -35,7 +38,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_003.webp" 
+    <img src="/gallery/everglades/everglades_003.webp"
+         data-color="#1f1812" data-tone="sombre" 
          alt="Cliché historique immortalisé à Everglades par Romain Charretteur." 
          title="ILCE-6700 | f/5.0 | 1/250s | ISO 100" 
           
@@ -44,7 +48,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_004.webp" 
+    <img src="/gallery/everglades/everglades_004.webp"
+         data-color="#2e3021" data-tone="or" 
          alt="Exploration visuelle de Everglades, révélant une esthétique historique." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
@@ -53,7 +58,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_005.webp" 
+    <img src="/gallery/everglades/everglades_005.webp"
+         data-color="#5c622c" data-tone="or" 
          alt="Atmosphère intemporelle à Everglades, une photographie artistique." 
          title="ILCE-6700 | f/5.6 | 1/1000s | ISO 500" 
           
@@ -62,7 +68,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_006.webp" 
+    <img src="/gallery/everglades/everglades_006.webp"
+         data-color="#515f2e" data-tone="vert" 
          alt="Une vue rétro de Everglades. artistique" 
          title="ILCE-6700 | f/5.6 | 1/1000s | ISO 640" 
           
@@ -71,7 +78,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_007.webp" 
+    <img src="/gallery/everglades/everglades_007.webp"
+         data-color="#231e1f" data-tone="neutre" 
          alt="Atmosphère rétro à Everglades, une photographie artistique." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -80,7 +88,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_008.webp" 
+    <img src="/gallery/everglades/everglades_008.webp"
+         data-color="#221b1a" data-tone="sombre" 
          alt="Atmosphère rétro à Everglades, une photographie artistique." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -89,7 +98,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_009.webp" 
+    <img src="/gallery/everglades/everglades_009.webp"
+         data-color="#22211e" data-tone="neutre" 
          alt="Une vue intemporelle de Everglades. artistique" 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -98,7 +108,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_010.webp" 
+    <img src="/gallery/everglades/everglades_010.webp"
+         data-color="#5c5b63" data-tone="neutre" 
          alt="Atmosphère intemporelle à Everglades, une photographie artistique." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -107,7 +118,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_011.webp" 
+    <img src="/gallery/everglades/everglades_011.webp"
+         data-color="#5e5866" data-tone="neutre" 
          alt="Atmosphère rétro à Everglades, une photographie artistique." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
@@ -116,7 +128,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_012.webp" 
+    <img src="/gallery/everglades/everglades_012.webp"
+         data-color="#646230" data-tone="or" 
          alt="Atmosphère historique à Everglades, une photographie artistique." 
          title="ILCE-6700 | f/5.6 | 1/250s | ISO 100" 
           
@@ -125,7 +138,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/everglades/lqip/everglades_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/everglades/everglades_013.webp" 
+    <img src="/gallery/everglades/everglades_013.webp"
+         data-color="#53522f" data-tone="or" 
          alt="Une vue historique de Everglades. artistique" 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           

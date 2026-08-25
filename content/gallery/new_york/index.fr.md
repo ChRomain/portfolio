@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/new_york/feature.webp"]
 dominant_color: "#2f3537"
 tags: ["ocean", "sunset", "urban"]
+country_code: "us"
 itinerary_days:
   - label: "Bons plans à New York"
     items:
@@ -60,7 +61,8 @@ itinerary_days:
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-08%2012-20-58.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-06-23%2013-16-26.mov" type="video/mp4"></video>
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-12-06%2000-27-10.mov" type="video/mp4"></video>
-    <img src="/gallery/new_york/new_york_001.webp" 
+    <img src="/gallery/new_york/new_york_001.webp"
+         data-color="#525f5e" data-tone="neutre" 
          alt="Exploration visuelle de New York, révélant une esthétique azur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/60s | ISO 160" 
           
@@ -69,7 +71,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_002.webp" 
+    <img src="/gallery/new_york/new_york_002.webp"
+         data-color="#292a30" data-tone="neutre" 
          alt="Cliché maritime immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/500s | ISO 100" 
           
@@ -78,7 +81,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_003.webp" 
+    <img src="/gallery/new_york/new_york_003.webp"
+         data-color="#5c5463" data-tone="bleu" 
          alt="Cliché maritime immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/640s | ISO 100" 
           
@@ -87,7 +91,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_004.webp" 
+    <img src="/gallery/new_york/new_york_004.webp"
+         data-color="#655d5d" data-tone="neutre" 
          alt="Cliché azur immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/200s | ISO 100" 
           
@@ -96,7 +101,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_005.webp" 
+    <img src="/gallery/new_york/new_york_005.webp"
+         data-color="#927560" data-tone="or" 
          alt="Atmosphère aquatique à New York, une photographie artistique." 
          title="iPhone 15 | f/1.6 | 1/200s | ISO 32" 
           
@@ -105,7 +111,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_006.webp" 
+    <img src="/gallery/new_york/new_york_006.webp"
+         data-color="#211d28" data-tone="bleu" 
          alt="Cliché côtière immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/400s | ISO 100" 
           
@@ -114,7 +121,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_007.webp" 
+    <img src="/gallery/new_york/new_york_007.webp"
+         data-color="#201b13" data-tone="sombre" 
          alt="Une vue aquatique de New York. artistique" 
          title="Canon EOS Rebel T100 | f/5.6 | 1/800s | ISO 100" 
           
@@ -123,7 +131,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_008.webp" 
+    <img src="/gallery/new_york/new_york_008.webp"
+         data-color="#24150b" data-tone="sombre" 
          alt="Exploration visuelle de New York, révélant une esthétique azur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/80s | ISO 500" 
           
@@ -132,7 +141,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_009.webp" 
+    <img src="/gallery/new_york/new_york_009.webp"
+         data-color="#6b6351" data-tone="or" 
          alt="Une vue côtière de New York. artistique" 
          title="Canon EOS Rebel T100 | f/5.6 | 1/200s | ISO 100" 
           
@@ -141,7 +151,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_010.webp" 
+    <img src="/gallery/new_york/new_york_010.webp"
+         data-color="#2e281b" data-tone="or" 
          alt="Cliché azur immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/100s | ISO 100" 
           
@@ -150,7 +161,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_011.webp" 
+    <img src="/gallery/new_york/new_york_011.webp"
+         data-color="#575d61" data-tone="neutre" 
          alt="Atmosphère côtière à New York, une photographie artistique." 
          title="Canon EOS Rebel T100 | f/6.3 | 1/15s | ISO 3200" 
           
@@ -159,7 +171,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_012.webp" 
+    <img src="/gallery/new_york/new_york_012.webp"
+         data-color="#5e5b59" data-tone="neutre" 
          alt="Exploration visuelle de New York, révélant une esthétique côtière." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/60s | ISO 100" 
           
@@ -168,7 +181,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_013.webp" 
+    <img src="/gallery/new_york/new_york_013.webp"
+         data-color="#27262a" data-tone="neutre" 
          alt="Cliché maritime immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/400s | ISO 100" 
           
@@ -177,7 +191,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_014.webp" 
+    <img src="/gallery/new_york/new_york_014.webp"
+         data-color="#999c99" data-tone="neutre" 
          alt="Une vue maritime de New York. artistique" 
          title="Canon EOS Rebel T100 | f/5.6 | 1/1000s | ISO 100" 
           
@@ -186,7 +201,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_015.webp" 
+    <img src="/gallery/new_york/new_york_015.webp"
+         data-color="#5a759a" data-tone="bleu" 
          alt="Cliché azur immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/800s | ISO 100" 
           
@@ -195,7 +211,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_016.webp" 
+    <img src="/gallery/new_york/new_york_016.webp"
+         data-color="#8a9caf" data-tone="bleu" 
          alt="Cliché azur immortalisé à New York par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/1000s | ISO 100" 
           
@@ -204,7 +221,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_017.webp" 
+    <img src="/gallery/new_york/new_york_017.webp"
+         data-color="#23292f" data-tone="bleu" 
          alt="Exploration visuelle de New York, révélant une esthétique côtière." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/160s | ISO 100" 
           
@@ -213,7 +231,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_018.webp" 
+    <img src="/gallery/new_york/new_york_018.webp"
+         data-color="#22515b" data-tone="bleu" 
          alt="Exploration visuelle de New York, révélant une esthétique aquatique." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/50s | ISO 1250" 
           
@@ -222,7 +241,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_019.webp" 
+    <img src="/gallery/new_york/new_york_019.webp"
+         data-color="#675d5b" data-tone="neutre" 
          alt="Une vue aquatique de New York. artistique" 
          title="iPhone 15 | f/1.6 | 1/30s | ISO 500" 
           
@@ -231,7 +251,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_020.webp" 
+    <img src="/gallery/new_york/new_york_020.webp"
+         data-color="#1a2e0e" data-tone="sombre" 
          alt="Atmosphère côtière à New York, une photographie artistique." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/100s | ISO 125" 
           
@@ -240,7 +261,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_021.webp" 
+    <img src="/gallery/new_york/new_york_021.webp"
+         data-color="#60a3dc" data-tone="bleu" 
          alt="Exploration visuelle de New York, révélant une esthétique maritime." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/1000s | ISO 100" 
           
@@ -249,7 +271,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_022.webp" 
+    <img src="/gallery/new_york/new_york_022.webp"
+         data-color="#1f9fd9" data-tone="bleu" 
          alt="Atmosphère maritime à New York, une photographie artistique." 
          title="Canon EOS Rebel T100 | f/5.6 | 1/800s | ISO 100" 
           
@@ -258,7 +281,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_022.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_023.webp" 
+    <img src="/gallery/new_york/new_york_023.webp"
+         data-color="#1f1b15" data-tone="sombre" 
          alt="Une vue côtière de New York. artistique" 
          title="ILCE-6700 | f/4.0 | 1/60s | ISO 100" 
           
@@ -267,7 +291,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_023.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_024.webp" 
+    <img src="/gallery/new_york/new_york_024.webp"
+         data-color="#2d5fa4" data-tone="bleu" 
          alt="Exploration visuelle de New York, révélant une esthétique côtière." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -276,7 +301,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_024.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_025.webp" 
+    <img src="/gallery/new_york/new_york_025.webp"
+         data-color="#9da1aa" data-tone="neutre" 
          alt="Atmosphère aquatique à New York, une photographie artistique." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -285,7 +311,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_025.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_026.webp" 
+    <img src="/gallery/new_york/new_york_026.webp"
+         data-color="#545a58" data-tone="neutre" 
          alt="Exploration visuelle de New York, révélant une esthétique côtière." 
          title="ILCE-6700 | f/6.3 | 1/125s | ISO 100" 
           
@@ -294,7 +321,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_026.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_027.webp" 
+    <img src="/gallery/new_york/new_york_027.webp"
+         data-color="#b0c5d6" data-tone="bleu" 
          alt="Atmosphère côtière à New York, une photographie artistique." 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -303,7 +331,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_027.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_028.webp" 
+    <img src="/gallery/new_york/new_york_028.webp"
+         data-color="#513016" data-tone="or" 
          alt="Une vue côtière de New York. artistique" 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 1000" 
           
@@ -312,7 +341,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_028.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_029.webp" 
+    <img src="/gallery/new_york/new_york_029.webp"
+         data-color="#24170e" data-tone="sombre" 
          alt="Cliché azur immortalisé à New York par Romain Charretteur." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 4000" 
           
@@ -321,7 +351,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_029.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_030.webp" 
+    <img src="/gallery/new_york/new_york_030.webp"
+         data-color="#2d251e" data-tone="or" 
          alt="Cliché maritime immortalisé à New York par Romain Charretteur." 
          title="iPhone 15 | f/1.6 | 1/9s | ISO 320" 
           
@@ -330,7 +361,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_030.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_031.webp" 
+    <img src="/gallery/new_york/new_york_031.webp"
+         data-color="#6f655e" data-tone="or" 
          alt="Exploration visuelle de New York, révélant une esthétique côtière." 
          title="ILCE-6700 | f/5.6 | 1/200s | ISO 320" 
           
@@ -339,7 +371,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_031.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_032.webp" 
+    <img src="/gallery/new_york/new_york_032.webp"
+         data-color="#635d5b" data-tone="neutre" 
          alt="Exploration visuelle de New York, révélant une esthétique aquatique." 
          title="ILCE-6700 | f/4.5 | 1/1000s | ISO 800" 
           
@@ -348,7 +381,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_032.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_033.webp" 
+    <img src="/gallery/new_york/new_york_033.webp"
+         data-color="#5e555a" data-tone="neutre" 
          alt="Atmosphère azur à New York, une photographie artistique." 
          title="ILCE-6700 | f/5.0 | 1/1000s | ISO 800" 
           
@@ -357,7 +391,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_033.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_034.webp" 
+    <img src="/gallery/new_york/new_york_034.webp"
+         data-color="#6c5951" data-tone="rouge" 
          alt="Exploration visuelle de New York, révélant une esthétique côtière." 
          title="ILCE-6700 | f/5.0 | 1/2000s | ISO 800" 
           
@@ -366,7 +401,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_034.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_035.webp" 
+    <img src="/gallery/new_york/new_york_035.webp"
+         data-color="#a09999" data-tone="neutre" 
          alt="Une vue maritime de New York. artistique" 
          title="ILCE-6700 | f/4.5 | 1/80s | ISO 100" 
           
@@ -375,7 +411,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_035.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_036.webp" 
+    <img src="/gallery/new_york/new_york_036.webp"
+         data-color="#2e2211" data-tone="or" 
          alt="Cliché azur immortalisé à New York par Romain Charretteur." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 3200" 
           
@@ -384,7 +421,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_036.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_037.webp" 
+    <img src="/gallery/new_york/new_york_037.webp"
+         data-color="#34251a" data-tone="or" 
          alt="Une vue côtière de New York. artistique" 
          title="ILCE-6700 | f/3.5 | 1/160s | ISO 1600" 
           
@@ -393,7 +431,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_037.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_038.webp" 
+    <img src="/gallery/new_york/new_york_038.webp"
+         data-color="#141110" data-tone="sombre" 
          alt="Atmosphère aquatique à New York, une photographie artistique." 
          title="ILCE-6700 | f/3.2 | 1/160s | ISO 1600" 
           
@@ -402,7 +441,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_038.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_039.webp" 
+    <img src="/gallery/new_york/new_york_039.webp"
+         data-color="#2a251e" data-tone="or" 
          alt="Atmosphère azur à New York, une photographie artistique." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 4000" 
           
@@ -411,7 +451,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_039.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_040.webp" 
+    <img src="/gallery/new_york/new_york_040.webp"
+         data-color="#1c1414" data-tone="sombre" 
          alt="Exploration visuelle de New York, révélant une esthétique aquatique." 
          title="ILCE-6700 | f/2.8 | 1/60s | ISO 800" 
           
@@ -420,7 +461,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_040.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_041.webp" 
+    <img src="/gallery/new_york/new_york_041.webp"
+         data-color="#1e1312" data-tone="sombre" 
          alt="Atmosphère aquatique à New York, une photographie artistique." 
          title="ILCE-6700 | f/2.8 | 1/60s | ISO 800" 
           
@@ -429,7 +471,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/new_york/lqip/new_york_041.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/new_york/new_york_042.webp" 
+    <img src="/gallery/new_york/new_york_042.webp"
+         data-color="#1d0e09" data-tone="sombre" 
          alt="Exploration visuelle de New York, révélant une esthétique maritime." 
          title="ILCE-6700 | f/3.2 | 1/160s | ISO 1600" 
           

@@ -5,6 +5,7 @@ layout: "peru"
 images: ["/gallery/peru/feature.webp"]
 dominant_color: "#615046"
 tags: ["dark", "warm", "bright", "cold", "lush"]
+country_code: "pe"
 itinerary: [{"id": "lima", "name": "Lima", "coords": [-12.04637, -77.04279], "date": "2026-06-20", "cover": "/gallery/peru/peru_lima_001.webp", "count": 17}, {"id": "paracas", "name": "Paracas", "coords": [-13.7144, -76.2505], "date": "2026-06-22", "cover": "/gallery/peru/peru_paracas_001.webp", "count": 27}, {"id": "huacachina", "name": "Huacachina", "coords": [-14.0875, -75.7633], "date": "2026-06-23", "cover": "/gallery/peru/peru_huacachina_001.webp", "count": 10}, {"id": "nazca", "name": "Nazca", "coords": [-14.8307, -74.9386], "date": "2026-06-24", "cover": "/gallery/peru/peru_nazca_001.webp", "count": 10}, {"id": "arequipa", "name": "Arequipa", "coords": [-16.409, -71.5375], "date": "2026-06-25", "cover": "/gallery/peru/peru_arequipa_001.webp", "count": 27}, {"id": "colca_canyon", "name": "Colca Canyon", "coords": [-15.6092, -71.8874], "date": "2026-06-26", "cover": "/gallery/peru/peru_colca_canyon_001.webp", "count": 20}, {"id": "sacred_valley", "name": "Sacred Valley", "coords": [-13.3278, -72.0734], "date": "2026-06-29", "cover": "/gallery/peru/peru_sacred_valley_001.webp", "count": 21}, {"id": "salineras_de_maras", "name": "Salineras De Maras", "coords": [-13.3045, -72.1554], "date": "2026-06-29", "cover": "/gallery/peru/peru_salineras_de_maras_001.webp", "count": 14}, {"id": "rainbow_mountain", "name": "Rainbow Mountain", "coords": [-13.8633, -71.3028], "date": "2026-06-30", "cover": "/gallery/peru/peru_rainbow_mountain_001.webp", "count": 27}, {"id": "aguas_calientes", "name": "Aguas Calientes", "coords": [-13.1551, -72.5249], "date": "2026-07-02", "cover": "/gallery/peru/peru_aguas_calientes_001.webp", "count": 9}, {"id": "machu_picchu", "name": "Machu Picchu", "coords": [-13.1631, -72.545], "date": "2026-07-03", "cover": "/gallery/peru/peru_machu_picchu_001.webp", "count": 21}]
 intro_text: "&nbsp;&nbsp;&nbsp;&nbsp;From the Pacific cliffs of Lima to the ancient secrets of the Sacred Valley, through the high-altitude oasis of Huacachina and the colored peaks of Rainbow Mountain, embark on an immersive journey across the land of the Incas."
 itinerary_days:
@@ -106,7 +107,8 @@ itinerary_days:
 ---
 
 {{< gallery >}}
-    <img src="/gallery/peru/peru_lima_001.webp" 
+    <img src="/gallery/peru/peru_lima_001.webp"
+         data-color="#926a64" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="iPhone 17 | f/1.6 | 1/4300s | ISO 32" 
           
@@ -116,7 +118,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_002.webp" 
+    <img src="/gallery/peru/peru_lima_002.webp"
+         data-color="#a29f97" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="iPhone 17 | f/1.6 | 1/4000s | ISO 32" 
           
@@ -126,7 +129,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_003.webp" 
+    <img src="/gallery/peru/peru_lima_003.webp"
+         data-color="#675a53" data-tone="or" 
          alt="Capturing the bright and clear essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/9.0 | 1/200s | ISO 100" 
           
@@ -136,7 +140,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_004.webp" 
+    <img src="/gallery/peru/peru_lima_004.webp"
+         data-color="#6b669d" data-tone="bleu" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 4000" 
           
@@ -146,7 +151,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_005.webp" 
+    <img src="/gallery/peru/peru_lima_005.webp"
+         data-color="#131316" data-tone="sombre" 
          alt="Capturing the dark and mysterious essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 3200" 
           
@@ -156,7 +162,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_006.webp" 
+    <img src="/gallery/peru/peru_lima_006.webp"
+         data-color="#55582e" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="" 
           
@@ -166,7 +173,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_007.webp" 
+    <img src="/gallery/peru/peru_lima_007.webp"
+         data-color="#8f645f" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -176,7 +184,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_008.webp" 
+    <img src="/gallery/peru/peru_lima_008.webp"
+         data-color="#aaa39d" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -186,7 +195,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_009.webp" 
+    <img src="/gallery/peru/peru_lima_009.webp"
+         data-color="#615558" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" 
           
@@ -196,7 +206,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_010.webp" 
+    <img src="/gallery/peru/peru_lima_010.webp"
+         data-color="#615f59" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -206,7 +217,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_011.webp" 
+    <img src="/gallery/peru/peru_lima_011.webp"
+         data-color="#6d5955" data-tone="rouge" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -216,7 +228,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_012.webp" 
+    <img src="/gallery/peru/peru_lima_012.webp"
+         data-color="#5a565a" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 6400" 
           
@@ -226,7 +239,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_013.webp" 
+    <img src="/gallery/peru/peru_lima_013.webp"
+         data-color="#262514" data-tone="sombre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/2.8 | 1/125s | ISO 6400" 
           
@@ -236,7 +250,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_014.webp" 
+    <img src="/gallery/peru/peru_lima_014.webp"
+         data-color="#626055" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/2.8 | 1/50s | ISO 6400" 
           
@@ -246,7 +261,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_015.webp" 
+    <img src="/gallery/peru/peru_lima_015.webp"
+         data-color="#625d5b" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/500s | ISO 100" 
           
@@ -256,7 +272,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_016.webp" 
+    <img src="/gallery/peru/peru_lima_016.webp"
+         data-color="#6e5d4f" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="" 
           
@@ -266,7 +283,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_lima_017.webp" 
+    <img src="/gallery/peru/peru_lima_017.webp"
+         data-color="#6e5b54" data-tone="rouge" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="" 
           
@@ -276,7 +294,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_lima_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_001.webp" 
+    <img src="/gallery/peru/peru_paracas_001.webp"
+         data-color="#5e615d" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a with cold reflections aesthetic." 
          title="iPhone 17 | f/1.6 | 1/5000s | ISO 32" 
           
@@ -286,7 +305,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_002.webp" 
+    <img src="/gallery/peru/peru_paracas_002.webp"
+         data-color="#9fa0a5" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -296,7 +316,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_003.webp" 
+    <img src="/gallery/peru/peru_paracas_003.webp"
+         data-color="#655d60" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -306,7 +327,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_004.webp" 
+    <img src="/gallery/peru/peru_paracas_004.webp"
+         data-color="#d6d5dd" data-tone="bleu" 
          alt="Capturing the bright and clear essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -316,7 +338,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_005.webp" 
+    <img src="/gallery/peru/peru_paracas_005.webp"
+         data-color="#62595c" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" 
           
@@ -326,7 +349,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_006.webp" 
+    <img src="/gallery/peru/peru_paracas_006.webp"
+         data-color="#625b64" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
           
@@ -336,7 +360,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_007.webp" 
+    <img src="/gallery/peru/peru_paracas_007.webp"
+         data-color="#522b16" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -346,7 +371,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_008.webp" 
+    <img src="/gallery/peru/peru_paracas_008.webp"
+         data-color="#a7742a" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -356,7 +382,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_009.webp" 
+    <img src="/gallery/peru/peru_paracas_009.webp"
+         data-color="#a2a6a1" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -366,7 +393,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_010.webp" 
+    <img src="/gallery/peru/peru_paracas_010.webp"
+         data-color="#683521" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -376,7 +404,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_011.webp" 
+    <img src="/gallery/peru/peru_paracas_011.webp"
+         data-color="#9ab5e2" data-tone="bleu" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -386,7 +415,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_012.webp" 
+    <img src="/gallery/peru/peru_paracas_012.webp"
+         data-color="#c99059" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -396,7 +426,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_013.webp" 
+    <img src="/gallery/peru/peru_paracas_013.webp"
+         data-color="#586767" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -406,7 +437,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_014.webp" 
+    <img src="/gallery/peru/peru_paracas_014.webp"
+         data-color="#a29ea0" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/400s | ISO 100" 
           
@@ -416,7 +448,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_015.webp" 
+    <img src="/gallery/peru/peru_paracas_015.webp"
+         data-color="#b58947" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/400s | ISO 100" 
           
@@ -426,7 +459,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_016.webp" 
+    <img src="/gallery/peru/peru_paracas_016.webp"
+         data-color="#1d8eb1" data-tone="bleu" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/400s | ISO 100" 
           
@@ -436,7 +470,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_017.webp" 
+    <img src="/gallery/peru/peru_paracas_017.webp"
+         data-color="#605d57" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/500s | ISO 100" 
           
@@ -446,7 +481,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_018.webp" 
+    <img src="/gallery/peru/peru_paracas_018.webp"
+         data-color="#976122" data-tone="or" 
          alt="Visual exploration of Peru, featuring a with cold reflections aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -456,7 +492,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_019.webp" 
+    <img src="/gallery/peru/peru_paracas_019.webp"
+         data-color="#9b581e" data-tone="or" 
          alt="Capturing the with cold reflections essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -466,7 +503,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_020.webp" 
+    <img src="/gallery/peru/peru_paracas_020.webp"
+         data-color="#935b2a" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -476,7 +514,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_021.webp" 
+    <img src="/gallery/peru/peru_paracas_021.webp"
+         data-color="#25261b" data-tone="or" 
          alt="A with cold reflections view of Peru. with cold reflections" 
          title="ILCE-6700 | f/7.1 | 1/200s | ISO 100" 
           
@@ -486,7 +525,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_022.webp" 
+    <img src="/gallery/peru/peru_paracas_022.webp"
+         data-color="#6b675c" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -496,7 +536,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_022.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_023.webp" 
+    <img src="/gallery/peru/peru_paracas_023.webp"
+         data-color="#241c1a" data-tone="rouge" 
          alt="Capturing the with warm tones essence of Peru. Photo by Romain Charretteur." 
          title="iPhone 17 | f/1.6 | 1/1250s | ISO 50" 
           
@@ -506,7 +547,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_023.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_024.webp" 
+    <img src="/gallery/peru/peru_paracas_024.webp"
+         data-color="#0864b7" data-tone="bleu" 
          alt="The with cold reflections atmosphere of Peru, a with cold reflections shot." 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -516,7 +558,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_024.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_025.webp" 
+    <img src="/gallery/peru/peru_paracas_025.webp"
+         data-color="#282317" data-tone="or" 
          alt="A with warm tones view of Peru. with warm tones" 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -526,7 +569,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_025.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_026.webp" 
+    <img src="/gallery/peru/peru_paracas_026.webp"
+         data-color="#1a2e20" data-tone="vert" 
          alt="The dark and mysterious atmosphere of Peru, a dark and mysterious shot." 
          title="ILCE-6700 | f/6.3 | 1/125s | ISO 100" 
           
@@ -536,7 +580,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_026.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_paracas_027.webp" 
+    <img src="/gallery/peru/peru_paracas_027.webp"
+         data-color="#1e2a1e" data-tone="vert" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.0 | 1/100s | ISO 100" 
           
@@ -546,7 +591,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_paracas_027.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_001.webp" 
+    <img src="/gallery/peru/peru_huacachina_001.webp"
+         data-color="#926d56" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -556,7 +602,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_002.webp" 
+    <img src="/gallery/peru/peru_huacachina_002.webp"
+         data-color="#6e4d2b" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/320s | ISO 100" 
           
@@ -566,7 +613,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_003.webp" 
+    <img src="/gallery/peru/peru_huacachina_003.webp"
+         data-color="#6b5b50" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="FC9313 | f/1.8 | 1/30s | ISO 100" 
           
@@ -576,7 +624,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_004.webp" 
+    <img src="/gallery/peru/peru_huacachina_004.webp"
+         data-color="#67624e" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="FC9313 | f/1.8 | 1/30s | ISO 100" 
           
@@ -586,7 +635,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_005.webp" 
+    <img src="/gallery/peru/peru_huacachina_005.webp"
+         data-color="#967656" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -596,7 +646,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_006.webp" 
+    <img src="/gallery/peru/peru_huacachina_006.webp"
+         data-color="#674b33" data-tone="or" 
          alt="A lush and vibrant view of Peru. with cold reflections" 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -606,7 +657,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_007.webp" 
+    <img src="/gallery/peru/peru_huacachina_007.webp"
+         data-color="#966f53" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -616,7 +668,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_008.webp" 
+    <img src="/gallery/peru/peru_huacachina_008.webp"
+         data-color="#221a12" data-tone="sombre" 
          alt="The dark and mysterious atmosphere of Peru, a dark and mysterious shot." 
          title="ILCE-6700 | f/7.1 | 1/250s | ISO 100" 
           
@@ -626,7 +679,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_009.webp" 
+    <img src="/gallery/peru/peru_huacachina_009.webp"
+         data-color="#463229" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/6.3 | 1/200s | ISO 100" 
           
@@ -636,7 +690,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_huacachina_010.webp" 
+    <img src="/gallery/peru/peru_huacachina_010.webp"
+         data-color="#523531" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/4.0 | 1/250s | ISO 100" 
           
@@ -646,7 +701,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_huacachina_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_001.webp" 
+    <img src="/gallery/peru/peru_nazca_001.webp"
+         data-color="#1e3328" data-tone="vert" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -656,7 +712,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_002.webp" 
+    <img src="/gallery/peru/peru_nazca_002.webp"
+         data-color="#665a58" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -666,7 +723,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_003.webp" 
+    <img src="/gallery/peru/peru_nazca_003.webp"
+         data-color="#76612a" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -676,7 +734,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_004.webp" 
+    <img src="/gallery/peru/peru_nazca_004.webp"
+         data-color="#252822" data-tone="vert" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -686,7 +745,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_005.webp" 
+    <img src="/gallery/peru/peru_nazca_005.webp"
+         data-color="#62645e" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -696,7 +756,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_006.webp" 
+    <img src="/gallery/peru/peru_nazca_006.webp"
+         data-color="#222923" data-tone="vert" 
          alt="The dark and mysterious atmosphere of Peru, a dark and mysterious shot." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -706,7 +767,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_007.webp" 
+    <img src="/gallery/peru/peru_nazca_007.webp"
+         data-color="#6d6f61" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -716,7 +778,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_008.webp" 
+    <img src="/gallery/peru/peru_nazca_008.webp"
+         data-color="#64655f" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -726,7 +789,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_009.webp" 
+    <img src="/gallery/peru/peru_nazca_009.webp"
+         data-color="#646658" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -736,7 +800,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_nazca_010.webp" 
+    <img src="/gallery/peru/peru_nazca_010.webp"
+         data-color="#63645e" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -746,7 +811,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_nazca_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_001.webp" 
+    <img src="/gallery/peru/peru_arequipa_001.webp"
+         data-color="#6f595e" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -756,7 +822,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_002.webp" 
+    <img src="/gallery/peru/peru_arequipa_002.webp"
+         data-color="#96585c" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="iPhone 17 | f/1.6 | 1/460s | ISO 64" 
           
@@ -766,7 +833,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_003.webp" 
+    <img src="/gallery/peru/peru_arequipa_003.webp"
+         data-color="#52312d" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/3.5 | 1/160s | ISO 1600" 
           
@@ -776,7 +844,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_004.webp" 
+    <img src="/gallery/peru/peru_arequipa_004.webp"
+         data-color="#9f5661" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="iPhone 17 | f/1.6 | 1/900s | ISO 50" 
           
@@ -786,7 +855,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_005.webp" 
+    <img src="/gallery/peru/peru_arequipa_005.webp"
+         data-color="#620e21" data-tone="rouge" 
          alt="The with warm tones atmosphere of Peru, a with warm tones shot." 
          title="iPhone 17 | f/1.6 | 1/3400s | ISO 32" 
           
@@ -796,7 +866,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_006.webp" 
+    <img src="/gallery/peru/peru_arequipa_006.webp"
+         data-color="#5b2b1c" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.0 | 1/125s | ISO 100" 
           
@@ -806,7 +877,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_007.webp" 
+    <img src="/gallery/peru/peru_arequipa_007.webp"
+         data-color="#5a1e17" data-tone="rouge" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/4.5 | 1/100s | ISO 100" 
           
@@ -816,7 +888,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_008.webp" 
+    <img src="/gallery/peru/peru_arequipa_008.webp"
+         data-color="#a5605f" data-tone="rouge" 
          alt="A bright and clear view of Peru. bright and clear" 
          title="ILCE-6700 | f/4.5 | 1/100s | ISO 100" 
           
@@ -826,7 +899,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_009.webp" 
+    <img src="/gallery/peru/peru_arequipa_009.webp"
+         data-color="#665c5b" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/4.5 | 1/160s | ISO 160" 
           
@@ -836,7 +910,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_010.webp" 
+    <img src="/gallery/peru/peru_arequipa_010.webp"
+         data-color="#1d2d5d" data-tone="bleu" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/5.0 | 1/250s | ISO 100" 
           
@@ -846,7 +921,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_011.webp" 
+    <img src="/gallery/peru/peru_arequipa_011.webp"
+         data-color="#272623" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" 
           
@@ -856,7 +932,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_012.webp" 
+    <img src="/gallery/peru/peru_arequipa_012.webp"
+         data-color="#685d65" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/5.6 | 1/160s | ISO 100" 
           
@@ -866,7 +943,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_013.webp" 
+    <img src="/gallery/peru/peru_arequipa_013.webp"
+         data-color="#605c67" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/4.5 | 1/100s | ISO 100" 
           
@@ -876,7 +954,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_014.webp" 
+    <img src="/gallery/peru/peru_arequipa_014.webp"
+         data-color="#55595c" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a lush and vibrant aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
           
@@ -886,7 +965,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_015.webp" 
+    <img src="/gallery/peru/peru_arequipa_015.webp"
+         data-color="#6598da" data-tone="bleu" 
          alt="A lush and vibrant view of Peru. with cold reflections" 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -896,7 +976,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_016.webp" 
+    <img src="/gallery/peru/peru_arequipa_016.webp"
+         data-color="#242519" data-tone="or" 
          alt="Visual exploration of Peru, featuring a with cold reflections aesthetic." 
          title="iPhone 17 | f/1.6 | 1/1800s | ISO 32" 
           
@@ -906,7 +987,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_017.webp" 
+    <img src="/gallery/peru/peru_arequipa_017.webp"
+         data-color="#272227" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/6.3 | 1/200s | ISO 100" 
           
@@ -916,7 +998,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_018.webp" 
+    <img src="/gallery/peru/peru_arequipa_018.webp"
+         data-color="#5e5d5e" data-tone="neutre" 
          alt="A with cold reflections view of Peru. with cold reflections" 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -926,7 +1009,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_019.webp" 
+    <img src="/gallery/peru/peru_arequipa_019.webp"
+         data-color="#686150" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.6 | 1/125s | ISO 100" 
           
@@ -936,7 +1020,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_020.webp" 
+    <img src="/gallery/peru/peru_arequipa_020.webp"
+         data-color="#282829" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/250s | ISO 100" 
           
@@ -946,7 +1031,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_021.webp" 
+    <img src="/gallery/peru/peru_arequipa_021.webp"
+         data-color="#5f605a" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="FC9313 | f/1.8 | 1/20s | ISO 150" 
           
@@ -956,7 +1042,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_022.webp" 
+    <img src="/gallery/peru/peru_arequipa_022.webp"
+         data-color="#696255" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="FC9313 | f/1.8 | 1/15s | ISO 150" 
           
@@ -966,7 +1053,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_022.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_023.webp" 
+    <img src="/gallery/peru/peru_arequipa_023.webp"
+         data-color="#5c5553" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="FC9313 | f/1.8 | 1/25s | ISO 150" 
           
@@ -976,7 +1064,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_023.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_024.webp" 
+    <img src="/gallery/peru/peru_arequipa_024.webp"
+         data-color="#92abd7" data-tone="bleu" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/500s | ISO 100" 
           
@@ -986,7 +1075,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_024.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_025.webp" 
+    <img src="/gallery/peru/peru_arequipa_025.webp"
+         data-color="#1e1419" data-tone="sombre" 
          alt="Capturing the dark and mysterious essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 6400" 
           
@@ -996,7 +1086,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_025.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_026.webp" 
+    <img src="/gallery/peru/peru_arequipa_026.webp"
+         data-color="#1b131a" data-tone="sombre" 
          alt="The dark and mysterious atmosphere of Peru, a dark and mysterious shot." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 4000" 
           
@@ -1006,7 +1097,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_026.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_arequipa_027.webp" 
+    <img src="/gallery/peru/peru_arequipa_027.webp"
+         data-color="#150f1b" data-tone="sombre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/2.8 | 1/125s | ISO 6400" 
           
@@ -1016,7 +1108,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_arequipa_027.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_001.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_001.webp"
+         data-color="#92abd7" data-tone="bleu" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/500s | ISO 100" 
           
@@ -1026,7 +1119,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_002.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_002.webp"
+         data-color="#e6e6ef" data-tone="bleu" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1036,7 +1130,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_003.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_003.webp"
+         data-color="#6e5320" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1046,7 +1141,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_004.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_004.webp"
+         data-color="#1d1a0e" data-tone="sombre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1056,7 +1152,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_005.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_005.webp"
+         data-color="#9e9791" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/5.6 | 1/640s | ISO 100" 
           
@@ -1066,7 +1163,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_006.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_006.webp"
+         data-color="#5d5456" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/4.5 | 1/400s | ISO 100" 
           
@@ -1076,7 +1174,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_007.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_007.webp"
+         data-color="#5b585f" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/6.3 | 1/200s | ISO 100" 
           
@@ -1086,7 +1185,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_008.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_008.webp"
+         data-color="#60585d" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/500s | ISO 100" 
           
@@ -1096,7 +1196,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_009.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_009.webp"
+         data-color="#15262d" data-tone="bleu" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
           
@@ -1106,7 +1207,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_010.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_010.webp"
+         data-color="#6794d1" data-tone="bleu" 
          alt="A lush and vibrant view of Peru. with cold reflections" 
          title="ILCE-6700 | f/10.0 | 1/400s | ISO 100" 
           
@@ -1116,7 +1218,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_011.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_011.webp"
+         data-color="#132c6c" data-tone="bleu" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/500s | ISO 100" 
           
@@ -1126,7 +1229,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_012.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_012.webp"
+         data-color="#283651" data-tone="bleu" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1136,7 +1240,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_013.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_013.webp"
+         data-color="#58615e" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/4.5 | 1/200s | ISO 100" 
           
@@ -1146,7 +1251,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_014.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_014.webp"
+         data-color="#655f59" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="FC9313 | f/1.8 | 1/500s | ISO 200" 
           data-gps="-15.63314,-71.79955" 
@@ -1156,7 +1262,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_015.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_015.webp"
+         data-color="#687493" data-tone="bleu" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -1166,7 +1273,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_016.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_016.webp"
+         data-color="#605850" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="FC9313 | f/1.8 | 1/640s | ISO 160" 
           
@@ -1176,7 +1284,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_017.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_017.webp"
+         data-color="#655d50" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="FC9313 | f/1.8 | 1/500s | ISO 200" 
           
@@ -1186,7 +1295,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_018.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_018.webp"
+         data-color="#5f5f5c" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/4.5 | 1/320s | ISO 100" 
           
@@ -1196,7 +1306,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_019.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_019.webp"
+         data-color="#242b20" data-tone="vert" 
          alt="Capturing the dark and mysterious essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/4.5 | 1/250s | ISO 100" 
           
@@ -1206,7 +1317,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_colca_canyon_020.webp" 
+    <img src="/gallery/peru/peru_colca_canyon_020.webp"
+         data-color="#616455" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/5.0 | 1/250s | ISO 100" 
           
@@ -1216,7 +1328,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_colca_canyon_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_001.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_001.webp"
+         data-color="#9a551f" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="iPhone 17 | f/1.6 | 1/150s | ISO 125" 
           
@@ -1226,7 +1339,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_002.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_002.webp"
+         data-color="#625752" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/3.2 | 1/160s | ISO 1600" 
           
@@ -1236,7 +1350,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_003.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_003.webp"
+         data-color="#0ca2ef" data-tone="bleu" 
          alt="The lush and vibrant atmosphere of Peru, a with cold reflections shot." 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -1246,7 +1361,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_004.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_004.webp"
+         data-color="#ac9069" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" 
           
@@ -1256,7 +1372,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_005.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_005.webp"
+         data-color="#ad8d72" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/4.5 | 1/500s | ISO 100" 
           
@@ -1266,7 +1383,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_006.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_006.webp"
+         data-color="#a68a63" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
           
@@ -1276,7 +1394,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_007.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_007.webp"
+         data-color="#b3dff1" data-tone="bleu" 
          alt="The with cold reflections atmosphere of Peru, a with cold reflections shot." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -1286,7 +1405,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_008.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_008.webp"
+         data-color="#8d6522" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="iPhone 17 | f/1.6 | 1/2500s | ISO 50" 
           
@@ -1296,7 +1416,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_009.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_009.webp"
+         data-color="#645221" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1306,7 +1427,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_010.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_010.webp"
+         data-color="#ad906b" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/6.3 | 1/400s | ISO 100" 
           
@@ -1316,7 +1438,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_011.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_011.webp"
+         data-color="#1b150f" data-tone="sombre" 
          alt="The with cold reflections atmosphere of Peru, a with cold reflections shot." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1326,7 +1449,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_012.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_012.webp"
+         data-color="#6a552f" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1336,7 +1460,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_013.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_013.webp"
+         data-color="#1a191a" data-tone="sombre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -1346,7 +1471,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_014.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_014.webp"
+         data-color="#6a685a" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1356,7 +1482,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_015.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_015.webp"
+         data-color="#2a2f2b" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/4.5 | 1/200s | ISO 100" 
           
@@ -1366,7 +1493,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_016.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_016.webp"
+         data-color="#575b5b" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="iPhone 17 | f/1.6 | 1/750s | ISO 32" 
           
@@ -1376,7 +1504,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_017.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_017.webp"
+         data-color="#2e2d27" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.6 | 1/125s | ISO 100" 
           
@@ -1386,7 +1515,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_018.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_018.webp"
+         data-color="#483325" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.0 | 1/100s | ISO 100" 
           
@@ -1396,7 +1526,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_019.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_019.webp"
+         data-color="#2c2920" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/100s | ISO 100" 
           
@@ -1406,7 +1537,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_020.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_020.webp"
+         data-color="#6b6963" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 320" 
           
@@ -1416,7 +1548,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_sacred_valley_021.webp" 
+    <img src="/gallery/peru/peru_sacred_valley_021.webp"
+         data-color="#696a61" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 320" 
           
@@ -1426,7 +1559,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_sacred_valley_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_001.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_001.webp"
+         data-color="#ab9f8f" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="FC9313 | f/1.8 | 1/250s | ISO 120" 
           data-gps="-13.30265,-72.15419" 
@@ -1436,7 +1570,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_002.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_002.webp"
+         data-color="#4d332c" data-tone="rouge" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1446,7 +1581,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_003.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_003.webp"
+         data-color="#aa9590" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/640s | ISO 100" 
           
@@ -1456,7 +1592,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_004.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_004.webp"
+         data-color="#ac9692" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1466,7 +1603,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_005.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_005.webp"
+         data-color="#4d2d2c" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1476,7 +1614,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_006.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_006.webp"
+         data-color="#ad9a94" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/640s | ISO 100" 
           
@@ -1486,7 +1625,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_007.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_007.webp"
+         data-color="#6f5a54" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/1000s | ISO 100" 
           
@@ -1496,7 +1636,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_008.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_008.webp"
+         data-color="#af9389" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="FC9313 | f/1.8 | 1/400s | ISO 100" 
           
@@ -1506,7 +1647,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_009.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_009.webp"
+         data-color="#ae9c8b" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="FC9313 | f/1.8 | 1/160s | ISO 100" 
           
@@ -1516,7 +1658,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_010.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_010.webp"
+         data-color="#b0978c" data-tone="rouge" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/8.0 | 1/800s | ISO 100" 
           
@@ -1526,7 +1669,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_011.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_011.webp"
+         data-color="#2b2322" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="FC9313 | f/1.8 | 1/200s | ISO 150" 
           
@@ -1536,7 +1680,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_012.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_012.webp"
+         data-color="#8f7369" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="FC9313 | f/1.8 | 1/400s | ISO 100" 
           
@@ -1546,7 +1691,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_013.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_013.webp"
+         data-color="#a08d71" data-tone="or" 
          alt="The dark and mysterious atmosphere of Peru, a dark and mysterious shot." 
          title="FC9313 | f/1.8 | 1/250s | ISO 120" 
           
@@ -1556,7 +1702,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_salineras_de_maras_014.webp" 
+    <img src="/gallery/peru/peru_salineras_de_maras_014.webp"
+         data-color="#9e8876" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="FC9313 | f/1.8 | 1/350s | ISO 100" 
           
@@ -1566,7 +1713,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_salineras_de_maras_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_001.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_001.webp"
+         data-color="#8a7060" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="iPhone 17 | f/1.6 | 1/120s | ISO 125" 
           
@@ -1576,7 +1724,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_002.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_002.webp"
+         data-color="#232f51" data-tone="bleu" 
          alt="Capturing the bright and clear essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/200s | ISO 100" 
           
@@ -1586,7 +1735,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_003.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_003.webp"
+         data-color="#665c59" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -1596,7 +1746,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_004.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_004.webp"
+         data-color="#675a5a" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/400s | ISO 100" 
           
@@ -1606,7 +1757,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_005.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_005.webp"
+         data-color="#8d6e57" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="iPhone 17 | f/1.6 | 1/3800s | ISO 32" 
           
@@ -1616,7 +1768,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_006.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_006.webp"
+         data-color="#a68e74" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="iPhone 17 | f/1.6 | 1/7000s | ISO 50" 
           
@@ -1626,7 +1779,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_007.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_007.webp"
+         data-color="#676157" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1636,7 +1790,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_008.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_008.webp"
+         data-color="#655855" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.6 | 1/320s | ISO 100" 
           
@@ -1646,7 +1801,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_009.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_009.webp"
+         data-color="#5b5053" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1656,7 +1812,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_010.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_010.webp"
+         data-color="#62585a" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1666,7 +1823,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_011.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_011.webp"
+         data-color="#8b6c5b" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1676,7 +1834,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_012.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_012.webp"
+         data-color="#916d5f" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -1686,7 +1845,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_013.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_013.webp"
+         data-color="#a49797" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1696,7 +1856,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_014.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_014.webp"
+         data-color="#d8e5ee" data-tone="bleu" 
          alt="The bright and clear atmosphere of Peru, a bright and clear shot." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1706,7 +1867,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_015.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_015.webp"
+         data-color="#6b5551" data-tone="rouge" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1716,7 +1878,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_016.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_016.webp"
+         data-color="#6a5455" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1726,7 +1889,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_017.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_017.webp"
+         data-color="#686662" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1736,7 +1900,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_018.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_018.webp"
+         data-color="#97626a" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1746,7 +1911,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_019.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_019.webp"
+         data-color="#d7daf2" data-tone="bleu" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1756,7 +1922,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_020.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_020.webp"
+         data-color="#d3a8a9" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/9.0 | 1/160s | ISO 100" 
           
@@ -1766,7 +1933,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_021.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_021.webp"
+         data-color="#91514c" data-tone="rouge" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1776,7 +1944,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_022.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_022.webp"
+         data-color="#98645e" data-tone="rouge" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1786,7 +1955,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_022.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_023.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_023.webp"
+         data-color="#9a6d5f" data-tone="rouge" 
          alt="Capturing the bright and clear essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1796,7 +1966,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_023.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_024.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_024.webp"
+         data-color="#ae8a95" data-tone="rouge" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -1806,7 +1977,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_024.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_025.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_025.webp"
+         data-color="#dbe2fc" data-tone="bleu" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1816,7 +1988,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_025.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_026.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_026.webp"
+         data-color="#cdcfec" data-tone="bleu" 
          alt="Capturing the bright and clear essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/200s | ISO 100" 
           
@@ -1826,7 +1999,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_026.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_rainbow_mountain_027.webp" 
+    <img src="/gallery/peru/peru_rainbow_mountain_027.webp"
+         data-color="#996658" data-tone="rouge" 
          alt="Capturing the with warm tones essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -1836,7 +2010,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_rainbow_mountain_027.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_001.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_001.webp"
+         data-color="#62635a" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="iPhone 17 | f/1.6 | 1/60s | ISO 160" 
           
@@ -1846,7 +2021,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_002.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_002.webp"
+         data-color="#221b15" data-tone="sombre" 
          alt="Capturing the dark and mysterious essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 800" 
           
@@ -1856,7 +2032,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_003.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_003.webp"
+         data-color="#5f5e54" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/100s | ISO 100" 
           
@@ -1866,7 +2043,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_004.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_004.webp"
+         data-color="#565234" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/7.1 | 1/100s | ISO 100" 
           
@@ -1876,7 +2054,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_005.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_005.webp"
+         data-color="#636753" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/7.1 | 1/100s | ISO 100" 
           
@@ -1886,7 +2065,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_006.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_006.webp"
+         data-color="#615a57" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 1250" 
           
@@ -1896,7 +2076,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_007.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_007.webp"
+         data-color="#62564f" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/3.2 | 1/160s | ISO 1600" 
           
@@ -1906,7 +2087,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_008.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_008.webp"
+         data-color="#eff0f1" data-tone="neutre" 
          alt="A bright and clear view of Peru. bright and clear" 
          title="ILCE-6700 | f/4.5 | 1/320s | ISO 100" 
           
@@ -1916,7 +2098,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_aguas_calientes_009.webp" 
+    <img src="/gallery/peru/peru_aguas_calientes_009.webp"
+         data-color="#251a13" data-tone="sombre" 
          alt="Visual exploration of Peru, featuring a dark and mysterious aesthetic." 
          title="iPhone 17 | f/1.6 | 1/40s | ISO 100" 
           
@@ -1926,7 +2109,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_aguas_calientes_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_001.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_001.webp"
+         data-color="#a2d0fb" data-tone="bleu" 
          alt="Visual exploration of Peru, featuring a with cold reflections aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -1936,7 +2120,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_002.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_002.webp"
+         data-color="#212322" data-tone="neutre" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -1946,7 +2131,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_003.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_003.webp"
+         data-color="#58502e" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -1956,7 +2142,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_004.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_004.webp"
+         data-color="#676955" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/6.3 | 1/100s | ISO 100" 
           
@@ -1966,7 +2153,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_005.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_005.webp"
+         data-color="#5e6055" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/7.1 | 1/100s | ISO 100" 
           
@@ -1976,7 +2164,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_006.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_006.webp"
+         data-color="#5c542f" data-tone="or" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -1986,7 +2175,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_007.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_007.webp"
+         data-color="#daeef7" data-tone="bleu" 
          alt="Visual exploration of Peru, featuring a dark and mysterious aesthetic." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -1996,7 +2186,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_008.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_008.webp"
+         data-color="#1f2223" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a with cold reflections aesthetic." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -2006,7 +2197,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_009.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_009.webp"
+         data-color="#252a26" data-tone="neutre" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -2016,7 +2208,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_010.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_010.webp"
+         data-color="#262914" data-tone="sombre" 
          alt="A with cold reflections view of Peru. with cold reflections" 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -2026,7 +2219,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_011.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_011.webp"
+         data-color="#585b5a" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -2036,7 +2230,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_012.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_012.webp"
+         data-color="#5d562d" data-tone="or" 
          alt="Visual exploration of Peru, featuring a unique aesthetic." 
          title="ILCE-6700 | f/9.0 | 1/125s | ISO 100" 
           
@@ -2046,7 +2241,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_013.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_013.webp"
+         data-color="#dee5e6" data-tone="bleu" 
          alt="Capturing the bright and clear essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -2056,7 +2252,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_014.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_014.webp"
+         data-color="#302013" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/7.1 | 1/500s | ISO 100" 
           
@@ -2066,7 +2263,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_015.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_015.webp"
+         data-color="#635a57" data-tone="neutre" 
          alt="The unique atmosphere of Peru, an artistic shot." 
          title="ILCE-6700 | f/5.0 | 1/250s | ISO 100" 
           
@@ -2076,7 +2274,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_016.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_016.webp"
+         data-color="#5d541d" data-tone="or" 
          alt="A with cold reflections view of Peru. with cold reflections" 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -2086,7 +2285,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_017.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_017.webp"
+         data-color="#5d651e" data-tone="or" 
          alt="A bright and clear view of Peru. bright and clear" 
          title="ILCE-6700 | f/8.0 | 1/125s | ISO 100" 
           
@@ -2096,7 +2296,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_018.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_018.webp"
+         data-color="#4e4d1f" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/7.1 | 1/100s | ISO 100" 
           
@@ -2106,7 +2307,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_019.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_019.webp"
+         data-color="#958b5b" data-tone="or" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/4.5 | 1/250s | ISO 100" 
           
@@ -2116,7 +2318,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_020.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_020.webp"
+         data-color="#676d61" data-tone="neutre" 
          alt="A unique view of Peru. artistic" 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 100" 
           
@@ -2126,7 +2329,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/peru/lqip/peru_machu_picchu_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/peru/peru_machu_picchu_021.webp" 
+    <img src="/gallery/peru/peru_machu_picchu_021.webp"
+         data-color="#6b6356" data-tone="or" 
          alt="Capturing the unique essence of Peru. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/5.0 | 1/100s | ISO 100" 
           

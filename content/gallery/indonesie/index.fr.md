@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/indonesie/feature.webp"]
 dominant_color: "#5f6144"
 tags: ["vintage", "ocean", "nature"]
+country_code: "id"
 itinerary_days:
   - label: "1er mai — Ubud"
     coords: [-8.5069, 115.2624]
@@ -108,7 +109,8 @@ itinerary_days:
 {{< itinerary >}}
 
 {{< gallery >}}
-    <img src="/gallery/indonesie/indonesie_001.webp" 
+    <img src="/gallery/indonesie/indonesie_001.webp"
+         data-color="#61695c" data-tone="neutre" 
          alt="Cliché nostalgique immortalisé à Indonesie par Romain Charretteur." 
          title="iPhone 13 | f/1.6 | 1/620s | ISO 50" 
           
@@ -117,7 +119,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_002.webp" 
+    <img src="/gallery/indonesie/indonesie_002.webp"
+         data-color="#0c231f" data-tone="sombre" 
          alt="Une vue intemporelle de Indonesie. artistique" 
          title="iPhone 13 | f/1.6 | 1/3200s | ISO 50" 
           
@@ -126,7 +129,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_003.webp" 
+    <img src="/gallery/indonesie/indonesie_003.webp"
+         data-color="#50675c" data-tone="vert" 
          alt="Cliché rétro immortalisé à Indonesie par Romain Charretteur." 
          title="iPhone 13 | f/2.4 | 1/950s | ISO 32" 
           
@@ -135,7 +139,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_004.webp" 
+    <img src="/gallery/indonesie/indonesie_004.webp"
+         data-color="#576d60" data-tone="vert" 
          alt="Cliché intemporelle immortalisé à Indonesie par Romain Charretteur." 
          title="iPhone 13 | f/1.6 | 1/1150s | ISO 50" 
           
@@ -144,7 +149,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_005.webp" 
+    <img src="/gallery/indonesie/indonesie_005.webp"
+         data-color="#636456" data-tone="neutre" 
          alt="Atmosphère nostalgique à Indonesie, une photographie artistique." 
          title="iPhone 13 | f/2.4 | 1/160s | ISO 32" 
           
@@ -153,7 +159,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_006.webp" 
+    <img src="/gallery/indonesie/indonesie_006.webp"
+         data-color="#28311f" data-tone="vert" 
          alt="Cliché intemporelle immortalisé à Indonesie par Romain Charretteur." 
          title="iPhone 13 | f/2.4 | 1/150s | ISO 32" 
           
@@ -162,7 +169,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_007.webp" 
+    <img src="/gallery/indonesie/indonesie_007.webp"
+         data-color="#4c5a27" data-tone="vert" 
          alt="Exploration visuelle de Indonesie, révélant une esthétique intemporelle." 
          title="iPhone 13 | f/2.4 | 1/720s | ISO 32" 
           
@@ -171,7 +179,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_008.webp" 
+    <img src="/gallery/indonesie/indonesie_008.webp"
+         data-color="#2765a5" data-tone="bleu" 
          alt="Exploration visuelle de Indonesie, révélant une esthétique historique." 
          title="" 
           
@@ -180,7 +189,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_009.webp" 
+    <img src="/gallery/indonesie/indonesie_009.webp"
+         data-color="#cedeeb" data-tone="bleu" 
          alt="Atmosphère nostalgique à Indonesie, une photographie artistique." 
          title="" 
           
@@ -189,7 +199,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_010.webp" 
+    <img src="/gallery/indonesie/indonesie_010.webp"
+         data-color="#4c5b6a" data-tone="bleu" 
          alt="Une vue historique de Indonesie. artistique" 
          title="" 
           
@@ -198,7 +209,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_011.webp" 
+    <img src="/gallery/indonesie/indonesie_011.webp"
+         data-color="#242924" data-tone="neutre" 
          alt="Une vue nostalgique de Indonesie. artistique" 
          title="" 
           
@@ -207,7 +219,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_012.webp" 
+    <img src="/gallery/indonesie/indonesie_012.webp"
+         data-color="#27291d" data-tone="or" 
          alt="Atmosphère historique à Indonesie, une photographie artistique." 
          title="" 
           
@@ -216,7 +229,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_013.webp" 
+    <img src="/gallery/indonesie/indonesie_013.webp"
+         data-color="#262e19" data-tone="vert" 
          alt="Atmosphère nostalgique à Indonesie, une photographie artistique." 
          title="" 
           
@@ -225,7 +239,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_014.webp" 
+    <img src="/gallery/indonesie/indonesie_014.webp"
+         data-color="#62665f" data-tone="neutre" 
          alt="Une vue nostalgique de Indonesie. artistique" 
          title="" 
           
@@ -234,7 +249,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/indonesie/lqip/indonesie_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/indonesie/indonesie_015.webp" 
+    <img src="/gallery/indonesie/indonesie_015.webp"
+         data-color="#1c1e22" data-tone="bleu" 
          alt="Cliché intemporelle immortalisé à Indonesie par Romain Charretteur." 
          title="" 
           

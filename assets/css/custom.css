@@ -1579,3 +1579,47 @@ html, body {
 .itinerary-section .itinerary-items li a:hover {
     text-decoration-color: currentColor;
 }
+
+/* --- 23. NAVIGATION PAR AMBIANCE (accueil -> /tags/) --- */
+.mood-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.mood-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(64 64 64);
+    background: rgb(245 245 245);
+    border: 1px solid rgb(229 229 229);
+    transition: background-color .2s, color .2s, transform .2s;
+}
+.mood-chip:hover {
+    background: rgb(23 23 23);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+.mood-chip-count {
+    font-size: 0.72rem;
+    font-weight: 700;
+    opacity: .55;
+    font-variant-numeric: tabular-nums;
+}
+.dark .mood-chip {
+    color: rgb(212 212 212);
+    background: rgb(38 38 38);
+    border-color: rgb(64 64 64);
+}
+.dark .mood-chip:hover { background: #fff; color: rgb(23 23 23); }
+@media (prefers-reduced-motion: reduce) {
+    .mood-chip { transition: none; }
+    .mood-chip:hover { transform: none; }
+}

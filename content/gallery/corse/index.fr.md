@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/corse/feature.webp"]
 dominant_color: "#9ac6de"
 tags: ["vintage", "ocean", "nature"]
+country_code: "fr"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -12,7 +13,8 @@ tags: ["vintage", "ocean", "nature"]
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/corse/corse_001.webp" 
+    <img src="/gallery/corse/corse_001.webp"
+         data-color="#575d2b" data-tone="or" 
          alt="Exploration visuelle de Corse, révélant une esthétique historique." 
          title="iPhone 13 | f/1.6 | 1/5000s | ISO 50" 
           
@@ -21,7 +23,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/corse/lqip/corse_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/corse/corse_002.webp" 
+    <img src="/gallery/corse/corse_002.webp"
+         data-color="#6b6e53" data-tone="or" 
          alt="Une vue intemporelle de Corse. artistique" 
          title="iPhone 13 | f/1.6 | 1/121s | ISO 40" 
           data-gps="41.83853,9.30907" 
@@ -30,7 +33,8 @@ tags: ["vintage", "ocean", "nature"]
          data-lqip="true" 
          style="background-image: url(/gallery/corse/lqip/corse_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/corse/corse_003.webp" 
+    <img src="/gallery/corse/corse_003.webp"
+         data-color="#60605c" data-tone="neutre" 
          alt="Exploration visuelle de Corse, révélant une esthétique nostalgique." 
          title="iPhone 13 | f/1.6 | 1/3000s | ISO 50" 
           

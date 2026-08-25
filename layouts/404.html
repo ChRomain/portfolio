@@ -1,0 +1,112 @@
+{{ define "main" }}
+{{/* Une des images hero en fond plutôt qu'une impasse : la 404 devient une porte
+     d'entrée vers la carte et les galeries. */}}
+{{ $heroImages := slice }}
+{{ range (resources.Match "img/hero/*") }}
+  {{ if eq .MediaType.MainType "image" }}
+    {{ $heroImages = $heroImages | append . }}
+  {{ end }}
+{{ end }}
+
+<section class="nf-wrap">
+  {{ with index $heroImages 0 }}
+    {{ $bg := .Resize "1440x webp q60" }}
+    <img class="nf-bg" src="{{ $bg.RelPermalink }}" width="{{ $bg.Width }}" height="{{ $bg.Height }}"
+         alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+  {{ end }}
+  <div class="nf-veil"></div>
+
+  <div class="nf-inner">
+    <p class="nf-code">404</p>
+    <h1 class="nf-title">{{ i18n "nf_title" }}</h1>
+    <p class="nf-text">{{ i18n "nf_text" }}</p>
+    <div class="nf-actions">
+      <a class="nf-btn nf-btn-primary" href="{{ "" | relLangURL }}">{{ i18n "nf_home" }}</a>
+      <a class="nf-btn" href="{{ "map/" | relLangURL }}">{{ i18n "nf_map" }}</a>
+      <a class="nf-btn" href="{{ "gallery/" | relLangURL }}">{{ i18n "nf_galleries" }}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .nf-wrap {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 2rem 0 3rem;
+  }
+  .nf-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .nf-veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.72));
+    z-index: 1;
+  }
+  .nf-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    max-width: 40rem;
+  }
+  .nf-code {
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.04em;
+    color: rgba(255, 255, 255, .22);
+    margin: 0;
+  }
+  .nf-title {
+    color: #fff;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    margin: .25rem 0 .75rem;
+  }
+  .nf-text {
+    color: rgba(255, 255, 255, .85);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 1.75rem;
+  }
+  .nf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    justify-content: center;
+  }
+  .nf-btn {
+    display: inline-block;
+    padding: .6rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .45);
+    transition: background-color .2s, color .2s;
+  }
+  .nf-btn:hover { background: rgba(255, 255, 255, .16); }
+  .nf-btn-primary {
+    background: #fff;
+    color: #171717;
+    border-color: transparent;
+  }
+  .nf-btn-primary:hover { background: rgba(255, 255, 255, .85); }
+  @media (prefers-reduced-motion: reduce) {
+    .nf-btn { transition: none; }
+  }
+</style>
+{{ end }}

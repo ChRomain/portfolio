@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/philadelphie/feature.webp"]
 dominant_color: "#3e4726"
 tags: ["vintage", "ocean", "urban"]
+country_code: "us"
 itinerary_days:
   - label: "Lugares recomendados en Filadelfia"
     items:
@@ -25,7 +26,8 @@ itinerary_days:
 {{< itinerary >}}
 
 {{< gallery >}}
-    <img src="/gallery/philadelphie/philadelphie_001.webp" 
+    <img src="/gallery/philadelphie/philadelphie_001.webp"
+         data-color="#686954" data-tone="or" 
          alt="La atmósfera atemporal de Philadelphie, una toma artística." 
          title="iPhone 15 | f/1.6 | 1/120s | ISO 80" 
           
@@ -34,7 +36,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/philadelphie/lqip/philadelphie_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/philadelphie/philadelphie_002.webp" 
+    <img src="/gallery/philadelphie/philadelphie_002.webp"
+         data-color="#1a5363" data-tone="bleu" 
          alt="Exploración visual de Philadelphie, con una estética nostálgica." 
          title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" 
           
@@ -43,7 +46,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/philadelphie/lqip/philadelphie_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/philadelphie/philadelphie_003.webp" 
+    <img src="/gallery/philadelphie/philadelphie_003.webp"
+         data-color="#241812" data-tone="sombre" 
          alt="Una vista atemporal de Philadelphie. artística" 
          title="iPhone 15 | f/1.6 | 1/2500s | ISO 50" 
           
@@ -52,7 +56,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/philadelphie/lqip/philadelphie_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/philadelphie/philadelphie_004.webp" 
+    <img src="/gallery/philadelphie/philadelphie_004.webp"
+         data-color="#6e6a59" data-tone="or" 
          alt="Exploración visual de Philadelphie, con una estética nostálgica." 
          title="iPhone 15 | f/2.4 | 1/210s | ISO 25" 
           
@@ -61,7 +66,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/philadelphie/lqip/philadelphie_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/philadelphie/philadelphie_005.webp" 
+    <img src="/gallery/philadelphie/philadelphie_005.webp"
+         data-color="#566b2a" data-tone="vert" 
          alt="Exploración visual de Philadelphie, con una estética histórica." 
          title="iPhone 15 | f/1.6 | 1/4600s | ISO 50" 
           
@@ -70,7 +76,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/philadelphie/lqip/philadelphie_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/philadelphie/philadelphie_006.webp" 
+    <img src="/gallery/philadelphie/philadelphie_006.webp"
+         data-color="#5e6258" data-tone="neutre" 
          alt="La atmósfera retro de Philadelphie, una toma artística." 
          title="iPhone 15 | f/1.6 | 1/1250s | ISO 50" 
           
@@ -79,7 +86,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/philadelphie/lqip/philadelphie_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/philadelphie/philadelphie_007.webp" 
+    <img src="/gallery/philadelphie/philadelphie_007.webp"
+         data-color="#9d744f" data-tone="or" 
          alt="Exploración visual de Philadelphie, con una estética histórica." 
          title="iPhone 15 | f/1.6 | 1/2200s | ISO 50" 
           

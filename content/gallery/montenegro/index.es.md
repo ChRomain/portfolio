@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/montenegro/feature.webp"]
 dominant_color: "#96755a"
 tags: ["vintage", "ocean"]
+country_code: "me"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -12,7 +13,8 @@ tags: ["vintage", "ocean"]
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/montenegro/montenegro_001.webp" 
+    <img src="/gallery/montenegro/montenegro_001.webp"
+         data-color="#566460" data-tone="neutre" 
          alt="Una vista atemporal de Montenegro. artística" 
          title="PCT-L29 | f/1.8 | 1/2000s | ISO 50" 
           
@@ -21,7 +23,8 @@ tags: ["vintage", "ocean"]
          data-lqip="true" 
          style="background-image: url(/gallery/montenegro/lqip/montenegro_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/montenegro/montenegro_002.webp" 
+    <img src="/gallery/montenegro/montenegro_002.webp"
+         data-color="#6a6c5c" data-tone="or" 
          alt="Exploración visual de Montenegro, con una estética histórica." 
          title="PCT-L29 | f/1.8 | 1/2300s | ISO 50" 
           
@@ -30,7 +33,8 @@ tags: ["vintage", "ocean"]
          data-lqip="true" 
          style="background-image: url(/gallery/montenegro/lqip/montenegro_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/montenegro/montenegro_003.webp" 
+    <img src="/gallery/montenegro/montenegro_003.webp"
+         data-color="#155d6d" data-tone="bleu" 
          alt="La atmósfera nostálgica de Montenegro, una toma artística." 
          title="PCT-L29 | f/1.8 | 1/3200s | ISO 50" 
           

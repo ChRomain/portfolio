@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/quebec/feature.webp"]
 dominant_color: "#f1eeec"
 tags: ["vintage", "sunset", "bright", "urban", "ocean", "nature"]
+country_code: "ca"
 itinerary_days:
   - label: "Bons plans à Québec"
     items:
@@ -28,7 +29,8 @@ itinerary_days:
 
 {{< gallery >}}
   <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="https://pub-4f55cfaeea7f4e58ae5f19966ae63baf.r2.dev/2025-10-14%2000-31-25.mov" type="video/mp4"></video>
-    <img src="/gallery/quebec/quebec_001.webp" 
+    <img src="/gallery/quebec/quebec_001.webp"
+         data-color="#5c615a" data-tone="neutre" 
          alt="Atmosphère historique à Quebec, une photographie lumineuse." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 100" 
           
@@ -37,7 +39,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_002.webp" 
+    <img src="/gallery/quebec/quebec_002.webp"
+         data-color="#2e281c" data-tone="or" 
          alt="Cliché historique immortalisé à Quebec par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 1000" 
           
@@ -46,7 +49,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_003.webp" 
+    <img src="/gallery/quebec/quebec_003.webp"
+         data-color="#565c62" data-tone="neutre" 
          alt="Exploration visuelle de Quebec, révélant une esthétique historique." 
          title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 160" 
           
@@ -55,7 +59,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_004.webp" 
+    <img src="/gallery/quebec/quebec_004.webp"
+         data-color="#1f2b28" data-tone="bleu" 
          alt="Cliché historique immortalisé à Quebec par Romain Charretteur." 
          title="Canon EOS Rebel T100 | f/4.5 | 1/250s | ISO 500" 
           
@@ -64,7 +69,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_005.webp" 
+    <img src="/gallery/quebec/quebec_005.webp"
+         data-color="#161712" data-tone="sombre" 
          alt="Une vue rétro de Quebec. lumineuse" 
          title="Canon EOS Rebel T100 | f/4.5 | 1/100s | ISO 3200" 
           
@@ -73,7 +79,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_006.webp" 
+    <img src="/gallery/quebec/quebec_006.webp"
+         data-color="#231f1b" data-tone="or" 
          alt="Une vue rétro de Quebec. lumineuse" 
          title="iPhone 15 | f/1.6 | 1/30s | ISO 800" 
           
@@ -82,7 +89,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_007.webp" 
+    <img src="/gallery/quebec/quebec_007.webp"
+         data-color="#232826" data-tone="neutre" 
          alt="Atmosphère intemporelle à Quebec, une photographie lumineuse." 
          title="Canon EOS Rebel T100 | f/5.0 | 1/250s | ISO 100" 
           
@@ -91,7 +99,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_008.webp" 
+    <img src="/gallery/quebec/quebec_008.webp"
+         data-color="#262823" data-tone="neutre" 
          alt="Cliché rétro immortalisé à Quebec par Romain Charretteur." 
          title="ILCE-6700 | f/7.1 | 1/200s | ISO 100" 
           
@@ -100,7 +109,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_009.webp" 
+    <img src="/gallery/quebec/quebec_009.webp"
+         data-color="#232618" data-tone="or" 
          alt="Une vue nostalgique de Quebec. lumineuse" 
          title="ILCE-6700 | f/5.6 | 1/250s | ISO 100" 
           
@@ -109,7 +119,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_010.webp" 
+    <img src="/gallery/quebec/quebec_010.webp"
+         data-color="#1c2223" data-tone="bleu" 
          alt="Une vue nostalgique de Quebec. lumineuse" 
          title="ILCE-6700 | f/10.0 | 1/160s | ISO 100" 
           
@@ -118,7 +129,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_011.webp" 
+    <img src="/gallery/quebec/quebec_011.webp"
+         data-color="#505f63" data-tone="bleu" 
          alt="Atmosphère nostalgique à Quebec, une photographie lumineuse." 
          title="ILCE-6700 | f/4.5 | 1/100s | ISO 100" 
           
@@ -127,7 +139,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_012.webp" 
+    <img src="/gallery/quebec/quebec_012.webp"
+         data-color="#515766" data-tone="bleu" 
          alt="Atmosphère historique à Quebec, une photographie lumineuse." 
          title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
           
@@ -136,7 +149,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/quebec/lqip/quebec_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/quebec/quebec_013.webp" 
+    <img src="/gallery/quebec/quebec_013.webp"
+         data-color="#565a60" data-tone="neutre" 
          alt="Exploration visuelle de Quebec, révélant une esthétique rétro." 
          title="FC3682 | f/1.7 | 1/2500s | ISO 100" 
           

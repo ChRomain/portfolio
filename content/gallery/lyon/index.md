@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/lyon/feature.webp"]
 dominant_color: "#826c69"
 tags: ["vintage", "ocean", "urban"]
+country_code: "fr"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
@@ -12,7 +13,8 @@ tags: ["vintage", "ocean", "urban"]
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/lyon/lyon_001.webp" 
+    <img src="/gallery/lyon/lyon_001.webp"
+         data-color="#695b5b" data-tone="neutre" 
          alt="A historic view of Lyon. artistic" 
          title="iPhone 15 | f/1.6 | 1/35s | ISO 100" 
           
@@ -21,7 +23,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_002.webp" 
+    <img src="/gallery/lyon/lyon_002.webp"
+         data-color="#676057" data-tone="or" 
          alt="The historic atmosphere of Lyon, an artistic shot." 
          title="iPhone 15 | f/1.6 | 1/50s | ISO 250" 
           data-gps="45.76219,4.82211" 
@@ -30,7 +33,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_003.webp" 
+    <img src="/gallery/lyon/lyon_003.webp"
+         data-color="#a6a4ac" data-tone="neutre" 
          alt="A nostalgic view of Lyon. artistic" 
          title="ILCE-6700 | f/6.3 | 1/200s | ISO 100" 
           
@@ -39,7 +43,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_004.webp" 
+    <img src="/gallery/lyon/lyon_004.webp"
+         data-color="#695e53" data-tone="or" 
          alt="Capturing the nostalgic essence of Lyon. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 2500" 
           
@@ -48,7 +53,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_005.webp" 
+    <img src="/gallery/lyon/lyon_005.webp"
+         data-color="#eeefef" data-tone="neutre" 
          alt="A retro view of Lyon. artistic" 
          title="ILCE-6700 | f/5.6 | 1/80s | ISO 100" 
           
@@ -57,7 +63,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_006.webp" 
+    <img src="/gallery/lyon/lyon_006.webp"
+         data-color="#6c6260" data-tone="neutre" 
          alt="Visual exploration of Lyon, featuring a nostalgic aesthetic." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 125" 
           
@@ -66,7 +73,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_006.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_007.webp" 
+    <img src="/gallery/lyon/lyon_007.webp"
+         data-color="#272013" data-tone="sombre" 
          alt="Visual exploration of Lyon, featuring a timeless aesthetic." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 2500" 
           
@@ -75,7 +83,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_007.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_008.webp" 
+    <img src="/gallery/lyon/lyon_008.webp"
+         data-color="#271f1d" data-tone="rouge" 
          alt="Visual exploration of Lyon, featuring a historic aesthetic." 
          title="ILCE-6700 | f/4.0 | 1/100s | ISO 100" 
           
@@ -84,7 +93,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_008.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_009.webp" 
+    <img src="/gallery/lyon/lyon_009.webp"
+         data-color="#64544f" data-tone="rouge" 
          alt="The retro atmosphere of Lyon, an artistic shot." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 100" 
           
@@ -93,7 +103,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_009.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_010.webp" 
+    <img src="/gallery/lyon/lyon_010.webp"
+         data-color="#dce1e9" data-tone="bleu" 
          alt="Visual exploration of Lyon, featuring a retro aesthetic." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
@@ -102,7 +113,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_010.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_011.webp" 
+    <img src="/gallery/lyon/lyon_011.webp"
+         data-color="#6c5d62" data-tone="neutre" 
          alt="The timeless atmosphere of Lyon, an artistic shot." 
          title="ILCE-6700 | f/7.1 | 1/125s | ISO 100" 
           
@@ -111,7 +123,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_011.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_012.webp" 
+    <img src="/gallery/lyon/lyon_012.webp"
+         data-color="#1d1c1e" data-tone="sombre" 
          alt="Visual exploration of Lyon, featuring a nostalgic aesthetic." 
          title="ILCE-6700 | f/10.0 | 1/250s | ISO 100" 
           
@@ -120,7 +133,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_012.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_013.webp" 
+    <img src="/gallery/lyon/lyon_013.webp"
+         data-color="#625656" data-tone="neutre" 
          alt="The historic atmosphere of Lyon, an artistic shot." 
          title="ILCE-6700 | f/8.0 | 1/160s | ISO 100" 
           
@@ -129,7 +143,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_013.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_014.webp" 
+    <img src="/gallery/lyon/lyon_014.webp"
+         data-color="#635f60" data-tone="neutre" 
          alt="Visual exploration of Lyon, featuring a timeless aesthetic." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 100" 
           
@@ -138,7 +153,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_014.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_015.webp" 
+    <img src="/gallery/lyon/lyon_015.webp"
+         data-color="#5f615d" data-tone="neutre" 
          alt="Capturing the timeless essence of Lyon. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/4.0 | 1/160s | ISO 1000" 
           
@@ -147,7 +163,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_015.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_016.webp" 
+    <img src="/gallery/lyon/lyon_016.webp"
+         data-color="#201614" data-tone="sombre" 
          alt="Visual exploration of Lyon, featuring a timeless aesthetic." 
          title="ILCE-6700 | f/4.0 | 1/60s | ISO 200" 
           
@@ -156,7 +173,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_016.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_017.webp" 
+    <img src="/gallery/lyon/lyon_017.webp"
+         data-color="#040101" data-tone="sombre" 
          alt="Visual exploration of Lyon, featuring a timeless aesthetic." 
          title="ILCE-6700 | f/5.6 | 1/25s | ISO 1600" 
           
@@ -165,7 +183,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_017.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_018.webp" 
+    <img src="/gallery/lyon/lyon_018.webp"
+         data-color="#14110b" data-tone="sombre" 
          alt="Capturing the historic essence of Lyon. Photo by Romain Charretteur." 
          title="ILCE-6700 | f/2.8 | 1/160s | ISO 6400" 
           
@@ -174,7 +193,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_018.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_019.webp" 
+    <img src="/gallery/lyon/lyon_019.webp"
+         data-color="#221e0f" data-tone="sombre" 
          alt="The nostalgic atmosphere of Lyon, an artistic shot." 
          title="ILCE-6700 | f/3.5 | 1/160s | ISO 1600" 
           
@@ -183,7 +203,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_019.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_020.webp" 
+    <img src="/gallery/lyon/lyon_020.webp"
+         data-color="#604e2c" data-tone="or" 
          alt="The retro atmosphere of Lyon, an artistic shot." 
          title="ILCE-6700 | f/5.0 | 1/80s | ISO 100" 
           
@@ -192,7 +213,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_020.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_021.webp" 
+    <img src="/gallery/lyon/lyon_021.webp"
+         data-color="#5c5856" data-tone="neutre" 
          alt="The nostalgic atmosphere of Lyon, an artistic shot." 
          title="ILCE-6700 | f/5.6 | 1/250s | ISO 200" 
           
@@ -201,7 +223,8 @@ tags: ["vintage", "ocean", "urban"]
          data-lqip="true" 
          style="background-image: url(/gallery/lyon/lqip/lyon_021.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/lyon/lyon_022.webp" 
+    <img src="/gallery/lyon/lyon_022.webp"
+         data-color="#1c2524" data-tone="bleu" 
          alt="A retro view of Lyon. artistic" 
          title="iPhone 15 | f/1.6 | 1/2500s | ISO 50" 
           

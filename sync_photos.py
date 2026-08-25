@@ -102,6 +102,22 @@ FOLDER_TO_COUNTRY = {
     "peru": "Pérou"
 }
 
+# --- MAPPING PAYS -> CODE ISO 3166-1 alpha-2 ---
+# Consommé par layouts/partials/flag-badge.html, qui lit .Params.country_code.
+# Ce champ n'était écrit nulle part : le badge drapeau ne s'affichait donc jamais.
+COUNTRY_TO_CODE = {
+    "France": "fr",
+    "Italie": "it",
+    "Suède": "se",
+    "Monténégro": "me",
+    "USA": "us",
+    "Canada": "ca",
+    "Guatemala": "gt",
+    "Indonésie": "id",
+    "Pérou": "pe",
+    "Guadeloupe": "gp",
+}
+
 # --- DICTIONNAIRES SEO POUR L'IA SÉMANTIQUE ---
 SEO_VOCAB = {
     "fr": {
@@ -615,6 +631,8 @@ def sync_portfolio():
                     f.write(f'images: ["/gallery/peru/feature.webp"]\n')
                     f.write(f'dominant_color: "{peru_dom_color}"\n')
                     f.write(f'tags: {json.dumps(list(peru_mood_tags))}\n')
+                    if COUNTRY_TO_CODE.get(FOLDER_TO_COUNTRY.get(folder_clean, "")):
+                        f.write(f'country_code: "{COUNTRY_TO_CODE[FOLDER_TO_COUNTRY[folder_clean]]}"\n')
                     f.write(f'itinerary: {json.dumps(peru_itinerary_data)}\n')
                     f.write(f'intro_text: {json.dumps(gallery_desc)}\n')
                     f.write('---\n\n')
@@ -812,6 +830,8 @@ def sync_portfolio():
                     f.write(f'images: ["/gallery/{folder_clean}/feature.webp"]\n')
                 f.write(f'dominant_color: "{dom_color}"\n')
                 f.write(f'tags: {json.dumps(mood_tags)}\n')
+                if COUNTRY_TO_CODE.get(FOLDER_TO_COUNTRY.get(folder_clean, "")):
+                    f.write(f'country_code: "{COUNTRY_TO_CODE[FOLDER_TO_COUNTRY[folder_clean]]}"\n')
                 f.write('---\n\n')
                 if gallery_desc:
                     f.write(f'<div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">\n{gallery_desc}\n</div>\n\n')

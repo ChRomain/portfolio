@@ -4,6 +4,7 @@ description: "Desde las calas turquesas de Sainte-Anne y las islas vírgenes de 
 layout: "gallery"
 dominant_color: "#2c7a7b"
 tags: ["ocean", "tropical", "lush"]
+country_code: "gp"
 itinerary_days:
   - label: "Sábado 15 — Llegada"
     coords: [16.228, -61.379]

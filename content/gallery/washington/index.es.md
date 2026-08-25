@@ -5,6 +5,7 @@ layout: "gallery"
 images: ["/gallery/washington/feature.webp"]
 dominant_color: "#463c25"
 tags: ["vintage", "ocean", "neige", "urban"]
+country_code: "us"
 itinerary_days:
   - label: "Lugares recomendados en Washington"
     items:
@@ -24,7 +25,8 @@ itinerary_days:
 {{< itinerary >}}
 
 {{< gallery >}}
-    <img src="/gallery/washington/washington_001.webp" 
+    <img src="/gallery/washington/washington_001.webp"
+         data-color="#524f2a" data-tone="or" 
          alt="Capturando la esencia nostálgica de Washington. Foto de Romain Charretteur." 
          title="iPhone 15 | f/1.6 | 1/6400s | ISO 50" 
           
@@ -33,7 +35,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_002.webp" 
+    <img src="/gallery/washington/washington_002.webp"
+         data-color="#2c2612" data-tone="or" 
          alt="Exploración visual de Washington, con una estética atemporal." 
          title="iPhone 15 | f/1.6 | 1/5000s | ISO 50" 
           
@@ -42,7 +45,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_003.webp" 
+    <img src="/gallery/washington/washington_003.webp"
+         data-color="#646356" data-tone="neutre" 
          alt="La atmósfera atemporal de Washington, una toma artística." 
          title="iPhone 15 | f/1.6 | 1/6700s | ISO 50" 
           
@@ -51,7 +55,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_004.webp" 
+    <img src="/gallery/washington/washington_004.webp"
+         data-color="#5f522f" data-tone="or" 
          alt="Exploración visual de Washington, con una estética histórica." 
          title="iPhone 15 | f/1.6 | 1/20s | ISO 400" 
           
@@ -60,7 +65,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_005.webp" 
+    <img src="/gallery/washington/washington_005.webp"
+         data-color="#535f61" data-tone="neutre" 
          alt="La atmósfera retro de Washington, una toma artística." 
          title="iPhone 15 | f/1.6 | 1/5600s | ISO 50" 
           
@@ -69,7 +75,8 @@ itinerary_days:
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_006.webp" 
+    <img src="/gallery/washington/washington_006.webp"
+         data-color="#242520" data-tone="neutre" 
          alt="Exploración visual de Washington, con una estética histórica." 
          title="iPhone 15 | f/1.6 | 1/60s | ISO 160" 
           

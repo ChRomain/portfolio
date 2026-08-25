@@ -4,6 +4,7 @@ description: "From the turquoise coves of Sainte-Anne and the untouched isles of
 layout: "gallery"
 dominant_color: "#2c7a7b"
 tags: ["ocean", "tropical", "lush"]
+country_code: "gp"
 itinerary_days:
   - label: "Samedi 15 — Arrivée"
     coords: [16.228, -61.379]

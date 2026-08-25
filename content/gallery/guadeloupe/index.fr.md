@@ -4,6 +4,7 @@ description: "Des criques turquoise de Sainte-Anne aux îles préservées des Sa
 layout: "gallery"
 dominant_color: "#2c7a7b"
 tags: ["ocean", "tropical", "lush"]
+country_code: "gp"
 itinerary_days:
   - label: "Samedi 15 — Arrivée"
     coords: [16.228, -61.379]
