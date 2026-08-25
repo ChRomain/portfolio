@@ -5,11 +5,107 @@ layout: "gallery"
 images: ["/gallery/indonesie/feature.webp"]
 dominant_color: "#5f6144"
 tags: ["vintage", "ocean", "nature"]
+itinerary_days:
+  - label: "May 1 — Ubud"
+    coords: [-8.5069, 115.2624]
+    items:
+      - "Arrival at Ngurah Rai airport (Denpasar)"
+      - "Shuttle to Ubud, rice terraces and Puri Saren"
+      - "Sangeh Monkey Forest"
+      - "Nungnung Waterfall"
+  - label: "May 2 — Crossing to Nusa Penida"
+    items:
+      - "Transition day, no photos"
+  - label: "May 3 — Nusa Penida (west coast)"
+    coords: [-8.7276, 115.5444]
+    items:
+      - "Fast boat from Sanur"
+      - "Broken Beach and Angel's Billabong"
+      - "Kelingking Beach at sunset"
+  - label: "May 4 — Nusa Penida (east coast and interior)"
+    items:
+      - "Sunrise at Atuh viewpoint"
+      - "Diamond Beach"
+      - "Rumah Pohon (Thousand Island Viewpoint)"
+      - "Tanglad, the \"Teletubbies Hills\""
+      - "Wild south coast at Suwehan"
+      - "Dinner in Sampalan"
+  - label: "May 5 — Canggu"
+    coords: [-8.6478, 115.1385]
+    items:
+      - "Boat back to Sanur"
+      - "Shuttle to Canggu (Pererenan)"
+      - "Evening on Batu Bolong"
+  - label: "May 6 — Lovina"
+    coords: [-8.1590, 115.0256]
+    items:
+      - "Road through the mountains to Lovina"
+      - "Arrival in Kalibukbuk"
+  - label: "May 7 — Lovina"
+    items:
+      - "Night on the beach"
+      - "Morning excursion (dolphins or Banjar hot springs)"
+      - "Walk through the streets and along the seafront"
+  - label: "May 8 — Crossing to Java"
+    coords: [-8.2192, 114.3691]
+    items:
+      - "Road from Lovina to Gilimanuk"
+      - "Public ferry across the Bali Strait"
+      - "Arrival in Banyuwangi"
+  - label: "May 9 — Kawah Ijen"
+    coords: [-8.0581, 114.2422]
+    items:
+      - "Early start from Banyuwangi"
+      - "Daytime climb to the crater and its turquoise acid lake"
+  - label: "May 9-10 — Night train to Malang"
+    items:
+      - "Train to Malang (inferred)"
+  - label: "May 10 — Malang"
+    coords: [-7.9666, 112.6326]
+    items:
+      - "Arrival in Malang, Kayutangan district"
+  - label: "May 11 — Malang then Wonokitri"
+    coords: [-7.9160, 112.9407]
+    items:
+      - "Walk around Malang"
+      - "Jodipan painted village"
+      - "Road to Nongkojajar then Wonokitri"
+  - label: "May 12 — Bromo"
+    coords: [-7.9425, 112.9530]
+    items:
+      - "Sunrise at Penanjakan"
+      - "Crossing the Laut Pasir sand sea"
+      - "Climb to the Bromo crater"
+      - "Road to the Lumajang region"
+  - label: "May 13 — Tumpak Sewu"
+    coords: [-8.2136, 112.9186]
+    items:
+      - "Panoramic viewpoint over the waterfall"
+      - "Descent to Goa Tetes and the canyon"
+  - label: "May 13-14 — Night train to Yogyakarta"
+    items:
+      - "Train to Yogyakarta (inferred)"
+  - label: "May 14 — Yogyakarta"
+    coords: [-7.7956, 110.3695]
+    items:
+      - "Alun-Alun Kidul and the Kraton walls"
+      - "Malioboro and Beringharjo market"
+  - label: "May 15 — Prambanan"
+    coords: [-7.7520, 110.4915]
+    items:
+      - "Prambanan complex and Candi Sewu"
+  - label: "May 16 — Towards Jakarta"
+    coords: [-6.2088, 106.8456]
+    items:
+      - "Train heading west via Cirebon towards Jakarta"
+      - "End of the documented trip; arrival in Jakarta reconstructed"
 ---
 
 <div class="gallery-description max-w-2xl mx-auto mb-8 text-neutral-600 dark:text-neutral-400 tracking-wide">
 &nbsp;&nbsp;&nbsp;&nbsp;Between ancestral temples, secret Balinese beaches, volcanic mists, and lush jungles, dive into a visual exploration of Indonesian contrasts—where wild nature meets sacred serenity.
 </div>
+
+{{< itinerary >}}
 
 {{< gallery >}}
     <img src="/gallery/indonesie/indonesie_001.webp" 
