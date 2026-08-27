@@ -1,0 +1,2682 @@
+{
+ "bordeaux_001": [
+  "urbain"
+ ],
+ "bordeaux_002": [],
+ "bordeaux_003": [
+  "urbain"
+ ],
+ "bordeaux_004": [],
+ "bordeaux_005": [
+  "historique",
+  "nuit"
+ ],
+ "boston_001": [
+  "historique",
+  "urbain"
+ ],
+ "boston_002": [],
+ "boston_003": [
+  "ocean",
+  "sunset",
+  "urbain"
+ ],
+ "boston_004": [
+  "historique"
+ ],
+ "boston_005": [
+  "urbain",
+  "historique"
+ ],
+ "boston_006": [
+  "urbain",
+  "historique"
+ ],
+ "boston_007": [],
+ "boston_008": [
+  "historique",
+  "urbain"
+ ],
+ "boston_009": [
+  "historique",
+  "urbain"
+ ],
+ "canada_001": [
+  "faune",
+  "neige"
+ ],
+ "canada_002": [
+  "automne"
+ ],
+ "canada_003": [
+  "neige",
+  "lac_riviere",
+  "foret"
+ ],
+ "canada_004": [
+  "faune",
+  "neige"
+ ],
+ "canada_005": [
+  "faune",
+  "neige"
+ ],
+ "canada_006": [
+  "neige"
+ ],
+ "canada_007": [
+  "faune",
+  "neige"
+ ],
+ "canada_008": [
+  "faune",
+  "neige"
+ ],
+ "canada_009": [
+  "faune",
+  "neige"
+ ],
+ "canada_010": [
+  "urbain",
+  "neige"
+ ],
+ "canada_011": [
+  "neige"
+ ],
+ "canada_012": [
+  "neige"
+ ],
+ "canada_013": [
+  "neige",
+  "montagne"
+ ],
+ "canada_014": [
+  "neige",
+  "montagne",
+  "foret"
+ ],
+ "canada_015": [
+  "foret"
+ ],
+ "canada_016": [
+  "ocean",
+  "foret"
+ ],
+ "canada_017": [
+  "sunset",
+  "lac_riviere"
+ ],
+ "canada_018": [
+  "ocean",
+  "foret"
+ ],
+ "canada_019": [
+  "ocean"
+ ],
+ "canada_020": [
+  "lac_riviere",
+  "foret"
+ ],
+ "canada_021": [
+  "urbain"
+ ],
+ "canada_022": [
+  "urbain"
+ ],
+ "cape_cod_001": [
+  "historique",
+  "urbain"
+ ],
+ "cape_cod_002": [
+  "ocean",
+  "historique",
+  "urbain"
+ ],
+ "cape_cod_003": [
+  "historique"
+ ],
+ "cape_cod_004": [],
+ "cape_cod_005": [
+  "ocean"
+ ],
+ "cape_cod_006": [
+  "ocean"
+ ],
+ "cape_cod_007": [
+  "ocean",
+  "historique"
+ ],
+ "cape_cod_008": [
+  "ocean",
+  "faune"
+ ],
+ "cape_cod_009": [
+  "ocean",
+  "faune"
+ ],
+ "cape_cod_010": [
+  "ocean",
+  "urbain"
+ ],
+ "cape_cod_011": [
+  "historique"
+ ],
+ "cape_cod_012": [],
+ "cape_cod_013": [
+  "ocean"
+ ],
+ "chicago_001": [],
+ "chicago_002": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_003": [
+  "historique",
+  "urbain"
+ ],
+ "chicago_004": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_005": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_006": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_007": [
+  "urbain",
+  "historique",
+  "lac_riviere"
+ ],
+ "chicago_008": [
+  "urbain",
+  "historique",
+  "lac_riviere"
+ ],
+ "chicago_009": [
+  "urbain",
+  "historique",
+  "lac_riviere"
+ ],
+ "chicago_010": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_011": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_012": [
+  "urbain",
+  "historique",
+  "lac_riviere"
+ ],
+ "chicago_013": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_014": [
+  "historique",
+  "urbain"
+ ],
+ "chicago_015": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_016": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_017": [
+  "historique",
+  "automne",
+  "lac_riviere"
+ ],
+ "chicago_018": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_019": [
+  "historique"
+ ],
+ "chicago_020": [
+  "historique"
+ ],
+ "chicago_021": [
+  "urbain"
+ ],
+ "chicago_022": [
+  "urbain"
+ ],
+ "chicago_023": [
+  "urbain"
+ ],
+ "chicago_024": [
+  "urbain"
+ ],
+ "chicago_025": [],
+ "chicago_026": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_027": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_028": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_029": [
+  "lac_riviere",
+  "urbain"
+ ],
+ "chicago_030": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_031": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_032": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_033": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_034": [
+  "urbain",
+  "sunset",
+  "lac_riviere"
+ ],
+ "chicago_035": [
+  "urbain",
+  "sunset"
+ ],
+ "chicago_036": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_037": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_038": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_039": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_040": [
+  "urbain",
+  "lac_riviere",
+  "historique"
+ ],
+ "chicago_041": [
+  "urbain"
+ ],
+ "chicago_042": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_043": [
+  "urbain",
+  "lac_riviere",
+  "sunset"
+ ],
+ "chicago_044": [
+  "urbain",
+  "nuit",
+  "lac_riviere"
+ ],
+ "chicago_045": [
+  "urbain",
+  "nuit"
+ ],
+ "chicago_046": [
+  "urbain",
+  "nuit"
+ ],
+ "chicago_047": [
+  "urbain",
+  "nuit"
+ ],
+ "chicago_048": [
+  "urbain",
+  "nuit"
+ ],
+ "chicago_049": [],
+ "chicago_050": [
+  "faune"
+ ],
+ "chicago_051": [
+  "faune"
+ ],
+ "chicago_052": [
+  "tropical"
+ ],
+ "chicago_053": [],
+ "chicago_054": [
+  "faune"
+ ],
+ "chicago_055": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_056": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_057": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_058": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_059": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_060": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_061": [
+  "urbain"
+ ],
+ "chicago_062": [
+  "urbain"
+ ],
+ "chicago_063": [
+  "urbain",
+  "sunset",
+  "lac_riviere"
+ ],
+ "chicago_064": [
+  "urbain"
+ ],
+ "chicago_065": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_066": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_067": [
+  "urbain",
+  "nuit"
+ ],
+ "chicago_068": [
+  "urbain",
+  "nuit"
+ ],
+ "chicago_069": [
+  "urbain"
+ ],
+ "chicago_070": [
+  "urbain"
+ ],
+ "chicago_071": [
+  "urbain"
+ ],
+ "chicago_072": [
+  "urbain"
+ ],
+ "chicago_073": [
+  "urbain"
+ ],
+ "chicago_074": [],
+ "chicago_075": [],
+ "chicago_076": [],
+ "chicago_077": [],
+ "chicago_078": [],
+ "chicago_079": [],
+ "chicago_080": [],
+ "chicago_081": [],
+ "chicago_082": [],
+ "chicago_083": [],
+ "chicago_084": [
+  "urbain"
+ ],
+ "chicago_085": [],
+ "chicago_086": [],
+ "chicago_087": [],
+ "chicago_088": [
+  "urbain",
+  "historique"
+ ],
+ "chicago_089": [
+  "urbain"
+ ],
+ "chicago_090": [
+  "urbain"
+ ],
+ "chicago_091": [],
+ "chicago_092": [
+  "nuit",
+  "historique",
+  "lac_riviere"
+ ],
+ "chicago_093": [
+  "nuit",
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_094": [
+  "nuit",
+  "urbain",
+  "lac_riviere"
+ ],
+ "chicago_095": [
+  "nuit",
+  "urbain"
+ ],
+ "chicago_096": [
+  "nuit",
+  "historique",
+  "urbain"
+ ],
+ "chicago_097": [
+  "nuit",
+  "historique",
+  "urbain"
+ ],
+ "chicago_098": [
+  "nuit",
+  "historique",
+  "urbain"
+ ],
+ "chicago_099": [
+  "nuit",
+  "historique",
+  "urbain"
+ ],
+ "chicago_100": [
+  "nuit",
+  "historique",
+  "urbain"
+ ],
+ "chicago_101": [
+  "nuit",
+  "historique",
+  "urbain"
+ ],
+ "chicago_102": [
+  "historique",
+  "urbain"
+ ],
+ "chicago_103": [
+  "ocean",
+  "urbain"
+ ],
+ "chicago_104": [
+  "ocean",
+  "urbain"
+ ],
+ "chicago_105": [
+  "urbain"
+ ],
+ "chicago_106": [
+  "urbain"
+ ],
+ "corse_001": [
+  "ocean",
+  "historique"
+ ],
+ "corse_002": [
+  "lac_riviere",
+  "foret",
+  "historique"
+ ],
+ "corse_003": [
+  "ocean"
+ ],
+ "everglades_001": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_002": [
+  "lac_riviere",
+  "foret"
+ ],
+ "everglades_003": [
+  "faune",
+  "foret"
+ ],
+ "everglades_004": [
+  "foret",
+  "lac_riviere",
+  "tropical"
+ ],
+ "everglades_005": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_006": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_007": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_008": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_009": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_010": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_011": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_012": [
+  "faune",
+  "lac_riviere"
+ ],
+ "everglades_013": [
+  "faune",
+  "lac_riviere"
+ ],
+ "finistere_001": [
+  "nuit",
+  "historique"
+ ],
+ "finistere_002": [
+  "ocean"
+ ],
+ "finistere_003": [
+  "ocean",
+  "historique"
+ ],
+ "finistere_004": [
+  "ocean"
+ ],
+ "finistere_005": [
+  "ocean",
+  "historique"
+ ],
+ "finistere_006": [
+  "sunset",
+  "historique"
+ ],
+ "finistere_007": [
+  "historique"
+ ],
+ "finistere_008": [],
+ "finistere_009": [
+  "ocean",
+  "historique"
+ ],
+ "finistere_010": [
+  "ocean",
+  "historique"
+ ],
+ "finistere_011": [
+  "historique"
+ ],
+ "finistere_012": [
+  "ocean",
+  "foret"
+ ],
+ "finistere_013": [
+  "ocean"
+ ],
+ "finistere_014": [
+  "ocean",
+  "historique"
+ ],
+ "finistere_015": [
+  "ocean"
+ ],
+ "finistere_016": [
+  "ocean"
+ ],
+ "finistere_017": [
+  "ocean"
+ ],
+ "finistere_018": [
+  "ocean",
+  "faune"
+ ],
+ "finistere_019": [
+  "ocean"
+ ],
+ "guatemala_001": [
+  "lac_riviere",
+  "montagne",
+  "urbain"
+ ],
+ "guatemala_002": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_003": [
+  "urbain"
+ ],
+ "guatemala_004": [
+  "urbain"
+ ],
+ "guatemala_005": [],
+ "guatemala_006": [
+  "montagne",
+  "urbain"
+ ],
+ "guatemala_007": [
+  "historique",
+  "urbain"
+ ],
+ "guatemala_008": [
+  "historique",
+  "urbain",
+  "montagne"
+ ],
+ "guatemala_009": [
+  "historique"
+ ],
+ "guatemala_010": [
+  "historique"
+ ],
+ "guatemala_011": [
+  "urbain"
+ ],
+ "guatemala_012": [
+  "urbain",
+  "nuit"
+ ],
+ "guatemala_013": [
+  "montagne",
+  "foret"
+ ],
+ "guatemala_014": [],
+ "guatemala_015": [
+  "faune"
+ ],
+ "guatemala_016": [
+  "montagne",
+  "nuit"
+ ],
+ "guatemala_017": [
+  "montagne",
+  "nuit"
+ ],
+ "guatemala_018": [
+  "montagne",
+  "sunset",
+  "nuit"
+ ],
+ "guatemala_019": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_020": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_021": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_022": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_023": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_024": [
+  "montagne"
+ ],
+ "guatemala_025": [
+  "montagne"
+ ],
+ "guatemala_026": [],
+ "guatemala_027": [
+  "montagne",
+  "sunset"
+ ],
+ "guatemala_028": [
+  "urbain"
+ ],
+ "guatemala_029": [
+  "lac_riviere",
+  "urbain",
+  "montagne"
+ ],
+ "guatemala_030": [
+  "lac_riviere",
+  "urbain",
+  "montagne"
+ ],
+ "guatemala_031": [
+  "historique"
+ ],
+ "guatemala_032": [
+  "urbain"
+ ],
+ "guatemala_033": [
+  "tropical",
+  "lac_riviere",
+  "urbain"
+ ],
+ "guatemala_034": [
+  "historique",
+  "foret"
+ ],
+ "guatemala_035": [
+  "historique",
+  "faune",
+  "foret"
+ ],
+ "guatemala_036": [
+  "faune",
+  "foret"
+ ],
+ "guatemala_037": [
+  "urbain",
+  "lac_riviere",
+  "montagne"
+ ],
+ "guatemala_038": [
+  "foret",
+  "lac_riviere"
+ ],
+ "guatemala_039": [
+  "foret",
+  "lac_riviere"
+ ],
+ "guatemala_040": [
+  "foret",
+  "lac_riviere"
+ ],
+ "indonesie_001": [
+  "ocean"
+ ],
+ "indonesie_002": [
+  "ocean"
+ ],
+ "indonesie_003": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "indonesie_004": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "indonesie_005": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "indonesie_006": [
+  "foret",
+  "lac_riviere"
+ ],
+ "indonesie_007": [
+  "historique",
+  "sunset"
+ ],
+ "indonesie_008": [
+  "historique",
+  "ocean"
+ ],
+ "indonesie_009": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "indonesie_010": [
+  "montagne"
+ ],
+ "indonesie_011": [
+  "montagne"
+ ],
+ "indonesie_012": [
+  "foret",
+  "lac_riviere"
+ ],
+ "indonesie_013": [
+  "foret",
+  "lac_riviere"
+ ],
+ "indonesie_014": [],
+ "indonesie_015": [
+  "sunset",
+  "montagne"
+ ],
+ "keys_001": [
+  "ocean",
+  "tropical"
+ ],
+ "keys_002": [
+  "ocean",
+  "tropical"
+ ],
+ "keys_003": [
+  "ocean"
+ ],
+ "keys_004": [
+  "ocean"
+ ],
+ "keys_005": [
+  "historique",
+  "tropical"
+ ],
+ "keys_006": [
+  "historique"
+ ],
+ "keys_007": [
+  "faune"
+ ],
+ "keys_008": [
+  "faune"
+ ],
+ "keys_009": [
+  "faune"
+ ],
+ "keys_010": [
+  "faune"
+ ],
+ "keys_011": [
+  "faune"
+ ],
+ "keys_012": [
+  "faune"
+ ],
+ "keys_013": [
+  "faune"
+ ],
+ "keys_014": [
+  "ocean",
+  "sunset"
+ ],
+ "keys_015": [
+  "ocean",
+  "sunset",
+  "tropical"
+ ],
+ "keys_016": [
+  "ocean",
+  "faune",
+  "sunset"
+ ],
+ "keys_017": [
+  "ocean",
+  "sunset"
+ ],
+ "keys_018": [
+  "tropical"
+ ],
+ "lyon_001": [
+  "historique"
+ ],
+ "lyon_002": [
+  "historique"
+ ],
+ "lyon_003": [
+  "historique"
+ ],
+ "lyon_004": [
+  "urbain",
+  "historique"
+ ],
+ "lyon_005": [
+  "historique",
+  "urbain"
+ ],
+ "lyon_006": [
+  "historique",
+  "urbain"
+ ],
+ "lyon_007": [
+  "historique",
+  "urbain"
+ ],
+ "lyon_008": [
+  "historique"
+ ],
+ "lyon_009": [
+  "urbain",
+  "historique"
+ ],
+ "lyon_010": [
+  "urbain"
+ ],
+ "lyon_011": [
+  "urbain"
+ ],
+ "lyon_012": [
+  "urbain",
+  "historique",
+  "lac_riviere"
+ ],
+ "lyon_013": [
+  "historique",
+  "urbain",
+  "lac_riviere"
+ ],
+ "lyon_014": [
+  "urbain"
+ ],
+ "lyon_015": [
+  "historique",
+  "urbain"
+ ],
+ "lyon_016": [
+  "historique",
+  "urbain"
+ ],
+ "lyon_017": [
+  "historique",
+  "nuit"
+ ],
+ "lyon_018": [
+  "historique",
+  "nuit",
+  "lac_riviere"
+ ],
+ "lyon_019": [
+  "historique",
+  "nuit"
+ ],
+ "lyon_020": [
+  "tropical"
+ ],
+ "lyon_021": [
+  "historique"
+ ],
+ "lyon_022": [],
+ "maine_001": [
+  "ocean",
+  "sunset",
+  "lac_riviere"
+ ],
+ "maine_002": [
+  "ocean"
+ ],
+ "maine_003": [],
+ "maine_004": [
+  "ocean"
+ ],
+ "maine_005": [
+  "ocean"
+ ],
+ "maine_006": [
+  "ocean",
+  "historique"
+ ],
+ "maine_007": [
+  "ocean",
+  "sunset"
+ ],
+ "maine_008": [
+  "ocean",
+  "faune"
+ ],
+ "maine_009": [
+  "ocean",
+  "historique",
+  "sunset"
+ ],
+ "maine_010": [
+  "urbain",
+  "historique"
+ ],
+ "miami_001": [
+  "ocean"
+ ],
+ "miami_002": [
+  "ocean"
+ ],
+ "miami_003": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_004": [
+  "urbain"
+ ],
+ "miami_005": [
+  "tropical",
+  "urbain"
+ ],
+ "miami_006": [
+  "tropical",
+  "urbain"
+ ],
+ "miami_007": [
+  "tropical"
+ ],
+ "miami_008": [
+  "ocean"
+ ],
+ "miami_009": [],
+ "miami_010": [
+  "ocean"
+ ],
+ "miami_011": [],
+ "miami_012": [],
+ "miami_013": [
+  "nuit",
+  "tropical"
+ ],
+ "miami_014": [
+  "tropical",
+  "historique"
+ ],
+ "miami_015": [
+  "tropical",
+  "historique"
+ ],
+ "miami_016": [],
+ "miami_017": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_018": [
+  "urbain"
+ ],
+ "miami_019": [
+  "urbain"
+ ],
+ "miami_020": [
+  "urbain"
+ ],
+ "miami_021": [],
+ "miami_022": [
+  "urbain"
+ ],
+ "miami_023": [
+  "urbain"
+ ],
+ "miami_024": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_025": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_026": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_027": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_028": [
+  "tropical"
+ ],
+ "miami_029": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_030": [
+  "urbain",
+  "tropical"
+ ],
+ "miami_031": [
+  "urbain"
+ ],
+ "miami_032": [],
+ "miami_033": [
+  "urbain"
+ ],
+ "miami_034": [
+  "urbain"
+ ],
+ "miami_035": [
+  "urbain"
+ ],
+ "miami_036": [
+  "urbain"
+ ],
+ "miami_037": [
+  "urbain"
+ ],
+ "miami_038": [
+  "urbain"
+ ],
+ "miami_039": [
+  "urbain",
+  "ocean"
+ ],
+ "miami_040": [
+  "nuit",
+  "tropical"
+ ],
+ "miami_041": [
+  "urbain",
+  "nuit"
+ ],
+ "miami_042": [
+  "urbain",
+  "nuit",
+  "ocean"
+ ],
+ "miami_043": [
+  "urbain",
+  "nuit"
+ ],
+ "miami_044": [
+  "urbain",
+  "nuit"
+ ],
+ "miami_045": [
+  "nuit",
+  "urbain"
+ ],
+ "miami_046": [
+  "nuit",
+  "urbain"
+ ],
+ "montenegro_001": [
+  "montagne",
+  "ocean",
+  "historique"
+ ],
+ "montenegro_002": [
+  "montagne",
+  "ocean",
+  "historique"
+ ],
+ "montenegro_003": [
+  "montagne",
+  "historique"
+ ],
+ "montreal_001": [
+  "historique"
+ ],
+ "montreal_002": [
+  "neige",
+  "lac_riviere"
+ ],
+ "montreal_003": [
+  "neige",
+  "nuit",
+  "urbain"
+ ],
+ "montreal_004": [
+  "neige",
+  "nuit",
+  "urbain"
+ ],
+ "montreal_005": [
+  "neige",
+  "nuit",
+  "urbain"
+ ],
+ "montreal_006": [
+  "urbain",
+  "automne"
+ ],
+ "montreal_007": [
+  "urbain",
+  "historique"
+ ],
+ "montreal_008": [],
+ "montreal_009": [
+  "historique"
+ ],
+ "montreal_010": [
+  "urbain",
+  "historique"
+ ],
+ "montreal_011": [
+  "urbain",
+  "sunset",
+  "lac_riviere"
+ ],
+ "montreal_012": [
+  "foret",
+  "sunset",
+  "urbain"
+ ],
+ "montreal_013": [
+  "lac_riviere",
+  "sunset",
+  "urbain"
+ ],
+ "montreal_014": [
+  "neige",
+  "historique",
+  "urbain"
+ ],
+ "montreal_015": [
+  "urbain"
+ ],
+ "montreal_016": [
+  "urbain",
+  "nuit"
+ ],
+ "montreal_017": [
+  "neige",
+  "historique",
+  "urbain"
+ ],
+ "montreal_018": [
+  "neige",
+  "historique",
+  "urbain"
+ ],
+ "montreal_019": [],
+ "montreal_020": [],
+ "montreal_021": [
+  "urbain",
+  "lac_riviere",
+  "automne"
+ ],
+ "montreal_022": [
+  "automne",
+  "sunset"
+ ],
+ "montreal_023": [
+  "urbain"
+ ],
+ "montreal_024": [
+  "urbain"
+ ],
+ "montreal_025": [
+  "automne",
+  "urbain",
+  "historique"
+ ],
+ "montreal_026": [
+  "urbain",
+  "nuit"
+ ],
+ "montreal_027": [
+  "automne"
+ ],
+ "montreal_028": [
+  "automne",
+  "foret"
+ ],
+ "montreal_029": [
+  "urbain"
+ ],
+ "montreal_030": [
+  "nuit",
+  "urbain"
+ ],
+ "montreal_031": [
+  "neige",
+  "urbain",
+  "lac_riviere"
+ ],
+ "montreal_032": [
+  "nuit",
+  "neige",
+  "urbain"
+ ],
+ "montreal_033": [
+  "nuit",
+  "urbain"
+ ],
+ "montreal_034": [
+  "historique",
+  "urbain"
+ ],
+ "montreal_035": [
+  "faune",
+  "tropical"
+ ],
+ "montreal_036": [],
+ "montreal_037": [
+  "nuit",
+  "urbain"
+ ],
+ "montreal_038": [],
+ "montreal_039": [
+  "urbain"
+ ],
+ "montreal_040": [],
+ "montreal_041": [
+  "urbain",
+  "historique"
+ ],
+ "montreal_042": [
+  "urbain"
+ ],
+ "montreal_043": [],
+ "montreal_044": [],
+ "montreal_045": [
+  "nuit",
+  "urbain"
+ ],
+ "montreal_046": [
+  "historique"
+ ],
+ "montreal_047": [
+  "historique"
+ ],
+ "montreal_048": [],
+ "naples_001": [
+  "urbain",
+  "historique"
+ ],
+ "naples_002": [
+  "urbain",
+  "montagne",
+  "ocean"
+ ],
+ "naples_003": [
+  "ocean",
+  "urbain"
+ ],
+ "naples_004": [
+  "historique",
+  "sunset",
+  "urbain"
+ ],
+ "new_hampshire_001": [
+  "faune",
+  "automne"
+ ],
+ "new_hampshire_002": [
+  "foret",
+  "automne"
+ ],
+ "new_hampshire_003": [
+  "montagne",
+  "lac_riviere",
+  "automne"
+ ],
+ "new_hampshire_004": [
+  "montagne",
+  "automne",
+  "foret"
+ ],
+ "new_hampshire_005": [
+  "montagne",
+  "automne",
+  "foret"
+ ],
+ "new_hampshire_006": [
+  "automne",
+  "lac_riviere",
+  "foret"
+ ],
+ "new_hampshire_007": [
+  "automne",
+  "foret"
+ ],
+ "new_hampshire_008": [
+  "montagne",
+  "automne",
+  "foret"
+ ],
+ "new_hampshire_009": [
+  "automne",
+  "foret"
+ ],
+ "new_york_001": [
+  "urbain",
+  "historique"
+ ],
+ "new_york_002": [
+  "urbain",
+  "historique"
+ ],
+ "new_york_003": [
+  "urbain"
+ ],
+ "new_york_004": [
+  "urbain"
+ ],
+ "new_york_005": [
+  "urbain",
+  "sunset",
+  "lac_riviere"
+ ],
+ "new_york_006": [
+  "urbain"
+ ],
+ "new_york_007": [
+  "urbain"
+ ],
+ "new_york_008": [
+  "historique"
+ ],
+ "new_york_009": [
+  "urbain"
+ ],
+ "new_york_010": [
+  "urbain",
+  "lac_riviere",
+  "sunset"
+ ],
+ "new_york_011": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "new_york_012": [
+  "urbain",
+  "historique"
+ ],
+ "new_york_013": [
+  "historique"
+ ],
+ "new_york_014": [
+  "ocean",
+  "urbain"
+ ],
+ "new_york_015": [],
+ "new_york_016": [],
+ "new_york_017": [
+  "urbain"
+ ],
+ "new_york_018": [
+  "nuit",
+  "urbain"
+ ],
+ "new_york_019": [
+  "urbain",
+  "sunset",
+  "lac_riviere"
+ ],
+ "new_york_020": [
+  "foret",
+  "historique",
+  "lac_riviere"
+ ],
+ "new_york_021": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "new_york_022": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "new_york_023": [
+  "nuit",
+  "urbain"
+ ],
+ "new_york_024": [
+  "historique"
+ ],
+ "new_york_025": [
+  "historique",
+  "ocean"
+ ],
+ "new_york_026": [
+  "urbain"
+ ],
+ "new_york_027": [
+  "urbain"
+ ],
+ "new_york_028": [
+  "historique"
+ ],
+ "new_york_029": [
+  "urbain"
+ ],
+ "new_york_030": [
+  "nuit",
+  "urbain",
+  "historique"
+ ],
+ "new_york_031": [
+  "urbain",
+  "automne",
+  "faune"
+ ],
+ "new_york_032": [
+  "urbain",
+  "historique"
+ ],
+ "new_york_033": [
+  "urbain"
+ ],
+ "new_york_034": [],
+ "new_york_035": [
+  "urbain"
+ ],
+ "new_york_036": [
+  "historique"
+ ],
+ "new_york_037": [
+  "urbain"
+ ],
+ "new_york_038": [
+  "urbain",
+  "nuit"
+ ],
+ "new_york_039": [
+  "urbain",
+  "nuit"
+ ],
+ "new_york_040": [
+  "urbain",
+  "nuit"
+ ],
+ "new_york_041": [
+  "urbain",
+  "nuit"
+ ],
+ "new_york_042": [
+  "urbain",
+  "nuit"
+ ],
+ "niagara_falls_001": [
+  "lac_riviere",
+  "urbain"
+ ],
+ "niagara_falls_002": [
+  "lac_riviere",
+  "neige"
+ ],
+ "niagara_falls_003": [
+  "lac_riviere"
+ ],
+ "niagara_falls_004": [
+  "lac_riviere"
+ ],
+ "niagara_falls_005": [
+  "lac_riviere",
+  "faune"
+ ],
+ "niagara_falls_006": [
+  "nuit",
+  "lac_riviere"
+ ],
+ "niagara_falls_007": [
+  "lac_riviere"
+ ],
+ "niagara_falls_008": [
+  "lac_riviere",
+  "urbain"
+ ],
+ "niagara_falls_009": [
+  "nuit",
+  "urbain"
+ ],
+ "niagara_falls_010": [
+  "urbain"
+ ],
+ "niagara_falls_011": [
+  "lac_riviere"
+ ],
+ "niagara_falls_012": [
+  "lac_riviere"
+ ],
+ "niagara_falls_013": [
+  "urbain"
+ ],
+ "niagara_falls_014": [
+  "lac_riviere",
+  "neige"
+ ],
+ "ottawa_001": [],
+ "ottawa_002": [],
+ "ottawa_003": [],
+ "ottawa_004": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "ottawa_005": [
+  "lac_riviere",
+  "foret"
+ ],
+ "ottawa_006": [
+  "foret",
+  "lac_riviere"
+ ],
+ "ottawa_007": [
+  "neige"
+ ],
+ "ottawa_008": [
+  "nuit",
+  "urbain"
+ ],
+ "ottawa_009": [
+  "neige",
+  "historique"
+ ],
+ "ottawa_010": [
+  "historique",
+  "neige"
+ ],
+ "ottawa_011": [
+  "neige",
+  "historique"
+ ],
+ "ottawa_012": [],
+ "ottawa_013": [
+  "lac_riviere",
+  "urbain",
+  "historique"
+ ],
+ "ottawa_014": [
+  "urbain"
+ ],
+ "ottawa_015": [
+  "historique"
+ ],
+ "ottawa_016": [
+  "historique"
+ ],
+ "ottawa_017": [
+  "lac_riviere",
+  "foret"
+ ],
+ "paris_001": [
+  "urbain",
+  "nuit",
+  "historique"
+ ],
+ "paris_002": [
+  "historique"
+ ],
+ "paris_003": [],
+ "paris_004": [],
+ "paris_005": [],
+ "paris_006": [
+  "historique"
+ ],
+ "paris_007": [
+  "historique",
+  "nuit"
+ ],
+ "peru_aguas_calientes_001": [],
+ "peru_aguas_calientes_002": [],
+ "peru_aguas_calientes_003": [
+  "montagne",
+  "lac_riviere",
+  "urbain"
+ ],
+ "peru_aguas_calientes_004": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "peru_aguas_calientes_005": [
+  "montagne",
+  "lac_riviere",
+  "urbain"
+ ],
+ "peru_aguas_calientes_006": [],
+ "peru_aguas_calientes_007": [],
+ "peru_aguas_calientes_008": [
+  "montagne"
+ ],
+ "peru_aguas_calientes_009": [
+  "nuit",
+  "urbain"
+ ],
+ "peru_arequipa_001": [],
+ "peru_arequipa_002": [
+  "historique"
+ ],
+ "peru_arequipa_003": [],
+ "peru_arequipa_004": [
+  "historique"
+ ],
+ "peru_arequipa_005": [
+  "historique",
+  "montagne",
+  "neige"
+ ],
+ "peru_arequipa_006": [
+  "historique"
+ ],
+ "peru_arequipa_007": [
+  "historique"
+ ],
+ "peru_arequipa_008": [
+  "historique"
+ ],
+ "peru_arequipa_009": [
+  "historique"
+ ],
+ "peru_arequipa_010": [
+  "historique"
+ ],
+ "peru_arequipa_011": [
+  "historique"
+ ],
+ "peru_arequipa_012": [
+  "historique",
+  "urbain"
+ ],
+ "peru_arequipa_013": [
+  "historique",
+  "urbain"
+ ],
+ "peru_arequipa_014": [
+  "historique",
+  "tropical"
+ ],
+ "peru_arequipa_015": [
+  "montagne",
+  "historique",
+  "tropical"
+ ],
+ "peru_arequipa_016": [
+  "montagne",
+  "historique"
+ ],
+ "peru_arequipa_017": [
+  "historique"
+ ],
+ "peru_arequipa_018": [
+  "montagne",
+  "urbain"
+ ],
+ "peru_arequipa_019": [
+  "tropical"
+ ],
+ "peru_arequipa_020": [
+  "tropical",
+  "urbain"
+ ],
+ "peru_arequipa_021": [
+  "montagne",
+  "urbain",
+  "sunset"
+ ],
+ "peru_arequipa_022": [
+  "montagne",
+  "urbain",
+  "sunset"
+ ],
+ "peru_arequipa_023": [
+  "montagne",
+  "urbain",
+  "sunset"
+ ],
+ "peru_arequipa_024": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "peru_arequipa_025": [
+  "nuit",
+  "historique"
+ ],
+ "peru_arequipa_026": [
+  "nuit",
+  "historique"
+ ],
+ "peru_arequipa_027": [
+  "nuit",
+  "historique",
+  "montagne"
+ ],
+ "peru_colca_canyon_001": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "peru_colca_canyon_002": [
+  "faune",
+  "lac_riviere",
+  "montagne"
+ ],
+ "peru_colca_canyon_003": [
+  "faune",
+  "lac_riviere",
+  "montagne"
+ ],
+ "peru_colca_canyon_004": [
+  "faune",
+  "lac_riviere",
+  "montagne"
+ ],
+ "peru_colca_canyon_005": [
+  "faune"
+ ],
+ "peru_colca_canyon_006": [
+  "faune"
+ ],
+ "peru_colca_canyon_007": [
+  "faune"
+ ],
+ "peru_colca_canyon_008": [
+  "montagne"
+ ],
+ "peru_colca_canyon_009": [
+  "faune",
+  "montagne"
+ ],
+ "peru_colca_canyon_010": [
+  "faune",
+  "montagne"
+ ],
+ "peru_colca_canyon_011": [
+  "faune"
+ ],
+ "peru_colca_canyon_012": [
+  "montagne"
+ ],
+ "peru_colca_canyon_013": [
+  "desert",
+  "montagne"
+ ],
+ "peru_colca_canyon_014": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "peru_colca_canyon_015": [
+  "faune",
+  "montagne"
+ ],
+ "peru_colca_canyon_016": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "peru_colca_canyon_017": [
+  "montagne",
+  "lac_riviere"
+ ],
+ "peru_colca_canyon_018": [
+  "lac_riviere"
+ ],
+ "peru_colca_canyon_019": [
+  "lac_riviere"
+ ],
+ "peru_colca_canyon_020": [],
+ "peru_huacachina_001": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_huacachina_002": [
+  "desert"
+ ],
+ "peru_huacachina_003": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_huacachina_004": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_huacachina_005": [
+  "desert"
+ ],
+ "peru_huacachina_006": [
+  "desert"
+ ],
+ "peru_huacachina_007": [
+  "desert"
+ ],
+ "peru_huacachina_008": [
+  "desert",
+  "sunset"
+ ],
+ "peru_huacachina_009": [
+  "desert",
+  "sunset"
+ ],
+ "peru_huacachina_010": [
+  "desert",
+  "sunset"
+ ],
+ "peru_lima_001": [
+  "historique"
+ ],
+ "peru_lima_002": [
+  "ocean",
+  "urbain"
+ ],
+ "peru_lima_003": [
+  "historique"
+ ],
+ "peru_lima_004": [
+  "nuit"
+ ],
+ "peru_lima_005": [
+  "nuit",
+  "historique"
+ ],
+ "peru_lima_006": [
+  "historique",
+  "tropical"
+ ],
+ "peru_lima_007": [
+  "historique",
+  "tropical"
+ ],
+ "peru_lima_008": [
+  "historique"
+ ],
+ "peru_lima_009": [
+  "historique"
+ ],
+ "peru_lima_010": [
+  "historique",
+  "tropical"
+ ],
+ "peru_lima_011": [
+  "historique"
+ ],
+ "peru_lima_012": [
+  "urbain",
+  "nuit"
+ ],
+ "peru_lima_013": [
+  "ocean"
+ ],
+ "peru_lima_014": [
+  "nuit",
+  "ocean",
+  "urbain"
+ ],
+ "peru_lima_015": [
+  "historique"
+ ],
+ "peru_lima_016": [],
+ "peru_lima_017": [],
+ "peru_machu_picchu_001": [
+  "montagne",
+  "foret"
+ ],
+ "peru_machu_picchu_002": [
+  "montagne",
+  "foret",
+  "historique"
+ ],
+ "peru_machu_picchu_003": [
+  "montagne",
+  "foret",
+  "historique"
+ ],
+ "peru_machu_picchu_004": [
+  "montagne",
+  "foret",
+  "historique"
+ ],
+ "peru_machu_picchu_005": [
+  "montagne",
+  "foret",
+  "historique"
+ ],
+ "peru_machu_picchu_006": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_007": [
+  "montagne",
+  "historique"
+ ],
+ "peru_machu_picchu_008": [
+  "montagne",
+  "historique"
+ ],
+ "peru_machu_picchu_009": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_010": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_011": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_012": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_013": [
+  "montagne",
+  "historique"
+ ],
+ "peru_machu_picchu_014": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_015": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_016": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_017": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_018": [
+  "montagne",
+  "foret",
+  "historique"
+ ],
+ "peru_machu_picchu_019": [
+  "faune",
+  "historique"
+ ],
+ "peru_machu_picchu_020": [
+  "historique",
+  "montagne"
+ ],
+ "peru_machu_picchu_021": [
+  "historique",
+  "montagne"
+ ],
+ "peru_nazca_001": [],
+ "peru_nazca_002": [
+  "desert"
+ ],
+ "peru_nazca_003": [
+  "desert"
+ ],
+ "peru_nazca_004": [
+  "desert"
+ ],
+ "peru_nazca_005": [
+  "desert"
+ ],
+ "peru_nazca_006": [
+  "desert"
+ ],
+ "peru_nazca_007": [
+  "desert"
+ ],
+ "peru_nazca_008": [
+  "desert"
+ ],
+ "peru_nazca_009": [
+  "desert"
+ ],
+ "peru_nazca_010": [
+  "desert"
+ ],
+ "peru_paracas_001": [
+  "urbain"
+ ],
+ "peru_paracas_002": [
+  "faune",
+  "ocean"
+ ],
+ "peru_paracas_003": [
+  "faune",
+  "ocean"
+ ],
+ "peru_paracas_004": [
+  "faune",
+  "ocean"
+ ],
+ "peru_paracas_005": [
+  "faune",
+  "ocean"
+ ],
+ "peru_paracas_006": [
+  "faune",
+  "ocean"
+ ],
+ "peru_paracas_007": [
+  "desert",
+  "ocean"
+ ],
+ "peru_paracas_008": [
+  "desert",
+  "ocean"
+ ],
+ "peru_paracas_009": [
+  "desert",
+  "ocean"
+ ],
+ "peru_paracas_010": [
+  "desert",
+  "ocean"
+ ],
+ "peru_paracas_011": [
+  "desert",
+  "faune"
+ ],
+ "peru_paracas_012": [
+  "desert",
+  "faune"
+ ],
+ "peru_paracas_013": [
+  "ocean"
+ ],
+ "peru_paracas_014": [
+  "desert",
+  "ocean"
+ ],
+ "peru_paracas_015": [
+  "desert"
+ ],
+ "peru_paracas_016": [
+  "desert",
+  "ocean"
+ ],
+ "peru_paracas_017": [
+  "desert"
+ ],
+ "peru_paracas_018": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_paracas_019": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_paracas_020": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_paracas_021": [
+  "ocean",
+  "montagne"
+ ],
+ "peru_paracas_022": [
+  "desert"
+ ],
+ "peru_paracas_023": [
+  "ocean",
+  "montagne"
+ ],
+ "peru_paracas_024": [
+  "desert",
+  "faune"
+ ],
+ "peru_paracas_025": [
+  "desert",
+  "lac_riviere"
+ ],
+ "peru_paracas_026": [
+  "faune",
+  "ocean"
+ ],
+ "peru_paracas_027": [
+  "faune",
+  "ocean"
+ ],
+ "peru_rainbow_mountain_001": [
+  "faune"
+ ],
+ "peru_rainbow_mountain_002": [
+  "neige",
+  "montagne"
+ ],
+ "peru_rainbow_mountain_003": [
+  "neige",
+  "montagne",
+  "faune"
+ ],
+ "peru_rainbow_mountain_004": [
+  "montagne",
+  "faune"
+ ],
+ "peru_rainbow_mountain_005": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_006": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_007": [
+  "montagne",
+  "neige"
+ ],
+ "peru_rainbow_mountain_008": [
+  "montagne",
+  "neige",
+  "faune"
+ ],
+ "peru_rainbow_mountain_009": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_010": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_011": [
+  "montagne",
+  "faune"
+ ],
+ "peru_rainbow_mountain_012": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_013": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_014": [
+  "montagne",
+  "neige"
+ ],
+ "peru_rainbow_mountain_015": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_016": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_017": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_018": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_019": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_020": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_021": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_022": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_023": [
+  "montagne",
+  "neige"
+ ],
+ "peru_rainbow_mountain_024": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_025": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_026": [
+  "montagne"
+ ],
+ "peru_rainbow_mountain_027": [
+  "montagne",
+  "neige"
+ ],
+ "peru_sacred_valley_001": [],
+ "peru_sacred_valley_002": [],
+ "peru_sacred_valley_003": [],
+ "peru_sacred_valley_004": [],
+ "peru_sacred_valley_005": [],
+ "peru_sacred_valley_006": [
+  "montagne",
+  "neige"
+ ],
+ "peru_sacred_valley_007": [
+  "montagne",
+  "historique"
+ ],
+ "peru_sacred_valley_008": [
+  "historique"
+ ],
+ "peru_sacred_valley_009": [
+  "montagne",
+  "historique"
+ ],
+ "peru_sacred_valley_010": [
+  "historique"
+ ],
+ "peru_sacred_valley_011": [
+  "montagne",
+  "neige",
+  "historique"
+ ],
+ "peru_sacred_valley_012": [
+  "montagne",
+  "historique"
+ ],
+ "peru_sacred_valley_013": [
+  "montagne",
+  "historique",
+  "urbain"
+ ],
+ "peru_sacred_valley_014": [
+  "montagne",
+  "historique",
+  "urbain"
+ ],
+ "peru_sacred_valley_015": [
+  "montagne",
+  "historique"
+ ],
+ "peru_sacred_valley_016": [
+  "montagne",
+  "sunset",
+  "historique"
+ ],
+ "peru_sacred_valley_017": [
+  "montagne"
+ ],
+ "peru_sacred_valley_018": [
+  "montagne",
+  "sunset",
+  "historique"
+ ],
+ "peru_sacred_valley_019": [
+  "montagne",
+  "sunset",
+  "historique"
+ ],
+ "peru_sacred_valley_020": [
+  "faune",
+  "montagne"
+ ],
+ "peru_sacred_valley_021": [
+  "faune",
+  "montagne"
+ ],
+ "peru_salineras_de_maras_001": [
+  "montagne"
+ ],
+ "peru_salineras_de_maras_002": [
+  "montagne"
+ ],
+ "peru_salineras_de_maras_003": [],
+ "peru_salineras_de_maras_004": [
+  "montagne",
+  "neige"
+ ],
+ "peru_salineras_de_maras_005": [
+  "montagne",
+  "neige"
+ ],
+ "peru_salineras_de_maras_006": [
+  "montagne"
+ ],
+ "peru_salineras_de_maras_007": [
+  "montagne"
+ ],
+ "peru_salineras_de_maras_008": [],
+ "peru_salineras_de_maras_009": [
+  "montagne",
+  "neige"
+ ],
+ "peru_salineras_de_maras_010": [
+  "montagne"
+ ],
+ "peru_salineras_de_maras_011": [
+  "montagne",
+  "neige"
+ ],
+ "peru_salineras_de_maras_012": [],
+ "peru_salineras_de_maras_013": [
+  "montagne",
+  "neige"
+ ],
+ "peru_salineras_de_maras_014": [
+  "montagne"
+ ],
+ "philadelphie_001": [
+  "historique",
+  "urbain"
+ ],
+ "philadelphie_002": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "philadelphie_003": [
+  "urbain"
+ ],
+ "philadelphie_004": [],
+ "philadelphie_005": [
+  "historique",
+  "urbain"
+ ],
+ "philadelphie_006": [],
+ "philadelphie_007": [],
+ "quebec_001": [
+  "historique",
+  "urbain"
+ ],
+ "quebec_002": [
+  "historique",
+  "lac_riviere",
+  "sunset"
+ ],
+ "quebec_003": [
+  "neige",
+  "lac_riviere",
+  "foret"
+ ],
+ "quebec_004": [
+  "neige"
+ ],
+ "quebec_005": [
+  "nuit"
+ ],
+ "quebec_006": [
+  "nuit",
+  "historique"
+ ],
+ "quebec_007": [
+  "urbain",
+  "historique"
+ ],
+ "quebec_008": [
+  "automne",
+  "foret",
+  "montagne"
+ ],
+ "quebec_009": [
+  "automne",
+  "foret",
+  "montagne"
+ ],
+ "quebec_010": [
+  "lac_riviere",
+  "automne",
+  "foret"
+ ],
+ "quebec_011": [
+  "historique",
+  "automne"
+ ],
+ "quebec_012": [
+  "montagne",
+  "lac_riviere",
+  "automne"
+ ],
+ "quebec_013": [
+  "historique",
+  "urbain",
+  "automne"
+ ],
+ "rome_001": [
+  "historique",
+  "nuit"
+ ],
+ "rome_002": [
+  "historique",
+  "nuit"
+ ],
+ "rome_003": [
+  "historique",
+  "nuit"
+ ],
+ "rome_004": [
+  "historique"
+ ],
+ "rome_005": [
+  "historique"
+ ],
+ "rome_006": [
+  "historique",
+  "urbain",
+  "nuit"
+ ],
+ "rome_007": [],
+ "suede_001": [
+  "lac_riviere"
+ ],
+ "suede_002": [
+  "nuit",
+  "urbain"
+ ],
+ "suede_003": [
+  "urbain",
+  "nuit",
+  "lac_riviere"
+ ],
+ "suede_004": [
+  "urbain",
+  "nuit",
+  "lac_riviere"
+ ],
+ "suede_005": [],
+ "toronto_001": [
+  "urbain",
+  "sunset"
+ ],
+ "toronto_002": [
+  "urbain"
+ ],
+ "toronto_003": [],
+ "toronto_004": [
+  "urbain",
+  "nuit"
+ ],
+ "toronto_005": [
+  "urbain",
+  "nuit",
+  "neige"
+ ],
+ "toronto_006": [],
+ "toronto_007": [
+  "urbain"
+ ],
+ "toronto_008": [
+  "historique"
+ ],
+ "toronto_009": [
+  "historique"
+ ],
+ "toronto_010": [
+  "urbain",
+  "nuit"
+ ],
+ "toronto_011": [
+  "urbain"
+ ],
+ "toronto_012": [
+  "urbain"
+ ],
+ "toronto_013": [
+  "urbain",
+  "historique"
+ ],
+ "toronto_014": [
+  "urbain"
+ ],
+ "toronto_015": [
+  "urbain"
+ ],
+ "toronto_016": [
+  "urbain",
+  "sunset"
+ ],
+ "toronto_017": [
+  "urbain",
+  "nuit"
+ ],
+ "toronto_018": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "toronto_019": [
+  "urbain",
+  "lac_riviere",
+  "sunset"
+ ],
+ "toronto_020": [
+  "urbain",
+  "lac_riviere"
+ ],
+ "vermont_001": [
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_002": [
+  "montagne",
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_003": [
+  "lac_riviere",
+  "foret"
+ ],
+ "vermont_004": [
+  "montagne",
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_005": [
+  "montagne",
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_006": [
+  "historique"
+ ],
+ "vermont_007": [
+  "historique"
+ ],
+ "vermont_008": [
+  "sunset",
+  "montagne",
+  "lac_riviere"
+ ],
+ "vermont_009": [
+  "montagne",
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_010": [
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_011": [
+  "montagne",
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_012": [
+  "montagne",
+  "foret",
+  "lac_riviere"
+ ],
+ "vermont_013": [
+  "urbain",
+  "historique"
+ ],
+ "vermont_014": [
+  "historique",
+  "urbain"
+ ],
+ "vermont_015": [
+  "urbain",
+  "historique"
+ ],
+ "washington_001": [
+  "historique"
+ ],
+ "washington_002": [
+  "historique"
+ ],
+ "washington_003": [
+  "lac_riviere"
+ ],
+ "washington_004": [
+  "nuit",
+  "historique"
+ ],
+ "washington_005": [
+  "urbain"
+ ],
+ "washington_006": []
+}

@@ -1,0 +1,62 @@
+{{ define "main" }}
+{{/* .Params.tag/.photos sont absents sur la page de section /mood/ auto-générée
+     par Hugo (seules les pages /mood/<tag>/ ajoutées via AddPage les définissent) :
+     sans ce filet, `len` plante sur une valeur nil plutôt que de rendre une liste vide. */}}
+{{ $tag := .Params.tag | default "" }}
+{{ $photos := .Params.photos | default slice }}
+
+<article class="mood-page">
+  <nav class="mb-6">
+    <a href="{{ "" | relLangURL }}" class="text-sm text-neutral-500 hover:text-primary-500 dark:text-neutral-400">
+      ← {{ i18n "nf_home" }}
+    </a>
+  </nav>
+
+  <header class="flex flex-col items-center text-center mb-10">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter text-neutral-800 dark:text-white mb-3">
+      {{ T (printf "mood_%s" $tag) | default $tag }}
+    </h1>
+    <p class="text-neutral-500 dark:text-neutral-400">
+      {{ len $photos }} {{ T "mood_page_intro" }}
+    </p>
+  </header>
+
+  {{ if $photos }}
+  <div class="mood-grid">
+    {{ range $photos }}
+    <a href="{{ printf "photo/%s/" .slug | relLangURL }}" class="mood-grid-item" style="background-color: {{ .color }};" title="{{ .galleryTitle }}">
+      <img src="{{ .src }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="lazy" decoding="async" />
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+
+<style>
+  .mood-grid {
+    column-count: 4;
+    column-gap: 16px;
+    margin: 0 0 2rem;
+  }
+  .mood-grid-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    break-inside: avoid-column;
+  }
+  .mood-grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  }
+  .mood-grid-item:hover img {
+    transform: scale(1.03);
+  }
+  @media (max-width: 1200px) { .mood-grid { column-count: 3; } }
+  @media (max-width: 768px) { .mood-grid { column-count: 2; column-gap: 12px; } .mood-grid-item { margin-bottom: 12px; } }
+  @media (max-width: 480px) { .mood-grid { column-count: 1; } }
+</style>
+{{ end }}

@@ -1,4 +1,4 @@
-disableKinds = ["RSS"]
+disableKinds = ["RSS", "taxonomy", "term"]
 enableRobotsTXT = true
 baseURL = 'https://rctravel.pages.dev/'
 theme = "blowfish"
@@ -38,11 +38,6 @@ title = "Romain Charretteur | Photographie de Voyage"
     showRecentItems = 1000
     showTitle = false
     cardView = true
-  [params.sitemap]
-    # Blowfish exclut "taxonomy" et "term" par défaut. Les pages /tags/<ambiance>/
-    # sont désormais liées depuis l'accueil : elles doivent être indexables.
-    excludedKinds = []
-
   [params.gallery]
     enable = true
   [params.article]

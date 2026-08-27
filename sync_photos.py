@@ -3,6 +3,7 @@ import json
 import os
 import shutil
 import re
+import numpy as np
 from PIL import Image, ImageOps
 
 SOURCE_DIR = "/Users/romaincharretteur/pCloud Drive/Portfolio_Images"
@@ -88,6 +89,18 @@ VIDEO_CATEGORIES = {
 # pour ne pas mélanger texte et logique, et garder des diffs Git lisibles.
 with open("data/destination_descriptions.json", "r", encoding="utf-8") as _f:
     DESCRIPTIONS = json.load(_f)
+
+# --- TAGS DE MOOD PAR PHOTO (analyse visuelle réelle, pas une heuristique) ---
+# Produit par un passage d'analyse d'image par photo (voir data/photo_tags.json).
+# Clé = slug (nom de fichier sans extension), valeur = liste de tags parmi la
+# taxonomie fixe. Une photo absente de ce fichier (nouvel ajout pas encore
+# analysé) reçoit simplement une liste vide, jamais un tag deviné.
+PHOTO_TAGS_PATH = "data/photo_tags.json"
+if os.path.exists(PHOTO_TAGS_PATH):
+    with open(PHOTO_TAGS_PATH, "r", encoding="utf-8") as _f:
+        PHOTO_TAGS = json.load(_f)
+else:
+    PHOTO_TAGS = {}
 
 # --- MAPPING DOSSIER -> PAYS (pour stats carte) ---
 FOLDER_TO_COUNTRY = {
@@ -256,52 +269,72 @@ def get_decimal_from_dms(dms, ref):
     except:
         return None
 
-def get_dominant_color(img_path):
-    """Extrait la couleur dominante d'une image en format Hex"""
+def get_photo_tone(img):
+    """Calcule la couleur dominante et une tonalité (or/bleu/vert/rouge/neutre/sombre)
+    à partir de l'image RÉELLE déjà chargée (pas une vignette LQIP 20x20, dont la
+    moyenne de pixels floutée produisait des tonalités fausses).
+
+    Ne se contente pas de prendre la couleur la plus fréquente après quantification :
+    sur une photo de paysage, un rocher ou un premier plan sombre couvre souvent plus
+    de pixels que le ciel/l'océan qui définit pourtant la tonalité perçue. On calcule
+    donc une teinte moyenne circulaire sur les pixels "vifs" (saturés et lumineux) et
+    on ne bascule en sombre/neutre que si l'image n'a pas assez de pixels vifs."""
     try:
-        with Image.open(img_path) as img:
-            img = img.resize((50, 50))
-            img = img.convert('RGB')
-            # Réduit à une palette de 8 couleurs pour isoler la dominante
-            img_p = img.quantize(colors=8).convert('RGB')
-            colors = img_p.getcolors(50*50)
-            # Trie par fréquence
-            colors.sort(key=lambda x: x[0], reverse=True)
-            dominant = colors[0][1] # (R, G, B)
-            return '#%02x%02x%02x' % dominant
-    except:
-        return ""
+        small = img.convert('RGB').resize((120, 120))
+        arr = np.asarray(small, dtype=np.float64) / 255.0
+        r, g, b = arr[..., 0], arr[..., 1], arr[..., 2]
+        maxc = arr.max(axis=-1)
+        minc = arr.min(axis=-1)
+        delta = maxc - minc
+        v = maxc
+        s = np.divide(delta, maxc, out=np.zeros_like(maxc), where=maxc > 1e-9)
 
-def get_mood_tags(title, descriptions, hex_color):
-    """Génère des tags basés sur le titre, les descriptions et la couleur"""
-    tags = set()
-    
-    # 1. Analyse des mots clés dans le titre et les descriptions
-    all_text = (title + " " + " ".join(descriptions.values())).lower()
-    
-    keywords = {
-        "neige": ["snow", "winter", "cold", "white", "hiver", "glace", "ice"],
-        "ocean": ["sea", "water", "blue", "beach", "coast", "plage", "mer", "turquoise"],
-        "sunset": ["orange", "warm", "golden", "sun", "dusk", "soir", "coucher", "sunrise"],
-        "nature": ["green", "forest", "jungle", "lush", "mountains", "vert", "sauvage"],
-        "urban": ["city", "architecture", "street", "night", "lights", "ville", "building"],
-        "vintage": ["old", "history", "retro", "ancestral", "ancient", "antique"]
-    }
-    
-    for tag, keys in keywords.items():
-        if any(k in all_text for k in keys):
-            tags.add(tag)
-            
-    # 2. Analyse de la couleur
-    if hex_color:
-        r, g, b = int(hex_color[1:3], 16), int(hex_color[3:5], 16), int(hex_color[5:7], 16)
-        if r > 150 and g < 120 and b < 100: tags.add("warm")
-        if b > 150 and r < 120: tags.add("cold")
-        if g > 150 and r < 120: tags.add("lush")
-        if r > 200 and g > 200 and b > 200: tags.add("bright")
-        if r < 50 and g < 50 and b < 50: tags.add("dark")
+        safe_delta = np.where(delta > 1e-9, delta, 1.0)
+        rc, gc, bc = (maxc - r) / safe_delta, (maxc - g) / safe_delta, (maxc - b) / safe_delta
+        hue = np.zeros_like(maxc)
+        hue = np.where((maxc == r) & (delta > 1e-9), bc - gc, hue)
+        hue = np.where((maxc == g) & (delta > 1e-9), 2.0 + rc - bc, hue)
+        hue = np.where((maxc == b) & (delta > 1e-9), 4.0 + gc - rc, hue)
+        hue_deg = (hue / 6.0) % 1.0 * 360.0
 
-    return list(tags)
+        avg_v = float(v.mean())
+        vivid = (s > 0.25) & (v > 0.25)
+        vivid_frac = float(vivid.mean())
+
+        if vivid_frac > 0.03:
+            hues_rad = np.deg2rad(hue_deg[vivid])
+            mean_hue = np.degrees(np.arctan2(np.sin(hues_rad).mean(), np.cos(hues_rad).mean())) % 360
+            mean_rgb = arr[vivid].mean(axis=0) * 255
+        else:
+            mean_hue = None
+            mean_rgb = arr.reshape(-1, 3).mean(axis=0) * 255
+
+        hex_color = '#%02x%02x%02x' % tuple(int(round(c)) for c in mean_rgb)
+
+        if avg_v < 0.22:
+            tone = "sombre"
+        elif mean_hue is None:
+            tone = "neutre"
+        elif mean_hue < 25 or mean_hue >= 345:
+            tone = "rouge"
+        elif mean_hue < 70:
+            tone = "or"
+        elif mean_hue < 170:
+            tone = "vert"
+        elif mean_hue < 255:
+            tone = "bleu"
+        else:
+            tone = "rouge"
+
+        return hex_color, tone
+    except Exception:
+        return "", ""
+
+# --- MOT-CLÉ SEO PAR TONALITÉ (remplace l'ancienne classification par seuils RGB) ---
+TONE_TO_COLOR_MOOD = {
+    "or": "warm", "rouge": "warm", "bleu": "cold",
+    "vert": "lush", "sombre": "dark", "neutre": "bright"
+}
 
 def get_exif_data(img_path):
     """Extrait les réglages techniques, les coordonnées GPS et la date de l'image"""
@@ -499,32 +532,32 @@ def sync_portfolio():
                         sf_date = date_info
                         
                     gps_attr = f' data-gps="{gps_info}"' if gps_info else ""
-                    
-                    img_dom_color = get_dominant_color(full_source_path)
-                    img_mood_tags = get_mood_tags(sf_original.replace('_', ' ').title(), {}, img_dom_color)
-                    
-                    peru_mood_tags.update(img_mood_tags)
-                    if not peru_dom_color:
-                        peru_dom_color = img_dom_color
-                    
+                    img_slug = os.path.splitext(img_clean)[0]
+                    img_tags = PHOTO_TAGS.get(img_slug, [])
+                    peru_mood_tags.update(img_tags)
+
                     try:
                         if not os.path.exists(target_path):
                             img = Image.open(full_source_path)
                             img = ImageOps.exif_transpose(img)
                             width, height = img.size
-                            
+
                             if img.width > MAX_WIDTH:
                                 ratio = MAX_WIDTH / float(img.width)
                                 new_height = int(float(img.height) * float(ratio))
                                 img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
-                                width, height = MAX_WIDTH, new_height 
-                                
+                                width, height = MAX_WIDTH, new_height
+
                             img.save(target_path, "WEBP", quality=QUALITY, method=6)
                             print(f"    ↳ [{img_num}/{len(sf_images)}] {sf_clean}/{img_clean} optimisée.")
                         else:
                             img = Image.open(target_path)
                             width, height = img.size
-                            
+
+                        hex_color, tone = get_photo_tone(img)
+                        if not peru_dom_color:
+                            peru_dom_color = hex_color
+
                         try:
                             lqip_basename = os.path.splitext(img_clean)[0]
                             lqip_dir = os.path.join(hugo_assets_path, "lqip")
@@ -540,26 +573,23 @@ def sync_portfolio():
                             print(f"Error generating LQIP for {img_clean}: {e}")
                             lqip_style = ""
                             
-                        color_mood = "unique"
-                        if "warm" in img_mood_tags: color_mood = "warm"
-                        elif "cold" in img_mood_tags: color_mood = "cold"
-                        elif "lush" in img_mood_tags: color_mood = "lush"
-                        elif "bright" in img_mood_tags: color_mood = "bright"
-                        elif "dark" in img_mood_tags: color_mood = "dark"
-                        
+                        color_mood = TONE_TO_COLOR_MOOD.get(tone, "unique")
+
                         img_src = f"/gallery/peru/{img_clean}"
                         if not first_image_overall:
                             first_image_overall = img_src
                         if not sf_cover:
                             sf_cover = img_src
-                            
+
                         peru_images_metadata.append({
                             "src": img_src,
                             "title": exif_info,
                             "gps": gps_attr,
                             "width": width,
                             "height": height,
-                            "tags": img_mood_tags,
+                            "tags": img_tags,
+                            "color": hex_color,
+                            "tone": tone,
                             "color_mood": color_mood,
                             "lqip_style": lqip_style,
                             "destination": sf_clean
@@ -617,16 +647,19 @@ def sync_portfolio():
                     lang_gallery_html += f'         title="{img_data["title"]}" \n'
                     lang_gallery_html += f'         {img_data["gps"]} \n'
                     lang_gallery_html += f'         data-destination="{img_data["destination"]}" \n'
+                    lang_gallery_html += f'         data-color="{img_data["color"]}" \n'
+                    lang_gallery_html += f'         data-tone="{img_data["tone"]}" \n'
+                    lang_gallery_html += f'         data-tags="{",".join(img_data["tags"])}" \n'
                     lang_gallery_html += f'         width="{img_data["width"]}" height="{img_data["height"]}" \n'
                     lang_gallery_html += f'         {loading_attrs} \n'
                     lang_gallery_html += f'         data-lqip="true" \n'
                     lang_gallery_html += f'         style="{img_data["lqip_style"]}" \n'
                     lang_gallery_html += f'         onload="this.classList.add(\'loaded\')" />\n'
-                
+
                 with open(os.path.join(hugo_content_path, filename), "w") as f:
                     f.write('---\n')
                     f.write(f'title: "{config["title"]}"\n')
-                    f.write(f'description: "{meta_desc}"\n')
+                    f.write(f'description: {json.dumps(meta_desc, ensure_ascii=False)}\n')
                     f.write(f'layout: "peru"\n')
                     f.write(f'images: ["/gallery/peru/feature.webp"]\n')
                     f.write(f'dominant_color: "{peru_dom_color}"\n')
@@ -670,16 +703,9 @@ def sync_portfolio():
             for v_url in VIDEOS[folder_clean]:
                 video_html_snippets.append(f'  <video autoplay loop muted playsinline preload="metadata" class="video-element"><source src="{v_url}" type="video/mp4"></video>\n')
 
-        # --- 2. ANALYSE DU STYLE DE LA GALERIE (Basé sur la 1ère image) ---
         images = [f for f in os.listdir(source_folder_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'webp'))]
         dom_color = ""
-        mood_tags = []
-        if images:
-            first_img_name = sorted(images)[0]
-            first_img_full = os.path.join(source_folder_path, first_img_name)
-            # Temporaire pour extraction couleur
-            dom_color = get_dominant_color(first_img_full)
-            mood_tags = get_mood_tags(display_title, DESCRIPTIONS.get(folder_clean, {}), dom_color)
+        gallery_mood_tags = set()
 
         for i, img_name in enumerate(sorted(images)):
             img_num = i + 1
@@ -720,7 +746,14 @@ def sync_portfolio():
                     # On ouvre l'image existante pour extraire le LQIP et les dimensions
                     img = Image.open(target_path)
                     width, height = img.size
-                
+
+                img_slug = os.path.splitext(img_clean)[0]
+                img_tags = PHOTO_TAGS.get(img_slug, [])
+                gallery_mood_tags.update(img_tags)
+                hex_color, tone = get_photo_tone(img)
+                if not dom_color:
+                    dom_color = hex_color
+
                 # --- LQIP (Low-Quality Image Placeholder) ---
                 # Écrit comme fichier statique séparé (mis en cache par le navigateur)
                 # plutôt qu'inline en base64 dans le HTML (voir extraction historique
@@ -740,14 +773,7 @@ def sync_portfolio():
                     print(f"Error generating LQIP for {img_clean}: {e}")
                     lqip_style = ""
 
-                # --- COLOR MOOD ---
-                color_mood = "unique"
-                if mood_tags:
-                    if "warm" in mood_tags: color_mood = "warm"
-                    elif "cold" in mood_tags: color_mood = "cold"
-                    elif "lush" in mood_tags: color_mood = "lush"
-                    elif "bright" in mood_tags: color_mood = "bright"
-                    elif "dark" in mood_tags: color_mood = "dark"
+                color_mood = TONE_TO_COLOR_MOOD.get(tone, "unique")
 
                 # Stocke les infos de l'image pour la génération multilingue
                 images_metadata.append({
@@ -756,23 +782,24 @@ def sync_portfolio():
                     "gps": gps_attr,
                     "width": width,
                     "height": height,
-                    "tags": mood_tags,
+                    "tags": img_tags,
+                    "color": hex_color,
+                    "tone": tone,
                     "color_mood": color_mood,
                     "lqip_style": lqip_style
                 })
-                
+
                 total_images_count += 1
-                
+
             except Exception as e:
                 print(f"❌ Erreur sur {img_name}: {e}")
+
+        mood_tags = list(gallery_mood_tags)
 
         if images:
             first_img_renamed = f"{folder_clean}_001.webp"
             first_img_path = os.path.join(hugo_assets_path, first_img_renamed)
             shutil.copy(first_img_path, os.path.join(hugo_content_path, "feature.webp"))
-        else:
-            dom_color = ""
-            mood_tags = []
 
         # Langues à générer
         languages = {
@@ -815,6 +842,9 @@ def sync_portfolio():
                 lang_gallery_html += f'         alt="{alt_seo}" \n'
                 lang_gallery_html += f'         title="{img_data["title"]}" \n'
                 lang_gallery_html += f'         {img_data["gps"]} \n'
+                lang_gallery_html += f'         data-color="{img_data["color"]}" \n'
+                lang_gallery_html += f'         data-tone="{img_data["tone"]}" \n'
+                lang_gallery_html += f'         data-tags="{",".join(img_data["tags"])}" \n'
                 lang_gallery_html += f'         width="{img_data["width"]}" height="{img_data["height"]}" \n'
                 lang_gallery_html += f'         {loading_attrs} \n'
                 lang_gallery_html += f'         data-lqip="true" \n'
@@ -824,7 +854,7 @@ def sync_portfolio():
             with open(os.path.join(hugo_content_path, filename), "w") as f:
                 f.write('---\n')
                 f.write(f'title: "{display_title}"\n')
-                f.write(f'description: "{meta_desc}"\n')
+                f.write(f'description: {json.dumps(meta_desc, ensure_ascii=False)}\n')
                 f.write(f'layout: "gallery"\n')
                 if images:
                     f.write(f'images: ["/gallery/{folder_clean}/feature.webp"]\n')

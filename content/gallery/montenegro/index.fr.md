@@ -3,8 +3,8 @@ title: "Montenegro"
 description: "Contemplez la rencontre dramatique de pics calcaires déchiquetés et d'eaux cristallines. Naviguez dans la baie sinueuse de Kotor, où d'anciens villages de…"
 layout: "gallery"
 images: ["/gallery/montenegro/feature.webp"]
-dominant_color: "#96755a"
-tags: ["vintage", "ocean"]
+dominant_color: "#5b6d6d"
+tags: ["ocean", "montagne", "historique"]
 country_code: "me"
 ---
 
@@ -13,31 +13,37 @@ country_code: "me"
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/montenegro/montenegro_001.webp"
-         data-color="#566460" data-tone="neutre" 
-         alt="Exploration visuelle de Montenegro, révélant une esthétique historique." 
+    <img src="/gallery/montenegro/montenegro_001.webp" 
+         alt="Cliché unique immortalisé à Montenegro par Romain Charretteur." 
          title="PCT-L29 | f/1.8 | 1/2000s | ISO 50" 
           
+         data-color="#5b6d6d" 
+         data-tone="bleu" 
+         data-tags="montagne,ocean,historique" 
          width="1600" height="1200" 
          loading="eager" fetchpriority="high" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/montenegro/lqip/montenegro_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/montenegro/montenegro_002.webp"
-         data-color="#6a6c5c" data-tone="or" 
-         alt="Une vue intemporelle de Montenegro. artistique" 
+    <img src="/gallery/montenegro/montenegro_002.webp" 
+         alt="Cliché unique immortalisé à Montenegro par Romain Charretteur." 
          title="PCT-L29 | f/1.8 | 1/2300s | ISO 50" 
           
+         data-color="#587583" 
+         data-tone="bleu" 
+         data-tags="montagne,ocean,historique" 
          width="1600" height="1200" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/montenegro/lqip/montenegro_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/montenegro/montenegro_003.webp"
-         data-color="#155d6d" data-tone="bleu" 
-         alt="Une vue intemporelle de Montenegro. artistique" 
+    <img src="/gallery/montenegro/montenegro_003.webp" 
+         alt="Exploration visuelle de Montenegro, révélant une esthétique unique." 
          title="PCT-L29 | f/1.8 | 1/3200s | ISO 50" 
           
+         data-color="#4a7479" 
+         data-tone="bleu" 
+         data-tags="montagne,historique" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 

@@ -69,6 +69,7 @@ def main():
                 slug = src.rsplit("/", 1)[-1][: -len(".webp")]
                 rec = photos.get(slug)
                 if rec is None:
+                    raw_tags = a.get("data-tags", "")
                     rec = {
                         "slug": slug,
                         "gallery": gallery,
@@ -80,6 +81,7 @@ def main():
                         "date": a.get("data-date", ""),
                         "color": a.get("data-color", ""),
                         "tone": a.get("data-tone", ""),
+                        "tags": [t for t in raw_tags.split(",") if t],
                         "country": country_code,
                         "alt": {},
                         "galleryTitle": {},

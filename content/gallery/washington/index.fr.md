@@ -3,8 +3,8 @@ title: "Washington"
 description: "Marchez au cœur de l'histoire américaine. De la grandeur néoclassique de la Maison Blanche et du Capitole la nuit aux tours rouges du Smithsonian,…"
 layout: "gallery"
 images: ["/gallery/washington/feature.webp"]
-dominant_color: "#463c25"
-tags: ["vintage", "ocean", "neige", "urban"]
+dominant_color: "#585837"
+tags: ["lac_riviere", "historique", "urbain", "nuit"]
 country_code: "us"
 itinerary_days:
   - label: "Bons plans à Washington"
@@ -22,64 +22,74 @@ itinerary_days:
 &nbsp;&nbsp;&nbsp;&nbsp;Marchez au cœur de l'histoire américaine. De la grandeur néoclassique de la Maison Blanche et du Capitole la nuit aux tours rouges du Smithsonian, témoignez d'une ville où chaque coin raconte une histoire de pouvoir et d'héritage.
 </div>
 
-{{< itinerary >}}
-
 {{< gallery >}}
-    <img src="/gallery/washington/washington_001.webp"
-         data-color="#524f2a" data-tone="or" 
-         alt="Une vue intemporelle de Washington. artistique" 
+    <img src="/gallery/washington/washington_001.webp" 
+         alt="Atmosphère unique à Washington, une photographie aux tons chauds." 
          title="iPhone 15 | f/1.6 | 1/6400s | ISO 50" 
           
+         data-color="#585837" 
+         data-tone="or" 
+         data-tags="historique" 
          width="1600" height="2133" 
          loading="eager" fetchpriority="high" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_002.webp"
-         data-color="#2c2612" data-tone="or" 
-         alt="Cliché intemporelle immortalisé à Washington par Romain Charretteur." 
+    <img src="/gallery/washington/washington_002.webp" 
+         alt="Exploration visuelle de Washington, révélant une esthétique unique." 
          title="iPhone 15 | f/1.6 | 1/5000s | ISO 50" 
           
+         data-color="#7ea497" 
+         data-tone="vert" 
+         data-tags="historique" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_003.webp"
-         data-color="#646356" data-tone="neutre" 
-         alt="Exploration visuelle de Washington, révélant une esthétique intemporelle." 
+    <img src="/gallery/washington/washington_003.webp" 
+         alt="Atmosphère unique à Washington, une photographie luxuriante." 
          title="iPhone 15 | f/1.6 | 1/6700s | ISO 50" 
           
+         data-color="#557f83" 
+         data-tone="vert" 
+         data-tags="lac_riviere" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_004.webp"
-         data-color="#5f522f" data-tone="or" 
-         alt="Une vue historique de Washington. artistique" 
+    <img src="/gallery/washington/washington_004.webp" 
+         alt="Exploration visuelle de Washington, révélant une esthétique unique." 
          title="iPhone 15 | f/1.6 | 1/20s | ISO 400" 
           
+         data-color="#7f7148" 
+         data-tone="or" 
+         data-tags="nuit,historique" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_004.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_005.webp"
-         data-color="#535f61" data-tone="neutre" 
-         alt="Cliché nostalgique immortalisé à Washington par Romain Charretteur." 
+    <img src="/gallery/washington/washington_005.webp" 
+         alt="Atmosphère unique à Washington, une photographie aux reflets froids." 
          title="iPhone 15 | f/1.6 | 1/5600s | ISO 50" 
           
+         data-color="#2b5f99" 
+         data-tone="bleu" 
+         data-tags="urbain" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/washington/lqip/washington_005.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/washington/washington_006.webp"
-         data-color="#242520" data-tone="neutre" 
-         alt="Atmosphère nostalgique à Washington, une photographie artistique." 
+    <img src="/gallery/washington/washington_006.webp" 
+         alt="Exploration visuelle de Washington, révélant une esthétique unique." 
          title="iPhone 15 | f/1.6 | 1/60s | ISO 160" 
           
+         data-color="#664d39" 
+         data-tone="or" 
+         data-tags="" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 

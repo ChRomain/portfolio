@@ -8,10 +8,11 @@
         "url": "/gallery/montenegro/",
         "country": "Mont\u00e9n\u00e9gro",
         "date": "2019-09-02",
-        "color": "#96755a",
+        "color": "#5b6d6d",
         "tags": [
-            "vintage",
-            "ocean"
+            "ocean",
+            "montagne",
+            "historique"
         ]
     },
     {
@@ -23,12 +24,11 @@
         "url": "/gallery/paris/",
         "country": "France",
         "date": "2019-12-29",
-        "color": "#0f1718",
+        "color": "#986349",
         "tags": [
-            "vintage",
-            "neige",
-            "dark",
-            "urban"
+            "urbain",
+            "historique",
+            "nuit"
         ]
     },
     {
@@ -40,11 +40,13 @@
         "url": "/gallery/naples/",
         "country": "Italie",
         "date": "2020-02-22",
-        "color": "#886643",
+        "color": "#547386",
         "tags": [
-            "vintage",
-            "sunset",
-            "urban"
+            "montagne",
+            "historique",
+            "ocean",
+            "urbain",
+            "sunset"
         ]
     },
     {
@@ -56,10 +58,11 @@
         "url": "/gallery/rome/",
         "country": "Italie",
         "date": "2021-11-21",
-        "color": "#533d21",
+        "color": "#816437",
         "tags": [
-            "vintage",
-            "urban"
+            "urbain",
+            "historique",
+            "nuit"
         ]
     },
     {
@@ -71,11 +74,12 @@
         "url": "/gallery/corse/",
         "country": "France",
         "date": "2022-06-03",
-        "color": "#9ac6de",
+        "color": "#5b8688",
         "tags": [
-            "vintage",
             "ocean",
-            "nature"
+            "lac_riviere",
+            "historique",
+            "foret"
         ]
     },
     {
@@ -87,13 +91,11 @@
         "url": "/gallery/suede/",
         "country": "Su\u00e8de",
         "date": "2022-12-06",
-        "color": "#b0a6a0",
+        "color": "#8c5b3f",
         "tags": [
-            "vintage",
-            "sunset",
-            "urban",
-            "ocean",
-            "neige"
+            "urbain",
+            "lac_riviere",
+            "nuit"
         ]
     },
     {
@@ -105,11 +107,15 @@
         "url": "/gallery/indonesie/",
         "country": "Indon\u00e9sie",
         "date": "2024-05-03",
-        "color": "#5f6144",
+        "color": "#626e35",
         "tags": [
-            "vintage",
+            "montagne",
+            "historique",
             "ocean",
-            "nature"
+            "urbain",
+            "foret",
+            "lac_riviere",
+            "sunset"
         ]
     },
     {
@@ -121,12 +127,12 @@
         "url": "/gallery/washington/",
         "country": "USA",
         "date": "2024-08-17",
-        "color": "#463c25",
+        "color": "#585837",
         "tags": [
-            "vintage",
-            "ocean",
-            "neige",
-            "urban"
+            "lac_riviere",
+            "historique",
+            "urbain",
+            "nuit"
         ]
     },
     {
@@ -138,11 +144,11 @@
         "url": "/gallery/philadelphie/",
         "country": "USA",
         "date": "2024-08-20",
-        "color": "#3e4726",
+        "color": "#6f663e",
         "tags": [
-            "vintage",
-            "ocean",
-            "urban"
+            "urbain",
+            "historique",
+            "lac_riviere"
         ]
     },
     {
@@ -154,11 +160,12 @@
         "url": "/gallery/boston/",
         "country": "USA",
         "date": "2024-09-02",
-        "color": "#6b5a53",
+        "color": "#858273",
         "tags": [
-            "vintage",
             "ocean",
-            "urban"
+            "urbain",
+            "historique",
+            "sunset"
         ]
     },
     {
@@ -170,10 +177,18 @@
         "url": "/gallery/montreal/",
         "country": "Canada",
         "date": "2024-10-20",
-        "color": "#a5adb1",
+        "color": "#7e8580",
         "tags": [
-            "ocean",
-            "urban"
+            "historique",
+            "urbain",
+            "automne",
+            "neige",
+            "foret",
+            "tropical",
+            "lac_riviere",
+            "sunset",
+            "faune",
+            "nuit"
         ]
     },
     {
@@ -185,14 +200,17 @@
         "url": "/gallery/quebec/",
         "country": "Canada",
         "date": "2024-12-07",
-        "color": "#f1eeec",
+        "color": "#667e6f",
         "tags": [
-            "vintage",
+            "montagne",
+            "historique",
+            "urbain",
+            "automne",
+            "neige",
+            "foret",
+            "lac_riviere",
             "sunset",
-            "bright",
-            "urban",
-            "ocean",
-            "nature"
+            "nuit"
         ]
     },
     {
@@ -204,10 +222,14 @@
         "url": "/gallery/toronto/",
         "country": "Canada",
         "date": "2025-01-03",
-        "color": "#594d40",
+        "color": "#7a705d",
         "tags": [
-            "nature",
-            "urban"
+            "historique",
+            "urbain",
+            "neige",
+            "lac_riviere",
+            "sunset",
+            "nuit"
         ]
     },
     {
@@ -219,12 +241,17 @@
         "url": "/gallery/canada/",
         "country": "Canada",
         "date": "2025-02-15",
-        "color": "#d1d2d2",
+        "color": "#5d4a37",
         "tags": [
+            "montagne",
             "ocean",
+            "automne",
+            "urbain",
             "neige",
-            "bright",
-            "nature"
+            "foret",
+            "lac_riviere",
+            "sunset",
+            "faune"
         ]
     },
     {
@@ -236,11 +263,13 @@
         "url": "/gallery/niagara_falls/",
         "country": "Canada",
         "date": "2025-04-20",
-        "color": "#9ba7b6",
+        "color": "#4e7ba8",
         "tags": [
-            "vintage",
-            "ocean",
-            "urban"
+            "urbain",
+            "neige",
+            "lac_riviere",
+            "faune",
+            "nuit"
         ]
     },
     {
@@ -252,9 +281,14 @@
         "url": "/gallery/ottawa/",
         "country": "Canada",
         "date": "2025-05-11",
-        "color": "#626e39",
+        "color": "#ac6e2d",
         "tags": [
-            "urban"
+            "historique",
+            "urbain",
+            "neige",
+            "foret",
+            "lac_riviere",
+            "nuit"
         ]
     },
     {
@@ -266,11 +300,12 @@
         "url": "/gallery/cape_cod/",
         "country": "USA",
         "date": "2025-05-17",
-        "color": "#313028",
+        "color": "#86a5b2",
         "tags": [
-            "vintage",
             "ocean",
-            "dark"
+            "urbain",
+            "faune",
+            "historique"
         ]
     },
     {
@@ -282,11 +317,17 @@
         "url": "/gallery/new_york/",
         "country": "USA",
         "date": "2025-06-20",
-        "color": "#2f3537",
+        "color": "#51757e",
         "tags": [
+            "historique",
             "ocean",
+            "urbain",
+            "automne",
+            "foret",
+            "lac_riviere",
             "sunset",
-            "urban"
+            "faune",
+            "nuit"
         ]
     },
     {
@@ -298,10 +339,14 @@
         "url": "/gallery/vermont/",
         "country": "USA",
         "date": "2025-07-19",
-        "color": "#426533",
+        "color": "#446c46",
         "tags": [
-            "ocean",
-            "nature"
+            "montagne",
+            "historique",
+            "urbain",
+            "foret",
+            "lac_riviere",
+            "sunset"
         ]
     },
     {
@@ -313,11 +358,14 @@
         "url": "/gallery/maine/",
         "country": "USA",
         "date": "2025-08-01",
-        "color": "#506274",
+        "color": "#5d6977",
         "tags": [
-            "vintage",
+            "historique",
             "ocean",
-            "nature"
+            "urbain",
+            "lac_riviere",
+            "sunset",
+            "faune"
         ]
     },
     {
@@ -329,11 +377,17 @@
         "url": "/gallery/guatemala/",
         "country": "Guatemala",
         "date": "2025-09-04",
-        "color": "#15242d",
+        "color": "#50748b",
         "tags": [
-            "vintage",
-            "dark",
-            "urban"
+            "montagne",
+            "historique",
+            "urbain",
+            "foret",
+            "tropical",
+            "lac_riviere",
+            "sunset",
+            "faune",
+            "nuit"
         ]
     },
     {
@@ -345,13 +399,13 @@
         "url": "/gallery/new_hampshire/",
         "country": "USA",
         "date": "2025-09-30",
-        "color": "#8d7e6d",
+        "color": "#6c4e28",
         "tags": [
-            "vintage",
-            "sunset",
-            "ocean",
-            "neige",
-            "nature"
+            "montagne",
+            "automne",
+            "foret",
+            "lac_riviere",
+            "faune"
         ]
     },
     {
@@ -363,12 +417,14 @@
         "url": "/gallery/finistere/",
         "country": "France",
         "date": "2025-12-16",
-        "color": "#030100",
+        "color": "#6d322f",
         "tags": [
-            "vintage",
+            "historique",
             "ocean",
-            "dark",
-            "nature"
+            "foret",
+            "sunset",
+            "faune",
+            "nuit"
         ]
     },
     {
@@ -380,12 +436,11 @@
         "url": "/gallery/bordeaux/",
         "country": "France",
         "date": "2026-01-02",
-        "color": "#8cacd7",
+        "color": "#6b86ae",
         "tags": [
-            "vintage",
-            "ocean",
-            "sunset",
-            "urban"
+            "urbain",
+            "historique",
+            "nuit"
         ]
     },
     {
@@ -397,11 +452,13 @@
         "url": "/gallery/lyon/",
         "country": "France",
         "date": "2026-01-08",
-        "color": "#826c69",
+        "color": "#6f5d55",
         "tags": [
-            "vintage",
-            "ocean",
-            "urban"
+            "historique",
+            "urbain",
+            "tropical",
+            "lac_riviere",
+            "nuit"
         ]
     },
     {
@@ -413,14 +470,13 @@
         "url": "/gallery/miami/",
         "country": "USA",
         "date": "2026-04-02",
-        "color": "#77a2c0",
+        "color": "#9f8e84",
         "tags": [
-            "sunset",
-            "lush",
-            "urban",
+            "historique",
             "ocean",
-            "cold",
-            "neige"
+            "urbain",
+            "tropical",
+            "nuit"
         ]
     },
     {
@@ -432,11 +488,13 @@
         "url": "/gallery/keys/",
         "country": "USA",
         "date": "2026-04-03",
-        "color": "#cfe5f5",
+        "color": "#3a83ab",
         "tags": [
+            "historique",
             "ocean",
-            "bright",
-            "urban"
+            "tropical",
+            "sunset",
+            "faune"
         ]
     },
     {
@@ -448,11 +506,12 @@
         "url": "/gallery/everglades/",
         "country": "USA",
         "date": "2026-04-04",
-        "color": "#43464c",
+        "color": "#576578",
         "tags": [
-            "vintage",
-            "ocean",
-            "nature"
+            "foret",
+            "lac_riviere",
+            "tropical",
+            "faune"
         ]
     },
     {
@@ -464,11 +523,17 @@
         "url": "/gallery/chicago/",
         "country": "USA",
         "date": "2026-05-16",
-        "color": "#a09a96",
+        "color": "#84645a",
         "tags": [
+            "historique",
             "ocean",
-            "nature",
-            "urban"
+            "urbain",
+            "automne",
+            "tropical",
+            "lac_riviere",
+            "sunset",
+            "faune",
+            "nuit"
         ]
     },
     {
@@ -480,13 +545,20 @@
         "url": "/gallery/peru/",
         "country": "P\u00e9rou",
         "date": "2026-06-20",
-        "color": "#615046",
+        "color": "#9c6554",
         "tags": [
-            "dark",
-            "warm",
-            "bright",
-            "cold",
-            "lush"
+            "montagne",
+            "historique",
+            "desert",
+            "ocean",
+            "urbain",
+            "neige",
+            "foret",
+            "tropical",
+            "lac_riviere",
+            "sunset",
+            "faune",
+            "nuit"
         ]
     }
 ]

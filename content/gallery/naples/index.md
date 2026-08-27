@@ -3,8 +3,8 @@ title: "Naples"
 description: "In the shadow of Mount Vesuvius, experience the raw and captivating soul of Southern Italy. Journey through a city where ancient history and vibrant…"
 layout: "gallery"
 images: ["/gallery/naples/feature.webp"]
-dominant_color: "#886643"
-tags: ["vintage", "sunset", "urban"]
+dominant_color: "#547386"
+tags: ["montagne", "historique", "ocean", "urbain", "sunset"]
 country_code: "it"
 ---
 
@@ -13,41 +13,49 @@ country_code: "it"
 </div>
 
 {{< gallery >}}
-    <img src="/gallery/naples/naples_001.webp"
-         data-color="#6b4c2b" data-tone="or" 
-         alt="Visual exploration of Naples, featuring a timeless aesthetic." 
+    <img src="/gallery/naples/naples_001.webp" 
+         alt="A unique view of Naples. with warm tones" 
          title="iPhone XR | f/1.8 | 1/1000s | ISO 25" 
           
+         data-color="#547386" 
+         data-tone="or" 
+         data-tags="urbain,historique" 
          width="1600" height="2133" 
          loading="eager" fetchpriority="high" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/naples/lqip/naples_001.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/naples/naples_002.webp"
-         data-color="#181d1b" data-tone="sombre" 
-         alt="The historic atmosphere of Naples, an artistic shot." 
+    <img src="/gallery/naples/naples_002.webp" 
+         alt="Visual exploration of Naples, featuring a unique aesthetic." 
          title="iPhone XR | f/1.8 | 1/3200s | ISO 25" 
           
+         data-color="#547c7b" 
+         data-tone="vert" 
+         data-tags="urbain,montagne,ocean" 
          width="1600" height="1200" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/naples/lqip/naples_002.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/naples/naples_003.webp"
-         data-color="#292a21" data-tone="or" 
-         alt="A timeless view of Naples. artistic" 
+    <img src="/gallery/naples/naples_003.webp" 
+         alt="The azure atmosphere of Naples, a with cold reflections shot." 
          title="iPhone XR | f/1.8 | 1/6000s | ISO 25" 
           
+         data-color="#707f87" 
+         data-tone="bleu" 
+         data-tags="ocean,urbain" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 
          style="background-image: url(/gallery/naples/lqip/naples_003.jpg); background-size: cover;" 
          onload="this.classList.add('loaded')" />
-    <img src="/gallery/naples/naples_004.webp"
-         data-color="#5f5d5a" data-tone="neutre" 
-         alt="The nostalgic atmosphere of Naples, an artistic shot." 
+    <img src="/gallery/naples/naples_004.webp" 
+         alt="The unique atmosphere of Naples, a with warm tones shot." 
          title="iPhone XR | f/1.8 | 1/60s | ISO 125" 
           
+         data-color="#937d4d" 
+         data-tone="or" 
+         data-tags="historique,sunset,urbain" 
          width="1600" height="2133" 
          loading="lazy" decoding="async" 
          data-lqip="true" 

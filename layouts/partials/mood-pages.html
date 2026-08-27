@@ -1,0 +1,59 @@
+{{/*
+  Adaptateur de contenu : génère une page par mood (/mood/<tag>/) à partir de
+  data/photos.json, chacune listant TOUTES les photos qui portent ce tag, tous
+  voyages confondus.
+
+  Remplace l'ancienne navigation par /tags/<terme>/ (taxonomie Hugo native), qui
+  ne listait que des galeries entières dont le frontmatter contenait le terme —
+  cliquer sur "Neige" affichait alors la galerie complète de la destination, pas
+  les photos hivernales elles-mêmes. Les tags par photo sont produits par une
+  analyse visuelle réelle (voir data/photo_tags.json), pas par une heuristique de
+  couleur ou de mots-clés marketing.
+
+  Ce template est exécuté une fois par langue : site.Language.Lang sert à choisir
+  la bonne traduction sans dupliquer les données.
+*/}}
+{{ $ctx := . }}
+{{ $lang := site.Language.Lang }}
+{{ $photos := (index site.Data "photos").photos }}
+
+{{ $allTags := slice }}
+{{ range $photos }}
+  {{ range .tags }}
+    {{ if not (in $allTags .) }}
+      {{ $allTags = $allTags | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ range $allTags }}
+  {{ $tag := . }}
+  {{ $matching := slice }}
+  {{ range $photos }}
+    {{ if in .tags $tag }}
+      {{ $alt := or (index .alt $lang) (index .alt "en") }}
+      {{ $galleryTitle := or (index .galleryTitle $lang) (index .galleryTitle "en") }}
+      {{ $matching = $matching | append (dict
+          "slug"          .slug
+          "src"           .src
+          "alt"           $alt
+          "width"         .width
+          "height"        .height
+          "color"         .color
+          "gallery"       .gallery
+          "galleryTitle"  $galleryTitle
+      ) }}
+    {{ end }}
+  {{ end }}
+
+  {{ $ctx.AddPage (dict
+    "path"    $tag
+    "title"   (T (printf "mood_%s" $tag) | default $tag)
+    "kind"    "page"
+    "layout"  "mood"
+    "params"  (dict
+      "tag"    $tag
+      "photos" $matching
+    )
+  ) }}
+{{ end }}
