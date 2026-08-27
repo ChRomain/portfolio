@@ -26,7 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (heroScrollBtn) {
             heroScrollBtn.style.opacity = opacity;
-            heroScrollBtn.style.transform = `translateX(-50%) translate3d(0, ${scrollY * -0.2}px, 0)`;
+            /* Le centrage horizontal vient de la classe Tailwind -translate-x-1/2, qui
+               pose la propriété CSS `translate` (pas `transform`). Réappliquer
+               translateX(-50%) ici via `transform` s'additionnait à ce centrage au lieu
+               de le remplacer, décalant le bouton vers la gauche dès le premier scroll. */
+            heroScrollBtn.style.transform = `translate3d(0, ${scrollY * -0.2}px, 0)`;
         }
     }, { passive: true });
 
