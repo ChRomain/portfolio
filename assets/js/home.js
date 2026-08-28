@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Exact same tiles as main map
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             opacity: 0.5
         }).addTo(map);
 
